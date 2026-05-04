@@ -90,8 +90,6 @@ public class FormularioCarga extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         btnCargarEstudio = new javax.swing.JButton();
-        dniProEst = new javax.swing.JTextField();
-        jLabel16 = new javax.swing.JLabel();
         fechaRetxt = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -106,11 +104,6 @@ public class FormularioCarga extends javax.swing.JFrame {
                 nombretxtPacActionPerformed(evt);
             }
         });
-        nombretxtPac.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                nombretxtPacKeyTyped(evt);
-            }
-        });
 
         jLabel2.setForeground(new java.awt.Color(102, 102, 102));
         jLabel2.setText("Nombre");
@@ -120,6 +113,11 @@ public class FormularioCarga extends javax.swing.JFrame {
         apellidotxtPac.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 apellidotxtPacActionPerformed(evt);
+            }
+        });
+        apellidotxtPac.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                apellidotxtPacKeyTyped(evt);
             }
         });
 
@@ -133,6 +131,11 @@ public class FormularioCarga extends javax.swing.JFrame {
                 dnitxtActionPerformed(evt);
             }
         });
+        dnitxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                dnitxtKeyTyped(evt);
+            }
+        });
 
         jLabel4.setForeground(new java.awt.Color(102, 102, 102));
         jLabel4.setText("DNI");
@@ -144,6 +147,11 @@ public class FormularioCarga extends javax.swing.JFrame {
                 telefonotxtPacActionPerformed(evt);
             }
         });
+        telefonotxtPac.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                telefonotxtPacKeyTyped(evt);
+            }
+        });
 
         jLabel5.setForeground(new java.awt.Color(102, 102, 102));
         jLabel5.setText("Telefono");
@@ -153,6 +161,11 @@ public class FormularioCarga extends javax.swing.JFrame {
         mailtxtPac.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mailtxtPacActionPerformed(evt);
+            }
+        });
+        mailtxtPac.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                mailtxtPacKeyTyped(evt);
             }
         });
 
@@ -263,6 +276,11 @@ public class FormularioCarga extends javax.swing.JFrame {
                 nombretxtActionPerformed(evt);
             }
         });
+        nombretxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                nombretxtKeyTyped(evt);
+            }
+        });
 
         nombreSig.setForeground(new java.awt.Color(102, 102, 102));
         nombreSig.setText("Nombre");
@@ -272,6 +290,11 @@ public class FormularioCarga extends javax.swing.JFrame {
         apellidotxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 apellidotxtActionPerformed(evt);
+            }
+        });
+        apellidotxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                apellidotxtKeyTyped(evt);
             }
         });
 
@@ -285,6 +308,11 @@ public class FormularioCarga extends javax.swing.JFrame {
                 matriculatxtActionPerformed(evt);
             }
         });
+        matriculatxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                matriculatxtKeyTyped(evt);
+            }
+        });
 
         matriculaSig.setForeground(new java.awt.Color(102, 102, 102));
         matriculaSig.setText("Matricula");
@@ -296,6 +324,11 @@ public class FormularioCarga extends javax.swing.JFrame {
                 telefonoProtxtActionPerformed(evt);
             }
         });
+        telefonoProtxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                telefonoProtxtKeyTyped(evt);
+            }
+        });
 
         telefonoSig.setForeground(new java.awt.Color(102, 102, 102));
         telefonoSig.setText("Telefono");
@@ -305,6 +338,11 @@ public class FormularioCarga extends javax.swing.JFrame {
         emailProtxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 emailProtxtActionPerformed(evt);
+            }
+        });
+        emailProtxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                emailProtxtKeyTyped(evt);
             }
         });
 
@@ -323,6 +361,11 @@ public class FormularioCarga extends javax.swing.JFrame {
 
         dniProtxt.setBackground(new java.awt.Color(0, 51, 102));
         dniProtxt.setForeground(new java.awt.Color(255, 255, 255));
+        dniProtxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                dniProtxtKeyTyped(evt);
+            }
+        });
 
         dniSig.setForeground(new java.awt.Color(102, 102, 102));
         dniSig.setText("DNI");
@@ -400,7 +443,7 @@ public class FormularioCarga extends javax.swing.JFrame {
         PanelCargaEst.setBackground(new java.awt.Color(153, 204, 255));
         PanelCargaEst.setPreferredSize(new java.awt.Dimension(380, 500));
 
-        tituloEst.setFont(new java.awt.Font("Nirmala Text", 1, 18)); // NOI18N
+        tituloEst.setFont(new java.awt.Font("Nirmala Text Semilight", 1, 18)); // NOI18N
         tituloEst.setForeground(new java.awt.Color(0, 0, 0));
         tituloEst.setText("Formulario estudio");
 
@@ -417,6 +460,11 @@ public class FormularioCarga extends javax.swing.JFrame {
                 dniPacEstActionPerformed(evt);
             }
         });
+        dniPacEst.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                dniPacEstKeyTyped(evt);
+            }
+        });
 
         jLabel7.setForeground(new java.awt.Color(102, 102, 102));
         jLabel7.setText("Matricula del profesional");
@@ -426,6 +474,11 @@ public class FormularioCarga extends javax.swing.JFrame {
         matProEst.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 matProEstActionPerformed(evt);
+            }
+        });
+        matProEst.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                matProEstKeyTyped(evt);
             }
         });
 
@@ -482,17 +535,6 @@ public class FormularioCarga extends javax.swing.JFrame {
             }
         });
 
-        dniProEst.setBackground(new java.awt.Color(0, 51, 102));
-        dniProEst.setForeground(new java.awt.Color(255, 255, 255));
-        dniProEst.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dniProEstActionPerformed(evt);
-            }
-        });
-
-        jLabel16.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel16.setText("DNI del profesional");
-
         fechaRetxt.setForeground(new java.awt.Color(0, 0, 0));
         fechaRetxt.setText("default");
 
@@ -507,21 +549,27 @@ public class FormularioCarga extends javax.swing.JFrame {
                         .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(PanelCargaEstLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel7)
-                                    .addComponent(jLabel9)
-                                    .addComponent(jLabel10)
-                                    .addComponent(jLabel11)
-                                    .addComponent(jLabel12)
-                                    .addComponent(jLabel13)
-                                    .addComponent(jLabel14)
-                                    .addComponent(jLabel15)
-                                    .addComponent(jLabel8)
-                                    .addComponent(jLabel16))
-                                .addGap(18, 18, 18)
+                                    .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(PanelCargaEstLayout.createSequentialGroup()
+                                            .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(jLabel9)
+                                                .addComponent(jLabel10)
+                                                .addComponent(jLabel11)
+                                                .addComponent(jLabel13)
+                                                .addComponent(jLabel15)
+                                                .addComponent(jLabel8))
+                                            .addGap(33, 33, 33))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCargaEstLayout.createSequentialGroup()
+                                            .addComponent(jLabel7)
+                                            .addGap(18, 18, 18)))
+                                    .addGroup(PanelCargaEstLayout.createSequentialGroup()
+                                        .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel14)
+                                            .addComponent(jLabel12))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                                 .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(dniProEst)
                                     .addComponent(dniPacEst)
                                     .addComponent(matProEst)
                                     .addComponent(fechaEnt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -534,7 +582,7 @@ public class FormularioCarga extends javax.swing.JFrame {
                     .addGroup(PanelCargaEstLayout.createSequentialGroup()
                         .addGap(109, 109, 109)
                         .addComponent(tituloEst)))
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(11, Short.MAX_VALUE))
         );
         PanelCargaEstLayout.setVerticalGroup(
             PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -547,28 +595,24 @@ public class FormularioCarga extends javax.swing.JFrame {
                         .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel8)
                             .addComponent(dniPacEst, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(18, 18, 18)
                         .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel16)
-                            .addComponent(dniProEst, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel7)
-                            .addComponent(matProEst, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(matProEst, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel7))
                         .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(PanelCargaEstLayout.createSequentialGroup()
-                                .addGap(101, 101, 101)
+                                .addGap(106, 106, 106)
                                 .addComponent(jLabel11)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGap(55, 55, 55)
                                 .addComponent(jLabel12)
-                                .addGap(27, 27, 27)
+                                .addGap(18, 18, 18)
                                 .addComponent(jLabel13)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel14)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel15))
                             .addGroup(PanelCargaEstLayout.createSequentialGroup()
-                                .addGap(18, 18, 18)
+                                .addGap(23, 23, 23)
                                 .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(fechaRetxt)
                                     .addComponent(jLabel9))
@@ -578,9 +622,9 @@ public class FormularioCarga extends javax.swing.JFrame {
                                     .addComponent(jLabel10))
                                 .addGap(18, 18, 18)
                                 .addComponent(estado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(18, 18, 18)
                                 .addComponent(estudiosScroll, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
                         .addComponent(btnCargarEstudio))
                     .addComponent(jSeparator2))
                 .addContainerGap())
@@ -782,15 +826,15 @@ public class FormularioCarga extends javax.swing.JFrame {
     }//GEN-LAST:event_btnGuardarProfesionalActionPerformed
 
     private void btnCargarEstudioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCargarEstudioActionPerformed
-          //Controles del profesional
-          
-          //Control de que no este repetido
+      
+      //Control de que no este repetido
+      
           if(!buscarProMat(dniPacEst.getText())){
                 JOptionPane.showMessageDialog(this, "-Error. El profesional no fue encontrado-\n\n");
                 this.dispose();
                 return;
           }
-          if(!buscarPacDni(dniProEst.getText())){
+          if(!buscarPacDni(matProEst.getText())){
                 JOptionPane.showMessageDialog(this, "-Error. El paciente no fue encontrado-\n\n");
                 this.dispose();
                 return;
@@ -800,7 +844,6 @@ public class FormularioCarga extends javax.swing.JFrame {
             LocalDate fechaRe = LocalDate.now();
             java.util.Date dateEntrega = (java.util.Date) fechaEnt.getValue();
             //Crea cal para extraer dia, mes y anio
-            DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
             java.util.Calendar cal2 = java.util.Calendar.getInstance();
             cal2.setTime(dateEntrega);
             int diaR = fechaRe.getDayOfMonth();
@@ -816,7 +859,7 @@ public class FormularioCarga extends javax.swing.JFrame {
             Estudio est = new Estudio();
             EstudioController miEstudio = new EstudioController(est);
             miEstudio.ColocarDniPaciente(dniPacEst.getText().trim());
-            miEstudio.ColocarDniProfesional(dniProEst.getText().trim());
+            miEstudio.ColocarDniProfesional(matProEst.getText().trim());
             miEstudio.ColocarMatricula(matProEst.getText().trim());
             miEstudio.ColocarFechaRealizacion(fechaR);
             miEstudio.ColocarFechaEntrega(fechaE);
@@ -842,14 +885,105 @@ public class FormularioCarga extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_emailProtxtActionPerformed
 
-    private void dniProEstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dniProEstActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_dniProEstActionPerformed
+      private void dniPacEstKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_dniPacEstKeyTyped
+            char c = evt.getKeyChar();
+            if(!Character.isDigit(c) && c != java.awt.event.KeyEvent.VK_BACK_SPACE){
+                  evt.consume();
+                  java.awt.Toolkit.getDefaultToolkit().beep();
+            }
+      }//GEN-LAST:event_dniPacEstKeyTyped
 
-    private void nombretxtPacKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nombretxtPacKeyTyped
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nombretxtPacKeyTyped
+      private void matProEstKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_matProEstKeyTyped
+             char c = evt.getKeyChar();
+            if(!Character.isDigit(c) && c != java.awt.event.KeyEvent.VK_BACK_SPACE){
+                  evt.consume();
+                  java.awt.Toolkit.getDefaultToolkit().beep();
+            }
+      }//GEN-LAST:event_matProEstKeyTyped
 
+      private void matriculatxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_matriculatxtKeyTyped
+             char c = evt.getKeyChar();
+            if(!Character.isDigit(c) && c != java.awt.event.KeyEvent.VK_BACK_SPACE){
+                  evt.consume();
+                  java.awt.Toolkit.getDefaultToolkit().beep();
+            }
+      }//GEN-LAST:event_matriculatxtKeyTyped
+
+      private void telefonoProtxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_telefonoProtxtKeyTyped
+             char c = evt.getKeyChar();
+            if(!Character.isDigit(c) && c != java.awt.event.KeyEvent.VK_BACK_SPACE){
+                  evt.consume();
+                  java.awt.Toolkit.getDefaultToolkit().beep();
+            }
+      }//GEN-LAST:event_telefonoProtxtKeyTyped
+
+      private void dniProtxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_dniProtxtKeyTyped
+             char c = evt.getKeyChar();
+            if(!Character.isDigit(c) && c != java.awt.event.KeyEvent.VK_BACK_SPACE){
+                  evt.consume();
+                  java.awt.Toolkit.getDefaultToolkit().beep();
+            }
+      }//GEN-LAST:event_dniProtxtKeyTyped
+
+      private void nombretxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nombretxtKeyTyped
+             char c = evt.getKeyChar();
+            if(!(Character.isLetter(c) || c == java.awt.event.KeyEvent.VK_BACK_SPACE || c == java.awt.event.KeyEvent.VK_SPACE)){
+                  evt.consume();
+                  java.awt.Toolkit.getDefaultToolkit().beep();
+            }
+      }//GEN-LAST:event_nombretxtKeyTyped
+
+      private void apellidotxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_apellidotxtKeyTyped
+            char c = evt.getKeyChar();
+            if(!(Character.isLetter(c) || c == java.awt.event.KeyEvent.VK_BACK_SPACE || c == java.awt.event.KeyEvent.VK_SPACE)){
+                  evt.consume();
+                  java.awt.Toolkit.getDefaultToolkit().beep();
+            }
+      }//GEN-LAST:event_apellidotxtKeyTyped
+
+      private void nombretxtPacKeyTyped(java.awt.event.KeyEvent evt) {                                      
+            char c = evt.getKeyChar();
+            if(!(Character.isLetter(c) || c == java.awt.event.KeyEvent.VK_BACK_SPACE || c == java.awt.event.KeyEvent.VK_SPACE)){
+                  evt.consume();
+                  java.awt.Toolkit.getDefaultToolkit().beep();
+            }
+      }                                     
+
+      private void apellidotxtPacKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_apellidotxtPacKeyTyped
+            char c = evt.getKeyChar();
+            if(!(Character.isLetter(c) || c == java.awt.event.KeyEvent.VK_BACK_SPACE || c == java.awt.event.KeyEvent.VK_SPACE)){
+                  evt.consume();
+                  java.awt.Toolkit.getDefaultToolkit().beep();
+            }
+      }//GEN-LAST:event_apellidotxtPacKeyTyped
+
+      private void dnitxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_dnitxtKeyTyped
+            char c = evt.getKeyChar();
+            if(!Character.isDigit(c) && c != java.awt.event.KeyEvent.VK_BACK_SPACE){
+                  evt.consume();
+                  java.awt.Toolkit.getDefaultToolkit().beep();
+            }
+      }//GEN-LAST:event_dnitxtKeyTyped
+
+      private void telefonotxtPacKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_telefonotxtPacKeyTyped
+            char c = evt.getKeyChar();
+            if(!Character.isDigit(c) && c != java.awt.event.KeyEvent.VK_BACK_SPACE){
+                  evt.consume();
+                  java.awt.Toolkit.getDefaultToolkit().beep();
+            }
+      }//GEN-LAST:event_telefonotxtPacKeyTyped
+
+      private void mailtxtPacKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_mailtxtPacKeyTyped
+            char c = evt.getKeyChar();
+            if(c == java.awt.event.KeyEvent.VK_SPACE)
+                  evt.consume();
+      }//GEN-LAST:event_mailtxtPacKeyTyped
+
+      private void emailProtxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_emailProtxtKeyTyped
+            char c = evt.getKeyChar();
+            if(c == java.awt.event.KeyEvent.VK_SPACE)
+                  evt.consume();
+      }//GEN-LAST:event_emailProtxtKeyTyped
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PanelCargaEst;
@@ -862,7 +996,6 @@ public class FormularioCarga extends javax.swing.JFrame {
     private javax.swing.JButton btnGuardarPaciente;
     private javax.swing.JButton btnGuardarProfesional;
     private javax.swing.JTextField dniPacEst;
-    private javax.swing.JTextField dniProEst;
     private javax.swing.JTextField dniProtxt;
     private javax.swing.JLabel dniSig;
     private javax.swing.JTextField dnitxt;
@@ -879,7 +1012,6 @@ public class FormularioCarga extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
