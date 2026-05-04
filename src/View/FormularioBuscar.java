@@ -194,7 +194,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
             confirmarProbtn = new javax.swing.JButton();
             cancelarProbtn = new javax.swing.JButton();
 
-            setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+            setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
             jPanelBuscarPaciente.setBackground(new java.awt.Color(153, 204, 255));
 
@@ -203,16 +203,24 @@ public class FormularioBuscar extends javax.swing.JFrame {
             jLabel1.setForeground(new java.awt.Color(0, 0, 0));
             jLabel1.setText("Buscar paciente");
 
-            dniPacBuscarTxt.setBackground(new java.awt.Color(0, 102, 153));
+            dniPacBuscarTxt.setBackground(new java.awt.Color(51, 51, 51));
+            dniPacBuscarTxt.setForeground(new java.awt.Color(255, 255, 255));
             dniPacBuscarTxt.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
                         dniPacBuscarTxtActionPerformed(evt);
+                  }
+            });
+            dniPacBuscarTxt.addKeyListener(new java.awt.event.KeyAdapter() {
+                  public void keyTyped(java.awt.event.KeyEvent evt) {
+                        dniPacBuscarTxtKeyTyped(evt);
                   }
             });
 
             jLabel4.setForeground(new java.awt.Color(102, 102, 102));
             jLabel4.setText("DNI");
 
+            btnBuscarPac.setBackground(new java.awt.Color(0, 51, 102));
+            btnBuscarPac.setForeground(new java.awt.Color(255, 255, 255));
             btnBuscarPac.setText("Buscar");
             btnBuscarPac.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -260,16 +268,24 @@ public class FormularioBuscar extends javax.swing.JFrame {
             jLabel2.setForeground(new java.awt.Color(0, 0, 0));
             jLabel2.setText("Buscar profesional");
 
-            dniProBuscarTxt.setBackground(new java.awt.Color(0, 102, 153));
+            dniProBuscarTxt.setBackground(new java.awt.Color(51, 51, 51));
+            dniProBuscarTxt.setForeground(new java.awt.Color(255, 255, 255));
             dniProBuscarTxt.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
                         dniProBuscarTxtActionPerformed(evt);
+                  }
+            });
+            dniProBuscarTxt.addKeyListener(new java.awt.event.KeyAdapter() {
+                  public void keyTyped(java.awt.event.KeyEvent evt) {
+                        dniProBuscarTxtKeyTyped(evt);
                   }
             });
 
             jLabel5.setForeground(new java.awt.Color(102, 102, 102));
             jLabel5.setText("Matricula");
 
+            btnBuscarPro.setBackground(new java.awt.Color(0, 51, 102));
+            btnBuscarPro.setForeground(new java.awt.Color(255, 255, 255));
             btnBuscarPro.setText("Buscar");
             btnBuscarPro.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -285,13 +301,15 @@ public class FormularioBuscar extends javax.swing.JFrame {
                         .addContainerGap(141, Short.MAX_VALUE)
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanelBuscarProfesionalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                              .addComponent(jLabel2)
-                              .addComponent(dniProBuscarTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(dniProBuscarTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(159, Short.MAX_VALUE))
                   .addGroup(jPanelBuscarProfesionalLayout.createSequentialGroup()
                         .addGap(198, 198, 198)
                         .addComponent(btnBuscarPro)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                  .addGroup(jPanelBuscarProfesionalLayout.createSequentialGroup()
+                        .addGap(170, 170, 170)
+                        .addComponent(jLabel2)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             );
             jPanelBuscarProfesionalLayout.setVerticalGroup(
@@ -315,16 +333,24 @@ public class FormularioBuscar extends javax.swing.JFrame {
             jLabel3.setForeground(new java.awt.Color(0, 0, 0));
             jLabel3.setText("Ingrese datos de paciente");
 
-            dniPacContarEstTxt.setBackground(new java.awt.Color(0, 102, 153));
+            dniPacContarEstTxt.setBackground(new java.awt.Color(51, 51, 51));
+            dniPacContarEstTxt.setForeground(new java.awt.Color(255, 255, 255));
             dniPacContarEstTxt.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
                         dniPacContarEstTxtActionPerformed(evt);
+                  }
+            });
+            dniPacContarEstTxt.addKeyListener(new java.awt.event.KeyAdapter() {
+                  public void keyTyped(java.awt.event.KeyEvent evt) {
+                        dniPacContarEstTxtKeyTyped(evt);
                   }
             });
 
             jLabel6.setForeground(new java.awt.Color(102, 102, 102));
             jLabel6.setText("DNI");
 
+            btnContarEstPac.setBackground(new java.awt.Color(0, 51, 102));
+            btnContarEstPac.setForeground(new java.awt.Color(255, 255, 255));
             btnContarEstPac.setText("Buscar");
             btnContarEstPac.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -336,21 +362,20 @@ public class FormularioBuscar extends javax.swing.JFrame {
             jPanelContarEstPac.setLayout(jPanelContarEstPacLayout);
             jPanelContarEstPacLayout.setHorizontalGroup(
                   jPanelContarEstPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                  .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelContarEstPacLayout.createSequentialGroup()
-                        .addGap(0, 184, Short.MAX_VALUE)
+                  .addGroup(jPanelContarEstPacLayout.createSequentialGroup()
                         .addGroup(jPanelContarEstPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                              .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelContarEstPacLayout.createSequentialGroup()
-                                    .addComponent(jLabel6)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(dniPacContarEstTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(77, 77, 77))
-                              .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelContarEstPacLayout.createSequentialGroup()
-                                    .addComponent(jLabel3)
-                                    .addGap(63, 63, 63))))
-                  .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelContarEstPacLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnContarEstPac)
-                        .addGap(135, 135, 135))
+                              .addGroup(jPanelContarEstPacLayout.createSequentialGroup()
+                                    .addGap(90, 90, 90)
+                                    .addGroup(jPanelContarEstPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                          .addComponent(jLabel3)
+                                          .addGroup(jPanelContarEstPacLayout.createSequentialGroup()
+                                                .addComponent(jLabel6)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(dniPacContarEstTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                              .addGroup(jPanelContarEstPacLayout.createSequentialGroup()
+                                    .addGap(165, 165, 165)
+                                    .addComponent(btnContarEstPac)))
+                        .addContainerGap(157, Short.MAX_VALUE))
             );
             jPanelContarEstPacLayout.setVerticalGroup(
                   jPanelContarEstPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -361,9 +386,9 @@ public class FormularioBuscar extends javax.swing.JFrame {
                         .addGroup(jPanelContarEstPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                               .addComponent(dniPacContarEstTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                               .addComponent(jLabel6))
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnContarEstPac)
-                        .addContainerGap(318, Short.MAX_VALUE))
+                        .addContainerGap(330, Short.MAX_VALUE))
             );
 
             jPanelBuscarMatPro.setBackground(new java.awt.Color(153, 204, 255));
@@ -373,16 +398,24 @@ public class FormularioBuscar extends javax.swing.JFrame {
             jLabel7.setForeground(new java.awt.Color(0, 0, 0));
             jLabel7.setText("Buscar profesional");
 
-            matProBuscartxt.setBackground(new java.awt.Color(0, 102, 153));
+            matProBuscartxt.setBackground(new java.awt.Color(51, 51, 51));
+            matProBuscartxt.setForeground(new java.awt.Color(255, 255, 255));
             matProBuscartxt.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
                         matProBuscartxtActionPerformed(evt);
+                  }
+            });
+            matProBuscartxt.addKeyListener(new java.awt.event.KeyAdapter() {
+                  public void keyTyped(java.awt.event.KeyEvent evt) {
+                        matProBuscartxtKeyTyped(evt);
                   }
             });
 
             jLabel8.setForeground(new java.awt.Color(102, 102, 102));
             jLabel8.setText("Matricula");
 
+            btnBuscarMatPro.setBackground(new java.awt.Color(0, 51, 102));
+            btnBuscarMatPro.setForeground(new java.awt.Color(255, 255, 255));
             btnBuscarMatPro.setText("Buscar");
             btnBuscarMatPro.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -395,17 +428,19 @@ public class FormularioBuscar extends javax.swing.JFrame {
             jPanelBuscarMatProLayout.setHorizontalGroup(
                   jPanelBuscarMatProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                   .addGroup(jPanelBuscarMatProLayout.createSequentialGroup()
-                        .addContainerGap(121, Short.MAX_VALUE)
-                        .addComponent(jLabel8)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanelBuscarMatProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addContainerGap(65, Short.MAX_VALUE)
+                        .addGroup(jPanelBuscarMatProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                               .addComponent(jLabel7)
-                              .addComponent(matProBuscartxt, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(145, Short.MAX_VALUE))
-                  .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBuscarMatProLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnBuscarMatPro)
-                        .addGap(125, 125, 125))
+                              .addGroup(jPanelBuscarMatProLayout.createSequentialGroup()
+                                    .addComponent(jLabel8)
+                                    .addGroup(jPanelBuscarMatProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                          .addGroup(jPanelBuscarMatProLayout.createSequentialGroup()
+                                                .addGap(62, 62, 62)
+                                                .addComponent(btnBuscarMatPro))
+                                          .addGroup(jPanelBuscarMatProLayout.createSequentialGroup()
+                                                .addGap(18, 18, 18)
+                                                .addComponent(matProBuscartxt, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addContainerGap(189, Short.MAX_VALUE))
             );
             jPanelBuscarMatProLayout.setVerticalGroup(
                   jPanelBuscarMatProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -439,11 +474,17 @@ public class FormularioBuscar extends javax.swing.JFrame {
                   }
             });
 
-            campoDniPac.setForeground(new java.awt.Color(153, 153, 153));
+            campoDniPac.setBackground(new java.awt.Color(51, 51, 51));
+            campoDniPac.setForeground(new java.awt.Color(255, 255, 255));
             campoDniPac.setToolTipText("Ingrese el DNI");
             campoDniPac.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
                         campoDniPacActionPerformed(evt);
+                  }
+            });
+            campoDniPac.addKeyListener(new java.awt.event.KeyAdapter() {
+                  public void keyTyped(java.awt.event.KeyEvent evt) {
+                        campoDniPacKeyTyped(evt);
                   }
             });
 
@@ -676,12 +717,17 @@ public class FormularioBuscar extends javax.swing.JFrame {
             emailSig1.setForeground(new java.awt.Color(102, 102, 102));
             emailSig1.setText("Email");
 
-            campoDniProMod.setBackground(new java.awt.Color(0, 51, 102));
+            campoDniProMod.setBackground(new java.awt.Color(51, 51, 51));
             campoDniProMod.setForeground(new java.awt.Color(255, 255, 255));
             campoDniProMod.setToolTipText("Ingrese el DNI");
             campoDniProMod.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
                         campoDniProModActionPerformed(evt);
+                  }
+            });
+            campoDniProMod.addKeyListener(new java.awt.event.KeyAdapter() {
+                  public void keyTyped(java.awt.event.KeyEvent evt) {
+                        campoDniProModKeyTyped(evt);
                   }
             });
 
@@ -808,7 +854,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
                         .addComponent(confirmarProbtn)
                         .addGap(18, 18, 18)
                         .addComponent(cancelarProbtn)
-                        .addContainerGap(189, Short.MAX_VALUE))
+                        .addContainerGap(190, Short.MAX_VALUE))
             );
 
             javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -1143,6 +1189,54 @@ public class FormularioBuscar extends javax.swing.JFrame {
     private void cancelarProbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarProbtnActionPerformed
         this.dispose();
     }//GEN-LAST:event_cancelarProbtnActionPerformed
+
+      private void dniPacBuscarTxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_dniPacBuscarTxtKeyTyped
+            char c = evt.getKeyChar();
+            if(!Character.isDigit(c) && c != java.awt.event.KeyEvent.VK_BACK_SPACE){
+                  evt.consume();
+                  java.awt.Toolkit.getDefaultToolkit().beep();
+            }
+      }//GEN-LAST:event_dniPacBuscarTxtKeyTyped
+
+      private void dniProBuscarTxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_dniProBuscarTxtKeyTyped
+            char c = evt.getKeyChar();
+            if(!Character.isDigit(c) && c != java.awt.event.KeyEvent.VK_BACK_SPACE){
+                  evt.consume();
+                  java.awt.Toolkit.getDefaultToolkit().beep();
+            }
+      }//GEN-LAST:event_dniProBuscarTxtKeyTyped
+
+      private void dniPacContarEstTxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_dniPacContarEstTxtKeyTyped
+            char c = evt.getKeyChar();
+            if(!Character.isDigit(c) && c != java.awt.event.KeyEvent.VK_BACK_SPACE){
+                  evt.consume();
+                  java.awt.Toolkit.getDefaultToolkit().beep();
+            }
+      }//GEN-LAST:event_dniPacContarEstTxtKeyTyped
+
+      private void matProBuscartxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_matProBuscartxtKeyTyped
+            char c = evt.getKeyChar();
+            if(!Character.isDigit(c) && c != java.awt.event.KeyEvent.VK_BACK_SPACE){
+                  evt.consume();
+                  java.awt.Toolkit.getDefaultToolkit().beep();
+            }
+      }//GEN-LAST:event_matProBuscartxtKeyTyped
+
+      private void campoDniPacKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_campoDniPacKeyTyped
+            char c = evt.getKeyChar();
+            if(!Character.isDigit(c) && c != java.awt.event.KeyEvent.VK_BACK_SPACE){
+                  evt.consume();
+                  java.awt.Toolkit.getDefaultToolkit().beep();
+            }
+      }//GEN-LAST:event_campoDniPacKeyTyped
+
+      private void campoDniProModKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_campoDniProModKeyTyped
+            char c = evt.getKeyChar();
+            if(!Character.isDigit(c) && c != java.awt.event.KeyEvent.VK_BACK_SPACE){
+                  evt.consume();
+                  java.awt.Toolkit.getDefaultToolkit().beep();
+            }
+      }//GEN-LAST:event_campoDniProModKeyTyped
 
       // Variables declaration - do not modify//GEN-BEGIN:variables
       private javax.swing.JLabel apellidoSig;
