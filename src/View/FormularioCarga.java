@@ -106,6 +106,11 @@ public class FormularioCarga extends javax.swing.JFrame {
                 nombretxtPacActionPerformed(evt);
             }
         });
+        nombretxtPac.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                nombretxtPacKeyTyped(evt);
+            }
+        });
 
         jLabel2.setForeground(new java.awt.Color(102, 102, 102));
         jLabel2.setText("Nombre");
@@ -840,6 +845,10 @@ public class FormularioCarga extends javax.swing.JFrame {
     private void dniProEstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dniProEstActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_dniProEstActionPerformed
+
+    private void nombretxtPacKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nombretxtPacKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nombretxtPacKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
