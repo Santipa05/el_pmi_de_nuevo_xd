@@ -6,6 +6,7 @@ public class PMI {
     
     // 2. EL REGISTRO DE ESTUDIOS
     //CACA
+      //la puta de la cabra
     
     // 3. EL CATÁLOGO DE ANÁLISIS 
     public static HashMap<Integer, String> catalogoAnalisis = new HashMap<>();
