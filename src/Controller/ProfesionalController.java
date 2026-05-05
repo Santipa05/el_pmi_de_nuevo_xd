@@ -1,5 +1,7 @@
 package Controller;
+import Model.Persona;
 import Model.Profesional;
+import java.util.HashMap;
 
 public class ProfesionalController {
     private Profesional profesional;
@@ -65,6 +67,18 @@ public class ProfesionalController {
    
     public Profesional ObtenerProfesional() {
         return profesional;
+    }
+    
+    public Profesional ObtenerProfesionalMat(String matricula, HashMap <String, Persona> mapaPersonas) {
+        for (Persona p : mapaPersonas.values()){
+            if (p instanceof Profesional pro){
+                ProfesionalController miPro = new ProfesionalController(pro);
+                if(miPro.muestraMatricula().equals(matricula)){
+                    return miPro.ObtenerProfesional();
+                }
+            }
+        }
+        return null;
     }
     
     

@@ -2,6 +2,7 @@ package View;
 
 
 import Controller.PacienteController;
+import Controller.PersonaController;
 import Controller.ProfesionalController;
 import Model.Estudio;
 import Model.Paciente;
@@ -17,6 +18,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
     private String accionActual;
     private ArrayList<Estudio> listaEstudios;
     private int op;
+    private Profesional encontroPro;
 
       public FormularioBuscar() {
             initComponents();
@@ -186,7 +188,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
         separador1 = new javax.swing.JSeparator();
         buscarModPro = new javax.swing.JButton();
         emailSig1 = new javax.swing.JLabel();
-        campoDniProMod = new javax.swing.JTextField();
+        campoMatiProMod = new javax.swing.JTextField();
         noEncontro1 = new javax.swing.JLabel();
         matMod = new javax.swing.JLabel();
         nombreSig1 = new javax.swing.JLabel();
@@ -505,6 +507,17 @@ public class FormularioBuscar extends javax.swing.JFrame {
                 campoTelModActionPerformed(evt);
             }
         });
+        campoTelMod.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                campoTelModKeyTyped(evt);
+            }
+        });
+
+        campoMailMod.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                campoMailModKeyTyped(evt);
+            }
+        });
 
         separador.setBackground(new java.awt.Color(153, 204, 255));
         separador.setForeground(new java.awt.Color(102, 102, 102));
@@ -652,6 +665,11 @@ public class FormularioBuscar extends javax.swing.JFrame {
                 modTelInput1ActionPerformed(evt);
             }
         });
+        modTelInput1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                modTelInput1KeyTyped(evt);
+            }
+        });
 
         dniTXT1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         dniTXT1.setForeground(new java.awt.Color(0, 0, 0));
@@ -659,6 +677,11 @@ public class FormularioBuscar extends javax.swing.JFrame {
 
         modMailInput1.setBackground(new java.awt.Color(0, 102, 153));
         modMailInput1.setForeground(new java.awt.Color(255, 255, 255));
+        modMailInput1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                modMailInput1KeyTyped(evt);
+            }
+        });
 
         titulo1.setFont(new java.awt.Font("Product Sans", 1, 18)); // NOI18N
         titulo1.setForeground(new java.awt.Color(0, 0, 0));
@@ -670,7 +693,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
 
         subtitulo1.setFont(new java.awt.Font("Product Sans", 1, 18)); // NOI18N
         subtitulo1.setForeground(new java.awt.Color(102, 102, 102));
-        subtitulo1.setText("DNI");
+        subtitulo1.setText("Matricula");
 
         separador1.setBackground(new java.awt.Color(153, 204, 255));
         separador1.setForeground(new java.awt.Color(102, 102, 102));
@@ -688,17 +711,17 @@ public class FormularioBuscar extends javax.swing.JFrame {
         emailSig1.setForeground(new java.awt.Color(102, 102, 102));
         emailSig1.setText("Email");
 
-        campoDniProMod.setBackground(new java.awt.Color(51, 51, 51));
-        campoDniProMod.setForeground(new java.awt.Color(255, 255, 255));
-        campoDniProMod.setToolTipText("Ingrese el DNI");
-        campoDniProMod.addActionListener(new java.awt.event.ActionListener() {
+        campoMatiProMod.setBackground(new java.awt.Color(51, 51, 51));
+        campoMatiProMod.setForeground(new java.awt.Color(255, 255, 255));
+        campoMatiProMod.setToolTipText("Ingrese el DNI");
+        campoMatiProMod.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoDniProModActionPerformed(evt);
+                campoMatiProModActionPerformed(evt);
             }
         });
-        campoDniProMod.addKeyListener(new java.awt.event.KeyAdapter() {
+        campoMatiProMod.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                campoDniProModKeyTyped(evt);
+                campoMatiProModKeyTyped(evt);
             }
         });
 
@@ -742,10 +765,12 @@ public class FormularioBuscar extends javax.swing.JFrame {
             .addGroup(jPanelModificarProLayout.createSequentialGroup()
                 .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelModificarProLayout.createSequentialGroup()
-                        .addGap(59, 59, 59)
+                        .addGap(43, 43, 43)
                         .addComponent(subtitulo1)
-                        .addGap(23, 23, 23)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(titulo1)
+                            .addComponent(campoMatiProMod, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanelModificarProLayout.createSequentialGroup()
                                 .addComponent(separador1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -773,13 +798,11 @@ public class FormularioBuscar extends javax.swing.JFrame {
                                             .addComponent(confirmarProbtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addGroup(jPanelModificarProLayout.createSequentialGroup()
                                         .addGap(22, 22, 22)
-                                        .addComponent(noEncontro1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addComponent(campoDniProMod, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(titulo1)))
+                                        .addComponent(noEncontro1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                     .addGroup(jPanelModificarProLayout.createSequentialGroup()
-                        .addGap(166, 166, 166)
+                        .addGap(193, 193, 193)
                         .addComponent(buscarModPro, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
         jPanelModificarProLayout.setVerticalGroup(
             jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -788,11 +811,11 @@ public class FormularioBuscar extends javax.swing.JFrame {
                 .addComponent(titulo1)
                 .addGap(18, 18, 18)
                 .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(campoDniProMod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoMatiProMod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(subtitulo1))
                 .addGap(18, 18, 18)
                 .addComponent(buscarModPro)
-                .addGap(11, 11, 11)
+                .addGap(18, 18, 18)
                 .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanelModificarProLayout.createSequentialGroup()
                         .addComponent(noEncontro1)
@@ -825,7 +848,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
                 .addComponent(confirmarProbtn)
                 .addGap(18, 18, 18)
                 .addComponent(cancelarProbtn)
-                .addContainerGap(190, Short.MAX_VALUE))
+                .addContainerGap(182, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -999,6 +1022,55 @@ public class FormularioBuscar extends javax.swing.JFrame {
             confirmarProbtn.setEnabled(false);
         }     
     }
+    
+    private boolean validarDatosBaseMod(String email, String telefono, String dniMod) {
+        //Control campos vacios
+        if (telefono.isEmpty() || email.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "No pueden haber campos vacios.");
+            return false;
+        }
+        //Control de formato de email
+        if (!email.contains("@")) {
+            JOptionPane.showMessageDialog(this, "El email debe contener '@' ");
+            return false;
+        }
+        if (email.contains(" ")) {
+            JOptionPane.showMessageDialog(this, "El email no puede contener espacios");
+            return false;
+        }
+        //Control de Teléfono y Email
+        for (Persona p : mapaPersonas.values()) {
+            PersonaController pc = new PersonaController(p);
+            
+            if(pc.muestraDni().equals(dniMod)){
+                continue;
+            }
+            
+            if (pc.muestraTelefono().equals(telefono)) {
+                JOptionPane.showMessageDialog(this, "Error: El teléfono ya pertenece a otro usuario.");
+                return false;
+            }
+            if (pc.muestraMail().equalsIgnoreCase(email)) {
+                JOptionPane.showMessageDialog(this, "Error: El email ya pertenece a otro usuario.");
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    private boolean buscarProMat(String matBusqueda){
+        for (Persona p : mapaPersonas.values()){
+            if (p instanceof Profesional pro){
+                ProfesionalController miPro = new ProfesionalController(pro);
+                
+                if(miPro.muestraMatricula().equals(matBusqueda)){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    
       
     private void btnBuscarPacActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarPacActionPerformed
         String dniBusqueda = dniPacBuscarTxt.getText();
@@ -1101,20 +1173,24 @@ public class FormularioBuscar extends javax.swing.JFrame {
     }//GEN-LAST:event_campoTelModActionPerformed
 
     private void btnConfirmarPacModActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmarPacModActionPerformed
-        PacienteController miPaciente = obtenerPac(dniTXT.getText());
-        miPaciente.colocarTelefono(campoTelMod.getText());
-        miPaciente.colocarEmail(campoMailMod.getText());
-        miPaciente.colocarObraSocial(campoModObSocPac.isSelected());
-        
-        mapaPersonas.put(miPaciente.muestraDni(), miPaciente.obtenerPaciente());
-        muestraOnoCamposModPac(false);
-        JOptionPane.showMessageDialog(this, "Paciente modificado correctamente.");
-        subtitulo.setVisible(true);
-        subtitulo.setEnabled(true);
-        campoDniPac.setVisible(true);
-        campoDniPac.setEnabled(true);
-        buscarModPac.setVisible(true);
-        buscarModPac.setEnabled(true);
+        String email = campoMailMod.getText().trim();
+        String telefono = campoTelMod.getText().trim();
+        String dniMod = dniTXT.getText().trim();
+        if (validarDatosBaseMod(email, telefono, dniMod)){
+            PacienteController miPaciente = obtenerPac(dniMod);
+            miPaciente.colocarTelefono(telefono);
+            miPaciente.colocarEmail(email);
+            miPaciente.colocarObraSocial(campoModObSocPac.isSelected());
+            mapaPersonas.put(miPaciente.muestraDni(), miPaciente.obtenerPaciente());
+            muestraOnoCamposModPac(false);
+            JOptionPane.showMessageDialog(this, "Paciente modificado correctamente.");
+            subtitulo.setVisible(true);
+            subtitulo.setEnabled(true);
+            campoDniPac.setVisible(true);
+            campoDniPac.setEnabled(true);
+            buscarModPac.setVisible(true);
+            buscarModPac.setEnabled(true);
+        }
     }//GEN-LAST:event_btnConfirmarPacModActionPerformed
 
     private void modTelInput1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modTelInput1ActionPerformed
@@ -1122,16 +1198,20 @@ public class FormularioBuscar extends javax.swing.JFrame {
     }//GEN-LAST:event_modTelInput1ActionPerformed
 
     private void buscarModProActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarModProActionPerformed
-        String dniBusqueda = campoDniProMod.getText();
-        if (buscarProDni(dniBusqueda)){
+        String matBusqueda = campoMatiProMod.getText();
+        if (buscarProMat(matBusqueda)){
+            Profesional pr = new Profesional();
+            ProfesionalController miPro = new ProfesionalController(pr);
+            Profesional pr2 = miPro.ObtenerProfesionalMat(matBusqueda, mapaPersonas);
+            ProfesionalController miPro2 = new ProfesionalController(pr2);
             //Mostramos todo para modificar
             muestraOnoCamposModPro(true);
-            nombreTXT1.setText(obtenerPro(dniBusqueda).muestraNombre());
-            apellidoTXT1.setText(obtenerPro(dniBusqueda).muestraApellido());
-            dniTXT1.setText(obtenerPro(dniBusqueda).muestraDni());
-            modTelInput1.setText(obtenerPro(dniBusqueda).muestraTelefono());
-            modMailInput1.setText(obtenerPro(dniBusqueda).muestraMail());
-            matriculaTXT1.setText(obtenerPro(dniBusqueda).muestraMatricula());
+            nombreTXT1.setText(miPro2.muestraNombre());
+            apellidoTXT1.setText(miPro2.muestraApellido());
+            dniTXT1.setText(miPro2.muestraDni());
+            modTelInput1.setText(miPro2.muestraTelefono());
+            modMailInput1.setText(miPro2.muestraMail());
+            matriculaTXT1.setText(miPro2.muestraMatricula());
         }
         else{
             muestraOnoCamposModPro(false);
@@ -1139,18 +1219,22 @@ public class FormularioBuscar extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_buscarModProActionPerformed
 
-    private void campoDniProModActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDniProModActionPerformed
+    private void campoMatiProModActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoMatiProModActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoDniProModActionPerformed
+    }//GEN-LAST:event_campoMatiProModActionPerformed
 
     private void confirmarProbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarProbtnActionPerformed
-        ProfesionalController miProfesional = obtenerPro(dniTXT1.getText());
-        miProfesional.colocarTelefono(modTelInput1.getText());
-        miProfesional.colocarEmail(modMailInput1.getText());
-        
-        mapaPersonas.put(miProfesional.muestraDni(), miProfesional.ObtenerProfesional());
-        muestraOnoCamposModPro(false);
-        JOptionPane.showMessageDialog(this, "Profesional modificado correctamente.");
+        String email = modMailInput1.getText().trim();
+        String telefono = modTelInput1.getText().trim();
+        String dniMod = dniTXT1.getText().trim();
+        if (validarDatosBaseMod(email, telefono, dniMod)){
+            ProfesionalController miProfesional = obtenerPro(dniMod);
+            miProfesional.colocarTelefono(telefono);
+            miProfesional.colocarEmail(email);
+            mapaPersonas.put(miProfesional.muestraDni(), miProfesional.ObtenerProfesional());
+            muestraOnoCamposModPro(false);
+            JOptionPane.showMessageDialog(this, "Profesional modificado correctamente.");
+        }
     }//GEN-LAST:event_confirmarProbtnActionPerformed
 
     private void btnCancelarPacModActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarPacModActionPerformed
@@ -1193,13 +1277,13 @@ public class FormularioBuscar extends javax.swing.JFrame {
             }
       }//GEN-LAST:event_campoDniPacKeyTyped
 
-      private void campoDniProModKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_campoDniProModKeyTyped
+      private void campoMatiProModKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_campoMatiProModKeyTyped
             char c = evt.getKeyChar();
             if(!Character.isDigit(c) && c != java.awt.event.KeyEvent.VK_BACK_SPACE){
                   evt.consume();
                   java.awt.Toolkit.getDefaultToolkit().beep();
             }
-      }//GEN-LAST:event_campoDniProModKeyTyped
+      }//GEN-LAST:event_campoMatiProModKeyTyped
 
     private void matProBuscartxt(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matProBuscartxt
         
@@ -1212,6 +1296,34 @@ public class FormularioBuscar extends javax.swing.JFrame {
                   java.awt.Toolkit.getDefaultToolkit().beep();
             }
     }//GEN-LAST:event_matProBuscarTxtKeyTyped
+
+    private void campoTelModKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_campoTelModKeyTyped
+        char c = evt.getKeyChar();
+            if(!Character.isDigit(c) && c != java.awt.event.KeyEvent.VK_BACK_SPACE){
+                  evt.consume();
+                  java.awt.Toolkit.getDefaultToolkit().beep();
+            }
+    }//GEN-LAST:event_campoTelModKeyTyped
+
+    private void campoMailModKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_campoMailModKeyTyped
+        char c = evt.getKeyChar();
+            if(c == java.awt.event.KeyEvent.VK_SPACE)
+                  evt.consume();
+    }//GEN-LAST:event_campoMailModKeyTyped
+
+    private void modTelInput1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_modTelInput1KeyTyped
+        char c = evt.getKeyChar();
+            if(!Character.isDigit(c) && c != java.awt.event.KeyEvent.VK_BACK_SPACE){
+                  evt.consume();
+                  java.awt.Toolkit.getDefaultToolkit().beep();
+            }
+    }//GEN-LAST:event_modTelInput1KeyTyped
+
+    private void modMailInput1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_modMailInput1KeyTyped
+        char c = evt.getKeyChar();
+            if(c == java.awt.event.KeyEvent.VK_SPACE)
+                  evt.consume();
+    }//GEN-LAST:event_modMailInput1KeyTyped
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel apellidoSig;
@@ -1227,8 +1339,8 @@ public class FormularioBuscar extends javax.swing.JFrame {
     private javax.swing.JButton buscarModPac;
     private javax.swing.JButton buscarModPro;
     private javax.swing.JTextField campoDniPac;
-    private javax.swing.JTextField campoDniProMod;
     private javax.swing.JTextField campoMailMod;
+    private javax.swing.JTextField campoMatiProMod;
     private javax.swing.JCheckBox campoModObSocPac;
     private javax.swing.JTextField campoTelMod;
     private javax.swing.JButton cancelarProbtn;
