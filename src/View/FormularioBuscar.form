@@ -209,38 +209,37 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="139" max="-2" attributes="0"/>
-                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="matProBuscarTxt" min="-2" pref="150" max="-2" attributes="0"/>
-                      </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="163" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
                           <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="184" max="-2" attributes="0"/>
-                          <Component id="btnBuscarPro" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="btnBuscarPro" min="-2" max="-2" attributes="0"/>
+                              <Component id="matProBuscarTxt" min="-2" pref="146" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="151" max="32767" attributes="0"/>
+                  <EmptySpace pref="103" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="matProBuscarTxt" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="matProBuscarTxt" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="btnBuscarPro" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="266" max="32767" attributes="0"/>
+                  <EmptySpace pref="145" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -790,9 +789,13 @@
         <Component class="javax.swing.JTextField" name="campoTelMod">
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoTelModActionPerformed"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="campoTelModKeyTyped"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="campoMailMod">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="campoMailModKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JSeparator" name="separador">
           <Properties>
@@ -858,11 +861,13 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                           <Component id="subtitulo1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="titulo1" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoMatiProMod" min="-2" pref="237" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="separador1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -899,16 +904,14 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <Component id="campoDniProMod" alignment="0" min="-2" pref="237" max="-2" attributes="0"/>
-                              <Component id="titulo1" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="166" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="193" max="-2" attributes="0"/>
                           <Component id="buscarModPro" min="-2" pref="118" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="75" max="32767" attributes="0"/>
+                  <EmptySpace pref="55" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -919,12 +922,12 @@
                   <Component id="titulo1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="campoDniProMod" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="campoMatiProMod" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="subtitulo1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="buscarModPro" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="noEncontro1" min="-2" max="-2" attributes="0"/>
@@ -965,7 +968,7 @@
                   <Component id="confirmarProbtn" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="cancelarProbtn" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="190" max="32767" attributes="0"/>
+                  <EmptySpace pref="182" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1026,6 +1029,7 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="modTelInput1ActionPerformed"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="modTelInput1KeyTyped"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="dniTXT1">
@@ -1048,6 +1052,9 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="modMailInput1KeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="titulo1">
           <Properties>
@@ -1079,7 +1086,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="66" red="66" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="DNI"/>
+            <Property name="text" type="java.lang.String" value="Matricula"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JSeparator" name="separador1">
@@ -1115,7 +1122,7 @@
             <Property name="text" type="java.lang.String" value="Email"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="campoDniProMod">
+        <Component class="javax.swing.JTextField" name="campoMatiProMod">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="33" red="33" type="rgb"/>
@@ -1126,8 +1133,8 @@
             <Property name="toolTipText" type="java.lang.String" value="Ingrese el DNI"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoDniProModActionPerformed"/>
-            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="campoDniProModKeyTyped"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoMatiProModActionPerformed"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="campoMatiProModKeyTyped"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="noEncontro1">

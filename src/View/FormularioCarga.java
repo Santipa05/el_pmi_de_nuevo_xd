@@ -20,7 +20,6 @@ public class FormularioCarga extends javax.swing.JFrame {
 
     private HashMap <String, Persona> mapaPersonas;
     private ArrayList<Estudio> listaEstudios;
-    private String modoActual; //Paciente profesional o estudio
     
       public FormularioCarga() {
             initComponents();
@@ -102,6 +101,11 @@ public class FormularioCarga extends javax.swing.JFrame {
         nombretxtPac.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nombretxtPacActionPerformed(evt);
+            }
+        });
+        nombretxtPac.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                nombretxtPacKeyTyped(evt);
             }
         });
 
@@ -361,6 +365,11 @@ public class FormularioCarga extends javax.swing.JFrame {
 
         dniProtxt.setBackground(new java.awt.Color(0, 51, 102));
         dniProtxt.setForeground(new java.awt.Color(255, 255, 255));
+        dniProtxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dniProtxtActionPerformed(evt);
+            }
+        });
         dniProtxt.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 dniProtxtKeyTyped(evt);
@@ -673,7 +682,6 @@ public class FormularioCarga extends javax.swing.JFrame {
       
       public void metAux(int op){
             if(op == 0){
-                  this.modoActual = "Paciente";
                   PanelCargaPac.setVisible(true);
                   PanelCargaPac.setEnabled(true);
                   PanelCargaPro.setVisible(false);
@@ -681,7 +689,6 @@ public class FormularioCarga extends javax.swing.JFrame {
                   PanelCargaEst.setVisible(false);
                   PanelCargaEst.setEnabled(false);
             } else if(op == 1){
-                  this.modoActual = "Profesional";
                   PanelCargaPro.setVisible(true);
                   PanelCargaPro.setEnabled(true);
                   PanelCargaPac.setVisible(false);
@@ -689,7 +696,6 @@ public class FormularioCarga extends javax.swing.JFrame {
                   PanelCargaEst.setVisible(false);
                   PanelCargaEst.setEnabled(false);
             } else{
-                  this.modoActual = "Estudio";
                   PanelCargaEst.setVisible(true);
                   PanelCargaEst.setEnabled(true);
                   PanelCargaPro.setVisible(false);
@@ -701,10 +707,20 @@ public class FormularioCarga extends javax.swing.JFrame {
             this.repaint();
       }
       
-      private boolean validarDatosBase(String dni, String email, String telefono) {
-        //Control de formato de email (no puede tener espacios)
+      
+      private boolean validarDatosBase(String nombre, String apellido, String dni, String email, String telefono) {
+        //Control campos vacios
+        if (nombre.isEmpty() || apellido.isEmpty() || telefono.isEmpty() || email.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "No pueden haber campos vacios.");
+            return false;
+        }
+        //Control de formato de email
+        if (!email.contains("@")) {
+            JOptionPane.showMessageDialog(this, "El email debe contener '@' ");
+            return false;
+        }
         if (email.contains(" ")) {
-            JOptionPane.showMessageDialog(this, "El email no puede contener espacios.");
+            JOptionPane.showMessageDialog(this, "El email no puede contener espacios");
             return false;
         }
         //Control de DNI (Clave unica en el mapa)
@@ -715,7 +731,6 @@ public class FormularioCarga extends javax.swing.JFrame {
         //Control de Teléfono y Email
         for (Persona p : mapaPersonas.values()) {
             PersonaController pc = new PersonaController(p);
-        
             if (pc.muestraTelefono().equals(telefono)) {
                 JOptionPane.showMessageDialog(this, "Error: El teléfono ya pertenece a otro usuario.");
                 return false;
@@ -767,15 +782,17 @@ public class FormularioCarga extends javax.swing.JFrame {
     private void btnGuardarPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarPacienteActionPerformed
 
         //Captura de datos
+        String nombre = nombretxtPac.getText().trim();
+        String apellido = apellidotxtPac.getText().trim();
         String dni = dnitxt.getText().trim();
         String email = mailtxtPac.getText().trim();
         String telefono = telefonotxtPac.getText().trim();
         //validacion general
-        if (validarDatosBase(dni, email, telefono)) {
+        if (validarDatosBase(nombre, apellido, dni, email, telefono)) {
             Paciente pa = new Paciente();
             PacienteController miPaciente = new PacienteController(pa);
-            miPaciente.colocarNombre(nombretxtPac.getText());
-            miPaciente.colocarApellido(apellidotxtPac.getText());
+            miPaciente.colocarNombre(nombre);
+            miPaciente.colocarApellido(apellido);
             miPaciente.colocarDni(dni);
             miPaciente.colocarEmail(email);
             miPaciente.colocarTelefono(telefono);
@@ -800,20 +817,22 @@ public class FormularioCarga extends javax.swing.JFrame {
 
     private void btnGuardarProfesionalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarProfesionalActionPerformed
         // Captura de datos
+        String nombre = nombretxt.getText().trim();
+        String apellido = apellidotxt.getText().trim();
         String dni = dniProtxt.getText().trim();
         String email = emailProtxt.getText().trim();
         String telefono = telefonoProtxt.getText().trim();
         String matricula = matriculatxt.getText().trim();
         // Validamos primero los datos que comparten todas las personas
-        if (validarDatosBase(dni, email, telefono)) {
+        if (validarDatosBase(nombre, apellido,dni, email, telefono)) {
             // Validamos el dato matricula
             if (buscarProMat(matricula)) {
                 JOptionPane.showMessageDialog(this, "La matrícula ya se encuentra registrada.");
             }else {
                 Profesional pr = new Profesional();
                 ProfesionalController miProfesional = new ProfesionalController(pr);
-                miProfesional.colocarNombre(nombretxt.getText());
-                miProfesional.colocarApellido(apellidotxt.getText());
+                miProfesional.colocarNombre(nombre);
+                miProfesional.colocarApellido(apellido);
                 miProfesional.colocarDni(dni);
                 miProfesional.colocarEmail(email);
                 miProfesional.colocarTelefono(telefono);
@@ -859,7 +878,6 @@ public class FormularioCarga extends javax.swing.JFrame {
             Estudio est = new Estudio();
             EstudioController miEstudio = new EstudioController(est);
             miEstudio.ColocarDniPaciente(dniPacEst.getText().trim());
-            miEstudio.ColocarDniProfesional(matProEst.getText().trim());
             miEstudio.ColocarMatricula(matProEst.getText().trim());
             miEstudio.ColocarFechaRealizacion(fechaR);
             miEstudio.ColocarFechaEntrega(fechaE);
@@ -940,14 +958,7 @@ public class FormularioCarga extends javax.swing.JFrame {
                   java.awt.Toolkit.getDefaultToolkit().beep();
             }
       }//GEN-LAST:event_apellidotxtKeyTyped
-
-      private void nombretxtPacKeyTyped(java.awt.event.KeyEvent evt) {                                      
-            char c = evt.getKeyChar();
-            if(!(Character.isLetter(c) || c == java.awt.event.KeyEvent.VK_BACK_SPACE || c == java.awt.event.KeyEvent.VK_SPACE)){
-                  evt.consume();
-                  java.awt.Toolkit.getDefaultToolkit().beep();
-            }
-      }                                     
+                                    
 
       private void apellidotxtPacKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_apellidotxtPacKeyTyped
             char c = evt.getKeyChar();
@@ -984,6 +995,18 @@ public class FormularioCarga extends javax.swing.JFrame {
             if(c == java.awt.event.KeyEvent.VK_SPACE)
                   evt.consume();
       }//GEN-LAST:event_emailProtxtKeyTyped
+
+    private void dniProtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dniProtxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dniProtxtActionPerformed
+
+    private void nombretxtPacKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nombretxtPacKeyTyped
+        char c = evt.getKeyChar();
+            if(!(Character.isLetter(c) || c == java.awt.event.KeyEvent.VK_BACK_SPACE || c == java.awt.event.KeyEvent.VK_SPACE)){
+                  evt.consume();
+                  java.awt.Toolkit.getDefaultToolkit().beep();
+            }
+    }//GEN-LAST:event_nombretxtPacKeyTyped
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PanelCargaEst;

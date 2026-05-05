@@ -1,7 +1,6 @@
 package Model;
 
 import java.util.ArrayList;
-import CRUDPMI.PMI;
 
 public class Estudio {
     private String matriculaProfesional, dniPaciente, estado, dniProfesional;

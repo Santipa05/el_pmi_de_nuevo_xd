@@ -3,10 +3,16 @@ package View;
 
 import Controller.PacienteController;
 import Controller.ProfesionalController;
+import Controller.EstudioController;
 import Model.Estudio;
 import Model.Paciente;
 import Model.Persona;
 import Model.Profesional;
+import Model.Fecha;
+import java.io.File;
+import java.io.FileReader;
+import java.io.BufferedReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import javax.swing.JOptionPane;
@@ -16,6 +22,140 @@ public class Principal extends javax.swing.JFrame {
     
     private ArrayList<Estudio> listaEstudios;
     private HashMap <String, Persona> mapaPersonas;
+    
+    public final void precargaPacientes(){
+          BufferedReader lector = null;
+        try{
+              String nombre, apellido, dni, telefono, email;
+              File arPac = new File("archivos/archivoPacientes.txt");
+              FileReader fr = new FileReader(arPac);
+              lector = new BufferedReader(fr);
+              while((nombre = lector.readLine()) != null){
+                    apellido = lector.readLine();
+                    dni = lector.readLine();
+                    telefono = lector.readLine();
+                    email = lector.readLine();
+                    lector.readLine();
+                    Paciente pac = new Paciente();
+                    PacienteController miPac = new PacienteController(pac);
+                    miPac.colocarNombre(nombre);
+                    miPac.colocarApellido(apellido);
+                    miPac.colocarDni(dni);
+                    miPac.colocarTelefono(telefono);
+                    miPac.colocarEmail(email);
+                    mapaPersonas.put(dni, miPac.obtenerPaciente());
+              }
+        } catch(IOException e){
+              JOptionPane.showMessageDialog(this, e.getMessage());
+        } finally{
+              try{
+                    if(lector != null){
+                          lector.close();
+                    }
+              } catch(IOException e){
+                  JOptionPane.showMessageDialog(this, e.getMessage());
+              }
+        }
+    }
+    
+    public final void precargaProfesional(){
+          BufferedReader lector = null;
+        try{
+              String nombre, apellido, dni, telefono, email, matricula;
+              File arPac = new File("archivos/archivoProfesionales.txt");
+              FileReader fr = new FileReader(arPac);
+              lector = new BufferedReader(fr);
+              while((nombre = lector.readLine()) != null){
+                    apellido = lector.readLine();
+                    dni = lector.readLine();
+                    telefono = lector.readLine();
+                    email = lector.readLine();
+                    matricula = lector.readLine();
+                    lector.readLine();
+                    Profesional pro = new Profesional();
+                    ProfesionalController miPro = new ProfesionalController(pro);
+                    miPro.colocarNombre(nombre);
+                    miPro.colocarApellido(apellido);
+                    miPro.colocarDni(dni);
+                    miPro.colocarTelefono(telefono);
+                    miPro.colocarEmail(email);
+                    miPro.colocarMatricula(matricula);
+                    mapaPersonas.put(dni, miPro.ObtenerProfesional());
+              }
+        } catch(IOException e){
+              JOptionPane.showMessageDialog(this, e.getMessage());
+        } finally{
+              try{
+                    if(lector != null){
+                          lector.close();
+                    }
+              } catch(IOException e){
+                  JOptionPane.showMessageDialog(this, e.getMessage());
+              }
+        }
+    }
+    
+    public final void precargaEstudio(){
+          BufferedReader lector = null;
+        try{
+              String dniPac, matricula,  estado, analisis;
+              String diaR, mesR, anioR, diaE, mesE, anioE;
+              int aux1, aux2, aux3;
+              File arPac = new File("archivos/archivoEstudios.txt");
+              FileReader fr = new FileReader(arPac);
+              lector = new BufferedReader(fr);
+              while((dniPac = lector.readLine()) != null){
+                    matricula = lector.readLine();
+                    estado = lector.readLine();
+                    diaR = lector.readLine();
+                    mesR = lector.readLine();
+                    anioR = lector.readLine();
+                    aux1 = Integer.parseInt(diaR);
+                    aux2 = Integer.parseInt(mesR);
+                    aux3 = Integer.parseInt(anioR);
+                    Fecha fechaRea = new Fecha(aux1, aux2, aux3);
+                    diaE = lector.readLine();
+                    mesE = lector.readLine();
+                    anioE = lector.readLine();
+                    aux1 = Integer.parseInt(diaE);
+                    aux2 = Integer.parseInt(mesE);
+                    aux3 = Integer.parseInt(anioE);
+                    Fecha fechaEnt = new Fecha(aux1, aux2, aux3);
+                    analisis = lector.readLine();
+                    lector.readLine();
+                    Estudio est = new Estudio();
+                    EstudioController miEst = new EstudioController(est);
+                    miEst.ColocarDniPaciente(dniPac);
+                    miEst.ColocarMatricula(matricula);
+                    miEst.ColocarEstado(estado);
+                    miEst.ColocarFechaRealizacion(fechaRea);
+                    miEst.ColocarFechaEntrega(fechaEnt);
+                    ArrayList <Integer>aux =  new ArrayList<>();
+                    if (analisis != null && !analisis.isEmpty()) {
+                        String[] partes = analisis.split(";");
+                        for (String p : partes) {
+                               try {
+                                    aux.add(Integer.parseInt(p.trim())); 
+                              } catch (NumberFormatException e) {
+                                     JOptionPane.showMessageDialog(this, e.getMessage());
+                              }
+                        }
+                  }
+                  miEst.colocarAnalisisRealizados(aux);
+                    listaEstudios.add(miEst.obtenerEstudio());
+              }
+        } catch(IOException e){
+              JOptionPane.showMessageDialog(this, e.getMessage());
+        } finally{
+              try{
+                    if(lector != null){
+                          lector.close();
+                    }
+              } catch(IOException e){
+                  JOptionPane.showMessageDialog(this, e.getMessage());
+              }
+        }
+    }
 
     public Principal() {
         initComponents();
@@ -26,6 +166,9 @@ public class Principal extends javax.swing.JFrame {
         menuEstudio.setEnabled(false);
         menuProfesional.setVisible(false);
         menuProfesional.setEnabled(false);
+        precargaPacientes();
+        precargaProfesional();
+        precargaEstudio();
     }
     
     public Principal(HashMap<String, Persona> mapaRecibido, ArrayList<Estudio> listaEstudios) {
