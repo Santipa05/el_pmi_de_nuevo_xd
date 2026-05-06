@@ -6,9 +6,7 @@ import Model.Fecha;
 import Model.Persona;
 import java.util.ArrayList;
 import java.util.HashMap;
-import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -19,7 +17,6 @@ public class FormularioEstudio extends javax.swing.JFrame {
     private HashMap <String, Persona> mapaPersonas;
     private String accionActual;
     private ArrayList<Estudio> listaEstudios;
-    private int op;
 
       public FormularioEstudio() {
             initComponents();
@@ -35,50 +32,60 @@ public class FormularioEstudio extends javax.swing.JFrame {
       }
       
        private void metAux(String accionActual){
-           if (accionActual == "Mostrar todos"){
-               jPanelMostrarEstudios.setVisible(true);
-               jPanelMostrarEstudios.setEnabled(true);
-               jPanelBuscarEstudioEstado.setVisible(false);
-               jPanelBuscarEstudioEstado.setEnabled(false);
-               jPanelBuscarEstudioFechaRec.setVisible(false);
-               jPanelBuscarEstudioFechaRec.setEnabled(false);
-               jPanelBuscarEstudioPro.setVisible(false);
-               jPanelBuscarEstudioPro.setEnabled(false);
-               Fecha fechaR = new Fecha(0, 0, 0);
-               mostrarEstudios(accionActual, "", fechaR);
-               txtMuestraEstudios.setVisible(true);
-               txtMuestraEstudios.setEnabled(true);
-           }else if (accionActual == "Mostrar por profesional"){
-               jPanelMostrarEstudios.setVisible(false);
-               jPanelMostrarEstudios.setEnabled(false);
-               jPanelBuscarEstudioEstado.setVisible(false);
-               jPanelBuscarEstudioEstado.setEnabled(false);
-               jPanelBuscarEstudioFechaRec.setVisible(false);
-               jPanelBuscarEstudioFechaRec.setEnabled(false);
-               jPanelBuscarEstudioPro.setVisible(true);
-               jPanelBuscarEstudioPro.setEnabled(true);
-           }else if (accionActual == "Mostrar por estado"){
-               jPanelMostrarEstudios.setVisible(false);
-               jPanelMostrarEstudios.setEnabled(false);
-               jPanelBuscarEstudioEstado.setVisible(true);
-               jPanelBuscarEstudioEstado.setEnabled(true);
-               jPanelBuscarEstudioFechaRec.setVisible(false);
-               jPanelBuscarEstudioFechaRec.setEnabled(false);
-               jPanelBuscarEstudioPro.setVisible(false);
-               jPanelBuscarEstudioPro.setEnabled(false);
-           }else if(accionActual == "Mostrar por fecha de realizacion"){
-               jPanelMostrarEstudios.setVisible(false);
-               jPanelMostrarEstudios.setEnabled(false);
-               jPanelBuscarEstudioEstado.setVisible(false);
-               jPanelBuscarEstudioEstado.setEnabled(false);
-               jPanelBuscarEstudioFechaRec.setVisible(true);
-               jPanelBuscarEstudioFechaRec.setEnabled(true);
-               jPanelBuscarEstudioPro.setVisible(false);
-               jPanelBuscarEstudioPro.setEnabled(false);
-           }
+           if (listaEstudios.isEmpty()){
+               JOptionPane.showMessageDialog(this, "No se encontraron estudios cargados.");
+           }else{
+               switch (accionActual) {
+                   case "Mostrar todos":
+                       jPanelMostrarEstudios.setVisible(true);
+                       jPanelMostrarEstudios.setEnabled(true);
+                       jPanelBuscarEstudioEstado.setVisible(false);
+                       jPanelBuscarEstudioEstado.setEnabled(false);
+                       jPanelBuscarEstudioFechaRec.setVisible(false);
+                       jPanelBuscarEstudioFechaRec.setEnabled(false);
+                       jPanelBuscarEstudioPro.setVisible(false);
+                       jPanelBuscarEstudioPro.setEnabled(false);
+                       Fecha fechaR = new Fecha(0, 0, 0);
+                       mostrarEstudios(accionActual, "", fechaR);
+                       txtMuestraEstudios.setVisible(true);
+                       txtMuestraEstudios.setEnabled(true);
+                       break;
+                   case "Mostrar por profesional":
+                       jPanelMostrarEstudios.setVisible(false);
+                       jPanelMostrarEstudios.setEnabled(false);
+                       jPanelBuscarEstudioEstado.setVisible(false);
+                       jPanelBuscarEstudioEstado.setEnabled(false);
+                       jPanelBuscarEstudioFechaRec.setVisible(false);
+                       jPanelBuscarEstudioFechaRec.setEnabled(false);
+                       jPanelBuscarEstudioPro.setVisible(true);
+                       jPanelBuscarEstudioPro.setEnabled(true);
+                       break;
+                   case "Mostrar por estado":
+                       jPanelMostrarEstudios.setVisible(false);
+                       jPanelMostrarEstudios.setEnabled(false);
+                       jPanelBuscarEstudioEstado.setVisible(true);
+                       jPanelBuscarEstudioEstado.setEnabled(true);
+                       jPanelBuscarEstudioFechaRec.setVisible(false);
+                       jPanelBuscarEstudioFechaRec.setEnabled(false);
+                       jPanelBuscarEstudioPro.setVisible(false);
+                       jPanelBuscarEstudioPro.setEnabled(false);
+                       break;
+                   case "Mostrar por fecha de realizacion":
+                       jPanelMostrarEstudios.setVisible(false);
+                       jPanelMostrarEstudios.setEnabled(false);
+                       jPanelBuscarEstudioEstado.setVisible(false);
+                       jPanelBuscarEstudioEstado.setEnabled(false);
+                       jPanelBuscarEstudioFechaRec.setVisible(true);
+                       jPanelBuscarEstudioFechaRec.setEnabled(true);
+                       jPanelBuscarEstudioPro.setVisible(false);
+                       jPanelBuscarEstudioPro.setEnabled(false);
+                       break;
+               }
            this.revalidate();
            this.repaint();
       }
+    }
+           
       
       private void muestraOno(boolean muestra){
           if (muestra){

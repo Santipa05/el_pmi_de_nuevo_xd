@@ -26,7 +26,7 @@ public class Principal extends javax.swing.JFrame {
     public final void precargaPacientes(){
           BufferedReader lector = null;
         try{
-              String nombre, apellido, dni, telefono, email;
+              String nombre, apellido, dni, telefono, email, obSoc;
               File arPac = new File("archivos/archivoPacientes.txt");
               FileReader fr = new FileReader(arPac);
               lector = new BufferedReader(fr);
@@ -35,6 +35,7 @@ public class Principal extends javax.swing.JFrame {
                     dni = lector.readLine();
                     telefono = lector.readLine();
                     email = lector.readLine();
+                    obSoc = lector.readLine();
                     lector.readLine();
                     Paciente pac = new Paciente();
                     PacienteController miPac = new PacienteController(pac);
@@ -43,6 +44,10 @@ public class Principal extends javax.swing.JFrame {
                     miPac.colocarDni(dni);
                     miPac.colocarTelefono(telefono);
                     miPac.colocarEmail(email);
+                    if("true".equals(obSoc))
+                        miPac.colocarObraSocial(true);
+                    else
+                        miPac.colocarObraSocial(false);
                     mapaPersonas.put(dni, miPac.obtenerPaciente());
               }
         } catch(IOException e){
@@ -204,6 +209,7 @@ public class Principal extends javax.swing.JFrame {
             Principal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
             menuOpciones.setBackground(new java.awt.Color(0, 102, 153));
+            menuOpciones.setForeground(new java.awt.Color(255, 255, 255));
             menuOpciones.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Paciente", "Profesional", "Estudio" }));
             menuOpciones.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
             menuOpciones.setMaximumSize(new java.awt.Dimension(167, 26));
@@ -217,6 +223,7 @@ public class Principal extends javax.swing.JFrame {
             Principal.add(menuOpciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(109, 106, 200, 30));
 
             menuPaciente.setBackground(new java.awt.Color(0, 102, 153));
+            menuPaciente.setForeground(new java.awt.Color(255, 255, 255));
             menuPaciente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cargar", "Eliminar", "Modificar", "Mostrar todos", "Buscar por DNI", "Mostrar con obra social", "Ver cantidad de estudios" }));
             menuPaciente.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
             menuPaciente.setMaximumSize(new java.awt.Dimension(167, 26));

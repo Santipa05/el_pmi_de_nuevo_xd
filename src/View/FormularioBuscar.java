@@ -830,7 +830,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
                               .addGroup(jPanelModificarProLayout.createSequentialGroup()
                                     .addGap(193, 193, 193)
                                     .addComponent(buscarModPro, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(55, Short.MAX_VALUE))
+                        .addContainerGap(53, Short.MAX_VALUE))
             );
             jPanelModificarProLayout.setVerticalGroup(
                   jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -903,7 +903,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
                   .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                               .addContainerGap()
-                              .addComponent(jPanelModificarPro, javax.swing.GroupLayout.DEFAULT_SIZE, 512, Short.MAX_VALUE)
+                              .addComponent(jPanelModificarPro, javax.swing.GroupLayout.DEFAULT_SIZE, 514, Short.MAX_VALUE)
                               .addContainerGap()))
             );
             layout.setVerticalGroup(
@@ -1106,7 +1106,6 @@ public class FormularioBuscar extends javax.swing.JFrame {
         }else{
             JOptionPane.showMessageDialog(this, "No se encontro ningun paciente con el dni " + dniBusqueda);
         }
-        this.dispose();
     }//GEN-LAST:event_btnBuscarPacActionPerformed
 
     private void dniPacBuscarTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dniPacBuscarTxtActionPerformed
@@ -1124,7 +1123,6 @@ public class FormularioBuscar extends javax.swing.JFrame {
         }else{
             JOptionPane.showMessageDialog(this, "No se encontro ningun profesional con el dni " + dniBusqueda);
         }
-        this.dispose();
     }//GEN-LAST:event_btnBuscarProActionPerformed
 
     private void dniPacContarEstTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dniPacContarEstTxtActionPerformed
@@ -1141,7 +1139,6 @@ public class FormularioBuscar extends javax.swing.JFrame {
         }else{
             JOptionPane.showMessageDialog(this, "No se encontro ningun paciente con el dni " + dniBusqueda);
         }
-        this.dispose();
     }//GEN-LAST:event_btnContarEstPacActionPerformed
 
     private void matProBuscartxt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matProBuscartxt1ActionPerformed
@@ -1165,7 +1162,6 @@ public class FormularioBuscar extends javax.swing.JFrame {
         if (encontro == false){
             JOptionPane.showMessageDialog(this, "No se encontro profesional con matricula -" + matIngresada + "-");
         }
-        this.dispose();
     }//GEN-LAST:event_btnBuscarMatProActionPerformed
 
     private void buscarModPacActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarModPacActionPerformed

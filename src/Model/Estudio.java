@@ -3,7 +3,7 @@ package Model;
 import java.util.ArrayList;
 
 public class Estudio {
-    private String matriculaProfesional, dniPaciente, estado, dniProfesional;
+    private String matriculaProfesional, dniPaciente, estado;
     private Fecha fec_realizacion, fec_entrega;
     private ArrayList<Integer> analisisRealizados;
 
@@ -30,15 +30,6 @@ public class Estudio {
     
     public ArrayList<Integer> getAnalisisRealizados() {
         return this.analisisRealizados;
-    }
-
-    
-    public String getDniProfesional() {
-        return dniProfesional;
-    }
-
-    public void setDniProfesional(String dniProfesional) {
-        this.dniProfesional = dniProfesional;
     }
     
     public String getMatriculaProfesional() {
@@ -83,7 +74,7 @@ public class Estudio {
 
     @Override
     public String toString() {
-        return "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||DATOS ESTUDIO|||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n" + "||| Matricula profesional: " + matriculaProfesional + "  ||  " + "DNI paciente: " + dniPaciente + "  ||  " + "Estado: " + estado + "\n"+ "||| DNI profesional: " + dniProfesional +
+        return "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||DATOS ESTUDIO|||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n" + "||| Matricula profesional: " + matriculaProfesional + "  ||  " + "DNI paciente: " + dniPaciente + "  ||  " + "Estado: " + estado + "\n"+
                 " || " + "Fecha realizacion: " + fec_realizacion + " || " + "Fecha entrega: " + fec_entrega + "\n||| Analisis realizados: \n|||[] ";
     }
     
