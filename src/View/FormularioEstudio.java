@@ -181,6 +181,8 @@ public class FormularioEstudio extends javax.swing.JFrame {
             jLabel4 = new javax.swing.JLabel();
             jLabel12 = new javax.swing.JLabel();
             matProEstInput = new javax.swing.JTextField();
+            jPanelModificarEstudio = new javax.swing.JPanel();
+            jLabel1 = new javax.swing.JLabel();
 
             setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
             setResizable(false);
@@ -380,6 +382,30 @@ public class FormularioEstudio extends javax.swing.JFrame {
                         .addContainerGap(404, Short.MAX_VALUE))
             );
 
+            jPanelModificarEstudio.setBackground(new java.awt.Color(153, 204, 255));
+            jPanelModificarEstudio.setForeground(new java.awt.Color(255, 255, 255));
+
+            jLabel1.setFont(new java.awt.Font("Nirmala Text", 1, 18)); // NOI18N
+            jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+            jLabel1.setText("Modificacion de Estudio");
+
+            javax.swing.GroupLayout jPanelModificarEstudioLayout = new javax.swing.GroupLayout(jPanelModificarEstudio);
+            jPanelModificarEstudio.setLayout(jPanelModificarEstudioLayout);
+            jPanelModificarEstudioLayout.setHorizontalGroup(
+                  jPanelModificarEstudioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                  .addGroup(jPanelModificarEstudioLayout.createSequentialGroup()
+                        .addGap(115, 115, 115)
+                        .addComponent(jLabel1)
+                        .addContainerGap(137, Short.MAX_VALUE))
+            );
+            jPanelModificarEstudioLayout.setVerticalGroup(
+                  jPanelModificarEstudioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                  .addGroup(jPanelModificarEstudioLayout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(jLabel1)
+                        .addContainerGap(462, Short.MAX_VALUE))
+            );
+
             javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
             getContentPane().setLayout(layout);
             layout.setHorizontalGroup(
@@ -400,6 +426,8 @@ public class FormularioEstudio extends javax.swing.JFrame {
                               .addGap(20, 20, 20)
                               .addComponent(jPanelBuscarEstudioPro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                               .addContainerGap(900, Short.MAX_VALUE)))
+                  .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanelModificarEstudio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             );
             layout.setVerticalGroup(
                   layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -419,6 +447,8 @@ public class FormularioEstudio extends javax.swing.JFrame {
                               .addContainerGap()
                               .addComponent(jPanelBuscarEstudioPro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                               .addGap(2, 2, 2)))
+                  .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanelModificarEstudio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             );
 
             pack();
@@ -476,6 +506,7 @@ public class FormularioEstudio extends javax.swing.JFrame {
       private javax.swing.JButton btnBuscarEstPro;
       private javax.swing.JComboBox<String> estadoInput;
       private javax.swing.JSpinner fechaRealInput;
+      private javax.swing.JLabel jLabel1;
       private javax.swing.JLabel jLabel10;
       private javax.swing.JLabel jLabel12;
       private javax.swing.JLabel jLabel2;
@@ -485,6 +516,7 @@ public class FormularioEstudio extends javax.swing.JFrame {
       private javax.swing.JPanel jPanelBuscarEstudioEstado;
       private javax.swing.JPanel jPanelBuscarEstudioFechaRec;
       private javax.swing.JPanel jPanelBuscarEstudioPro;
+      private javax.swing.JPanel jPanelModificarEstudio;
       private javax.swing.JPanel jPanelMostrarEstudios;
       private javax.swing.JTextField matProEstInput;
       private java.awt.TextArea txtMuestraEstudios;

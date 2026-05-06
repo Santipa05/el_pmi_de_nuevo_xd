@@ -45,8 +45,8 @@ public class FormularioBuscar extends javax.swing.JFrame {
                     jPanelBuscarPaciente.setEnabled(false);
                     jPanelBuscarProfesional.setVisible(false);
                     jPanelBuscarProfesional.setEnabled(false);
-                    jPanelBuscarMatPro.setVisible(false);
-                    jPanelBuscarMatPro.setEnabled(false);
+                    jPanelBuscarProfesional.setVisible(false);
+                    jPanelBuscarProfesional.setEnabled(false);
                     jPanelModificarPac.setVisible(false);
                     jPanelModificarPac.setEnabled(false);
                     jPanelModificarPro.setVisible(false);
@@ -61,8 +61,8 @@ public class FormularioBuscar extends javax.swing.JFrame {
                       jPanelBuscarPaciente.setEnabled(false);
                       jPanelBuscarProfesional.setVisible(false);
                       jPanelBuscarProfesional.setEnabled(false);
-                      jPanelBuscarMatPro.setVisible(false);
-                      jPanelBuscarMatPro.setEnabled(false);
+                      jPanelBuscarProfesional.setVisible(false);
+                      jPanelBuscarProfesional.setEnabled(false);
                       jPanelModificarPro.setVisible(false);
                       jPanelModificarPro.setEnabled(false);
                   }
@@ -73,8 +73,8 @@ public class FormularioBuscar extends javax.swing.JFrame {
                     jPanelContarEstPac.setEnabled(false);
                     jPanelBuscarProfesional.setVisible(false);
                     jPanelBuscarProfesional.setEnabled(false);
-                    jPanelBuscarMatPro.setVisible(false);
-                    jPanelBuscarMatPro.setEnabled(false);
+                    jPanelBuscarProfesional.setVisible(false);
+                    jPanelBuscarProfesional.setEnabled(false);
                     jPanelModificarPac.setVisible(false);
                     jPanelModificarPac.setEnabled(false);
                     jPanelModificarPro.setVisible(false);
@@ -83,8 +83,8 @@ public class FormularioBuscar extends javax.swing.JFrame {
                   
             }else if(op == 1){
                   if ("Buscar por matricula".equals(accionActual)){
-                    jPanelBuscarMatPro.setVisible(true);
-                    jPanelBuscarMatPro.setEnabled(true);
+                    jPanelBuscarProfesional.setVisible(true);
+                    jPanelBuscarProfesional.setEnabled(true);
                     jPanelContarEstPac.setVisible(false);
                     jPanelContarEstPac.setEnabled(false);
                     jPanelBuscarPaciente.setVisible(false);
@@ -105,16 +105,16 @@ public class FormularioBuscar extends javax.swing.JFrame {
                     jPanelBuscarPaciente.setEnabled(false);
                     jPanelBuscarProfesional.setVisible(false);
                     jPanelBuscarProfesional.setEnabled(false);
-                    jPanelBuscarMatPro.setVisible(false);
-                    jPanelBuscarMatPro.setEnabled(false);
+                    jPanelBuscarProfesional.setVisible(false);
+                    jPanelBuscarProfesional.setEnabled(false);
                     jPanelModificarPro.setVisible(true);
                     jPanelModificarPro.setEnabled(true);
                   }
                   else{ 
                     jPanelBuscarProfesional.setVisible(true);
                     jPanelBuscarProfesional.setEnabled(true);
-                    jPanelBuscarMatPro.setVisible(false);
-                    jPanelBuscarMatPro.setEnabled(false);
+                    jPanelBuscarProfesional.setVisible(false);
+                    jPanelBuscarProfesional.setEnabled(false);
                     jPanelContarEstPac.setVisible(false);
                     jPanelContarEstPac.setEnabled(false);
                     jPanelBuscarPaciente.setVisible(false);
@@ -138,17 +138,12 @@ public class FormularioBuscar extends javax.swing.JFrame {
             dniPacBuscarTxt = new javax.swing.JTextField();
             jLabel4 = new javax.swing.JLabel();
             btnBuscarPac = new javax.swing.JButton();
-            jPanelBuscarProfesional = new javax.swing.JPanel();
-            jLabel5 = new javax.swing.JLabel();
-            jLabel2 = new javax.swing.JLabel();
-            btnBuscarPro = new javax.swing.JButton();
-            matProBuscarTxt = new javax.swing.JTextField();
             jPanelContarEstPac = new javax.swing.JPanel();
             jLabel3 = new javax.swing.JLabel();
             dniPacContarEstTxt = new javax.swing.JTextField();
             jLabel6 = new javax.swing.JLabel();
             btnContarEstPac = new javax.swing.JButton();
-            jPanelBuscarMatPro = new javax.swing.JPanel();
+            jPanelBuscarProfesional = new javax.swing.JPanel();
             jLabel7 = new javax.swing.JLabel();
             matProBuscartxt1 = new javax.swing.JTextField();
             jLabel8 = new javax.swing.JLabel();
@@ -235,7 +230,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
             jPanelBuscarPacienteLayout.setHorizontalGroup(
                   jPanelBuscarPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                   .addGroup(jPanelBuscarPacienteLayout.createSequentialGroup()
-                        .addContainerGap(142, Short.MAX_VALUE)
+                        .addContainerGap(66, Short.MAX_VALUE)
                         .addGroup(jPanelBuscarPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                               .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBuscarPacienteLayout.createSequentialGroup()
                                     .addComponent(jLabel4)
@@ -247,7 +242,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
                               .addGroup(jPanelBuscarPacienteLayout.createSequentialGroup()
                                     .addGap(45, 45, 45)
                                     .addComponent(jLabel1)))
-                        .addContainerGap(177, Short.MAX_VALUE))
+                        .addContainerGap(98, Short.MAX_VALUE))
             );
             jPanelBuscarPacienteLayout.setVerticalGroup(
                   jPanelBuscarPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -260,71 +255,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
                               .addComponent(jLabel4))
                         .addGap(27, 27, 27)
                         .addComponent(btnBuscarPac)
-                        .addContainerGap(333, Short.MAX_VALUE))
-            );
-
-            jPanelBuscarProfesional.setBackground(new java.awt.Color(153, 204, 255));
-
-            jLabel5.setForeground(new java.awt.Color(102, 102, 102));
-            jLabel5.setText("Matricula");
-
-            jLabel2.setBackground(new java.awt.Color(0, 0, 0));
-            jLabel2.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-            jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-            jLabel2.setText("Buscar profesional");
-
-            btnBuscarPro.setBackground(new java.awt.Color(0, 51, 102));
-            btnBuscarPro.setForeground(new java.awt.Color(255, 255, 255));
-            btnBuscarPro.setText("Buscar");
-            btnBuscarPro.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        btnBuscarProActionPerformed(evt);
-                  }
-            });
-
-            matProBuscarTxt.setBackground(new java.awt.Color(51, 51, 51));
-            matProBuscarTxt.setForeground(new java.awt.Color(255, 255, 255));
-            matProBuscarTxt.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        matProBuscartxt(evt);
-                  }
-            });
-            matProBuscarTxt.addKeyListener(new java.awt.event.KeyAdapter() {
-                  public void keyTyped(java.awt.event.KeyEvent evt) {
-                        matProBuscarTxtKeyTyped(evt);
-                  }
-            });
-
-            javax.swing.GroupLayout jPanelBuscarProfesionalLayout = new javax.swing.GroupLayout(jPanelBuscarProfesional);
-            jPanelBuscarProfesional.setLayout(jPanelBuscarProfesionalLayout);
-            jPanelBuscarProfesionalLayout.setHorizontalGroup(
-                  jPanelBuscarProfesionalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                  .addGroup(jPanelBuscarProfesionalLayout.createSequentialGroup()
-                        .addGroup(jPanelBuscarProfesionalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                              .addGroup(jPanelBuscarProfesionalLayout.createSequentialGroup()
-                                    .addGap(87, 87, 87)
-                                    .addComponent(jLabel2))
-                              .addGroup(jPanelBuscarProfesionalLayout.createSequentialGroup()
-                                    .addGap(75, 75, 75)
-                                    .addComponent(jLabel5)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(jPanelBuscarProfesionalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                          .addComponent(btnBuscarPro)
-                                          .addComponent(matProBuscarTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addContainerGap(103, Short.MAX_VALUE))
-            );
-            jPanelBuscarProfesionalLayout.setVerticalGroup(
-                  jPanelBuscarProfesionalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                  .addGroup(jPanelBuscarProfesionalLayout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(jLabel2)
-                        .addGap(42, 42, 42)
-                        .addGroup(jPanelBuscarProfesionalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                              .addComponent(jLabel5)
-                              .addComponent(matProBuscarTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(btnBuscarPro)
-                        .addContainerGap(145, Short.MAX_VALUE))
+                        .addContainerGap(62, Short.MAX_VALUE))
             );
 
             jPanelContarEstPac.setBackground(new java.awt.Color(153, 204, 255));
@@ -392,7 +323,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
                         .addContainerGap(330, Short.MAX_VALUE))
             );
 
-            jPanelBuscarMatPro.setBackground(new java.awt.Color(153, 204, 255));
+            jPanelBuscarProfesional.setBackground(new java.awt.Color(153, 204, 255));
 
             jLabel7.setBackground(new java.awt.Color(0, 0, 0));
             jLabel7.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
@@ -424,37 +355,37 @@ public class FormularioBuscar extends javax.swing.JFrame {
                   }
             });
 
-            javax.swing.GroupLayout jPanelBuscarMatProLayout = new javax.swing.GroupLayout(jPanelBuscarMatPro);
-            jPanelBuscarMatPro.setLayout(jPanelBuscarMatProLayout);
-            jPanelBuscarMatProLayout.setHorizontalGroup(
-                  jPanelBuscarMatProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                  .addGroup(jPanelBuscarMatProLayout.createSequentialGroup()
-                        .addContainerGap(77, Short.MAX_VALUE)
-                        .addGroup(jPanelBuscarMatProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+            javax.swing.GroupLayout jPanelBuscarProfesionalLayout = new javax.swing.GroupLayout(jPanelBuscarProfesional);
+            jPanelBuscarProfesional.setLayout(jPanelBuscarProfesionalLayout);
+            jPanelBuscarProfesionalLayout.setHorizontalGroup(
+                  jPanelBuscarProfesionalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                  .addGroup(jPanelBuscarProfesionalLayout.createSequentialGroup()
+                        .addContainerGap(8, Short.MAX_VALUE)
+                        .addGroup(jPanelBuscarProfesionalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                               .addComponent(jLabel7)
-                              .addGroup(jPanelBuscarMatProLayout.createSequentialGroup()
+                              .addGroup(jPanelBuscarProfesionalLayout.createSequentialGroup()
                                     .addComponent(jLabel8)
-                                    .addGroup(jPanelBuscarMatProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                          .addGroup(jPanelBuscarMatProLayout.createSequentialGroup()
+                                    .addGroup(jPanelBuscarProfesionalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                          .addGroup(jPanelBuscarProfesionalLayout.createSequentialGroup()
                                                 .addGap(62, 62, 62)
                                                 .addComponent(btnBuscarMatPro))
-                                          .addGroup(jPanelBuscarMatProLayout.createSequentialGroup()
+                                          .addGroup(jPanelBuscarProfesionalLayout.createSequentialGroup()
                                                 .addGap(18, 18, 18)
                                                 .addComponent(matProBuscartxt1, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addContainerGap(200, Short.MAX_VALUE))
+                        .addContainerGap(129, Short.MAX_VALUE))
             );
-            jPanelBuscarMatProLayout.setVerticalGroup(
-                  jPanelBuscarMatProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                  .addGroup(jPanelBuscarMatProLayout.createSequentialGroup()
+            jPanelBuscarProfesionalLayout.setVerticalGroup(
+                  jPanelBuscarProfesionalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                  .addGroup(jPanelBuscarProfesionalLayout.createSequentialGroup()
                         .addGap(63, 63, 63)
                         .addComponent(jLabel7)
                         .addGap(18, 18, 18)
-                        .addGroup(jPanelBuscarMatProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanelBuscarProfesionalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                               .addComponent(matProBuscartxt1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                               .addComponent(jLabel8))
                         .addGap(18, 18, 18)
                         .addComponent(btnBuscarMatPro)
-                        .addContainerGap(330, Short.MAX_VALUE))
+                        .addContainerGap(102, Short.MAX_VALUE))
             );
 
             jPanelModificarPac.setBackground(new java.awt.Color(153, 204, 255));
@@ -830,7 +761,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
                               .addGroup(jPanelModificarProLayout.createSequentialGroup()
                                     .addGap(193, 193, 193)
                                     .addComponent(buscarModPro, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(53, Short.MAX_VALUE))
+                        .addContainerGap(57, Short.MAX_VALUE))
             );
             jPanelModificarProLayout.setVerticalGroup(
                   jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -876,7 +807,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
                         .addComponent(confirmarProbtn)
                         .addGap(18, 18, 18)
                         .addComponent(cancelarProbtn)
-                        .addContainerGap(182, Short.MAX_VALUE))
+                        .addContainerGap(195, Short.MAX_VALUE))
             );
 
             javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -886,16 +817,11 @@ public class FormularioBuscar extends javax.swing.JFrame {
                   .addComponent(jPanelBuscarPaciente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                   .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
-                              .addGap(10, 10, 10)
-                              .addComponent(jPanelBuscarProfesional, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                              .addContainerGap()))
-                  .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
                               .addContainerGap()
                               .addComponent(jPanelContarEstPac, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                               .addContainerGap()))
                   .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jPanelBuscarMatPro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jPanelBuscarProfesional, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                   .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                               .addContainerGap()
@@ -911,18 +837,11 @@ public class FormularioBuscar extends javax.swing.JFrame {
                   .addComponent(jPanelBuscarPaciente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                   .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
-                              .addGap(10, 10, 10)
-                              .addComponent(jPanelBuscarProfesional, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                              .addContainerGap()))
-                  .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
                               .addContainerGap()
                               .addComponent(jPanelContarEstPac, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                               .addContainerGap()))
                   .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                              .addContainerGap()
-                              .addComponent(jPanelBuscarMatPro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jPanelBuscarProfesional, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                   .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                               .addComponent(jPanelModificarPac, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1116,15 +1035,6 @@ public class FormularioBuscar extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_matProBuscarTxtActionPerformed
 
-    private void btnBuscarProActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarProActionPerformed
-        String dniBusqueda = matProBuscarTxt.getText();
-        if (buscarProDni(dniBusqueda)){
-                JOptionPane.showMessageDialog(this, "---Profesional encontrado---\n\n" + obtenerPro(dniBusqueda).mostrarDatos());
-        }else{
-            JOptionPane.showMessageDialog(this, "No se encontro ningun profesional con el dni " + dniBusqueda);
-        }
-    }//GEN-LAST:event_btnBuscarProActionPerformed
-
     private void dniPacContarEstTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dniPacContarEstTxtActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_dniPacContarEstTxtActionPerformed
@@ -1308,18 +1218,6 @@ public class FormularioBuscar extends javax.swing.JFrame {
             }
       }//GEN-LAST:event_campoMatiProModKeyTyped
 
-    private void matProBuscartxt(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matProBuscartxt
-        
-    }//GEN-LAST:event_matProBuscartxt
-
-    private void matProBuscarTxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_matProBuscarTxtKeyTyped
-            char c = evt.getKeyChar();
-            if(!Character.isDigit(c) && c != java.awt.event.KeyEvent.VK_BACK_SPACE){
-                  evt.consume();
-                  java.awt.Toolkit.getDefaultToolkit().beep();
-            }
-    }//GEN-LAST:event_matProBuscarTxtKeyTyped
-
     private void campoTelModKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_campoTelModKeyTyped
         char c = evt.getKeyChar();
             if(!Character.isDigit(c) && c != java.awt.event.KeyEvent.VK_BACK_SPACE){
@@ -1355,7 +1253,6 @@ public class FormularioBuscar extends javax.swing.JFrame {
       private javax.swing.JLabel apellidoTXT1;
       private javax.swing.JButton btnBuscarMatPro;
       private javax.swing.JButton btnBuscarPac;
-      private javax.swing.JButton btnBuscarPro;
       private javax.swing.JButton btnCancelarPacMod;
       private javax.swing.JButton btnConfirmarPacMod;
       private javax.swing.JButton btnContarEstPac;
@@ -1377,21 +1274,17 @@ public class FormularioBuscar extends javax.swing.JFrame {
       private javax.swing.JLabel emailSig;
       private javax.swing.JLabel emailSig1;
       private javax.swing.JLabel jLabel1;
-      private javax.swing.JLabel jLabel2;
       private javax.swing.JLabel jLabel3;
       private javax.swing.JLabel jLabel4;
-      private javax.swing.JLabel jLabel5;
       private javax.swing.JLabel jLabel6;
       private javax.swing.JLabel jLabel7;
       private javax.swing.JLabel jLabel8;
-      private javax.swing.JPanel jPanelBuscarMatPro;
       private javax.swing.JPanel jPanelBuscarPaciente;
       private javax.swing.JPanel jPanelBuscarProfesional;
       private javax.swing.JPanel jPanelContarEstPac;
       private javax.swing.JPanel jPanelModificarPac;
       private javax.swing.JPanel jPanelModificarPro;
       private javax.swing.JLabel matMod;
-      private javax.swing.JTextField matProBuscarTxt;
       private javax.swing.JTextField matProBuscartxt1;
       private javax.swing.JLabel matriculaTXT1;
       private javax.swing.JTextField modMailInput1;

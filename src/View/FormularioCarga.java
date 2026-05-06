@@ -15,6 +15,11 @@ import java.util.HashMap;
 import javax.swing.JOptionPane;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.io.File;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.FileNotFoundException;
 
 public class FormularioCarga extends javax.swing.JFrame {
 
@@ -798,7 +803,23 @@ public class FormularioCarga extends javax.swing.JFrame {
             miPaciente.colocarTelefono(telefono);
             miPaciente.colocarObraSocial(obSoc.isSelected());
             mapaPersonas.put(miPaciente.muestraDni(), miPaciente.obtenerPaciente());
+            try(BufferedWriter escritor = new BufferedWriter(new FileWriter("archivos/archivoPacientes.txt", true))){
+                  escritor.append(nombre + "\n");
+                  escritor.append(apellido + "\n");
+                  escritor.append(dni + "\n");
+                  escritor.append(email + "\n");
+                  escritor.append(telefono + "\n");
+                  if (obSoc.isSelected())
+                        escritor.append("true\n\n");
+                  else
+                        escritor.append("false\n\n");
+            } catch (FileNotFoundException e){
+                  JOptionPane.showMessageDialog(this, "Error, no se encontro el archivo correspondiente. Codigo: " + e.getMessage());
+            } catch(IOException e){
+                  JOptionPane.showMessageDialog(this, "Error al abrir el archivo. " + e.getMessage());
+            }
             JOptionPane.showMessageDialog(this, "Paciente cargado correctamente");
+            this.dispose();
         }
     }//GEN-LAST:event_btnGuardarPacienteActionPerformed
 
@@ -837,9 +858,21 @@ public class FormularioCarga extends javax.swing.JFrame {
                 miProfesional.colocarTelefono(telefono);
                 miProfesional.colocarMatricula(matricula);
                 mapaPersonas.put(miProfesional.muestraDni(), miProfesional.ObtenerProfesional());
+            try(BufferedWriter escritor = new BufferedWriter(new FileWriter("archivos/archivoProfesionales.txt", true))){
+                  escritor.append(nombre + "\n");
+                  escritor.append(apellido + "\n");
+                  escritor.append(dni + "\n");
+                  escritor.append(telefono + "\n");
+                  escritor.append(email + "\n");
+                  escritor.append(matricula + "\n");
+            } catch (FileNotFoundException e){
+                  JOptionPane.showMessageDialog(this, "Error, no se encontro el archivo correspondiente. Codigo: " + e.getMessage());
+            } catch(IOException e){
+                  JOptionPane.showMessageDialog(this, "Error al abrir el archivo. " + e.getMessage());
+            }
                 JOptionPane.showMessageDialog(this, "Profesional cargado correctamente");
             }
-        }  
+        }
     }//GEN-LAST:event_btnGuardarProfesionalActionPerformed
 
     private void btnCargarEstudioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCargarEstudioActionPerformed
@@ -887,6 +920,29 @@ public class FormularioCarga extends javax.swing.JFrame {
             miEstudio.colocarAnalisisRealizados(idsAnalisis);
             //Finalmente guardamos el estudio en la lista global
             listaEstudios.add(miEstudio.obtenerEstudio());
+            
+            try(BufferedWriter escritor = new BufferedWriter(new FileWriter("archivos/archivoEstudios.txt", true))){
+                  escritor.append(dniPacEst.getText() + "\n");
+                  escritor.append(matProEst.getText() + "\n");
+                  escritor.append(estado.getSelectedItem().toString() + "\n");
+                  escritor.append(diaR + "\n");
+                  escritor.append(mesR + "\n");
+                  escritor.append(anioR + "\n");
+                  escritor.append(diaE + "\n");
+                  escritor.append(mesE + "\n");
+                  escritor.append(anioE + "\n");
+                  StringBuilder sb = new StringBuilder();
+                  for (int i = 0; i < idsAnalisis.size(); i++){
+                        sb.append(idsAnalisis.get(i));
+                        if (i < idsAnalisis.size() - 1)
+                              sb.append(";");
+                  }
+                  escritor.append(sb.toString() + "\n\n");
+            } catch (FileNotFoundException e){
+                  JOptionPane.showMessageDialog(this, "Error, no se encontro el archivo correspondiente. Codigo: " + e.getMessage());
+            } catch(IOException e){
+                  JOptionPane.showMessageDialog(this, "Error al abrir el archivo. " + e.getMessage());
+            }
             this.dispose();
     }//GEN-LAST:event_btnCargarEstudioActionPerformed
 

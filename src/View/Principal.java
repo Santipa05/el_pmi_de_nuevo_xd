@@ -240,6 +240,7 @@ public class Principal extends javax.swing.JFrame {
             Principal.add(menuPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 250, 200, 30));
 
             menuProfesional.setBackground(new java.awt.Color(0, 102, 153));
+            menuProfesional.setForeground(new java.awt.Color(255, 255, 255));
             menuProfesional.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cargar", "Eliminar", "Modificar", "Mostrar todos", "Buscar por matricula" }));
             menuProfesional.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
             menuProfesional.setMaximumSize(new java.awt.Dimension(167, 26));
@@ -253,6 +254,7 @@ public class Principal extends javax.swing.JFrame {
             Principal.add(menuProfesional, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 250, 200, 30));
 
             menuEstudio.setBackground(new java.awt.Color(0, 102, 153));
+            menuEstudio.setForeground(new java.awt.Color(255, 255, 255));
             menuEstudio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cargar", "Mostrar todos", "Mostrar por estado", "Mostrar por profesional", "Mostrar por fecha de realizacion" }));
             menuEstudio.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
             menuEstudio.setMaximumSize(new java.awt.Dimension(167, 26));
@@ -436,7 +438,7 @@ public class Principal extends javax.swing.JFrame {
             Object[] opciones = {"Salir", "Cancelar"};
             int seleccion = javax.swing.JOptionPane.showOptionDialog(this,"Esta seguro que desea salir?\n", "Salida", javax.swing.JOptionPane.DEFAULT_OPTION, javax.swing.JOptionPane.QUESTION_MESSAGE, null, opciones, opciones[0]);
             if(seleccion == 0)
-                  this.dispose();
+                  System.exit(0);
       }//GEN-LAST:event_btnSalirActionPerformed
 
 

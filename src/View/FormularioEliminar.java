@@ -3,6 +3,11 @@ package View;
 import Model.Paciente;
 import Model.Persona;
 import Model.Profesional;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.HashMap;
 import javax.swing.JOptionPane;
 
@@ -39,6 +44,32 @@ public class FormularioEliminar extends javax.swing.JFrame {
             }
             this.revalidate();
             this.repaint();
+      }
+    
+    //Este metodo actualiza los archivos de paciente y profesional
+    
+      public void actualizarArchivoGeneral() {
+            try(BufferedWriter escritorPac = new BufferedWriter(new FileWriter("archivos/archivoPacientes.txt"));
+                    BufferedWriter escritorPro = new BufferedWriter(new FileWriter("archivos/archivoProfesionales.txt"))){
+            for (Persona p : mapaPersonas.values()) {
+                  if (p instanceof Paciente pac) {
+                        escritorPac.append(pac.getNombre() + "\n");
+                        escritorPac.append(pac.getApellido() + "\n");
+                        escritorPac.append(pac.getDni() + "\n");
+                        escritorPac.append(pac.getMail() + "\n");
+                        escritorPac.append(pac.getTelefono() + "\n");
+                        escritorPac.append(pac.getObraSocial() + "\n\n");
+                  } else if (p instanceof Profesional pro) {
+                        escritorPro.append(pro.getNombre() + "\n");
+                        escritorPro.append(pro.getApellido() + "\n");
+                        escritorPro.append(pro.getTelefono() + "\n");
+                        escritorPro.append(pro.getMail() + "\n");
+                        escritorPro.append(pro.getMatricula() + "\n\n");
+                        }
+                  }
+            } catch (IOException e) {
+                  JOptionPane.showMessageDialog(this, "Error al abrir el archivo: " + e.getMessage());
+            }
       }
       
       
@@ -277,6 +308,7 @@ public class FormularioEliminar extends javax.swing.JFrame {
             int seleccion = javax.swing.JOptionPane.showOptionDialog(this,"Esta seguro que desea eliminar al paciente?\n", "Eliminar", javax.swing.JOptionPane.DEFAULT_OPTION, javax.swing.JOptionPane.QUESTION_MESSAGE, null, opciones, opciones[0]);
             if(seleccion == 0){
                 mapaPersonas.remove(dniBusqueda);
+                actualizarArchivoGeneral();
                 JOptionPane.showMessageDialog(this, "Paciente eliminado correctamente.");
                   }
             }else{
@@ -303,6 +335,7 @@ public class FormularioEliminar extends javax.swing.JFrame {
             int seleccion = javax.swing.JOptionPane.showOptionDialog(this,"Esta seguro que desea eliminar el profesional?\n", "Eliminar", javax.swing.JOptionPane.DEFAULT_OPTION, javax.swing.JOptionPane.QUESTION_MESSAGE, null, opciones, opciones[0]);
             if(seleccion == 0){
                 mapaPersonas.remove(dniBusqueda);
+                actualizarArchivoGeneral();
                 JOptionPane.showMessageDialog(this, "Profesional eliminado correctamente.");
             }
         }else{
