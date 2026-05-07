@@ -6,7 +6,9 @@ import Model.Fecha;
 import Model.Persona;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.stream.Collectors;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -31,14 +33,26 @@ public class FormularioEstudio extends javax.swing.JFrame {
         metAux(accionActual);
       }
       
+    public void mostrarEstudioATabla(Estudio est) {
+    DefaultTableModel modelo = (DefaultTableModel) jTableMostrar.getModel();
+    EstudioController miEst = new EstudioController(est);
+    Object[] nuevaFila = new Object[6]; 
+    nuevaFila[0] = miEst.muestraDniPaciente();
+    nuevaFila[1] = miEst.muestraMatriculaProfesional();
+    nuevaFila[2] = miEst.muestraFechaRealizacion();
+    nuevaFila[3] = miEst.muestraFechaEntrega();
+    nuevaFila[4] = miEst.muestraEstado();
+    nuevaFila[5] = miEst.muestraAnalisisRealizados();
+    modelo.addRow(nuevaFila);
+}
        private void metAux(String accionActual){
            if (listaEstudios.isEmpty()){
                JOptionPane.showMessageDialog(this, "No se encontraron estudios cargados.");
            }else{
                switch (accionActual) {
                    case "Mostrar todos":
-                       jPanelMostrarEstudios.setVisible(true);
-                       jPanelMostrarEstudios.setEnabled(true);
+                       jPanelMostrarEstudios.setVisible(false);
+                       jPanelMostrarEstudios.setEnabled(false);
                        jPanelBuscarEstudioEstado.setVisible(false);
                        jPanelBuscarEstudioEstado.setEnabled(false);
                        jPanelBuscarEstudioFechaRec.setVisible(false);
@@ -47,8 +61,8 @@ public class FormularioEstudio extends javax.swing.JFrame {
                        jPanelBuscarEstudioPro.setEnabled(false);
                        Fecha fechaR = new Fecha(0, 0, 0);
                        mostrarEstudios(accionActual, "", fechaR);
-                       txtMuestraEstudios.setVisible(true);
-                       txtMuestraEstudios.setEnabled(true);
+                       jPanelModificarEst.setVisible(false);
+                       jPanelModificarEst.setEnabled(false);
                        break;
                    case "Mostrar por profesional":
                        jPanelMostrarEstudios.setVisible(false);
@@ -59,6 +73,8 @@ public class FormularioEstudio extends javax.swing.JFrame {
                        jPanelBuscarEstudioFechaRec.setEnabled(false);
                        jPanelBuscarEstudioPro.setVisible(true);
                        jPanelBuscarEstudioPro.setEnabled(true);
+                       jPanelModificarEst.setVisible(false);
+                       jPanelModificarEst.setEnabled(false);
                        break;
                    case "Mostrar por estado":
                        jPanelMostrarEstudios.setVisible(false);
@@ -69,6 +85,8 @@ public class FormularioEstudio extends javax.swing.JFrame {
                        jPanelBuscarEstudioFechaRec.setEnabled(false);
                        jPanelBuscarEstudioPro.setVisible(false);
                        jPanelBuscarEstudioPro.setEnabled(false);
+                       jPanelModificarEst.setVisible(false);
+                       jPanelModificarEst.setEnabled(false);
                        break;
                    case "Mostrar por fecha de realizacion":
                        jPanelMostrarEstudios.setVisible(false);
@@ -79,46 +97,43 @@ public class FormularioEstudio extends javax.swing.JFrame {
                        jPanelBuscarEstudioFechaRec.setEnabled(true);
                        jPanelBuscarEstudioPro.setVisible(false);
                        jPanelBuscarEstudioPro.setEnabled(false);
+                       jPanelModificarEst.setVisible(false);
+                       jPanelModificarEst.setEnabled(false);
                        break;
+                   case "Modificar":
+                       jPanelModificarEst.setVisible(true);
+                       jPanelModificarEst.setEnabled(true);
+                       jPanelMostrarEstudios.setVisible(false);
+                       jPanelMostrarEstudios.setEnabled(false);
+                       jPanelBuscarEstudioEstado.setVisible(false);
+                       jPanelBuscarEstudioEstado.setEnabled(false);
+                       jPanelBuscarEstudioFechaRec.setVisible(false);
+                       jPanelBuscarEstudioFechaRec.setEnabled(false);
+                       jPanelBuscarEstudioPro.setVisible(false);
+                       jPanelBuscarEstudioPro.setEnabled(false);
+                       
                }
            this.revalidate();
            this.repaint();
       }
     }
-           
-      
-      private void muestraOno(boolean muestra){
-          if (muestra){
-              jPanelMostrarEstudios.setVisible(true);
-              jPanelMostrarEstudios.setEnabled(true);
-              txtMuestraEstudios.setVisible(true);
-              txtMuestraEstudios.setEnabled(true);
-          }else{
-              jPanelMostrarEstudios.setVisible(false);
-              txtMuestraEstudios.setVisible(false);
-          }
-      }
       
       
        private void mostrarEstudios(String accionActual, String opcion, Fecha fec) {
         boolean encontro = false;
-        
         switch(accionActual){
-            
             case "Mostrar todos":
                 for (Estudio est : listaEstudios) {
                     EstudioController miEst = new EstudioController(est);
-                    String infoEstudio = miEst.muestraEstudio();
-                    txtMuestraEstudios.append(infoEstudio + "\n");
-                    muestraOno(true);
-                }break;
+                    mostrarEstudioATabla(miEst.obtenerEstudio());
+                }jPanelMostrarEstudios.setVisible(true);
+                 jPanelMostrarEstudios.setEnabled(true);break;
                 
             case "Mostrar por profesional":
                 for (Estudio est : listaEstudios) {
                     EstudioController miEst = new EstudioController(est);
                     if (miEst.muestraMatriculaProfesional().trim().equals(opcion.trim())){
-                        String infoEstudio = miEst.muestraEstudio();
-                        txtMuestraEstudios.append(infoEstudio + "\n");
+                        mostrarEstudioATabla(miEst.obtenerEstudio());
                         encontro = true;
                     }
                 }break;
@@ -127,25 +142,33 @@ public class FormularioEstudio extends javax.swing.JFrame {
                 for (Estudio est : listaEstudios) {
                     EstudioController miEst = new EstudioController(est);
                     if (miEst.muestraEstado().equals(opcion)){
-                        String infoEstudio = miEst.muestraEstudio();
-                        txtMuestraEstudios.append(infoEstudio + "\n");
+                        mostrarEstudioATabla(miEst.obtenerEstudio());
                         encontro = true;
                     }
-                }break;
+                }jPanelMostrarEstudios.setVisible(true);
+                 jPanelMostrarEstudios.setEnabled(true);break;
                     
             case "Mostrar por fecha de realizacion":
                 for (Estudio est : listaEstudios) {
                     EstudioController miEst = new EstudioController(est);
                     if (miEst.esMismaFecha(fec)){
-                        String infoEstudio = miEst.muestraEstudio();
-                        txtMuestraEstudios.append(infoEstudio + "\n");
+                        mostrarEstudioATabla(miEst.obtenerEstudio());
                         encontro = true;
                     }
-                }break;
+                }jPanelMostrarEstudios.setVisible(true);
+                 jPanelMostrarEstudios.setEnabled(true);break;
+            case "Modificar":
+                for (Estudio est : listaEstudios){
+                    EstudioController miEst = new EstudioController(est);
+                    if(miEst.muestraDniPaciente().equals(opcion)){
+                        mostrarEstudioATabla(miEst.obtenerEstudio());
+                        encontro = true;
+                    }
+                }jPanelMostrarEstudios.setVisible(true);
+                 jPanelMostrarEstudios.setEnabled(true);break;
         }
         
         if (encontro == true){
-            muestraOno(true);
             jPanelBuscarEstudioPro.setVisible(false);
             jPanelBuscarEstudioFechaRec.setVisible(false);
             jPanelBuscarEstudioEstado.setVisible(false);
@@ -165,7 +188,8 @@ public class FormularioEstudio extends javax.swing.JFrame {
       private void initComponents() {
 
             jPanelMostrarEstudios = new javax.swing.JPanel();
-            txtMuestraEstudios = new java.awt.TextArea();
+            jScrollPane2 = new javax.swing.JScrollPane();
+            jTableMostrar = new javax.swing.JTable();
             jPanelBuscarEstudioEstado = new javax.swing.JPanel();
             btnBuscarEstEsta = new javax.swing.JButton();
             jLabel5 = new javax.swing.JLabel();
@@ -181,25 +205,54 @@ public class FormularioEstudio extends javax.swing.JFrame {
             jLabel4 = new javax.swing.JLabel();
             jLabel12 = new javax.swing.JLabel();
             matProEstInput = new javax.swing.JTextField();
-            jPanelModificarEstudio = new javax.swing.JPanel();
-            jLabel1 = new javax.swing.JLabel();
+            jPanelModificarEst = new javax.swing.JPanel();
+            jLabel6 = new javax.swing.JLabel();
+            dniPactxt = new javax.swing.JTextField();
+            jLabel7 = new javax.swing.JLabel();
+            jButton1 = new javax.swing.JButton();
 
             setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
             setResizable(false);
 
-            txtMuestraEstudios.setBackground(new java.awt.Color(153, 204, 255));
-            txtMuestraEstudios.setEditable(false);
-            txtMuestraEstudios.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+            jPanelMostrarEstudios.setBackground(new java.awt.Color(153, 204, 255));
+
+            jTableMostrar.setModel(new javax.swing.table.DefaultTableModel(
+                  new Object [][] {
+
+                  },
+                  new String [] {
+                        "DNI paciente", "Matricula profesional", "Fecha de realizacion", "Fecha de entrega", "Estado", "Analisis"
+                  }
+            ) {
+                  Class[] types = new Class [] {
+                        java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.String.class, java.lang.String.class
+                  };
+                  boolean[] canEdit = new boolean [] {
+                        false, false, false, true, true, false
+                  };
+
+                  public Class getColumnClass(int columnIndex) {
+                        return types [columnIndex];
+                  }
+
+                  public boolean isCellEditable(int rowIndex, int columnIndex) {
+                        return canEdit [columnIndex];
+                  }
+            });
+            jScrollPane2.setViewportView(jTableMostrar);
 
             javax.swing.GroupLayout jPanelMostrarEstudiosLayout = new javax.swing.GroupLayout(jPanelMostrarEstudios);
             jPanelMostrarEstudios.setLayout(jPanelMostrarEstudiosLayout);
             jPanelMostrarEstudiosLayout.setHorizontalGroup(
                   jPanelMostrarEstudiosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                  .addComponent(txtMuestraEstudios, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1345, Short.MAX_VALUE)
+                  .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 639, javax.swing.GroupLayout.PREFERRED_SIZE)
             );
             jPanelMostrarEstudiosLayout.setVerticalGroup(
                   jPanelMostrarEstudiosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                  .addComponent(txtMuestraEstudios, javax.swing.GroupLayout.DEFAULT_SIZE, 583, Short.MAX_VALUE)
+                  .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelMostrarEstudiosLayout.createSequentialGroup()
+                        .addContainerGap(224, Short.MAX_VALUE)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(62, 62, 62))
             );
 
             jPanelBuscarEstudioEstado.setBackground(new java.awt.Color(153, 204, 255));
@@ -382,28 +435,61 @@ public class FormularioEstudio extends javax.swing.JFrame {
                         .addContainerGap(404, Short.MAX_VALUE))
             );
 
-            jPanelModificarEstudio.setBackground(new java.awt.Color(153, 204, 255));
-            jPanelModificarEstudio.setForeground(new java.awt.Color(255, 255, 255));
+            jPanelModificarEst.setBackground(new java.awt.Color(153, 204, 255));
 
-            jLabel1.setFont(new java.awt.Font("Nirmala Text", 1, 18)); // NOI18N
-            jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-            jLabel1.setText("Modificacion de Estudio");
+            jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+            jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+            jLabel6.setText("Modificacion de estudios");
 
-            javax.swing.GroupLayout jPanelModificarEstudioLayout = new javax.swing.GroupLayout(jPanelModificarEstudio);
-            jPanelModificarEstudio.setLayout(jPanelModificarEstudioLayout);
-            jPanelModificarEstudioLayout.setHorizontalGroup(
-                  jPanelModificarEstudioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                  .addGroup(jPanelModificarEstudioLayout.createSequentialGroup()
-                        .addGap(115, 115, 115)
-                        .addComponent(jLabel1)
-                        .addContainerGap(137, Short.MAX_VALUE))
+            dniPactxt.setBackground(new java.awt.Color(0, 51, 102));
+            dniPactxt.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        dniPactxtActionPerformed(evt);
+                  }
+            });
+
+            jLabel7.setForeground(new java.awt.Color(51, 51, 51));
+            jLabel7.setText("DNI del paciente");
+
+            jButton1.setText("Buscar");
+            jButton1.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        jButton1ActionPerformed(evt);
+                  }
+            });
+
+            javax.swing.GroupLayout jPanelModificarEstLayout = new javax.swing.GroupLayout(jPanelModificarEst);
+            jPanelModificarEst.setLayout(jPanelModificarEstLayout);
+            jPanelModificarEstLayout.setHorizontalGroup(
+                  jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                  .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelModificarEstLayout.createSequentialGroup()
+                        .addGap(0, 67, Short.MAX_VALUE)
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(dniPactxt, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(67, 67, 67))
+                  .addGroup(jPanelModificarEstLayout.createSequentialGroup()
+                        .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                              .addGroup(jPanelModificarEstLayout.createSequentialGroup()
+                                    .addGap(84, 84, 84)
+                                    .addComponent(jLabel6))
+                              .addGroup(jPanelModificarEstLayout.createSequentialGroup()
+                                    .addGap(139, 139, 139)
+                                    .addComponent(jButton1)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             );
-            jPanelModificarEstudioLayout.setVerticalGroup(
-                  jPanelModificarEstudioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                  .addGroup(jPanelModificarEstudioLayout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addComponent(jLabel1)
-                        .addContainerGap(462, Short.MAX_VALUE))
+            jPanelModificarEstLayout.setVerticalGroup(
+                  jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                  .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelModificarEstLayout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addComponent(jLabel6)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                              .addComponent(dniPactxt, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                              .addComponent(jLabel7))
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1)
+                        .addContainerGap(256, Short.MAX_VALUE))
             );
 
             javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -427,7 +513,10 @@ public class FormularioEstudio extends javax.swing.JFrame {
                               .addComponent(jPanelBuscarEstudioPro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                               .addContainerGap(900, Short.MAX_VALUE)))
                   .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jPanelModificarEstudio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(layout.createSequentialGroup()
+                              .addGap(0, 0, Short.MAX_VALUE)
+                              .addComponent(jPanelModificarEst, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                              .addGap(0, 0, Short.MAX_VALUE)))
             );
             layout.setVerticalGroup(
                   layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -448,7 +537,10 @@ public class FormularioEstudio extends javax.swing.JFrame {
                               .addComponent(jPanelBuscarEstudioPro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                               .addGap(2, 2, 2)))
                   .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jPanelModificarEstudio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(layout.createSequentialGroup()
+                              .addGap(0, 0, Short.MAX_VALUE)
+                              .addComponent(jPanelModificarEst, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                              .addGap(0, 0, Short.MAX_VALUE)))
             );
 
             pack();
@@ -482,7 +574,7 @@ public class FormularioEstudio extends javax.swing.JFrame {
             Fecha fechaR = new Fecha(0, 0, 0);
             mostrarEstudios(accionActual, matricula, fechaR);
         }else {
-            JOptionPane.showMessageDialog(this, "Por favor, ingrese una matrícula.");
+            JOptionPane.showMessageDialog(this, "Ingrese una matrícula.");
         }
     }//GEN-LAST:event_btnBuscarEstProActionPerformed
 
@@ -498,27 +590,45 @@ public class FormularioEstudio extends javax.swing.JFrame {
             }
       }//GEN-LAST:event_matProEstInputKeyTyped
 
+    private void dniPactxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dniPactxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dniPactxtActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String dni = dniPactxt.getText().trim();
+        if (!dni.isEmpty()){
+            Fecha fechaR = new Fecha(0, 0, 0);
+            mostrarEstudios(accionActual, dni, fechaR);
+        }else {
+            JOptionPane.showMessageDialog(this, "Ingrese un DNI.");
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
 
       // Variables declaration - do not modify//GEN-BEGIN:variables
       private javax.swing.JButton btnBuscarEstEsta;
       private javax.swing.JButton btnBuscarEstFec;
       private javax.swing.JButton btnBuscarEstPro;
+      private javax.swing.JTextField dniPactxt;
       private javax.swing.JComboBox<String> estadoInput;
       private javax.swing.JSpinner fechaRealInput;
-      private javax.swing.JLabel jLabel1;
+      private javax.swing.JButton jButton1;
       private javax.swing.JLabel jLabel10;
       private javax.swing.JLabel jLabel12;
       private javax.swing.JLabel jLabel2;
       private javax.swing.JLabel jLabel3;
       private javax.swing.JLabel jLabel4;
       private javax.swing.JLabel jLabel5;
+      private javax.swing.JLabel jLabel6;
+      private javax.swing.JLabel jLabel7;
       private javax.swing.JPanel jPanelBuscarEstudioEstado;
       private javax.swing.JPanel jPanelBuscarEstudioFechaRec;
       private javax.swing.JPanel jPanelBuscarEstudioPro;
-      private javax.swing.JPanel jPanelModificarEstudio;
+      private javax.swing.JPanel jPanelModificarEst;
       private javax.swing.JPanel jPanelMostrarEstudios;
+      private javax.swing.JScrollPane jScrollPane2;
+      private javax.swing.JTable jTableMostrar;
       private javax.swing.JTextField matProEstInput;
-      private java.awt.TextArea txtMuestraEstudios;
       // End of variables declaration//GEN-END:variables
 }
