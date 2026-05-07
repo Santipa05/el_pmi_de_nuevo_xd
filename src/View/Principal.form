@@ -180,13 +180,12 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="6">
+              <StringArray count="5">
                 <StringItem index="0" value="Cargar"/>
-                <StringItem index="1" value="Modificar"/>
-                <StringItem index="2" value="Mostrar todos"/>
-                <StringItem index="3" value="Mostrar por estado"/>
-                <StringItem index="4" value="Mostrar por profesional"/>
-                <StringItem index="5" value="Mostrar por fecha de realizacion"/>
+                <StringItem index="1" value="Mostrar todos"/>
+                <StringItem index="2" value="Mostrar por estado"/>
+                <StringItem index="3" value="Mostrar por profesional"/>
+                <StringItem index="4" value="Mostrar por fecha de realizacion"/>
               </StringArray>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
