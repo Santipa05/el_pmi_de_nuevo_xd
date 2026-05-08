@@ -204,7 +204,7 @@
                                   <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                                   <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="dniProEliminarTxt" min="-2" pref="179" max="-2" attributes="0"/>
+                                  <Component id="matProEliminarTxt" min="-2" pref="179" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
@@ -238,7 +238,7 @@
                           <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="dniProEliminarTxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="matProEliminarTxt" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -267,7 +267,7 @@
             <Property name="text" type="java.lang.String" value="Eliminar profesional"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="dniProEliminarTxt">
+        <Component class="javax.swing.JTextField" name="matProEliminarTxt">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="33" red="33" type="rgb"/>
@@ -277,8 +277,8 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dniProEliminarTxtActionPerformed"/>
-            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="dniProEliminarTxtKeyTyped"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="matProEliminarTxtActionPerformed"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="matProEliminarTxtKeyTyped"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel6">

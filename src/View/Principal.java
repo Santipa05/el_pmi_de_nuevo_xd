@@ -224,7 +224,7 @@ public class Principal extends javax.swing.JFrame {
 
         menuPaciente.setBackground(new java.awt.Color(0, 102, 153));
         menuPaciente.setForeground(new java.awt.Color(255, 255, 255));
-        menuPaciente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cargar", "Eliminar", "Modificar", "Mostrar todos", "Buscar por DNI", "Mostrar con obra social", "Ver cantidad de estudios" }));
+        menuPaciente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cargar", "Eliminar", "Modificar", "Mostrar todos", "Buscar por DNI", "Mostrar con obra social", "Mostrar sin obra social", "Ver cantidad de estudios" }));
         menuPaciente.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         menuPaciente.setMaximumSize(new java.awt.Dimension(167, 26));
         menuPaciente.addMouseWheelListener(new java.awt.event.MouseWheelListener() {
@@ -323,7 +323,7 @@ public class Principal extends javax.swing.JFrame {
                           break;
                           
                       case "Eliminar":
-                          new FormularioEliminar(this.mapaPersonas, opcion).setVisible(true);
+                          new FormularioEliminar(this.mapaPersonas, opcion, this.listaEstudios).setVisible(true);
                           break;
                           
                       case "Modificar":
@@ -339,7 +339,11 @@ public class Principal extends javax.swing.JFrame {
                           break;
                           
                       case "Mostrar con obra social":
-                          mostrarPacientesConObra();
+                          mostrarPacientesConOsinObra(true);
+                          break;
+                          
+                      case "Mostrar sin obra social":
+                          mostrarPacientesConOsinObra(false);
                           break;
                           
                       case "Ver cantidad de estudios":
@@ -356,7 +360,7 @@ public class Principal extends javax.swing.JFrame {
                           form.setLocationRelativeTo(null);
                           break;
                       case "Eliminar":
-                          new FormularioEliminar(this.mapaPersonas, opcion).setVisible(true);
+                          new FormularioEliminar(this.mapaPersonas, opcion, this.listaEstudios).setVisible(true);
                           break;
                       case "Modificar":
                           new FormularioBuscar(this.mapaPersonas, opcion, caso, this.listaEstudios).setVisible(true);
@@ -502,7 +506,7 @@ public class Principal extends javax.swing.JFrame {
       }
       
       
-      private void mostrarPacientesConObra(){
+      private void mostrarPacientesConOsinObra(boolean conOsin){
         boolean encontroPac = false;
         boolean encontroPacObra = false;
         
@@ -510,15 +514,16 @@ public class Principal extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "La lista está vacía.");
             return;
         }
-        String listado = "---LISTADO PACIENTES CON OBRA SOCIAL---\n\n";
+        if (conOsin == true){
+            String listado = "---LISTADO PACIENTES CON OBRA SOCIAL---\n\n";
         
-        for (Persona p : mapaPersonas.values()) {
-            if (p instanceof Paciente pac){
-                PacienteController miPac = new PacienteController(pac);
-                encontroPac = true;
-                if (miPac.muestraObraSocial()==true){
-                    encontroPacObra = true;
-                    listado += miPac.mostrarDatos() + "\n";
+            for (Persona p : mapaPersonas.values()) {
+                if (p instanceof Paciente pac){
+                    PacienteController miPac = new PacienteController(pac);
+                    encontroPac = true;
+                    if (miPac.muestraObraSocial()==true){
+                        encontroPacObra = true;
+                        listado += miPac.mostrarDatos() + "\n";
                 }
             }
         }
@@ -532,7 +537,30 @@ public class Principal extends javax.swing.JFrame {
         else{
             JOptionPane.showMessageDialog(this, "No se encontraron pacientes caragdos.");
         }
+        }else{
+            String listado = "---LISTADO PACIENTES SIN OBRA SOCIAL---\n\n";
         
+            for (Persona p : mapaPersonas.values()) {
+                if (p instanceof Paciente pac){
+                    PacienteController miPac = new PacienteController(pac);
+                    encontroPac = true;
+                    if (miPac.muestraObraSocial()==false){
+                        encontroPacObra = true;
+                        listado += miPac.mostrarDatos() + "\n";
+                }
+            }
+        }
+        if (encontroPacObra == true){
+            JOptionPane.showMessageDialog(this, listado);
+            return;
+        }
+        else if(encontroPac == true){
+            JOptionPane.showMessageDialog(this, "No se encontraron pacientes sin obra social.");
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "No se encontraron pacientes caragdos.");
+        }
+        }
       }
       
       //METODOS PROFESIONALES
