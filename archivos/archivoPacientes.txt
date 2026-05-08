@@ -1,0 +1,33 @@
+Santino
+Lucero
+46333179
+2665104469
+santi@gmail.com
+true
+
+Juan Ignacio
+Perez
+40123456
+2664001122
+juanperez@gmail.com
+false
+
+Maria Elena
+Gomez
+35987654
+2664556677
+mariagomez@outlook.com
+true
+
+Carlos Alberto
+Rodriguez
+28456123
+2664998800
+carlosrodriguez@hotmail.com
+falseluna
+formini
+46333488
+luna@gmail
+2665060851
+true
+

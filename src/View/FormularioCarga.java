@@ -15,7 +15,6 @@ import java.util.HashMap;
 import javax.swing.JOptionPane;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.io.File;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
