@@ -18,7 +18,6 @@ public class FormularioBuscar extends javax.swing.JFrame {
     private String accionActual;
     private ArrayList<Estudio> listaEstudios;
     private int op;
-    private Profesional encontroPro;
 
       public FormularioBuscar() {
             initComponents();
@@ -863,10 +862,6 @@ public class FormularioBuscar extends javax.swing.JFrame {
     
     private boolean buscarPacDni(String dniBusqueda){
         return (mapaPersonas.containsKey(dniBusqueda) && (mapaPersonas.get(dniBusqueda) instanceof Paciente));
-    }
-    
-    private boolean buscarProDni(String dniBusqueda){
-        return (mapaPersonas.containsKey(dniBusqueda) && (mapaPersonas.get(dniBusqueda) instanceof Profesional));
     }
     
     private PacienteController obtenerPac(String dni){

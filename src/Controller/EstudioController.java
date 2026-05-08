@@ -57,6 +57,10 @@ public class EstudioController {
         return estudio.getFec_realizacion();
     }
     
+    public String muestraStringFechaRealizacion() {
+        return estudio.getFec_realizacion().toString();
+    }
+    
     public boolean esMismaFecha(Fecha fechaConsulta){
         return estudio.getFec_realizacion().getDia() == fechaConsulta.getDia() &&
                estudio.getFec_realizacion().getMes() == fechaConsulta.getMes() &&
@@ -76,11 +80,11 @@ public class EstudioController {
             nombresTraducidos.append(nombre);
             //Agregamos una coma y espacio si no es el ultimo elemento
             if (i < ids.size() - 1) {
-                nombresTraducidos.append("\n|||[] ");
+                nombresTraducidos.append("\n");
             }
         }
         return nombresTraducidos.toString();
-    }   
+    }
     
     public String muestraEstudio(){
     String resultado = estudio.toString() + muestraAnalisisRealizados() + "\n|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n\n\n\n";
