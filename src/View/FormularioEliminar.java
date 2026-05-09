@@ -45,7 +45,7 @@ public class FormularioEliminar extends javax.swing.JFrame {
             this.revalidate();
             this.repaint();
       }
-    
+    //Falta agregar lo de archivos
     //Este metodo actualiza los archivos de paciente y profesional
     
       public void actualizarArchivoGeneral() {
