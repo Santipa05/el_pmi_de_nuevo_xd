@@ -8,6 +8,9 @@ import Model.Estudio;
 import Model.Paciente;
 import Model.Persona;
 import Model.Profesional;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import javax.swing.JOptionPane;
@@ -1022,6 +1025,34 @@ public class FormularioBuscar extends javax.swing.JFrame {
         return false;
     }
     
+    //Este metodo actualiza los archivos de paciente y profesional
+    
+      private void actualizarArchivoGeneral() {
+            try(BufferedWriter escritorPac = new BufferedWriter(new FileWriter("archivos/archivoPacientes.txt"));
+                    BufferedWriter escritorPro = new BufferedWriter(new FileWriter("archivos/archivoProfesionales.txt"))){
+            for (Persona p : mapaPersonas.values()) {
+                  if (p instanceof Paciente pac) {
+                        PacienteController miPac = new PacienteController(pac);
+                        escritorPac.append(miPac.muestraNombre() + "\n");
+                        escritorPac.append(miPac.muestraApellido() + "\n");
+                        escritorPac.append(miPac.muestraDni() + "\n");
+                        escritorPac.append(miPac.muestraMail() + "\n");
+                        escritorPac.append(miPac.muestraTelefono() + "\n");
+                        escritorPac.append(miPac.muestraObraSocial() + "\n\n");
+                  } else if (p instanceof Profesional pro) {
+                        ProfesionalController miPro = new ProfesionalController(pro);
+                        escritorPro.append(miPro.muestraNombre() + "\n");
+                        escritorPro.append(miPro.muestraApellido() + "\n");
+                        escritorPro.append(miPro.muestraDni() + "\n");
+                        escritorPro.append(miPro.muestraTelefono() + "\n");
+                        escritorPro.append(miPro.muestraMail() + "\n");
+                        escritorPro.append(miPro.muestraMatricula() + "\n\n");
+                        }
+                  }
+            } catch (IOException e) {
+                  JOptionPane.showMessageDialog(this, "Error al abrir el archivo: " + e.getMessage());
+            }
+      }
       
     private void btnBuscarPacActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarPacActionPerformed
         String dniBusqueda = dniPacBuscarTxt.getText();
@@ -1137,6 +1168,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
             campoDniPac.setEnabled(true);
             buscarModPac.setVisible(true);
             buscarModPac.setEnabled(true);
+            actualizarArchivoGeneral();
         }
     }//GEN-LAST:event_btnConfirmarPacModActionPerformed
 
@@ -1181,6 +1213,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
             mapaPersonas.put(miProfesional.muestraDni(), miProfesional.ObtenerProfesional());
             muestraOnoCamposModPro(false);
             JOptionPane.showMessageDialog(this, "Profesional modificado correctamente.");
+            actualizarArchivoGeneral();
         }
     }//GEN-LAST:event_confirmarProbtnActionPerformed
 

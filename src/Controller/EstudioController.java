@@ -48,13 +48,37 @@ public class EstudioController {
     public String muestraEstado() {
         return estudio.getEstado();
     }
+    
+    public ArrayList<Integer> obetenerAnalisis(){
+        return estudio.getAnalisisRealizados();
+    }
 
     public Fecha muestraFechaEntrega() {
         return estudio.getFec_entrega();
     }
+    
+    public int muestraFecEntDia(){
+        return estudio.getFec_entrega().getDia();
+    }
+    public int muestraFecEntMes(){
+        return estudio.getFec_entrega().getMes();
+    }
+    public int muestraFecEntAnio(){
+        return estudio.getFec_entrega().getAnio();
+    }
 
     public Fecha muestraFechaRealizacion() {
         return estudio.getFec_realizacion();
+    }
+    
+     public int muestraFecRealDia(){
+        return estudio.getFec_realizacion().getDia();
+    }
+    public int muestraFecRealMes(){
+        return estudio.getFec_realizacion().getMes();
+    }
+    public int muestraFecRealAnio(){
+        return estudio.getFec_realizacion().getAnio();
     }
     
     public String muestraStringFechaRealizacion() {
