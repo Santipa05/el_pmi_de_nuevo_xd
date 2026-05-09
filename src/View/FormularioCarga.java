@@ -549,7 +549,7 @@ public class FormularioCarga extends javax.swing.JFrame {
 
             btnCargarEstudio.setBackground(new java.awt.Color(0, 51, 102));
             btnCargarEstudio.setForeground(new java.awt.Color(255, 255, 255));
-            btnCargarEstudio.setText("CARGAR");
+            btnCargarEstudio.setText("Cargar");
             btnCargarEstudio.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
                         btnCargarEstudioActionPerformed(evt);

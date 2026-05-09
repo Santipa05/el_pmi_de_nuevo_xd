@@ -3,26 +3,19 @@ import View.Principal;
 import java.util.HashMap;
 
 public class PMI {
-    
-    // 2. EL REGISTRO DE ESTUDIOS
-    
-    // 3. EL CATÁLOGO DE ANÁLISIS 
+      //El hashMap de los analisis
     public static HashMap<Integer, String> catalogoAnalisis = new HashMap<>();
-    
-    
       public static void main(String[] args) {
-          
         cargarCatalogoAnalisis();
-          
         java.awt.EventQueue.invokeLater(new Runnable() {
         public void run() {
             Principal ventana = new Principal();
             ventana.setVisible(true);
             ventana.setLocationRelativeTo(null);
-        }
-    });
+            }
+          });
       }
-      
+      //Los estudios posibles
       
       public static void cargarCatalogoAnalisis(){
           catalogoAnalisis.put(0, "Hemograma Completo");
