@@ -458,6 +458,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
             obSocSig.setText("Obra Social");
 
             campoTelMod.setBackground(new java.awt.Color(51, 51, 51));
+            campoTelMod.setForeground(new java.awt.Color(255, 255, 255));
             campoTelMod.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
                         campoTelModActionPerformed(evt);
@@ -470,6 +471,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
             });
 
             campoMailMod.setBackground(new java.awt.Color(51, 51, 51));
+            campoMailMod.setForeground(new java.awt.Color(255, 255, 255));
             campoMailMod.addKeyListener(new java.awt.event.KeyAdapter() {
                   public void keyTyped(java.awt.event.KeyEvent evt) {
                         campoMailModKeyTyped(evt);
@@ -523,7 +525,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
                         .addComponent(buscarModPac, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                   .addGroup(jPanelModificarPacLayout.createSequentialGroup()
-                        .addGap(0, 99, Short.MAX_VALUE)
+                        .addGap(0, 100, Short.MAX_VALUE)
                         .addComponent(separador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -545,12 +547,13 @@ public class FormularioBuscar extends javax.swing.JFrame {
                                           .addComponent(campoTelMod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                               .addGroup(jPanelModificarPacLayout.createSequentialGroup()
                                     .addGap(22, 22, 22)
-                                    .addComponent(noEncontro, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))
-                              .addComponent(btnConfirmarPacMod, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(80, Short.MAX_VALUE))
+                                    .addComponent(noEncontro, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(81, Short.MAX_VALUE))
                   .addGroup(jPanelModificarPacLayout.createSequentialGroup()
                         .addGap(133, 133, 133)
-                        .addComponent(btnCancelarPacMod, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                              .addComponent(btnConfirmarPacMod, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                              .addComponent(btnCancelarPacMod, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             );
             jPanelModificarPacLayout.setVerticalGroup(
@@ -597,7 +600,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
                         .addComponent(btnConfirmarPacMod)
                         .addGap(32, 32, 32)
                         .addComponent(btnCancelarPacMod)
-                        .addContainerGap(171, Short.MAX_VALUE))
+                        .addContainerGap(172, Short.MAX_VALUE))
             );
 
             jPanelModificarPro.setBackground(new java.awt.Color(153, 204, 255));
@@ -756,9 +759,6 @@ public class FormularioBuscar extends javax.swing.JFrame {
                                                                   .addComponent(modTelInput1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                   .addComponent(matriculaTXT1)))
                                                       .addGroup(jPanelModificarProLayout.createSequentialGroup()
-                                                            .addGap(18, 18, 18)
-                                                            .addComponent(confirmarProbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                      .addGroup(jPanelModificarProLayout.createSequentialGroup()
                                                             .addGap(22, 22, 22)
                                                             .addComponent(noEncontro1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                               .addGroup(jPanelModificarProLayout.createSequentialGroup()
@@ -766,7 +766,9 @@ public class FormularioBuscar extends javax.swing.JFrame {
                                     .addComponent(buscarModPro, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
                               .addGroup(jPanelModificarProLayout.createSequentialGroup()
                                     .addGap(170, 170, 170)
-                                    .addComponent(cancelarProbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                          .addComponent(confirmarProbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                          .addComponent(cancelarProbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addContainerGap(56, Short.MAX_VALUE))
             );
             jPanelModificarProLayout.setVerticalGroup(
@@ -1074,10 +1076,10 @@ public class FormularioBuscar extends javax.swing.JFrame {
         for (Persona p : mapaPersonas.values()){
             if (p instanceof Profesional pro){
                 ProfesionalController miPro = new ProfesionalController(pro);
-                
                 if(miPro.muestraMatricula().equals(matIngresada)){
                     JOptionPane.showMessageDialog(this, "---Profesional encontrado---\n\n" + miPro.mostrarDatos());
-                    encontro = true;break;
+                    encontro = true;
+                    break;
                 }
             }
         }
