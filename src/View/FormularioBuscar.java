@@ -88,8 +88,6 @@ public class FormularioBuscar extends javax.swing.JFrame {
                     jPanelContarEstPac.setEnabled(false);
                     jPanelBuscarPaciente.setVisible(false);
                     jPanelBuscarPaciente.setEnabled(false);
-                    jPanelBuscarProfesional.setVisible(false);
-                    jPanelBuscarProfesional.setEnabled(false); 
                     jPanelModificarPac.setVisible(false);
                     jPanelModificarPac.setEnabled(false);
                     jPanelModificarPro.setVisible(false);
@@ -359,19 +357,17 @@ public class FormularioBuscar extends javax.swing.JFrame {
             jPanelBuscarProfesionalLayout.setHorizontalGroup(
                   jPanelBuscarProfesionalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                   .addGroup(jPanelBuscarProfesionalLayout.createSequentialGroup()
-                        .addContainerGap(8, Short.MAX_VALUE)
-                        .addGroup(jPanelBuscarProfesionalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                              .addComponent(jLabel7)
-                              .addGroup(jPanelBuscarProfesionalLayout.createSequentialGroup()
+                        .addContainerGap(30, Short.MAX_VALUE)
+                        .addGroup(jPanelBuscarProfesionalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                              .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBuscarProfesionalLayout.createSequentialGroup()
                                     .addComponent(jLabel8)
-                                    .addGroup(jPanelBuscarProfesionalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                          .addGroup(jPanelBuscarProfesionalLayout.createSequentialGroup()
-                                                .addGap(62, 62, 62)
-                                                .addComponent(btnBuscarMatPro))
-                                          .addGroup(jPanelBuscarProfesionalLayout.createSequentialGroup()
-                                                .addGap(18, 18, 18)
-                                                .addComponent(matProBuscartxt1, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addContainerGap(129, Short.MAX_VALUE))
+                                    .addGap(18, 18, 18)
+                                    .addComponent(matProBuscartxt1, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
+                              .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING)
+                              .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBuscarProfesionalLayout.createSequentialGroup()
+                                    .addComponent(btnBuscarMatPro)
+                                    .addGap(46, 46, 46)))
+                        .addContainerGap(119, Short.MAX_VALUE))
             );
             jPanelBuscarProfesionalLayout.setVerticalGroup(
                   jPanelBuscarProfesionalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -398,6 +394,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
             subtitulo.setText("DNI");
 
             buscarModPac.setBackground(new java.awt.Color(0, 51, 102));
+            buscarModPac.setForeground(new java.awt.Color(255, 255, 255));
             buscarModPac.setText("Buscar");
             buscarModPac.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -460,6 +457,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
             obSocSig.setForeground(new java.awt.Color(102, 102, 102));
             obSocSig.setText("Obra Social");
 
+            campoTelMod.setBackground(new java.awt.Color(51, 51, 51));
             campoTelMod.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
                         campoTelModActionPerformed(evt);
@@ -471,6 +469,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
                   }
             });
 
+            campoMailMod.setBackground(new java.awt.Color(51, 51, 51));
             campoMailMod.addKeyListener(new java.awt.event.KeyAdapter() {
                   public void keyTyped(java.awt.event.KeyEvent evt) {
                         campoMailModKeyTyped(evt);
@@ -482,6 +481,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
             separador.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
             btnConfirmarPacMod.setBackground(new java.awt.Color(0, 51, 102));
+            btnConfirmarPacMod.setForeground(new java.awt.Color(255, 255, 255));
             btnConfirmarPacMod.setText("Confirmar cambios");
             btnConfirmarPacMod.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -490,6 +490,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
             });
 
             btnCancelarPacMod.setBackground(new java.awt.Color(0, 51, 102));
+            btnCancelarPacMod.setForeground(new java.awt.Color(255, 255, 255));
             btnCancelarPacMod.setText("Cancelar");
             btnCancelarPacMod.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -545,10 +546,12 @@ public class FormularioBuscar extends javax.swing.JFrame {
                               .addGroup(jPanelModificarPacLayout.createSequentialGroup()
                                     .addGap(22, 22, 22)
                                     .addComponent(noEncontro, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))
-                              .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(btnCancelarPacMod, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btnConfirmarPacMod, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)))
+                              .addComponent(btnConfirmarPacMod, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(80, Short.MAX_VALUE))
+                  .addGroup(jPanelModificarPacLayout.createSequentialGroup()
+                        .addGap(133, 133, 133)
+                        .addComponent(btnCancelarPacMod, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             );
             jPanelModificarPacLayout.setVerticalGroup(
                   jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -592,9 +595,9 @@ public class FormularioBuscar extends javax.swing.JFrame {
                               .addComponent(separador))
                         .addGap(55, 55, 55)
                         .addComponent(btnConfirmarPacMod)
-                        .addGap(18, 18, 18)
+                        .addGap(32, 32, 32)
                         .addComponent(btnCancelarPacMod)
-                        .addContainerGap(185, Short.MAX_VALUE))
+                        .addContainerGap(171, Short.MAX_VALUE))
             );
 
             jPanelModificarPro.setBackground(new java.awt.Color(153, 204, 255));
@@ -616,7 +619,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
             dniSig1.setForeground(new java.awt.Color(102, 102, 102));
             dniSig1.setText("DNI");
 
-            modTelInput1.setBackground(new java.awt.Color(0, 102, 153));
+            modTelInput1.setBackground(new java.awt.Color(51, 51, 51));
             modTelInput1.setForeground(new java.awt.Color(255, 255, 255));
             modTelInput1.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -633,7 +636,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
             dniTXT1.setForeground(new java.awt.Color(0, 0, 0));
             dniTXT1.setText("default");
 
-            modMailInput1.setBackground(new java.awt.Color(0, 102, 153));
+            modMailInput1.setBackground(new java.awt.Color(51, 51, 51));
             modMailInput1.setForeground(new java.awt.Color(255, 255, 255));
             modMailInput1.addKeyListener(new java.awt.event.KeyAdapter() {
                   public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -658,6 +661,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
             separador1.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
             buscarModPro.setBackground(new java.awt.Color(0, 51, 102));
+            buscarModPro.setForeground(new java.awt.Color(255, 255, 255));
             buscarModPro.setText("Buscar");
             buscarModPro.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -701,6 +705,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
             matriculaTXT1.setText("default");
 
             confirmarProbtn.setBackground(new java.awt.Color(0, 51, 102));
+            confirmarProbtn.setForeground(new java.awt.Color(255, 255, 255));
             confirmarProbtn.setText("Confirmar cambios");
             confirmarProbtn.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -709,6 +714,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
             });
 
             cancelarProbtn.setBackground(new java.awt.Color(0, 51, 102));
+            cancelarProbtn.setForeground(new java.awt.Color(255, 255, 255));
             cancelarProbtn.setText("Cancelar");
             cancelarProbtn.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -751,16 +757,17 @@ public class FormularioBuscar extends javax.swing.JFrame {
                                                                   .addComponent(matriculaTXT1)))
                                                       .addGroup(jPanelModificarProLayout.createSequentialGroup()
                                                             .addGap(18, 18, 18)
-                                                            .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                                  .addComponent(cancelarProbtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                                  .addComponent(confirmarProbtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                            .addComponent(confirmarProbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                       .addGroup(jPanelModificarProLayout.createSequentialGroup()
                                                             .addGap(22, 22, 22)
                                                             .addComponent(noEncontro1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                               .addGroup(jPanelModificarProLayout.createSequentialGroup()
                                     .addGap(193, 193, 193)
-                                    .addComponent(buscarModPro, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(57, Short.MAX_VALUE))
+                                    .addComponent(buscarModPro, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
+                              .addGroup(jPanelModificarProLayout.createSequentialGroup()
+                                    .addGap(170, 170, 170)
+                                    .addComponent(cancelarProbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(56, Short.MAX_VALUE))
             );
             jPanelModificarProLayout.setVerticalGroup(
                   jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -806,7 +813,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
                         .addComponent(confirmarProbtn)
                         .addGap(18, 18, 18)
                         .addComponent(cancelarProbtn)
-                        .addContainerGap(195, Short.MAX_VALUE))
+                        .addContainerGap(183, Short.MAX_VALUE))
             );
 
             javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -896,6 +903,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
             btnConfirmarPacMod.setVisible(true);
             btnConfirmarPacMod.setEnabled(true);
         }else{
+            separador.setVisible(false);
             noEncontro.setVisible(false);
             nombreSig.setVisible(false);
             nombreTXT.setVisible(false);
@@ -1016,7 +1024,11 @@ public class FormularioBuscar extends javax.swing.JFrame {
     private void btnBuscarPacActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarPacActionPerformed
         String dniBusqueda = dniPacBuscarTxt.getText();
         if (buscarPacDni(dniBusqueda)){
-                JOptionPane.showMessageDialog(this, "---Paciente encontrado---\n\n" + obtenerPac(dniBusqueda).mostrarDatos());
+                Object[] opciones = {"Salir", "Reintentar"}; 
+                int seleccion = javax.swing.JOptionPane.showOptionDialog(this,"Paciente encontrado!\n\nNombre: " + obtenerPac(dniBusqueda).muestraNombre() + "\nDNI: " + obtenerPac(dniBusqueda).muestraDni()
+                        + "\n\nDesea intentarlo nuevamente?", "Busqueda", javax.swing.JOptionPane.DEFAULT_OPTION, javax.swing.JOptionPane.QUESTION_MESSAGE, null, opciones, opciones[0]);
+                if(seleccion == 0)
+                      this.dispose();
         }else{
             JOptionPane.showMessageDialog(this, "No se encontro ningun paciente con el dni " + dniBusqueda);
         }
@@ -1040,7 +1052,12 @@ public class FormularioBuscar extends javax.swing.JFrame {
                 Paciente encontrada = (Paciente) mapaPersonas.get(dniBusqueda);
                 PacienteController miPac = new PacienteController(encontrada);
                 int cantEst = miPac.obtenerCantidadEstudios(listaEstudios);
-                JOptionPane.showMessageDialog(this, "Paciente: " + miPac.muestraNombre() + " " + miPac.muestraApellido() + "\nDNI: " + dniBusqueda + "\nCantidad estudios: " + cantEst);
+                Object[] opciones = {"Salir", "Reintentar"}; 
+                int seleccion = javax.swing.JOptionPane.showOptionDialog(this,"Nombre: " + miPac.muestraNombre() + "\nDNI: " +
+                        miPac.muestraDni() + "\nCantidad de estudios: " + cantEst + "\n\nDesea intentarlo con otro paciente?\n", "Muestra",
+                        javax.swing.JOptionPane.DEFAULT_OPTION, javax.swing.JOptionPane.QUESTION_MESSAGE, null, opciones, opciones[0]);
+                if(seleccion == 0)
+                      this.dispose();
         }else{
             JOptionPane.showMessageDialog(this, "No se encontro ningun paciente con el dni " + dniBusqueda);
         }

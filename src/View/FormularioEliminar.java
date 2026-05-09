@@ -328,8 +328,7 @@ public class FormularioEliminar extends javax.swing.JFrame {
 
     private void btnEliminarProActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarProActionPerformed
         String dniBusqueda = dniProEliminarTxt.getText();
-        
-        //Falta agregar controles de si teiene estudios, etc.
+        //Falta agregar controles de si tiene estudios, etc.
         if (mapaPersonas.containsKey(dniBusqueda) && (mapaPersonas.get(dniBusqueda) instanceof Profesional)){
               Object[] opciones = {"Eliminar", "Cancelar"};
             int seleccion = javax.swing.JOptionPane.showOptionDialog(this,"Esta seguro que desea eliminar el profesional?\n", "Eliminar", javax.swing.JOptionPane.DEFAULT_OPTION, javax.swing.JOptionPane.QUESTION_MESSAGE, null, opciones, opciones[0]);
@@ -349,7 +348,7 @@ public class FormularioEliminar extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void btnCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelar1ActionPerformed
-        // TODO add your handling code here:
+        this.dispose();
     }//GEN-LAST:event_btnCancelar1ActionPerformed
 
       private void dniPacEliminarTxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_dniPacEliminarTxtKeyTyped

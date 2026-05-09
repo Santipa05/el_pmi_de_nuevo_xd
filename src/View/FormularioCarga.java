@@ -100,7 +100,7 @@ public class FormularioCarga extends javax.swing.JFrame {
 
             PanelCargaPac.setBackground(new java.awt.Color(153, 204, 255));
 
-            nombretxtPac.setBackground(new java.awt.Color(0, 51, 102));
+            nombretxtPac.setBackground(new java.awt.Color(51, 51, 51));
             nombretxtPac.setForeground(new java.awt.Color(255, 255, 255));
             nombretxtPac.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -116,7 +116,7 @@ public class FormularioCarga extends javax.swing.JFrame {
             jLabel2.setForeground(new java.awt.Color(102, 102, 102));
             jLabel2.setText("Nombre");
 
-            apellidotxtPac.setBackground(new java.awt.Color(0, 51, 102));
+            apellidotxtPac.setBackground(new java.awt.Color(51, 51, 51));
             apellidotxtPac.setForeground(new java.awt.Color(255, 255, 255));
             apellidotxtPac.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,7 +132,7 @@ public class FormularioCarga extends javax.swing.JFrame {
             jLabel3.setForeground(new java.awt.Color(102, 102, 102));
             jLabel3.setText("Apellido");
 
-            dnitxt.setBackground(new java.awt.Color(0, 51, 102));
+            dnitxt.setBackground(new java.awt.Color(51, 51, 51));
             dnitxt.setForeground(new java.awt.Color(255, 255, 255));
             dnitxt.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,7 +148,7 @@ public class FormularioCarga extends javax.swing.JFrame {
             jLabel4.setForeground(new java.awt.Color(102, 102, 102));
             jLabel4.setText("DNI");
 
-            telefonotxtPac.setBackground(new java.awt.Color(0, 51, 102));
+            telefonotxtPac.setBackground(new java.awt.Color(51, 51, 51));
             telefonotxtPac.setForeground(new java.awt.Color(255, 255, 255));
             telefonotxtPac.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,7 +164,7 @@ public class FormularioCarga extends javax.swing.JFrame {
             jLabel5.setForeground(new java.awt.Color(102, 102, 102));
             jLabel5.setText("Telefono");
 
-            mailtxtPac.setBackground(new java.awt.Color(0, 51, 102));
+            mailtxtPac.setBackground(new java.awt.Color(51, 51, 51));
             mailtxtPac.setForeground(new java.awt.Color(255, 255, 255));
             mailtxtPac.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -194,9 +194,12 @@ public class FormularioCarga extends javax.swing.JFrame {
                   }
             });
 
+            jSeparator1.setBackground(new java.awt.Color(153, 204, 255));
             jSeparator1.setForeground(new java.awt.Color(102, 102, 102));
             jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
+            btnGuardarPaciente.setBackground(new java.awt.Color(0, 51, 102));
+            btnGuardarPaciente.setForeground(new java.awt.Color(255, 255, 255));
             btnGuardarPaciente.setText("Cargar");
             btnGuardarPaciente.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -277,7 +280,7 @@ public class FormularioCarga extends javax.swing.JFrame {
             titulo.setForeground(new java.awt.Color(0, 0, 0));
             titulo.setText("Formulario Profesional");
 
-            nombretxt.setBackground(new java.awt.Color(0, 51, 102));
+            nombretxt.setBackground(new java.awt.Color(51, 51, 51));
             nombretxt.setForeground(new java.awt.Color(255, 255, 255));
             nombretxt.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -293,7 +296,7 @@ public class FormularioCarga extends javax.swing.JFrame {
             nombreSig.setForeground(new java.awt.Color(102, 102, 102));
             nombreSig.setText("Nombre");
 
-            apellidotxt.setBackground(new java.awt.Color(0, 51, 102));
+            apellidotxt.setBackground(new java.awt.Color(51, 51, 51));
             apellidotxt.setForeground(new java.awt.Color(255, 255, 255));
             apellidotxt.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -309,7 +312,7 @@ public class FormularioCarga extends javax.swing.JFrame {
             apellidoSig.setForeground(new java.awt.Color(102, 102, 102));
             apellidoSig.setText("Apellido");
 
-            matriculatxt.setBackground(new java.awt.Color(0, 51, 102));
+            matriculatxt.setBackground(new java.awt.Color(51, 51, 51));
             matriculatxt.setForeground(new java.awt.Color(255, 255, 255));
             matriculatxt.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -325,7 +328,7 @@ public class FormularioCarga extends javax.swing.JFrame {
             matriculaSig.setForeground(new java.awt.Color(102, 102, 102));
             matriculaSig.setText("Matricula");
 
-            telefonoProtxt.setBackground(new java.awt.Color(0, 51, 102));
+            telefonoProtxt.setBackground(new java.awt.Color(51, 51, 51));
             telefonoProtxt.setForeground(new java.awt.Color(255, 255, 255));
             telefonoProtxt.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -341,7 +344,7 @@ public class FormularioCarga extends javax.swing.JFrame {
             telefonoSig.setForeground(new java.awt.Color(102, 102, 102));
             telefonoSig.setText("Telefono");
 
-            emailProtxt.setBackground(new java.awt.Color(0, 51, 102));
+            emailProtxt.setBackground(new java.awt.Color(51, 51, 51));
             emailProtxt.setForeground(new java.awt.Color(255, 255, 255));
             emailProtxt.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -357,9 +360,12 @@ public class FormularioCarga extends javax.swing.JFrame {
             mailSig.setForeground(new java.awt.Color(102, 102, 102));
             mailSig.setText("Email");
 
+            separador.setBackground(new java.awt.Color(153, 204, 255));
             separador.setForeground(new java.awt.Color(102, 102, 102));
             separador.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
+            btnGuardarProfesional.setBackground(new java.awt.Color(0, 51, 102));
+            btnGuardarProfesional.setForeground(new java.awt.Color(255, 255, 255));
             btnGuardarProfesional.setText("Cargar");
             btnGuardarProfesional.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -367,7 +373,7 @@ public class FormularioCarga extends javax.swing.JFrame {
                   }
             });
 
-            dniProtxt.setBackground(new java.awt.Color(0, 51, 102));
+            dniProtxt.setBackground(new java.awt.Color(51, 51, 51));
             dniProtxt.setForeground(new java.awt.Color(255, 255, 255));
             dniProtxt.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -397,12 +403,13 @@ public class FormularioCarga extends javax.swing.JFrame {
                                     .addComponent(separador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addGroup(PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                          .addComponent(nombreSig, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                                           .addComponent(telefonoSig)
-                                          .addComponent(apellidoSig)
                                           .addComponent(mailSig)
                                           .addComponent(matriculaSig)
-                                          .addComponent(dniSig))
+                                          .addComponent(dniSig)
+                                          .addGroup(PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                .addComponent(nombreSig, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(apellidoSig, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                                     .addGap(22, 22, 22)
                                     .addGroup(PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                           .addComponent(nombretxt, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -423,7 +430,6 @@ public class FormularioCarga extends javax.swing.JFrame {
                         .addComponent(titulo)
                         .addGap(18, 18, 18)
                         .addGroup(PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                              .addComponent(separador, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
                               .addGroup(PanelCargaProLayout.createSequentialGroup()
                                     .addGroup(PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                           .addComponent(nombretxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -443,11 +449,12 @@ public class FormularioCarga extends javax.swing.JFrame {
                                     .addGap(18, 18, 18)
                                     .addGroup(PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                           .addComponent(mailSig)
-                                          .addComponent(emailProtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(18, 18, 18)
-                        .addGroup(PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                              .addComponent(dniProtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                              .addComponent(dniSig))
+                                          .addComponent(emailProtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGap(18, 18, 18)
+                                    .addGroup(PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                          .addComponent(dniProtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                          .addComponent(dniSig)))
+                              .addComponent(separador, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(48, 48, 48)
                         .addComponent(btnGuardarProfesional)
                         .addContainerGap(123, Short.MAX_VALUE))
@@ -456,17 +463,18 @@ public class FormularioCarga extends javax.swing.JFrame {
             PanelCargaEst.setBackground(new java.awt.Color(153, 204, 255));
             PanelCargaEst.setPreferredSize(new java.awt.Dimension(380, 500));
 
-            tituloEst.setFont(new java.awt.Font("Nirmala Text Semilight", 1, 18)); // NOI18N
+            tituloEst.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
             tituloEst.setForeground(new java.awt.Color(0, 0, 0));
             tituloEst.setText("Formulario estudio");
 
+            jSeparator2.setBackground(new java.awt.Color(153, 204, 255));
             jSeparator2.setForeground(new java.awt.Color(102, 102, 102));
             jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
             jLabel8.setForeground(new java.awt.Color(102, 102, 102));
             jLabel8.setText("DNI del paciente");
 
-            dniPacEst.setBackground(new java.awt.Color(0, 51, 102));
+            dniPacEst.setBackground(new java.awt.Color(51, 51, 51));
             dniPacEst.setForeground(new java.awt.Color(255, 255, 255));
             dniPacEst.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -482,7 +490,7 @@ public class FormularioCarga extends javax.swing.JFrame {
             jLabel7.setForeground(new java.awt.Color(102, 102, 102));
             jLabel7.setText("Matricula del profesional");
 
-            matProEst.setBackground(new java.awt.Color(0, 51, 102));
+            matProEst.setBackground(new java.awt.Color(51, 51, 51));
             matProEst.setForeground(new java.awt.Color(255, 255, 255));
             matProEst.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -498,7 +506,7 @@ public class FormularioCarga extends javax.swing.JFrame {
             jLabel9.setForeground(new java.awt.Color(102, 102, 102));
             jLabel9.setText("Fecha de realizacion");
 
-            fechaEnt.setModel(new javax.swing.SpinnerDateModel(new java.util.Date(1777426620000L), new java.util.Date(1777426620000L), new java.util.Date(1924997820000L), java.util.Calendar.DAY_OF_MONTH));
+            fechaEnt.setModel(new javax.swing.SpinnerDateModel(new java.util.Date(), new java.util.Date(), new java.util.Date(1924997820000L), java.util.Calendar.DAY_OF_MONTH));
             fechaEnt.setEditor(new javax.swing.JSpinner.DateEditor(fechaEnt, "dd/MM/yyyy"));
 
             jLabel10.setForeground(new java.awt.Color(102, 102, 102));
@@ -507,7 +515,7 @@ public class FormularioCarga extends javax.swing.JFrame {
             jLabel11.setForeground(new java.awt.Color(102, 102, 102));
             jLabel11.setText("Estado");
 
-            estado.setBackground(new java.awt.Color(0, 51, 102));
+            estado.setBackground(new java.awt.Color(51, 51, 51));
             estado.setForeground(new java.awt.Color(255, 255, 255));
             estado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "En elaboracion", "Finalizado", "Retirado", "Enviado" }));
             estado.addActionListener(new java.awt.event.ActionListener() {
@@ -519,14 +527,14 @@ public class FormularioCarga extends javax.swing.JFrame {
             jLabel12.setForeground(new java.awt.Color(102, 102, 102));
             jLabel12.setText("Estudios");
 
-            estudiosList.setBackground(new java.awt.Color(0, 51, 102));
+            estudiosList.setBackground(new java.awt.Color(51, 51, 51));
             estudiosList.setForeground(new java.awt.Color(255, 255, 255));
             estudiosList.setModel(new javax.swing.AbstractListModel<String>() {
                   String[] strings = { "Hemograma completo", "Glucemia", "Colesterol total", "Orina completa", "Uremia", "Creatinemia", "Hepatograma", "Perfil lipidico", "Grupo y factor", "Coagulograma" };
                   public int getSize() { return strings.length; }
                   public String getElementAt(int i) { return strings[i]; }
             });
-            estudiosList.setSelectionBackground(new java.awt.Color(0, 102, 204));
+            estudiosList.setSelectionBackground(new java.awt.Color(38, 85, 108));
             estudiosList.setSelectionForeground(new java.awt.Color(255, 255, 255));
             estudiosScroll.setViewportView(estudiosList);
 
@@ -560,38 +568,36 @@ public class FormularioCarga extends javax.swing.JFrame {
                               .addGroup(PanelCargaEstLayout.createSequentialGroup()
                                     .addGap(18, 18, 18)
                                     .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(12, 12, 12)
                                     .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                          .addGroup(PanelCargaEstLayout.createSequentialGroup()
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                          .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(PanelCargaEstLayout.createSequentialGroup()
                                                       .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                            .addGroup(PanelCargaEstLayout.createSequentialGroup()
-                                                                  .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                        .addComponent(jLabel9)
-                                                                        .addComponent(jLabel10)
-                                                                        .addComponent(jLabel11)
-                                                                        .addComponent(jLabel13)
-                                                                        .addComponent(jLabel15)
-                                                                        .addComponent(jLabel8))
-                                                                  .addGap(33, 33, 33))
-                                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCargaEstLayout.createSequentialGroup()
-                                                                  .addComponent(jLabel7)
-                                                                  .addGap(18, 18, 18)))
-                                                      .addGroup(PanelCargaEstLayout.createSequentialGroup()
-                                                            .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                  .addComponent(jLabel14)
-                                                                  .addComponent(jLabel12))
-                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                                                .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                      .addComponent(dniPacEst)
-                                                      .addComponent(matProEst)
-                                                      .addComponent(fechaEnt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                      .addComponent(estado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                      .addComponent(estudiosScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
-                                                      .addComponent(fechaRetxt)))
+                                                            .addComponent(jLabel9)
+                                                            .addComponent(jLabel10)
+                                                            .addComponent(jLabel11)
+                                                            .addComponent(jLabel13)
+                                                            .addComponent(jLabel15)
+                                                            .addComponent(jLabel8))
+                                                      .addGap(33, 33, 33))
+                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCargaEstLayout.createSequentialGroup()
+                                                      .addComponent(jLabel7)
+                                                      .addGap(18, 18, 18)))
                                           .addGroup(PanelCargaEstLayout.createSequentialGroup()
-                                                .addGap(120, 120, 120)
-                                                .addComponent(btnCargarEstudio))))
+                                                .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                      .addComponent(jLabel14)
+                                                      .addComponent(jLabel12))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                                    .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                          .addComponent(dniPacEst)
+                                          .addComponent(matProEst)
+                                          .addComponent(fechaEnt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                          .addComponent(estado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                          .addComponent(estudiosScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
+                                          .addComponent(fechaRetxt)))
+                              .addGroup(PanelCargaEstLayout.createSequentialGroup()
+                                    .addGap(141, 141, 141)
+                                    .addComponent(btnCargarEstudio))
                               .addGroup(PanelCargaEstLayout.createSequentialGroup()
                                     .addGap(109, 109, 109)
                                     .addComponent(tituloEst)))
@@ -603,7 +609,7 @@ public class FormularioCarga extends javax.swing.JFrame {
                         .addGap(33, 33, 33)
                         .addComponent(tituloEst)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                               .addGroup(PanelCargaEstLayout.createSequentialGroup()
                                     .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                           .addComponent(jLabel8)
@@ -636,10 +642,10 @@ public class FormularioCarga extends javax.swing.JFrame {
                                                 .addGap(18, 18, 18)
                                                 .addComponent(estado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(18, 18, 18)
-                                                .addComponent(estudiosScroll, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
-                                    .addComponent(btnCargarEstudio))
+                                                .addComponent(estudiosScroll, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                               .addComponent(jSeparator2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                        .addComponent(btnCargarEstudio)
                         .addContainerGap())
             );
 
@@ -886,7 +892,13 @@ public class FormularioCarga extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "-Error. El paciente no fue encontrado-\n\n");
                 return;
           }
+          //Control de que seleccione almenos un estudio
           
+          int cantSel = estudiosList.getSelectedValuesList().size();
+          if(cantSel == 0){
+                JOptionPane.showMessageDialog(this, "Error. Debe seleccionar almenos un estudio\n\n");
+                return;
+          }
             //Crea objeto date para leer fecha ingresada
             LocalDate fechaRe = LocalDate.now();
             java.util.Date dateEntrega = (java.util.Date) fechaEnt.getValue();
