@@ -212,8 +212,8 @@ public class FormularioEstudio extends javax.swing.JFrame {
     jPanelMostrarEstudios.setVisible(true);
     }
       @SuppressWarnings("unchecked")
-      // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-      private void initComponents() {
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
 
         jSplitPane1 = new javax.swing.JSplitPane();
         jPanelBusquedas = new javax.swing.JPanel();
@@ -255,14 +255,15 @@ public class FormularioEstudio extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTableMostrar = new javax.swing.JTable();
 
-            setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-            setBackground(new java.awt.Color(153, 204, 255));
-            setResizable(false);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setBackground(new java.awt.Color(153, 204, 255));
+        setResizable(false);
 
         jSplitPane1.setDividerLocation(400);
         jSplitPane1.setResizeWeight(1.0);
 
         jPanelBusquedas.setBackground(new java.awt.Color(153, 204, 255));
+        jPanelBusquedas.setPreferredSize(new java.awt.Dimension(790, 427));
         jPanelBusquedas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanelBuscarEstudioEstado.setBackground(new java.awt.Color(153, 204, 255));
@@ -270,40 +271,42 @@ public class FormularioEstudio extends javax.swing.JFrame {
         jPanelBuscarEstudioEstado.setMinimumSize(new java.awt.Dimension(562, 478));
         jPanelBuscarEstudioEstado.setPreferredSize(new java.awt.Dimension(562, 478));
 
-            jPanelBuscarEstudioEstado.setBackground(new java.awt.Color(153, 204, 255));
-            jPanelBuscarEstudioEstado.setPreferredSize(new java.awt.Dimension(790, 427));
+        btnBuscarEstEsta.setBackground(new java.awt.Color(0, 51, 102));
+        btnBuscarEstEsta.setForeground(new java.awt.Color(255, 255, 255));
+        btnBuscarEstEsta.setText("Buscar");
+        btnBuscarEstEsta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarEstEstaActionPerformed(evt);
+            }
+        });
 
-            btnBuscarEstEsta.setBackground(new java.awt.Color(0, 51, 102));
-            btnBuscarEstEsta.setForeground(new java.awt.Color(255, 255, 255));
-            btnBuscarEstEsta.setText("Buscar");
-            btnBuscarEstEsta.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        btnBuscarEstEstaActionPerformed(evt);
-                  }
-            });
+        jLabel5.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel5.setText("Estado");
 
-            jLabel5.setForeground(new java.awt.Color(102, 102, 102));
-            jLabel5.setText("Estado");
+        jLabel2.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel2.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Buscar estudio");
 
-            jLabel2.setBackground(new java.awt.Color(0, 0, 0));
-            jLabel2.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-            jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-            jLabel2.setText("Buscar estudio");
+        estadoInput.setBackground(new java.awt.Color(51, 51, 51));
+        estadoInput.setForeground(new java.awt.Color(255, 255, 255));
+        estadoInput.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "En elaboracion", "Finalizado", "Retirado", "Enviado" }));
+        estadoInput.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                estadoInputActionPerformed(evt);
+            }
+        });
 
-            estadoInput.setBackground(new java.awt.Color(51, 51, 51));
-            estadoInput.setForeground(new java.awt.Color(255, 255, 255));
-            estadoInput.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "En elaboracion", "Finalizado", "Retirado", "Enviado" }));
-            estadoInput.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        estadoInputActionPerformed(evt);
-                  }
-            });
-
-            javax.swing.GroupLayout jPanelBuscarEstudioEstadoLayout = new javax.swing.GroupLayout(jPanelBuscarEstudioEstado);
-            jPanelBuscarEstudioEstado.setLayout(jPanelBuscarEstudioEstadoLayout);
-            jPanelBuscarEstudioEstadoLayout.setHorizontalGroup(
-                  jPanelBuscarEstudioEstadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                  .addGroup(jPanelBuscarEstudioEstadoLayout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelBuscarEstudioEstadoLayout = new javax.swing.GroupLayout(jPanelBuscarEstudioEstado);
+        jPanelBuscarEstudioEstado.setLayout(jPanelBuscarEstudioEstadoLayout);
+        jPanelBuscarEstudioEstadoLayout.setHorizontalGroup(
+            jPanelBuscarEstudioEstadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelBuscarEstudioEstadoLayout.createSequentialGroup()
+                .addGroup(jPanelBuscarEstudioEstadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelBuscarEstudioEstadoLayout.createSequentialGroup()
+                        .addGap(75, 75, 75)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanelBuscarEstudioEstadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(estadoInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2)))
@@ -386,32 +389,42 @@ public class FormularioEstudio extends javax.swing.JFrame {
                 .addContainerGap(301, Short.MAX_VALUE))
         );
 
-            jPanelBusquedas.add(jPanelBuscarEstudioEstado);
+        jPanelBusquedas.add(jPanelBuscarEstudioFechaRec, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 6, -1, -1));
 
         jPanelBuscarEstudioPro.setBackground(new java.awt.Color(153, 204, 255));
         jPanelBuscarEstudioPro.setMaximumSize(new java.awt.Dimension(562, 478));
         jPanelBuscarEstudioPro.setMinimumSize(new java.awt.Dimension(562, 478));
         jPanelBuscarEstudioPro.setPreferredSize(new java.awt.Dimension(562, 478));
 
-            btnBuscarEstFec.setBackground(new java.awt.Color(0, 51, 102));
-            btnBuscarEstFec.setForeground(new java.awt.Color(255, 255, 255));
-            btnBuscarEstFec.setText("Buscar");
-            btnBuscarEstFec.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        btnBuscarEstFecActionPerformed(evt);
-                  }
-            });
+        btnBuscarEstPro.setBackground(new java.awt.Color(0, 51, 102));
+        btnBuscarEstPro.setForeground(new java.awt.Color(255, 255, 255));
+        btnBuscarEstPro.setText("Buscar");
+        btnBuscarEstPro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarEstProActionPerformed(evt);
+            }
+        });
 
-            jLabel3.setBackground(new java.awt.Color(0, 0, 0));
-            jLabel3.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-            jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-            jLabel3.setText("Buscar estudio");
+        jLabel4.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel4.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("Buscar estudio");
 
-            jLabel10.setForeground(new java.awt.Color(102, 102, 102));
-            jLabel10.setText("Fecha de realizacion");
+        jLabel12.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel12.setText("Matricula del profesional");
 
-            fechaRealInput.setModel(new javax.swing.SpinnerDateModel(new java.util.Date(), null, new java.util.Date(), java.util.Calendar.DAY_OF_MONTH));
-            fechaRealInput.setEditor(new javax.swing.JSpinner.DateEditor(fechaRealInput, "dd/MM/yyyy"));
+        matProEstInput.setBackground(new java.awt.Color(51, 51, 51));
+        matProEstInput.setForeground(new java.awt.Color(255, 255, 255));
+        matProEstInput.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                matProEstInputActionPerformed(evt);
+            }
+        });
+        matProEstInput.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                matProEstInputKeyTyped(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelBuscarEstudioProLayout = new javax.swing.GroupLayout(jPanelBuscarEstudioPro);
         jPanelBuscarEstudioPro.setLayout(jPanelBuscarEstudioProLayout);
@@ -567,122 +580,6 @@ public class FormularioEstudio extends javax.swing.JFrame {
                     .addGroup(jPanelModificarEstLayout.createSequentialGroup()
                         .addComponent(separador, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanelBuscarEstudioProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                              .addComponent(matProEstInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                              .addComponent(jLabel12))
-                        .addGap(18, 18, 18)
-                        .addComponent(btnBuscarEstPro)
-                        .addContainerGap(489, Short.MAX_VALUE))
-            );
-
-            jPanelBusquedas.add(jPanelBuscarEstudioPro);
-
-            jPanelModificarEst.setBackground(new java.awt.Color(153, 204, 255));
-
-            titulo.setFont(new java.awt.Font("Product Sans", 1, 18)); // NOI18N
-            titulo.setForeground(new java.awt.Color(0, 0, 0));
-            titulo.setText("Modificacion de estudio");
-
-            subtitulo.setFont(new java.awt.Font("Product Sans", 1, 18)); // NOI18N
-            subtitulo.setForeground(new java.awt.Color(102, 102, 102));
-            subtitulo.setText("DNI paciente");
-
-            buscarModEst.setBackground(new java.awt.Color(0, 51, 102));
-            buscarModEst.setText("Buscar");
-            buscarModEst.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        buscarModEstActionPerformed(evt);
-                  }
-            });
-
-            campoDniPac.setBackground(new java.awt.Color(51, 51, 51));
-            campoDniPac.setForeground(new java.awt.Color(255, 255, 255));
-            campoDniPac.setToolTipText("Ingrese el DNI");
-            campoDniPac.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        campoDniPacActionPerformed(evt);
-                  }
-            });
-            campoDniPac.addKeyListener(new java.awt.event.KeyAdapter() {
-                  public void keyTyped(java.awt.event.KeyEvent evt) {
-                        campoDniPacKeyTyped(evt);
-                  }
-            });
-
-            noEncontro.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-            noEncontro.setForeground(new java.awt.Color(102, 102, 102));
-            noEncontro.setText("Estudio no encontrado");
-            noEncontro.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-            nombreSig.setFont(new java.awt.Font("Nirmala Text", 1, 14)); // NOI18N
-            nombreSig.setForeground(new java.awt.Color(102, 102, 102));
-            nombreSig.setText("DNI paciente");
-
-            dniPacTXT.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-            dniPacTXT.setForeground(new java.awt.Color(0, 0, 0));
-            dniPacTXT.setText("default");
-
-            apellidoSig.setFont(new java.awt.Font("Nirmala Text", 1, 14)); // NOI18N
-            apellidoSig.setForeground(new java.awt.Color(102, 102, 102));
-            apellidoSig.setText("Matricula profesional");
-
-            matriculaTXT.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-            matriculaTXT.setForeground(new java.awt.Color(0, 0, 0));
-            matriculaTXT.setText("default");
-
-            dniSig.setFont(new java.awt.Font("Nirmala Text", 1, 14)); // NOI18N
-            dniSig.setForeground(new java.awt.Color(102, 102, 102));
-            dniSig.setText("Fecha realizacion");
-
-            fechaReTXT.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-            fechaReTXT.setForeground(new java.awt.Color(0, 0, 0));
-            fechaReTXT.setText("default");
-
-            telefonoSig.setFont(new java.awt.Font("Nirmala Text", 1, 14)); // NOI18N
-            telefonoSig.setForeground(new java.awt.Color(102, 102, 102));
-            telefonoSig.setText("Estado");
-
-            emailSig.setFont(new java.awt.Font("Nirmala Text", 1, 14)); // NOI18N
-            emailSig.setForeground(new java.awt.Color(102, 102, 102));
-            emailSig.setText("Fecha entrega");
-
-            separador.setBackground(new java.awt.Color(153, 204, 255));
-            separador.setForeground(new java.awt.Color(102, 102, 102));
-            separador.setOrientation(javax.swing.SwingConstants.VERTICAL);
-
-            btnConfirmarEstMod.setBackground(new java.awt.Color(0, 51, 102));
-            btnConfirmarEstMod.setText("Confirmar cambios");
-            btnConfirmarEstMod.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        btnConfirmarEstModActionPerformed(evt);
-                  }
-            });
-
-            btnCancelarPacMod.setBackground(new java.awt.Color(0, 51, 102));
-            btnCancelarPacMod.setText("Cancelar");
-            btnCancelarPacMod.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        btnCancelarPacModActionPerformed(evt);
-                  }
-            });
-
-            estadoEst.setBackground(new java.awt.Color(0, 51, 102));
-            estadoEst.setForeground(new java.awt.Color(255, 255, 255));
-            estadoEst.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "En elaboracion", "Finalizado", "Retirado", "Enviado" }));
-            estadoEst.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        estadoEstActionPerformed(evt);
-                  }
-            });
-
-            fechaEntEst.setModel(new javax.swing.SpinnerDateModel(new java.util.Date(1777426620000L), new java.util.Date(1777426620000L), new java.util.Date(1924997820000L), java.util.Calendar.DAY_OF_MONTH));
-            fechaEntEst.setEditor(new javax.swing.JSpinner.DateEditor(fechaEntEst, "dd/MM/yyyy"));
-
-            javax.swing.GroupLayout jPanelModificarEstLayout = new javax.swing.GroupLayout(jPanelModificarEst);
-            jPanelModificarEst.setLayout(jPanelModificarEstLayout);
-            jPanelModificarEstLayout.setHorizontalGroup(
-                  jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                  .addGroup(jPanelModificarEstLayout.createSequentialGroup()
                         .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanelModificarEstLayout.createSequentialGroup()
                                 .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -751,12 +648,11 @@ public class FormularioEstudio extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-            jPanelBusquedas.add(jPanelModificarEst);
+        jPanelBusquedas.add(jPanelModificarEst, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jSplitPane1.setLeftComponent(jPanelBusquedas);
 
         jPanelMostrarEstudios.setBackground(new java.awt.Color(153, 204, 255));
-        jPanelMostrarEstudios.setLayout(new java.awt.BorderLayout());
 
         jTableMostrar.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -789,14 +685,23 @@ public class FormularioEstudio extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(jTableMostrar);
 
-        jPanelMostrarEstudios.add(jScrollPane2, java.awt.BorderLayout.CENTER);
+        javax.swing.GroupLayout jPanelMostrarEstudiosLayout = new javax.swing.GroupLayout(jPanelMostrarEstudios);
+        jPanelMostrarEstudios.setLayout(jPanelMostrarEstudiosLayout);
+        jPanelMostrarEstudiosLayout.setHorizontalGroup(
+            jPanelMostrarEstudiosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        jPanelMostrarEstudiosLayout.setVerticalGroup(
+            jPanelMostrarEstudiosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1257, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         jSplitPane1.setRightComponent(jPanelMostrarEstudios);
 
         getContentPane().add(jSplitPane1, java.awt.BorderLayout.CENTER);
 
-            pack();
-      }// </editor-fold>//GEN-END:initComponents
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
 
     private void btnBuscarEstEstaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarEstEstaActionPerformed
         String estadoSelec = estadoInput.getItemAt(estadoInput.getSelectedIndex());
