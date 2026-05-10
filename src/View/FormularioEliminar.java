@@ -311,7 +311,8 @@ public class FormularioEliminar extends javax.swing.JFrame {
            EstudioController miEst = new EstudioController(e);
            if (miEst.muestraDniPaciente().equals(dniBusqueda)){
                JOptionPane.showMessageDialog(this, "No es posible eliminar un paciente que posea estudios. ");
-               encontro = true;break;
+               encontro = true;
+               break;
            }
         }
         if (encontro == false){
