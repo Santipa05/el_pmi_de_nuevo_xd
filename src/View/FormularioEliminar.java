@@ -309,7 +309,6 @@ public class FormularioEliminar extends javax.swing.JFrame {
         boolean encontro = false;
         for (Estudio e : listaEstudios){
            EstudioController miEst = new EstudioController(e);
-           System.out.println(miEst.muestraDniPaciente() + " " + dniBusqueda + "\n");
            if (miEst.muestraDniPaciente().equals(dniBusqueda)){
                JOptionPane.showMessageDialog(this, "No es posible eliminar un paciente que posea estudios. ");
                encontro = true;break;
@@ -343,7 +342,6 @@ public class FormularioEliminar extends javax.swing.JFrame {
     private void btnEliminarProActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarProActionPerformed
 
         String dniBusqueda = matProEliminarTxt.getText();
-        //Falta agregar controles de si tiene estudios, etc.
         if (mapaPersonas.containsKey(dniBusqueda) && (mapaPersonas.get(dniBusqueda) instanceof Profesional)){
               Object[] opciones = {"Eliminar", "Cancelar"};
             int seleccion = javax.swing.JOptionPane.showOptionDialog(this,"Esta seguro que desea eliminar el profesional?\n", "Eliminar", javax.swing.JOptionPane.DEFAULT_OPTION, javax.swing.JOptionPane.QUESTION_MESSAGE, null, opciones, opciones[0]);
