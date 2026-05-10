@@ -22,13 +22,19 @@ import javax.swing.table.TableCellRenderer;
  */
 public class FormularioEstudio extends javax.swing.JFrame {
     
+    
     private HashMap <String, Persona> mapaPersonas;
     private String accionActual;
     private ArrayList<Estudio> listaEstudios;
     private Estudio estudioSelec;
-
+    FondoPanel fondo = new FondoPanel();
+    
       public FormularioEstudio() {
+            this.setContentPane(fondo);
             initComponents();
+            jSplitPane1.setOpaque(false);
+            jPanelBusquedas.setOpaque(false);
+            jPanelMostrarEstudios.setOpaque(false);
             this.pack();
             jSplitPane1.setDividerLocation(484);
             setLocationRelativeTo(null);
@@ -257,6 +263,7 @@ public class FormularioEstudio extends javax.swing.JFrame {
 
         jSplitPane1.setDividerLocation(400);
         jSplitPane1.setOneTouchExpandable(true);
+        jSplitPane1.setOpaque(false);
 
         jPanelBusquedas.setBackground(new java.awt.Color(153, 204, 255));
         jPanelBusquedas.setPreferredSize(new java.awt.Dimension(790, 427));
@@ -265,6 +272,7 @@ public class FormularioEstudio extends javax.swing.JFrame {
         jPanelBuscarEstudioEstado.setBackground(new java.awt.Color(153, 204, 255));
         jPanelBuscarEstudioEstado.setMaximumSize(new java.awt.Dimension(562, 478));
         jPanelBuscarEstudioEstado.setMinimumSize(new java.awt.Dimension(562, 478));
+        jPanelBuscarEstudioEstado.setOpaque(false);
         jPanelBuscarEstudioEstado.setPreferredSize(new java.awt.Dimension(562, 478));
 
         btnBuscarEstEsta.setBackground(new java.awt.Color(0, 51, 102));
@@ -330,6 +338,7 @@ public class FormularioEstudio extends javax.swing.JFrame {
         jPanelBuscarEstudioFechaRec.setBackground(new java.awt.Color(153, 204, 255));
         jPanelBuscarEstudioFechaRec.setMaximumSize(new java.awt.Dimension(562, 478));
         jPanelBuscarEstudioFechaRec.setMinimumSize(new java.awt.Dimension(562, 478));
+        jPanelBuscarEstudioFechaRec.setOpaque(false);
         jPanelBuscarEstudioFechaRec.setPreferredSize(new java.awt.Dimension(562, 478));
 
         btnBuscarEstFec.setBackground(new java.awt.Color(0, 51, 102));
@@ -390,6 +399,7 @@ public class FormularioEstudio extends javax.swing.JFrame {
         jPanelBuscarEstudioPro.setBackground(new java.awt.Color(153, 204, 255));
         jPanelBuscarEstudioPro.setMaximumSize(new java.awt.Dimension(562, 478));
         jPanelBuscarEstudioPro.setMinimumSize(new java.awt.Dimension(562, 478));
+        jPanelBuscarEstudioPro.setOpaque(false);
         jPanelBuscarEstudioPro.setPreferredSize(new java.awt.Dimension(562, 478));
 
         btnBuscarEstPro.setBackground(new java.awt.Color(0, 51, 102));
@@ -460,6 +470,7 @@ public class FormularioEstudio extends javax.swing.JFrame {
         jPanelModificarEst.setBackground(new java.awt.Color(153, 204, 255));
         jPanelModificarEst.setMaximumSize(new java.awt.Dimension(562, 478));
         jPanelModificarEst.setMinimumSize(new java.awt.Dimension(562, 478));
+        jPanelModificarEst.setOpaque(false);
         jPanelModificarEst.setPreferredSize(new java.awt.Dimension(562, 478));
 
         titulo.setFont(new java.awt.Font("Product Sans", 1, 18)); // NOI18N
@@ -663,6 +674,7 @@ public class FormularioEstudio extends javax.swing.JFrame {
         jSplitPane1.setLeftComponent(jPanelBusquedas);
 
         jPanelMostrarEstudios.setBackground(new java.awt.Color(153, 204, 255));
+        jPanelMostrarEstudios.setOpaque(false);
 
         jTableMostrar.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -700,7 +712,7 @@ public class FormularioEstudio extends javax.swing.JFrame {
         jPanelMostrarEstudios.setLayout(jPanelMostrarEstudiosLayout);
         jPanelMostrarEstudiosLayout.setHorizontalGroup(
             jPanelMostrarEstudiosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 652, Short.MAX_VALUE)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 462, Short.MAX_VALUE)
         );
         jPanelMostrarEstudiosLayout.setVerticalGroup(
             jPanelMostrarEstudiosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

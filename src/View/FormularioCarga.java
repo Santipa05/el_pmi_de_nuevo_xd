@@ -1,6 +1,5 @@
 package View;
 
-import CRUDPMI.PMI;
 import Controller.EstudioController;
 import Controller.PacienteController;
 import Controller.PersonaController;
@@ -24,8 +23,10 @@ public class FormularioCarga extends javax.swing.JFrame {
 
     private HashMap <String, Persona> mapaPersonas;
     private ArrayList<Estudio> listaEstudios;
+    FondoPanel fondo = new FondoPanel();
     
       public FormularioCarga() {
+            this.setContentPane(fondo);
             initComponents();
             setLocationRelativeTo(null);
             LocalDate fechaRe = LocalDate.now();
@@ -40,632 +41,641 @@ public class FormularioCarga extends javax.swing.JFrame {
     }
 
       @SuppressWarnings("unchecked")
-      // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-      private void initComponents() {
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
 
-            PanelCargaPac = new javax.swing.JPanel();
-            nombretxtPac = new javax.swing.JTextField();
-            jLabel2 = new javax.swing.JLabel();
-            apellidotxtPac = new javax.swing.JTextField();
-            jLabel3 = new javax.swing.JLabel();
-            dnitxt = new javax.swing.JTextField();
-            jLabel4 = new javax.swing.JLabel();
-            telefonotxtPac = new javax.swing.JTextField();
-            jLabel5 = new javax.swing.JLabel();
-            mailtxtPac = new javax.swing.JTextField();
-            jLabel6 = new javax.swing.JLabel();
-            jLabel1 = new javax.swing.JLabel();
-            obSoc = new javax.swing.JCheckBox();
-            jSeparator1 = new javax.swing.JSeparator();
-            btnGuardarPaciente = new javax.swing.JButton();
-            PanelCargaPro = new javax.swing.JPanel();
-            titulo = new javax.swing.JLabel();
-            nombretxt = new javax.swing.JTextField();
-            nombreSig = new javax.swing.JLabel();
-            apellidotxt = new javax.swing.JTextField();
-            apellidoSig = new javax.swing.JLabel();
-            matriculatxt = new javax.swing.JTextField();
-            matriculaSig = new javax.swing.JLabel();
-            telefonoProtxt = new javax.swing.JTextField();
-            telefonoSig = new javax.swing.JLabel();
-            emailProtxt = new javax.swing.JTextField();
-            mailSig = new javax.swing.JLabel();
-            separador = new javax.swing.JSeparator();
-            btnGuardarProfesional = new javax.swing.JButton();
-            dniProtxt = new javax.swing.JTextField();
-            dniSig = new javax.swing.JLabel();
-            PanelCargaEst = new javax.swing.JPanel();
-            tituloEst = new javax.swing.JLabel();
-            jSeparator2 = new javax.swing.JSeparator();
-            jLabel8 = new javax.swing.JLabel();
-            dniPacEst = new javax.swing.JTextField();
-            jLabel7 = new javax.swing.JLabel();
-            matProEst = new javax.swing.JTextField();
-            jLabel9 = new javax.swing.JLabel();
-            fechaEnt = new javax.swing.JSpinner();
-            jLabel10 = new javax.swing.JLabel();
-            jLabel11 = new javax.swing.JLabel();
-            estado = new javax.swing.JComboBox<>();
-            jLabel12 = new javax.swing.JLabel();
-            estudiosScroll = new javax.swing.JScrollPane();
-            estudiosList = new javax.swing.JList<>();
-            jLabel13 = new javax.swing.JLabel();
-            jLabel14 = new javax.swing.JLabel();
-            jLabel15 = new javax.swing.JLabel();
-            btnCargarEstudio = new javax.swing.JButton();
-            fechaRetxt = new javax.swing.JLabel();
+        PanelCargaPac = new javax.swing.JPanel();
+        nombretxtPac = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        apellidotxtPac = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        dnitxt = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        telefonotxtPac = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        mailtxtPac = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        obSoc = new javax.swing.JCheckBox();
+        jSeparator1 = new javax.swing.JSeparator();
+        btnGuardarPaciente = new javax.swing.JButton();
+        PanelCargaPro = new javax.swing.JPanel();
+        titulo = new javax.swing.JLabel();
+        nombretxt = new javax.swing.JTextField();
+        nombreSig = new javax.swing.JLabel();
+        apellidotxt = new javax.swing.JTextField();
+        apellidoSig = new javax.swing.JLabel();
+        matriculatxt = new javax.swing.JTextField();
+        matriculaSig = new javax.swing.JLabel();
+        telefonoProtxt = new javax.swing.JTextField();
+        telefonoSig = new javax.swing.JLabel();
+        emailProtxt = new javax.swing.JTextField();
+        mailSig = new javax.swing.JLabel();
+        separador = new javax.swing.JSeparator();
+        btnGuardarProfesional = new javax.swing.JButton();
+        dniProtxt = new javax.swing.JTextField();
+        dniSig = new javax.swing.JLabel();
+        PanelCargaEst = new javax.swing.JPanel();
+        tituloEst = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
+        jLabel8 = new javax.swing.JLabel();
+        dniPacEst = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        matProEst = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        fechaEnt = new javax.swing.JSpinner();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        estado = new javax.swing.JComboBox<>();
+        jLabel12 = new javax.swing.JLabel();
+        estudiosScroll = new javax.swing.JScrollPane();
+        estudiosList = new javax.swing.JList<>();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        btnCargarEstudio = new javax.swing.JButton();
+        fechaRetxt = new javax.swing.JLabel();
 
-            setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-            setResizable(false);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setResizable(false);
 
-            PanelCargaPac.setBackground(new java.awt.Color(153, 204, 255));
+        PanelCargaPac.setBackground(new java.awt.Color(153, 204, 255));
+        PanelCargaPac.setOpaque(false);
 
-            nombretxtPac.setBackground(new java.awt.Color(51, 51, 51));
-            nombretxtPac.setForeground(new java.awt.Color(255, 255, 255));
-            nombretxtPac.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        nombretxtPacActionPerformed(evt);
-                  }
-            });
-            nombretxtPac.addKeyListener(new java.awt.event.KeyAdapter() {
-                  public void keyTyped(java.awt.event.KeyEvent evt) {
-                        nombretxtPacKeyTyped(evt);
-                  }
-            });
+        nombretxtPac.setBackground(new java.awt.Color(51, 51, 51));
+        nombretxtPac.setForeground(new java.awt.Color(255, 255, 255));
+        nombretxtPac.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nombretxtPacActionPerformed(evt);
+            }
+        });
+        nombretxtPac.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                nombretxtPacKeyTyped(evt);
+            }
+        });
 
-            jLabel2.setForeground(new java.awt.Color(102, 102, 102));
-            jLabel2.setText("Nombre");
+        jLabel2.setBackground(java.awt.Color.white);
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Nombre");
 
-            apellidotxtPac.setBackground(new java.awt.Color(51, 51, 51));
-            apellidotxtPac.setForeground(new java.awt.Color(255, 255, 255));
-            apellidotxtPac.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        apellidotxtPacActionPerformed(evt);
-                  }
-            });
-            apellidotxtPac.addKeyListener(new java.awt.event.KeyAdapter() {
-                  public void keyTyped(java.awt.event.KeyEvent evt) {
-                        apellidotxtPacKeyTyped(evt);
-                  }
-            });
+        apellidotxtPac.setBackground(new java.awt.Color(51, 51, 51));
+        apellidotxtPac.setForeground(new java.awt.Color(255, 255, 255));
+        apellidotxtPac.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                apellidotxtPacActionPerformed(evt);
+            }
+        });
+        apellidotxtPac.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                apellidotxtPacKeyTyped(evt);
+            }
+        });
 
-            jLabel3.setForeground(new java.awt.Color(102, 102, 102));
-            jLabel3.setText("Apellido");
+        jLabel3.setBackground(java.awt.Color.yellow);
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Apellido");
 
-            dnitxt.setBackground(new java.awt.Color(51, 51, 51));
-            dnitxt.setForeground(new java.awt.Color(255, 255, 255));
-            dnitxt.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        dnitxtActionPerformed(evt);
-                  }
-            });
-            dnitxt.addKeyListener(new java.awt.event.KeyAdapter() {
-                  public void keyTyped(java.awt.event.KeyEvent evt) {
-                        dnitxtKeyTyped(evt);
-                  }
-            });
+        dnitxt.setBackground(new java.awt.Color(51, 51, 51));
+        dnitxt.setForeground(new java.awt.Color(255, 255, 255));
+        dnitxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dnitxtActionPerformed(evt);
+            }
+        });
+        dnitxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                dnitxtKeyTyped(evt);
+            }
+        });
 
-            jLabel4.setForeground(new java.awt.Color(102, 102, 102));
-            jLabel4.setText("DNI");
+        jLabel4.setBackground(java.awt.Color.white);
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("DNI");
 
-            telefonotxtPac.setBackground(new java.awt.Color(51, 51, 51));
-            telefonotxtPac.setForeground(new java.awt.Color(255, 255, 255));
-            telefonotxtPac.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        telefonotxtPacActionPerformed(evt);
-                  }
-            });
-            telefonotxtPac.addKeyListener(new java.awt.event.KeyAdapter() {
-                  public void keyTyped(java.awt.event.KeyEvent evt) {
-                        telefonotxtPacKeyTyped(evt);
-                  }
-            });
+        telefonotxtPac.setBackground(new java.awt.Color(51, 51, 51));
+        telefonotxtPac.setForeground(new java.awt.Color(255, 255, 255));
+        telefonotxtPac.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                telefonotxtPacActionPerformed(evt);
+            }
+        });
+        telefonotxtPac.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                telefonotxtPacKeyTyped(evt);
+            }
+        });
 
-            jLabel5.setForeground(new java.awt.Color(102, 102, 102));
-            jLabel5.setText("Telefono");
+        jLabel5.setBackground(java.awt.Color.white);
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Telefono");
 
-            mailtxtPac.setBackground(new java.awt.Color(51, 51, 51));
-            mailtxtPac.setForeground(new java.awt.Color(255, 255, 255));
-            mailtxtPac.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        mailtxtPacActionPerformed(evt);
-                  }
-            });
-            mailtxtPac.addKeyListener(new java.awt.event.KeyAdapter() {
-                  public void keyTyped(java.awt.event.KeyEvent evt) {
-                        mailtxtPacKeyTyped(evt);
-                  }
-            });
+        mailtxtPac.setBackground(new java.awt.Color(51, 51, 51));
+        mailtxtPac.setForeground(new java.awt.Color(255, 255, 255));
+        mailtxtPac.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mailtxtPacActionPerformed(evt);
+            }
+        });
+        mailtxtPac.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                mailtxtPacKeyTyped(evt);
+            }
+        });
 
-            jLabel6.setForeground(new java.awt.Color(102, 102, 102));
-            jLabel6.setText("Email");
+        jLabel6.setBackground(java.awt.Color.white);
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Email");
 
-            jLabel1.setBackground(new java.awt.Color(0, 0, 0));
-            jLabel1.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-            jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-            jLabel1.setText("Formulario Paciente");
+        jLabel1.setBackground(java.awt.Color.white);
+        jLabel1.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Formulario Paciente");
 
-            obSoc.setBackground(new java.awt.Color(153, 204, 255));
-            obSoc.setForeground(new java.awt.Color(0, 0, 0));
-            obSoc.setText("Obra Social");
-            obSoc.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        obSocActionPerformed(evt);
-                  }
-            });
+        obSoc.setBackground(new java.awt.Color(153, 204, 255));
+        obSoc.setForeground(new java.awt.Color(255, 255, 255));
+        obSoc.setText("Obra Social");
+        obSoc.setContentAreaFilled(false);
+        obSoc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                obSocActionPerformed(evt);
+            }
+        });
 
-            jSeparator1.setBackground(new java.awt.Color(153, 204, 255));
-            jSeparator1.setForeground(new java.awt.Color(102, 102, 102));
-            jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jSeparator1.setBackground(new java.awt.Color(153, 204, 255));
+        jSeparator1.setForeground(new java.awt.Color(102, 102, 102));
+        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
-            btnGuardarPaciente.setBackground(new java.awt.Color(0, 51, 102));
-            btnGuardarPaciente.setForeground(new java.awt.Color(255, 255, 255));
-            btnGuardarPaciente.setText("Cargar");
-            btnGuardarPaciente.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        btnGuardarPacienteActionPerformed(evt);
-                  }
-            });
+        btnGuardarPaciente.setBackground(new java.awt.Color(0, 51, 102));
+        btnGuardarPaciente.setForeground(new java.awt.Color(255, 255, 255));
+        btnGuardarPaciente.setText("Cargar");
+        btnGuardarPaciente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarPacienteActionPerformed(evt);
+            }
+        });
 
-            javax.swing.GroupLayout PanelCargaPacLayout = new javax.swing.GroupLayout(PanelCargaPac);
-            PanelCargaPac.setLayout(PanelCargaPacLayout);
-            PanelCargaPacLayout.setHorizontalGroup(
-                  PanelCargaPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                  .addGroup(PanelCargaPacLayout.createSequentialGroup()
-                        .addContainerGap(25, Short.MAX_VALUE)
+        javax.swing.GroupLayout PanelCargaPacLayout = new javax.swing.GroupLayout(PanelCargaPac);
+        PanelCargaPac.setLayout(PanelCargaPacLayout);
+        PanelCargaPacLayout.setHorizontalGroup(
+            PanelCargaPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelCargaPacLayout.createSequentialGroup()
+                .addContainerGap(25, Short.MAX_VALUE)
+                .addGroup(PanelCargaPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel1)
+                    .addGroup(PanelCargaPacLayout.createSequentialGroup()
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(PanelCargaPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                              .addComponent(jLabel1)
-                              .addGroup(PanelCargaPacLayout.createSequentialGroup()
-                                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(PanelCargaPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                          .addComponent(jLabel5)
-                                          .addComponent(jLabel6)
-                                          .addComponent(jLabel4)
-                                          .addComponent(jLabel2)
-                                          .addComponent(jLabel3))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addGroup(PanelCargaPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                          .addComponent(mailtxtPac)
-                                          .addComponent(telefonotxtPac)
-                                          .addComponent(dnitxt)
-                                          .addComponent(apellidotxtPac)
-                                          .addComponent(nombretxtPac, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                          .addComponent(obSoc))))
-                        .addGap(108, 108, 108))
-                  .addGroup(PanelCargaPacLayout.createSequentialGroup()
-                        .addGap(126, 126, 126)
-                        .addComponent(btnGuardarPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            );
-            PanelCargaPacLayout.setVerticalGroup(
-                  PanelCargaPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                  .addGroup(PanelCargaPacLayout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(PanelCargaPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                              .addGroup(PanelCargaPacLayout.createSequentialGroup()
-                                    .addGroup(PanelCargaPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                          .addComponent(nombretxtPac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                          .addComponent(jLabel2))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(PanelCargaPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                          .addComponent(apellidotxtPac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                          .addComponent(jLabel3))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(PanelCargaPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                          .addComponent(dnitxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                          .addComponent(jLabel4))
-                                    .addGap(8, 8, 8)
-                                    .addGroup(PanelCargaPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                          .addComponent(telefonotxtPac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                          .addComponent(jLabel5))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(PanelCargaPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                          .addComponent(mailtxtPac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                          .addComponent(jLabel6)))
-                              .addComponent(jSeparator1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(obSoc)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnGuardarPaciente)
-                        .addContainerGap(228, Short.MAX_VALUE))
-            );
-
-            PanelCargaPro.setBackground(new java.awt.Color(153, 204, 255));
-
-            titulo.setBackground(new java.awt.Color(0, 0, 0));
-            titulo.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-            titulo.setForeground(new java.awt.Color(0, 0, 0));
-            titulo.setText("Formulario Profesional");
-
-            nombretxt.setBackground(new java.awt.Color(51, 51, 51));
-            nombretxt.setForeground(new java.awt.Color(255, 255, 255));
-            nombretxt.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        nombretxtActionPerformed(evt);
-                  }
-            });
-            nombretxt.addKeyListener(new java.awt.event.KeyAdapter() {
-                  public void keyTyped(java.awt.event.KeyEvent evt) {
-                        nombretxtKeyTyped(evt);
-                  }
-            });
-
-            nombreSig.setForeground(new java.awt.Color(102, 102, 102));
-            nombreSig.setText("Nombre");
-
-            apellidotxt.setBackground(new java.awt.Color(51, 51, 51));
-            apellidotxt.setForeground(new java.awt.Color(255, 255, 255));
-            apellidotxt.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        apellidotxtActionPerformed(evt);
-                  }
-            });
-            apellidotxt.addKeyListener(new java.awt.event.KeyAdapter() {
-                  public void keyTyped(java.awt.event.KeyEvent evt) {
-                        apellidotxtKeyTyped(evt);
-                  }
-            });
-
-            apellidoSig.setForeground(new java.awt.Color(102, 102, 102));
-            apellidoSig.setText("Apellido");
-
-            matriculatxt.setBackground(new java.awt.Color(51, 51, 51));
-            matriculatxt.setForeground(new java.awt.Color(255, 255, 255));
-            matriculatxt.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        matriculatxtActionPerformed(evt);
-                  }
-            });
-            matriculatxt.addKeyListener(new java.awt.event.KeyAdapter() {
-                  public void keyTyped(java.awt.event.KeyEvent evt) {
-                        matriculatxtKeyTyped(evt);
-                  }
-            });
-
-            matriculaSig.setForeground(new java.awt.Color(102, 102, 102));
-            matriculaSig.setText("Matricula");
-
-            telefonoProtxt.setBackground(new java.awt.Color(51, 51, 51));
-            telefonoProtxt.setForeground(new java.awt.Color(255, 255, 255));
-            telefonoProtxt.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        telefonoProtxtActionPerformed(evt);
-                  }
-            });
-            telefonoProtxt.addKeyListener(new java.awt.event.KeyAdapter() {
-                  public void keyTyped(java.awt.event.KeyEvent evt) {
-                        telefonoProtxtKeyTyped(evt);
-                  }
-            });
-
-            telefonoSig.setForeground(new java.awt.Color(102, 102, 102));
-            telefonoSig.setText("Telefono");
-
-            emailProtxt.setBackground(new java.awt.Color(51, 51, 51));
-            emailProtxt.setForeground(new java.awt.Color(255, 255, 255));
-            emailProtxt.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        emailProtxtActionPerformed(evt);
-                  }
-            });
-            emailProtxt.addKeyListener(new java.awt.event.KeyAdapter() {
-                  public void keyTyped(java.awt.event.KeyEvent evt) {
-                        emailProtxtKeyTyped(evt);
-                  }
-            });
-
-            mailSig.setForeground(new java.awt.Color(102, 102, 102));
-            mailSig.setText("Email");
-
-            separador.setBackground(new java.awt.Color(153, 204, 255));
-            separador.setForeground(new java.awt.Color(102, 102, 102));
-            separador.setOrientation(javax.swing.SwingConstants.VERTICAL);
-
-            btnGuardarProfesional.setBackground(new java.awt.Color(0, 51, 102));
-            btnGuardarProfesional.setForeground(new java.awt.Color(255, 255, 255));
-            btnGuardarProfesional.setText("Cargar");
-            btnGuardarProfesional.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        btnGuardarProfesionalActionPerformed(evt);
-                  }
-            });
-
-            dniProtxt.setBackground(new java.awt.Color(51, 51, 51));
-            dniProtxt.setForeground(new java.awt.Color(255, 255, 255));
-            dniProtxt.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        dniProtxtActionPerformed(evt);
-                  }
-            });
-            dniProtxt.addKeyListener(new java.awt.event.KeyAdapter() {
-                  public void keyTyped(java.awt.event.KeyEvent evt) {
-                        dniProtxtKeyTyped(evt);
-                  }
-            });
-
-            dniSig.setForeground(new java.awt.Color(102, 102, 102));
-            dniSig.setText("DNI");
-
-            javax.swing.GroupLayout PanelCargaProLayout = new javax.swing.GroupLayout(PanelCargaPro);
-            PanelCargaPro.setLayout(PanelCargaProLayout);
-            PanelCargaProLayout.setHorizontalGroup(
-                  PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                  .addGroup(PanelCargaProLayout.createSequentialGroup()
-                        .addGroup(PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                              .addGroup(PanelCargaProLayout.createSequentialGroup()
-                                    .addGap(85, 85, 85)
-                                    .addComponent(titulo))
-                              .addGroup(PanelCargaProLayout.createSequentialGroup()
-                                    .addGap(9, 9, 9)
-                                    .addComponent(separador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                          .addComponent(telefonoSig)
-                                          .addComponent(mailSig)
-                                          .addComponent(matriculaSig)
-                                          .addComponent(dniSig)
-                                          .addGroup(PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                .addComponent(nombreSig, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(apellidoSig, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                                    .addGap(22, 22, 22)
-                                    .addGroup(PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                          .addComponent(nombretxt, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                          .addComponent(apellidotxt, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                          .addComponent(emailProtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                          .addComponent(dniProtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                          .addComponent(telefonoProtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                          .addComponent(matriculatxt, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                              .addGroup(PanelCargaProLayout.createSequentialGroup()
-                                    .addGap(118, 118, 118)
-                                    .addComponent(btnGuardarProfesional, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(90, Short.MAX_VALUE))
-            );
-            PanelCargaProLayout.setVerticalGroup(
-                  PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                  .addGroup(PanelCargaProLayout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addComponent(titulo)
-                        .addGap(18, 18, 18)
-                        .addGroup(PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                              .addGroup(PanelCargaProLayout.createSequentialGroup()
-                                    .addGroup(PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                          .addComponent(nombretxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                          .addComponent(nombreSig))
-                                    .addGap(18, 18, 18)
-                                    .addGroup(PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                          .addComponent(apellidoSig)
-                                          .addComponent(apellidotxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(18, 18, 18)
-                                    .addGroup(PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                          .addComponent(matriculaSig)
-                                          .addComponent(matriculatxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(18, 18, 18)
-                                    .addGroup(PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                          .addComponent(telefonoSig)
-                                          .addComponent(telefonoProtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(18, 18, 18)
-                                    .addGroup(PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                          .addComponent(mailSig)
-                                          .addComponent(emailProtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(18, 18, 18)
-                                    .addGroup(PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                          .addComponent(dniProtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                          .addComponent(dniSig)))
-                              .addComponent(separador, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(48, 48, 48)
-                        .addComponent(btnGuardarProfesional)
-                        .addContainerGap(123, Short.MAX_VALUE))
-            );
-
-            PanelCargaEst.setBackground(new java.awt.Color(153, 204, 255));
-            PanelCargaEst.setPreferredSize(new java.awt.Dimension(380, 500));
-
-            tituloEst.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-            tituloEst.setForeground(new java.awt.Color(0, 0, 0));
-            tituloEst.setText("Formulario estudio");
-
-            jSeparator2.setBackground(new java.awt.Color(153, 204, 255));
-            jSeparator2.setForeground(new java.awt.Color(102, 102, 102));
-            jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
-
-            jLabel8.setForeground(new java.awt.Color(102, 102, 102));
-            jLabel8.setText("DNI del paciente");
-
-            dniPacEst.setBackground(new java.awt.Color(51, 51, 51));
-            dniPacEst.setForeground(new java.awt.Color(255, 255, 255));
-            dniPacEst.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        dniPacEstActionPerformed(evt);
-                  }
-            });
-            dniPacEst.addKeyListener(new java.awt.event.KeyAdapter() {
-                  public void keyTyped(java.awt.event.KeyEvent evt) {
-                        dniPacEstKeyTyped(evt);
-                  }
-            });
-
-            jLabel7.setForeground(new java.awt.Color(102, 102, 102));
-            jLabel7.setText("Matricula del profesional");
-
-            matProEst.setBackground(new java.awt.Color(51, 51, 51));
-            matProEst.setForeground(new java.awt.Color(255, 255, 255));
-            matProEst.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        matProEstActionPerformed(evt);
-                  }
-            });
-            matProEst.addKeyListener(new java.awt.event.KeyAdapter() {
-                  public void keyTyped(java.awt.event.KeyEvent evt) {
-                        matProEstKeyTyped(evt);
-                  }
-            });
-
-            jLabel9.setForeground(new java.awt.Color(102, 102, 102));
-            jLabel9.setText("Fecha de realizacion");
-
-            fechaEnt.setModel(new javax.swing.SpinnerDateModel(new java.util.Date(), new java.util.Date(), new java.util.Date(1924997820000L), java.util.Calendar.DAY_OF_MONTH));
-            fechaEnt.setEditor(new javax.swing.JSpinner.DateEditor(fechaEnt, "dd/MM/yyyy"));
-
-            jLabel10.setForeground(new java.awt.Color(102, 102, 102));
-            jLabel10.setText("Fecha de entrega");
-
-            jLabel11.setForeground(new java.awt.Color(102, 102, 102));
-            jLabel11.setText("Estado");
-
-            estado.setBackground(new java.awt.Color(51, 51, 51));
-            estado.setForeground(new java.awt.Color(255, 255, 255));
-            estado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "En elaboracion", "Finalizado", "Retirado", "Enviado" }));
-            estado.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        estadoActionPerformed(evt);
-                  }
-            });
-
-            jLabel12.setForeground(new java.awt.Color(102, 102, 102));
-            jLabel12.setText("Estudios");
-
-            estudiosList.setBackground(new java.awt.Color(51, 51, 51));
-            estudiosList.setForeground(new java.awt.Color(255, 255, 255));
-            estudiosList.setModel(new javax.swing.AbstractListModel<String>() {
-                  String[] strings = { "Hemograma completo", "Glucemia", "Colesterol total", "Orina completa", "Uremia", "Creatinemia", "Hepatograma", "Perfil lipidico", "Grupo y factor", "Coagulograma" };
-                  public int getSize() { return strings.length; }
-                  public String getElementAt(int i) { return strings[i]; }
-            });
-            estudiosList.setSelectionBackground(new java.awt.Color(38, 85, 108));
-            estudiosList.setSelectionForeground(new java.awt.Color(255, 255, 255));
-            estudiosScroll.setViewportView(estudiosList);
-
-            jLabel13.setForeground(new java.awt.Color(102, 102, 102));
-            jLabel13.setText("Mantenga presionado");
-
-            jLabel14.setForeground(new java.awt.Color(102, 102, 102));
-            jLabel14.setText("control para elegir");
-
-            jLabel15.setForeground(new java.awt.Color(102, 102, 102));
-            jLabel15.setText("mas de uno");
-
-            btnCargarEstudio.setBackground(new java.awt.Color(0, 51, 102));
-            btnCargarEstudio.setForeground(new java.awt.Color(255, 255, 255));
-            btnCargarEstudio.setText("Cargar");
-            btnCargarEstudio.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        btnCargarEstudioActionPerformed(evt);
-                  }
-            });
-
-            fechaRetxt.setForeground(new java.awt.Color(0, 0, 0));
-            fechaRetxt.setText("default");
-
-            javax.swing.GroupLayout PanelCargaEstLayout = new javax.swing.GroupLayout(PanelCargaEst);
-            PanelCargaEst.setLayout(PanelCargaEstLayout);
-            PanelCargaEstLayout.setHorizontalGroup(
-                  PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                  .addGroup(PanelCargaEstLayout.createSequentialGroup()
-                        .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                              .addGroup(PanelCargaEstLayout.createSequentialGroup()
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(12, 12, 12)
-                                    .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                          .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(PanelCargaEstLayout.createSequentialGroup()
-                                                      .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                            .addComponent(jLabel9)
-                                                            .addComponent(jLabel10)
-                                                            .addComponent(jLabel11)
-                                                            .addComponent(jLabel13)
-                                                            .addComponent(jLabel15)
-                                                            .addComponent(jLabel8))
-                                                      .addGap(33, 33, 33))
-                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCargaEstLayout.createSequentialGroup()
-                                                      .addComponent(jLabel7)
-                                                      .addGap(18, 18, 18)))
-                                          .addGroup(PanelCargaEstLayout.createSequentialGroup()
-                                                .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                      .addComponent(jLabel14)
-                                                      .addComponent(jLabel12))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                                    .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                          .addComponent(dniPacEst)
-                                          .addComponent(matProEst)
-                                          .addComponent(fechaEnt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                          .addComponent(estado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                          .addComponent(estudiosScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
-                                          .addComponent(fechaRetxt)))
-                              .addGroup(PanelCargaEstLayout.createSequentialGroup()
-                                    .addGap(141, 141, 141)
-                                    .addComponent(btnCargarEstudio))
-                              .addGroup(PanelCargaEstLayout.createSequentialGroup()
-                                    .addGap(109, 109, 109)
-                                    .addComponent(tituloEst)))
-                        .addContainerGap(11, Short.MAX_VALUE))
-            );
-            PanelCargaEstLayout.setVerticalGroup(
-                  PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                  .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCargaEstLayout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(tituloEst)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                              .addGroup(PanelCargaEstLayout.createSequentialGroup()
-                                    .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                          .addComponent(jLabel8)
-                                          .addComponent(dniPacEst, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(18, 18, 18)
-                                    .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                          .addComponent(matProEst, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                          .addComponent(jLabel7))
+                        .addGroup(PanelCargaPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(mailtxtPac)
+                            .addComponent(telefonotxtPac)
+                            .addComponent(dnitxt)
+                            .addComponent(apellidotxtPac)
+                            .addComponent(nombretxtPac, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(obSoc))))
+                .addGap(108, 108, 108))
+            .addGroup(PanelCargaPacLayout.createSequentialGroup()
+                .addGap(126, 126, 126)
+                .addComponent(btnGuardarPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        PanelCargaPacLayout.setVerticalGroup(
+            PanelCargaPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelCargaPacLayout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(PanelCargaPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(PanelCargaPacLayout.createSequentialGroup()
+                        .addGroup(PanelCargaPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(nombretxtPac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(PanelCargaPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(apellidotxtPac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(PanelCargaPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(dnitxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4))
+                        .addGap(8, 8, 8)
+                        .addGroup(PanelCargaPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(telefonotxtPac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(PanelCargaPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(mailtxtPac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel6)))
+                    .addComponent(jSeparator1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(obSoc)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnGuardarPaciente)
+                .addContainerGap(228, Short.MAX_VALUE))
+        );
+
+        PanelCargaPro.setBackground(new java.awt.Color(153, 204, 255));
+        PanelCargaPro.setOpaque(false);
+
+        titulo.setBackground(new java.awt.Color(0, 0, 0));
+        titulo.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        titulo.setForeground(new java.awt.Color(255, 255, 255));
+        titulo.setText("Formulario Profesional");
+
+        nombretxt.setBackground(new java.awt.Color(51, 51, 51));
+        nombretxt.setForeground(new java.awt.Color(255, 255, 255));
+        nombretxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nombretxtActionPerformed(evt);
+            }
+        });
+        nombretxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                nombretxtKeyTyped(evt);
+            }
+        });
+
+        nombreSig.setForeground(new java.awt.Color(255, 255, 255));
+        nombreSig.setText("Nombre");
+
+        apellidotxt.setBackground(new java.awt.Color(51, 51, 51));
+        apellidotxt.setForeground(new java.awt.Color(255, 255, 255));
+        apellidotxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                apellidotxtActionPerformed(evt);
+            }
+        });
+        apellidotxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                apellidotxtKeyTyped(evt);
+            }
+        });
+
+        apellidoSig.setForeground(new java.awt.Color(255, 255, 255));
+        apellidoSig.setText("Apellido");
+
+        matriculatxt.setBackground(new java.awt.Color(51, 51, 51));
+        matriculatxt.setForeground(new java.awt.Color(255, 255, 255));
+        matriculatxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                matriculatxtActionPerformed(evt);
+            }
+        });
+        matriculatxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                matriculatxtKeyTyped(evt);
+            }
+        });
+
+        matriculaSig.setForeground(new java.awt.Color(255, 255, 255));
+        matriculaSig.setText("Matricula");
+
+        telefonoProtxt.setBackground(new java.awt.Color(51, 51, 51));
+        telefonoProtxt.setForeground(new java.awt.Color(255, 255, 255));
+        telefonoProtxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                telefonoProtxtActionPerformed(evt);
+            }
+        });
+        telefonoProtxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                telefonoProtxtKeyTyped(evt);
+            }
+        });
+
+        telefonoSig.setForeground(new java.awt.Color(255, 255, 255));
+        telefonoSig.setText("Telefono");
+
+        emailProtxt.setBackground(new java.awt.Color(51, 51, 51));
+        emailProtxt.setForeground(new java.awt.Color(255, 255, 255));
+        emailProtxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emailProtxtActionPerformed(evt);
+            }
+        });
+        emailProtxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                emailProtxtKeyTyped(evt);
+            }
+        });
+
+        mailSig.setForeground(new java.awt.Color(255, 255, 255));
+        mailSig.setText("Email");
+
+        separador.setBackground(new java.awt.Color(153, 204, 255));
+        separador.setForeground(new java.awt.Color(102, 102, 102));
+        separador.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        btnGuardarProfesional.setBackground(new java.awt.Color(0, 51, 102));
+        btnGuardarProfesional.setForeground(new java.awt.Color(255, 255, 255));
+        btnGuardarProfesional.setText("Cargar");
+        btnGuardarProfesional.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarProfesionalActionPerformed(evt);
+            }
+        });
+
+        dniProtxt.setBackground(new java.awt.Color(51, 51, 51));
+        dniProtxt.setForeground(new java.awt.Color(255, 255, 255));
+        dniProtxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dniProtxtActionPerformed(evt);
+            }
+        });
+        dniProtxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                dniProtxtKeyTyped(evt);
+            }
+        });
+
+        dniSig.setForeground(new java.awt.Color(255, 255, 255));
+        dniSig.setText("DNI");
+
+        javax.swing.GroupLayout PanelCargaProLayout = new javax.swing.GroupLayout(PanelCargaPro);
+        PanelCargaPro.setLayout(PanelCargaProLayout);
+        PanelCargaProLayout.setHorizontalGroup(
+            PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelCargaProLayout.createSequentialGroup()
+                .addGroup(PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanelCargaProLayout.createSequentialGroup()
+                        .addGap(85, 85, 85)
+                        .addComponent(titulo))
+                    .addGroup(PanelCargaProLayout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addComponent(separador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(telefonoSig)
+                            .addComponent(mailSig)
+                            .addComponent(matriculaSig)
+                            .addComponent(dniSig)
+                            .addGroup(PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(nombreSig, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(apellidoSig, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(22, 22, 22)
+                        .addGroup(PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(nombretxt, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(apellidotxt, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(emailProtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dniProtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(telefonoProtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(matriculatxt, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(PanelCargaProLayout.createSequentialGroup()
+                        .addGap(118, 118, 118)
+                        .addComponent(btnGuardarProfesional, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(90, Short.MAX_VALUE))
+        );
+        PanelCargaProLayout.setVerticalGroup(
+            PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelCargaProLayout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addComponent(titulo)
+                .addGap(18, 18, 18)
+                .addGroup(PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanelCargaProLayout.createSequentialGroup()
+                        .addGroup(PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(nombretxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(nombreSig))
+                        .addGap(18, 18, 18)
+                        .addGroup(PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(apellidoSig)
+                            .addComponent(apellidotxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(matriculaSig)
+                            .addComponent(matriculatxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(telefonoSig)
+                            .addComponent(telefonoProtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(mailSig)
+                            .addComponent(emailProtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(dniProtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dniSig)))
+                    .addComponent(separador, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(48, 48, 48)
+                .addComponent(btnGuardarProfesional)
+                .addContainerGap(123, Short.MAX_VALUE))
+        );
+
+        PanelCargaEst.setBackground(new java.awt.Color(153, 204, 255));
+        PanelCargaEst.setOpaque(false);
+        PanelCargaEst.setPreferredSize(new java.awt.Dimension(380, 500));
+
+        tituloEst.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        tituloEst.setForeground(new java.awt.Color(255, 255, 255));
+        tituloEst.setText("Formulario estudio");
+
+        jSeparator2.setBackground(new java.awt.Color(153, 204, 255));
+        jSeparator2.setForeground(new java.awt.Color(102, 102, 102));
+        jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("DNI del paciente");
+
+        dniPacEst.setBackground(new java.awt.Color(51, 51, 51));
+        dniPacEst.setForeground(new java.awt.Color(255, 255, 255));
+        dniPacEst.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dniPacEstActionPerformed(evt);
+            }
+        });
+        dniPacEst.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                dniPacEstKeyTyped(evt);
+            }
+        });
+
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Matricula del profesional");
+
+        matProEst.setBackground(new java.awt.Color(51, 51, 51));
+        matProEst.setForeground(new java.awt.Color(255, 255, 255));
+        matProEst.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                matProEstActionPerformed(evt);
+            }
+        });
+        matProEst.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                matProEstKeyTyped(evt);
+            }
+        });
+
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Fecha de realizacion");
+
+        fechaEnt.setModel(new javax.swing.SpinnerDateModel(new java.util.Date(), new java.util.Date(), new java.util.Date(1924997820000L), java.util.Calendar.DAY_OF_MONTH));
+        fechaEnt.setEditor(new javax.swing.JSpinner.DateEditor(fechaEnt, "dd/MM/yyyy"));
+
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Fecha de entrega");
+
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("Estado");
+
+        estado.setBackground(new java.awt.Color(51, 51, 51));
+        estado.setForeground(new java.awt.Color(255, 255, 255));
+        estado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "En elaboracion", "Finalizado", "Retirado", "Enviado" }));
+        estado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                estadoActionPerformed(evt);
+            }
+        });
+
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setText("Estudios");
+
+        estudiosList.setBackground(new java.awt.Color(51, 51, 51));
+        estudiosList.setForeground(new java.awt.Color(255, 255, 255));
+        estudiosList.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Hemograma completo", "Glucemia", "Colesterol total", "Orina completa", "Uremia", "Creatinemia", "Hepatograma", "Perfil lipidico", "Grupo y factor", "Coagulograma" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        estudiosList.setSelectionBackground(new java.awt.Color(38, 85, 108));
+        estudiosList.setSelectionForeground(new java.awt.Color(255, 255, 255));
+        estudiosScroll.setViewportView(estudiosList);
+
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("Mantenga presionado");
+
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("control para elegir");
+
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setText("mas de uno");
+
+        btnCargarEstudio.setBackground(new java.awt.Color(0, 51, 102));
+        btnCargarEstudio.setForeground(new java.awt.Color(255, 255, 255));
+        btnCargarEstudio.setText("Cargar");
+        btnCargarEstudio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCargarEstudioActionPerformed(evt);
+            }
+        });
+
+        fechaRetxt.setForeground(new java.awt.Color(255, 255, 255));
+        fechaRetxt.setText("default");
+
+        javax.swing.GroupLayout PanelCargaEstLayout = new javax.swing.GroupLayout(PanelCargaEst);
+        PanelCargaEst.setLayout(PanelCargaEstLayout);
+        PanelCargaEstLayout.setHorizontalGroup(
+            PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelCargaEstLayout.createSequentialGroup()
+                .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanelCargaEstLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(12, 12, 12)
+                        .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(PanelCargaEstLayout.createSequentialGroup()
                                     .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                          .addGroup(PanelCargaEstLayout.createSequentialGroup()
-                                                .addGap(106, 106, 106)
-                                                .addComponent(jLabel11)
-                                                .addGap(55, 55, 55)
-                                                .addComponent(jLabel12)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jLabel13)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jLabel14)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jLabel15))
-                                          .addGroup(PanelCargaEstLayout.createSequentialGroup()
-                                                .addGap(23, 23, 23)
-                                                .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                      .addComponent(fechaRetxt)
-                                                      .addComponent(jLabel9))
-                                                .addGap(18, 18, 18)
-                                                .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                      .addComponent(fechaEnt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                      .addComponent(jLabel10))
-                                                .addGap(18, 18, 18)
-                                                .addComponent(estado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(estudiosScroll, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                              .addComponent(jSeparator2))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                        .addComponent(btnCargarEstudio)
-                        .addContainerGap())
-            );
+                                        .addComponent(jLabel9)
+                                        .addComponent(jLabel10)
+                                        .addComponent(jLabel11)
+                                        .addComponent(jLabel13)
+                                        .addComponent(jLabel15)
+                                        .addComponent(jLabel8))
+                                    .addGap(33, 33, 33))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCargaEstLayout.createSequentialGroup()
+                                    .addComponent(jLabel7)
+                                    .addGap(18, 18, 18)))
+                            .addGroup(PanelCargaEstLayout.createSequentialGroup()
+                                .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel14)
+                                    .addComponent(jLabel12))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                        .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(dniPacEst)
+                            .addComponent(matProEst)
+                            .addComponent(fechaEnt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(estado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(estudiosScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
+                            .addComponent(fechaRetxt)))
+                    .addGroup(PanelCargaEstLayout.createSequentialGroup()
+                        .addGap(141, 141, 141)
+                        .addComponent(btnCargarEstudio))
+                    .addGroup(PanelCargaEstLayout.createSequentialGroup()
+                        .addGap(109, 109, 109)
+                        .addComponent(tituloEst)))
+                .addContainerGap(11, Short.MAX_VALUE))
+        );
+        PanelCargaEstLayout.setVerticalGroup(
+            PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCargaEstLayout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(tituloEst)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(PanelCargaEstLayout.createSequentialGroup()
+                        .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel8)
+                            .addComponent(dniPacEst, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(matProEst, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel7))
+                        .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PanelCargaEstLayout.createSequentialGroup()
+                                .addGap(106, 106, 106)
+                                .addComponent(jLabel11)
+                                .addGap(55, 55, 55)
+                                .addComponent(jLabel12)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel13)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel14)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel15))
+                            .addGroup(PanelCargaEstLayout.createSequentialGroup()
+                                .addGap(23, 23, 23)
+                                .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(fechaRetxt)
+                                    .addComponent(jLabel9))
+                                .addGap(18, 18, 18)
+                                .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(fechaEnt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel10))
+                                .addGap(18, 18, 18)
+                                .addComponent(estado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(estudiosScroll, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(jSeparator2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                .addComponent(btnCargarEstudio)
+                .addContainerGap())
+        );
 
-            javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-            getContentPane().setLayout(layout);
-            layout.setHorizontalGroup(
-                  layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                  .addComponent(PanelCargaPro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                  .addComponent(PanelCargaPac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                  .addComponent(PanelCargaEst, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            );
-            layout.setVerticalGroup(
-                  layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                  .addComponent(PanelCargaPro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                  .addComponent(PanelCargaPac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                  .addComponent(PanelCargaEst, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            );
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(PanelCargaPro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(PanelCargaPac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(PanelCargaEst, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(PanelCargaPro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(PanelCargaPac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(PanelCargaEst, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
-            pack();
-      }// </editor-fold>//GEN-END:initComponents
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
       
       //metodos auxiliares
       
@@ -1070,57 +1080,57 @@ public class FormularioCarga extends javax.swing.JFrame {
             }
     }//GEN-LAST:event_nombretxtPacKeyTyped
 
-      // Variables declaration - do not modify//GEN-BEGIN:variables
-      private javax.swing.JPanel PanelCargaEst;
-      private javax.swing.JPanel PanelCargaPac;
-      private javax.swing.JPanel PanelCargaPro;
-      private javax.swing.JLabel apellidoSig;
-      private javax.swing.JTextField apellidotxt;
-      private javax.swing.JTextField apellidotxtPac;
-      private javax.swing.JButton btnCargarEstudio;
-      private javax.swing.JButton btnGuardarPaciente;
-      private javax.swing.JButton btnGuardarProfesional;
-      private javax.swing.JTextField dniPacEst;
-      private javax.swing.JTextField dniProtxt;
-      private javax.swing.JLabel dniSig;
-      private javax.swing.JTextField dnitxt;
-      private javax.swing.JTextField emailProtxt;
-      private javax.swing.JComboBox<String> estado;
-      private javax.swing.JList<String> estudiosList;
-      private javax.swing.JScrollPane estudiosScroll;
-      private javax.swing.JSpinner fechaEnt;
-      public javax.swing.JLabel fechaRetxt;
-      private javax.swing.JLabel jLabel1;
-      private javax.swing.JLabel jLabel10;
-      private javax.swing.JLabel jLabel11;
-      private javax.swing.JLabel jLabel12;
-      private javax.swing.JLabel jLabel13;
-      private javax.swing.JLabel jLabel14;
-      private javax.swing.JLabel jLabel15;
-      private javax.swing.JLabel jLabel2;
-      private javax.swing.JLabel jLabel3;
-      private javax.swing.JLabel jLabel4;
-      private javax.swing.JLabel jLabel5;
-      private javax.swing.JLabel jLabel6;
-      private javax.swing.JLabel jLabel7;
-      private javax.swing.JLabel jLabel8;
-      private javax.swing.JLabel jLabel9;
-      private javax.swing.JSeparator jSeparator1;
-      private javax.swing.JSeparator jSeparator2;
-      private javax.swing.JLabel mailSig;
-      private javax.swing.JTextField mailtxtPac;
-      private javax.swing.JTextField matProEst;
-      private javax.swing.JLabel matriculaSig;
-      private javax.swing.JTextField matriculatxt;
-      private javax.swing.JLabel nombreSig;
-      private javax.swing.JTextField nombretxt;
-      private javax.swing.JTextField nombretxtPac;
-      private javax.swing.JCheckBox obSoc;
-      private javax.swing.JSeparator separador;
-      private javax.swing.JTextField telefonoProtxt;
-      private javax.swing.JLabel telefonoSig;
-      private javax.swing.JTextField telefonotxtPac;
-      private javax.swing.JLabel titulo;
-      private javax.swing.JLabel tituloEst;
-      // End of variables declaration//GEN-END:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel PanelCargaEst;
+    private javax.swing.JPanel PanelCargaPac;
+    private javax.swing.JPanel PanelCargaPro;
+    private javax.swing.JLabel apellidoSig;
+    private javax.swing.JTextField apellidotxt;
+    private javax.swing.JTextField apellidotxtPac;
+    private javax.swing.JButton btnCargarEstudio;
+    private javax.swing.JButton btnGuardarPaciente;
+    private javax.swing.JButton btnGuardarProfesional;
+    private javax.swing.JTextField dniPacEst;
+    private javax.swing.JTextField dniProtxt;
+    private javax.swing.JLabel dniSig;
+    private javax.swing.JTextField dnitxt;
+    private javax.swing.JTextField emailProtxt;
+    private javax.swing.JComboBox<String> estado;
+    private javax.swing.JList<String> estudiosList;
+    private javax.swing.JScrollPane estudiosScroll;
+    private javax.swing.JSpinner fechaEnt;
+    public javax.swing.JLabel fechaRetxt;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JLabel mailSig;
+    private javax.swing.JTextField mailtxtPac;
+    private javax.swing.JTextField matProEst;
+    private javax.swing.JLabel matriculaSig;
+    private javax.swing.JTextField matriculatxt;
+    private javax.swing.JLabel nombreSig;
+    private javax.swing.JTextField nombretxt;
+    private javax.swing.JTextField nombretxtPac;
+    private javax.swing.JCheckBox obSoc;
+    private javax.swing.JSeparator separador;
+    private javax.swing.JTextField telefonoProtxt;
+    private javax.swing.JLabel telefonoSig;
+    private javax.swing.JTextField telefonotxtPac;
+    private javax.swing.JLabel titulo;
+    private javax.swing.JLabel tituloEst;
+    // End of variables declaration//GEN-END:variables
 }
