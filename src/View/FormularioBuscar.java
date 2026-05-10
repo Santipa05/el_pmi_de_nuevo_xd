@@ -190,6 +190,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
             matriculaTXT1 = new javax.swing.JLabel();
             confirmarProbtn = new javax.swing.JButton();
             cancelarProbtn = new javax.swing.JButton();
+            jTabbedPane1 = new javax.swing.JTabbedPane();
 
             setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -230,7 +231,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
             jPanelBuscarPacienteLayout.setHorizontalGroup(
                   jPanelBuscarPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                   .addGroup(jPanelBuscarPacienteLayout.createSequentialGroup()
-                        .addContainerGap(66, Short.MAX_VALUE)
+                        .addContainerGap(146, Short.MAX_VALUE)
                         .addGroup(jPanelBuscarPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                               .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBuscarPacienteLayout.createSequentialGroup()
                                     .addComponent(jLabel4)
@@ -242,7 +243,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
                               .addGroup(jPanelBuscarPacienteLayout.createSequentialGroup()
                                     .addGap(45, 45, 45)
                                     .addComponent(jLabel1)))
-                        .addContainerGap(98, Short.MAX_VALUE))
+                        .addContainerGap(177, Short.MAX_VALUE))
             );
             jPanelBuscarPacienteLayout.setVerticalGroup(
                   jPanelBuscarPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -255,7 +256,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
                               .addComponent(jLabel4))
                         .addGap(27, 27, 27)
                         .addComponent(btnBuscarPac)
-                        .addContainerGap(62, Short.MAX_VALUE))
+                        .addContainerGap(545, Short.MAX_VALUE))
             );
 
             jPanelContarEstPac.setBackground(new java.awt.Color(153, 204, 255));
@@ -307,7 +308,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
                               .addGroup(jPanelContarEstPacLayout.createSequentialGroup()
                                     .addGap(165, 165, 165)
                                     .addComponent(btnContarEstPac)))
-                        .addContainerGap(193, Short.MAX_VALUE))
+                        .addContainerGap(197, Short.MAX_VALUE))
             );
             jPanelContarEstPacLayout.setVerticalGroup(
                   jPanelContarEstPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -320,7 +321,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
                               .addComponent(jLabel6))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnContarEstPac)
-                        .addContainerGap(330, Short.MAX_VALUE))
+                        .addContainerGap(554, Short.MAX_VALUE))
             );
 
             jPanelBuscarProfesional.setBackground(new java.awt.Color(153, 204, 255));
@@ -360,7 +361,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
             jPanelBuscarProfesionalLayout.setHorizontalGroup(
                   jPanelBuscarProfesionalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                   .addGroup(jPanelBuscarProfesionalLayout.createSequentialGroup()
-                        .addContainerGap(30, Short.MAX_VALUE)
+                        .addContainerGap(102, Short.MAX_VALUE)
                         .addGroup(jPanelBuscarProfesionalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                               .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBuscarProfesionalLayout.createSequentialGroup()
                                     .addComponent(jLabel8)
@@ -370,7 +371,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
                               .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBuscarProfesionalLayout.createSequentialGroup()
                                     .addComponent(btnBuscarMatPro)
                                     .addGap(46, 46, 46)))
-                        .addContainerGap(119, Short.MAX_VALUE))
+                        .addContainerGap(191, Short.MAX_VALUE))
             );
             jPanelBuscarProfesionalLayout.setVerticalGroup(
                   jPanelBuscarProfesionalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -383,7 +384,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
                               .addComponent(jLabel8))
                         .addGap(18, 18, 18)
                         .addComponent(btnBuscarMatPro)
-                        .addContainerGap(102, Short.MAX_VALUE))
+                        .addContainerGap(554, Short.MAX_VALUE))
             );
 
             jPanelModificarPac.setBackground(new java.awt.Color(153, 204, 255));
@@ -524,10 +525,6 @@ public class FormularioBuscar extends javax.swing.JFrame {
                                     .addComponent(titulo)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                   .addGroup(jPanelModificarPacLayout.createSequentialGroup()
-                        .addGap(147, 147, 147)
-                        .addComponent(buscarModPac, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                  .addGroup(jPanelModificarPacLayout.createSequentialGroup()
                         .addGap(0, 100, Short.MAX_VALUE)
                         .addComponent(separador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -551,12 +548,16 @@ public class FormularioBuscar extends javax.swing.JFrame {
                               .addGroup(jPanelModificarPacLayout.createSequentialGroup()
                                     .addGap(22, 22, 22)
                                     .addComponent(noEncontro, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(81, Short.MAX_VALUE))
+                        .addContainerGap(83, Short.MAX_VALUE))
                   .addGroup(jPanelModificarPacLayout.createSequentialGroup()
                         .addGap(133, 133, 133)
                         .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                               .addComponent(btnConfirmarPacMod, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                               .addComponent(btnCancelarPacMod, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                  .addGroup(jPanelModificarPacLayout.createSequentialGroup()
+                        .addGap(157, 157, 157)
+                        .addComponent(buscarModPac, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             );
             jPanelModificarPacLayout.setVerticalGroup(
@@ -568,9 +569,9 @@ public class FormularioBuscar extends javax.swing.JFrame {
                         .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                               .addComponent(campoDniPac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                               .addComponent(subtitulo))
-                        .addGap(12, 12, 12)
-                        .addComponent(buscarModPac)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(buscarModPac)
+                        .addGap(12, 12, 12)
                         .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                               .addGroup(jPanelModificarPacLayout.createSequentialGroup()
                                     .addComponent(noEncontro)
@@ -603,7 +604,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
                         .addComponent(btnConfirmarPacMod)
                         .addGap(32, 32, 32)
                         .addComponent(btnCancelarPacMod)
-                        .addContainerGap(172, Short.MAX_VALUE))
+                        .addContainerGap(175, Short.MAX_VALUE))
             );
 
             jPanelModificarPro.setBackground(new java.awt.Color(153, 204, 255));
@@ -772,7 +773,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
                                     .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                           .addComponent(confirmarProbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
                                           .addComponent(cancelarProbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addContainerGap(56, Short.MAX_VALUE))
+                        .addContainerGap(59, Short.MAX_VALUE))
             );
             jPanelModificarProLayout.setVerticalGroup(
                   jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -818,8 +819,11 @@ public class FormularioBuscar extends javax.swing.JFrame {
                         .addComponent(confirmarProbtn)
                         .addGap(18, 18, 18)
                         .addComponent(cancelarProbtn)
-                        .addContainerGap(183, Short.MAX_VALUE))
+                        .addContainerGap(198, Short.MAX_VALUE))
             );
+
+            jTabbedPane1.setBackground(new java.awt.Color(153, 204, 255));
+            jTabbedPane1.setForeground(new java.awt.Color(153, 204, 255));
 
             javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
             getContentPane().setLayout(layout);
@@ -840,8 +844,13 @@ public class FormularioBuscar extends javax.swing.JFrame {
                   .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                               .addContainerGap()
-                              .addComponent(jPanelModificarPro, javax.swing.GroupLayout.DEFAULT_SIZE, 514, Short.MAX_VALUE)
+                              .addComponent(jPanelModificarPro, javax.swing.GroupLayout.DEFAULT_SIZE, 516, Short.MAX_VALUE)
                               .addContainerGap()))
+                  .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                              .addGap(0, 0, Short.MAX_VALUE)
+                              .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                              .addGap(0, 0, Short.MAX_VALUE)))
             );
             layout.setVerticalGroup(
                   layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -860,8 +869,13 @@ public class FormularioBuscar extends javax.swing.JFrame {
                   .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                               .addContainerGap()
-                              .addComponent(jPanelModificarPro, javax.swing.GroupLayout.DEFAULT_SIZE, 716, Short.MAX_VALUE)
+                              .addComponent(jPanelModificarPro, javax.swing.GroupLayout.DEFAULT_SIZE, 719, Short.MAX_VALUE)
                               .addContainerGap()))
+                  .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                              .addGap(0, 0, Short.MAX_VALUE)
+                              .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                              .addGap(0, 0, Short.MAX_VALUE)))
             );
 
             pack();
@@ -1036,8 +1050,8 @@ public class FormularioBuscar extends javax.swing.JFrame {
                         escritorPac.append(miPac.muestraNombre() + "\n");
                         escritorPac.append(miPac.muestraApellido() + "\n");
                         escritorPac.append(miPac.muestraDni() + "\n");
-                        escritorPac.append(miPac.muestraMail() + "\n");
                         escritorPac.append(miPac.muestraTelefono() + "\n");
+                        escritorPac.append(miPac.muestraMail() + "\n");
                         escritorPac.append(miPac.muestraObraSocial() + "\n\n");
                   } else if (p instanceof Profesional pro) {
                         ProfesionalController miPro = new ProfesionalController(pro);
@@ -1331,6 +1345,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
       private javax.swing.JPanel jPanelContarEstPac;
       private javax.swing.JPanel jPanelModificarPac;
       private javax.swing.JPanel jPanelModificarPro;
+      private javax.swing.JTabbedPane jTabbedPane1;
       private javax.swing.JLabel matMod;
       private javax.swing.JTextField matProBuscartxt1;
       private javax.swing.JLabel matriculaTXT1;

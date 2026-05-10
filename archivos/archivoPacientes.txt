@@ -1,28 +1,42 @@
 Juan Ignacio
 Perez
 40123456
-JULIANO@gmail.com
 2665101010
+JULIANO@gmail.com
 true
 
 Carlos Alberto
 Rodriguez
 28456123
-carlosrodriguez@hotmail.com
 2664998800
+carlosrodriguez@hotmail.com
+false
+
+Pepe
+romero
+46123457
+2665101010
+aa@gmail.com
 false
 
 Maria Elena
 Gomez
 35987654
-mariagomez@outlook.com
 2664556677
+mariagomez@outlook.com
 true
+
+Santino
+Marcoaurelio
+46333179
+2664755411
+santigame7@gmail.com
+false
 
 juan
 kiko
 46444123
-juan@gmail
 2665090807
+juan@gmail
 false
 
