@@ -330,7 +330,7 @@ public class Principal extends javax.swing.JFrame{
                           break;
                           
                       case "Mostrar todos":
-                          mostrarTodosPacientes();
+                          new FormularioBuscar(this.mapaPersonas, opcion, caso, this.listaEstudios).setVisible(true);
                           break;
                           
                       case "Buscar por DNI":
@@ -365,7 +365,7 @@ public class Principal extends javax.swing.JFrame{
                           new FormularioBuscar(this.mapaPersonas, opcion, caso, this.listaEstudios).setVisible(true);
                           break;
                       case "Mostrar todos":
-                          mostrarTodosProfesionales();
+                            new FormularioBuscar(this.mapaPersonas, opcion, caso, this.listaEstudios).setVisible(true);
                           break;
                       case "Buscar por matricula":
                           new FormularioBuscar(this.mapaPersonas, opcion, caso, this.listaEstudios).setVisible(true);
