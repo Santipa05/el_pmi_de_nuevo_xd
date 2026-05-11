@@ -257,7 +257,7 @@ public class Principal extends javax.swing.JFrame{
 
         menuEstudio.setBackground(new java.awt.Color(0, 102, 153));
         menuEstudio.setForeground(new java.awt.Color(255, 255, 255));
-        menuEstudio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cargar", "Modificar", "Mostrar todos", "Mostrar por estado", "Mostrar por profesional", "Mostrar por fecha de realizacion" }));
+        menuEstudio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cargar", "Modificar", "Mostrar/Buscar", "Mostrar por estado", "Mostrar por profesional", "Mostrar por fecha de realizacion" }));
         menuEstudio.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         menuEstudio.setMaximumSize(new java.awt.Dimension(167, 26));
         menuEstudio.setMinimumSize(new java.awt.Dimension(167, 26));
@@ -365,7 +365,7 @@ public class Principal extends javax.swing.JFrame{
                           form.setEnabled(true);
                           form.setLocationRelativeTo(null);
                           break;
-                      case "Mostrar todos":
+                      case "Mostrar/Buscar":
                           if (listaEstudios.isEmpty()) {
                             JOptionPane.showMessageDialog(this, "No hay estudios cargados en el sistema.");
                             return;

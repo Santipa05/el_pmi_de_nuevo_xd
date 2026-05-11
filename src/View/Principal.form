@@ -180,7 +180,7 @@
               <StringArray count="6">
                 <StringItem index="0" value="Cargar"/>
                 <StringItem index="1" value="Modificar"/>
-                <StringItem index="2" value="Mostrar todos"/>
+                <StringItem index="2" value="Mostrar/Buscar"/>
                 <StringItem index="3" value="Mostrar por estado"/>
                 <StringItem index="4" value="Mostrar por profesional"/>
                 <StringItem index="5" value="Mostrar por fecha de realizacion"/>
