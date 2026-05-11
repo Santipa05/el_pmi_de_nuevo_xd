@@ -188,119 +188,124 @@ public class Principal extends javax.swing.JFrame{
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+      // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+      private void initComponents() {
 
-        Principal = new javax.swing.JPanel();
-        menuOpciones = new javax.swing.JComboBox<>();
-        menuPaciente = new javax.swing.JComboBox<>();
-        menuProfesional = new javax.swing.JComboBox<>();
-        menuEstudio = new javax.swing.JComboBox<>();
-        txtPrincipal = new javax.swing.JLabel();
-        btnConfirmarMenu = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        btnSalir = new javax.swing.JButton();
-        jPanel1 = new FondoPanel();
+            Principal = new javax.swing.JPanel();
+            menuOpciones = new javax.swing.JComboBox<>();
+            menuPaciente = new javax.swing.JComboBox<>();
+            menuProfesional = new javax.swing.JComboBox<>();
+            menuEstudio = new javax.swing.JComboBox<>();
+            txtPrincipal = new javax.swing.JLabel();
+            btnConfirmarMenu = new javax.swing.JButton();
+            jLabel1 = new javax.swing.JLabel();
+            btnSalir = new javax.swing.JButton();
+            jPanel1 = new FondoPanel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBounds(new java.awt.Rectangle(0, 0, 600, 100));
-        setResizable(false);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+            setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+            setBounds(new java.awt.Rectangle(0, 0, 600, 100));
+            setResizable(false);
+            getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Principal.setBackground(new java.awt.Color(153, 204, 255));
-        Principal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+            Principal.setBackground(new java.awt.Color(153, 204, 255));
+            Principal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        menuOpciones.setBackground(new java.awt.Color(0, 102, 153));
-        menuOpciones.setForeground(new java.awt.Color(255, 255, 255));
-        menuOpciones.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Paciente", "Profesional", "Estudio" }));
-        menuOpciones.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        menuOpciones.setMaximumSize(new java.awt.Dimension(167, 26));
-        menuOpciones.setMinimumSize(new java.awt.Dimension(167, 26));
-        menuOpciones.setPreferredSize(new java.awt.Dimension(167, 26));
-        menuOpciones.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuOpcionesActionPerformed(evt);
-            }
-        });
-        Principal.add(menuOpciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 110, 200, 30));
+            menuOpciones.setBackground(new java.awt.Color(0, 102, 153));
+            menuOpciones.setForeground(new java.awt.Color(255, 255, 255));
+            menuOpciones.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Paciente", "Profesional", "Estudio" }));
+            menuOpciones.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+            menuOpciones.setMaximumSize(new java.awt.Dimension(167, 26));
+            menuOpciones.setMinimumSize(new java.awt.Dimension(167, 26));
+            menuOpciones.setPreferredSize(new java.awt.Dimension(167, 26));
+            menuOpciones.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        menuOpcionesActionPerformed(evt);
+                  }
+            });
+            Principal.add(menuOpciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 110, 200, 30));
 
-        menuPaciente.setBackground(new java.awt.Color(0, 102, 153));
-        menuPaciente.setForeground(new java.awt.Color(255, 255, 255));
-        menuPaciente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cargar", "Eliminar", "Modificar", "Mostrar/Buscar" }));
-        menuPaciente.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        menuPaciente.setMaximumSize(new java.awt.Dimension(167, 26));
-        menuPaciente.addMouseWheelListener(new java.awt.event.MouseWheelListener() {
-            public void mouseWheelMoved(java.awt.event.MouseWheelEvent evt) {
-                menuPacienteMouseWheelMoved(evt);
-            }
-        });
-        menuPaciente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuPacienteActionPerformed(evt);
-            }
-        });
-        Principal.add(menuPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 200, 30));
+            menuPaciente.setBackground(new java.awt.Color(0, 102, 153));
+            menuPaciente.setForeground(new java.awt.Color(255, 255, 255));
+            menuPaciente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cargar", "Eliminar", "Modificar", "Mostrar/Buscar" }));
+            menuPaciente.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+            menuPaciente.setMaximumSize(new java.awt.Dimension(167, 26));
+            menuPaciente.addMouseWheelListener(new java.awt.event.MouseWheelListener() {
+                  public void mouseWheelMoved(java.awt.event.MouseWheelEvent evt) {
+                        menuPacienteMouseWheelMoved(evt);
+                  }
+            });
+            menuPaciente.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        menuPacienteActionPerformed(evt);
+                  }
+            });
+            Principal.add(menuPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 200, 30));
 
-        menuProfesional.setBackground(new java.awt.Color(0, 102, 153));
-        menuProfesional.setForeground(new java.awt.Color(255, 255, 255));
-        menuProfesional.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cargar", "Eliminar", "Modificar", "Mostrar/Buscar" }));
-        menuProfesional.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        menuProfesional.setMaximumSize(new java.awt.Dimension(167, 26));
-        menuProfesional.setMinimumSize(new java.awt.Dimension(167, 26));
-        menuProfesional.setPreferredSize(new java.awt.Dimension(167, 26));
-        menuProfesional.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuProfesionalActionPerformed(evt);
-            }
-        });
-        Principal.add(menuProfesional, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 200, 30));
+            menuProfesional.setBackground(new java.awt.Color(0, 102, 153));
+            menuProfesional.setForeground(new java.awt.Color(255, 255, 255));
+            menuProfesional.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cargar", "Eliminar", "Modificar", "Mostrar/Buscar" }));
+            menuProfesional.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+            menuProfesional.setMaximumSize(new java.awt.Dimension(167, 26));
+            menuProfesional.setMinimumSize(new java.awt.Dimension(167, 26));
+            menuProfesional.setPreferredSize(new java.awt.Dimension(167, 26));
+            menuProfesional.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        menuProfesionalActionPerformed(evt);
+                  }
+            });
+            Principal.add(menuProfesional, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 200, 30));
 
-        menuEstudio.setBackground(new java.awt.Color(0, 102, 153));
-        menuEstudio.setForeground(new java.awt.Color(255, 255, 255));
-        menuEstudio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cargar", "Modificar", "Mostrar/Buscar", "Mostrar por estado", "Mostrar por profesional", "Mostrar por fecha de realizacion" }));
-        menuEstudio.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        menuEstudio.setMaximumSize(new java.awt.Dimension(167, 26));
-        menuEstudio.setMinimumSize(new java.awt.Dimension(167, 26));
-        menuEstudio.setPreferredSize(new java.awt.Dimension(167, 26));
-        Principal.add(menuEstudio, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 200, 30));
+            menuEstudio.setBackground(new java.awt.Color(0, 102, 153));
+            menuEstudio.setForeground(new java.awt.Color(255, 255, 255));
+            menuEstudio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cargar", "Modificar", "Mostrar/Buscar" }));
+            menuEstudio.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+            menuEstudio.setMaximumSize(new java.awt.Dimension(167, 26));
+            menuEstudio.setMinimumSize(new java.awt.Dimension(167, 26));
+            menuEstudio.setPreferredSize(new java.awt.Dimension(167, 26));
+            menuEstudio.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        menuEstudioActionPerformed(evt);
+                  }
+            });
+            Principal.add(menuEstudio, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 200, 30));
 
-        txtPrincipal.setBackground(new java.awt.Color(85, 177, 177));
-        txtPrincipal.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        txtPrincipal.setForeground(new java.awt.Color(102, 153, 255));
-        txtPrincipal.setText("OPCION");
-        Principal.add(txtPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, -1, -1));
+            txtPrincipal.setBackground(new java.awt.Color(85, 177, 177));
+            txtPrincipal.setFont(new java.awt.Font("Nirmala UI", 1, 18)); // NOI18N
+            txtPrincipal.setForeground(new java.awt.Color(102, 153, 255));
+            txtPrincipal.setText("OPCION");
+            Principal.add(txtPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, -1, -1));
 
-        btnConfirmarMenu.setBackground(new java.awt.Color(0, 51, 102));
-        btnConfirmarMenu.setForeground(new java.awt.Color(255, 255, 255));
-        btnConfirmarMenu.setText("CONFIRMAR");
-        btnConfirmarMenu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnConfirmarMenuActionPerformed(evt);
-            }
-        });
-        Principal.add(btnConfirmarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 330, 190, -1));
+            btnConfirmarMenu.setBackground(new java.awt.Color(0, 51, 102));
+            btnConfirmarMenu.setForeground(new java.awt.Color(255, 255, 255));
+            btnConfirmarMenu.setText("CONFIRMAR");
+            btnConfirmarMenu.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        btnConfirmarMenuActionPerformed(evt);
+                  }
+            });
+            Principal.add(btnConfirmarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 330, 190, -1));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(102, 153, 255));
-        jLabel1.setText("OPERACION");
-        jLabel1.setToolTipText("Operacion");
-        Principal.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 220, 135, -1));
+            jLabel1.setFont(new java.awt.Font("Nirmala UI", 1, 18)); // NOI18N
+            jLabel1.setForeground(new java.awt.Color(102, 153, 255));
+            jLabel1.setText("OPERACION");
+            jLabel1.setToolTipText("Operacion");
+            Principal.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 220, 135, -1));
 
-        btnSalir.setBackground(new java.awt.Color(0, 51, 102));
-        btnSalir.setForeground(new java.awt.Color(255, 255, 255));
-        btnSalir.setText("SALIR");
-        btnSalir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSalirActionPerformed(evt);
-            }
-        });
-        Principal.add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 370, 190, -1));
-        Principal.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 500));
+            btnSalir.setBackground(new java.awt.Color(0, 51, 102));
+            btnSalir.setForeground(new java.awt.Color(255, 255, 255));
+            btnSalir.setText("SALIR");
+            btnSalir.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        btnSalirActionPerformed(evt);
+                  }
+            });
+            Principal.add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 370, 190, -1));
+            Principal.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 500));
 
-        getContentPane().add(Principal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 500));
+            getContentPane().add(Principal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 500));
 
-        pack();
-    }// </editor-fold>//GEN-END:initComponents
+            pack();
+      }// </editor-fold>//GEN-END:initComponents
 
       private void menuProfesionalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuProfesionalActionPerformed
 
@@ -372,27 +377,6 @@ public class Principal extends javax.swing.JFrame{
                           }
                           new FormularioEstudio(this.mapaPersonas, caso, this.listaEstudios).setVisible(true);
                           break;
-                      case "Mostrar por estado":
-                          if (listaEstudios.isEmpty()) {
-                            JOptionPane.showMessageDialog(this, "No hay estudios cargados en el sistema.");
-                            return;
-                          }
-                          new FormularioEstudio(this.mapaPersonas, caso, this.listaEstudios).setVisible(true);
-                          break;
-                      case "Mostrar por profesional":
-                          if (listaEstudios.isEmpty()) {
-                            JOptionPane.showMessageDialog(this, "No hay estudios cargados en el sistema.");
-                            return;
-                          }
-                          new FormularioEstudio(this.mapaPersonas, caso, this.listaEstudios).setVisible(true);
-                          break;
-                      case "Mostrar por fecha de realizacion":
-                          if (listaEstudios.isEmpty()) {
-                            JOptionPane.showMessageDialog(this, "No hay estudios cargados en el sistema.");
-                            return;
-                          }
-                          new FormularioEstudio(this.mapaPersonas, caso, this.listaEstudios).setVisible(true);
-                          break;
                       case "Modificar":
                           if (listaEstudios.isEmpty()) {
                             JOptionPane.showMessageDialog(this, "No hay estudios cargados en el sistema.");
@@ -452,19 +436,23 @@ public class Principal extends javax.swing.JFrame{
                   System.exit(0);
       }//GEN-LAST:event_btnSalirActionPerformed
 
+      private void menuEstudioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuEstudioActionPerformed
+            // TODO add your handling code here:
+      }//GEN-LAST:event_menuEstudioActionPerformed
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel Principal;
-    private javax.swing.JButton btnConfirmarMenu;
-    private javax.swing.JButton btnSalir;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JComboBox<String> menuEstudio;
-    private javax.swing.JComboBox<String> menuOpciones;
-    private javax.swing.JComboBox<String> menuPaciente;
-    private javax.swing.JComboBox<String> menuProfesional;
-    private javax.swing.JLabel txtPrincipal;
-    // End of variables declaration//GEN-END:variables
+
+      // Variables declaration - do not modify//GEN-BEGIN:variables
+      private javax.swing.JPanel Principal;
+      private javax.swing.JButton btnConfirmarMenu;
+      private javax.swing.JButton btnSalir;
+      private javax.swing.JLabel jLabel1;
+      private javax.swing.JPanel jPanel1;
+      private javax.swing.JComboBox<String> menuEstudio;
+      private javax.swing.JComboBox<String> menuOpciones;
+      private javax.swing.JComboBox<String> menuPaciente;
+      private javax.swing.JComboBox<String> menuProfesional;
+      private javax.swing.JLabel txtPrincipal;
+      // End of variables declaration//GEN-END:variables
 
       
       //METODOS PACIENTES

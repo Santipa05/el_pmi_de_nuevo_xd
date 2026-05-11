@@ -115,812 +115,812 @@ public class FormularioBuscar extends javax.swing.JFrame {
       }
 
       @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+      // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+      private void initComponents() {
 
-        jPanelModificarPac = new javax.swing.JPanel();
-        titulo = new javax.swing.JLabel();
-        subtitulo = new javax.swing.JLabel();
-        buscarModPac = new javax.swing.JButton();
-        campoDniPac = new javax.swing.JTextField();
-        noEncontro = new javax.swing.JLabel();
-        nombreSig = new javax.swing.JLabel();
-        nombreTXT = new javax.swing.JLabel();
-        apellidoSig = new javax.swing.JLabel();
-        apellidoTXT = new javax.swing.JLabel();
-        dniSig = new javax.swing.JLabel();
-        dniTXT = new javax.swing.JLabel();
-        telefonoSig = new javax.swing.JLabel();
-        emailSig = new javax.swing.JLabel();
-        obSocSig = new javax.swing.JLabel();
-        campoTelMod = new javax.swing.JTextField();
-        campoMailMod = new javax.swing.JTextField();
-        separador = new javax.swing.JSeparator();
-        btnConfirmarPacMod = new javax.swing.JButton();
-        btnCancelarPacMod = new javax.swing.JButton();
-        campoModObSocPac = new javax.swing.JCheckBox();
-        jPanelModificarPro = new javax.swing.JPanel();
-        nombreTXT1 = new javax.swing.JLabel();
-        apellidoSig1 = new javax.swing.JLabel();
-        apellidoTXT1 = new javax.swing.JLabel();
-        dniSig1 = new javax.swing.JLabel();
-        modTelInput1 = new javax.swing.JTextField();
-        dniTXT1 = new javax.swing.JLabel();
-        modMailInput1 = new javax.swing.JTextField();
-        titulo1 = new javax.swing.JLabel();
-        telefonoSig1 = new javax.swing.JLabel();
-        subtitulo1 = new javax.swing.JLabel();
-        separador1 = new javax.swing.JSeparator();
-        buscarModPro = new javax.swing.JButton();
-        emailSig1 = new javax.swing.JLabel();
-        campoMatiProMod = new javax.swing.JTextField();
-        noEncontro1 = new javax.swing.JLabel();
-        matMod = new javax.swing.JLabel();
-        nombreSig1 = new javax.swing.JLabel();
-        matriculaTXT1 = new javax.swing.JLabel();
-        confirmarProbtn = new javax.swing.JButton();
-        cancelarProbtn = new javax.swing.JButton();
-        jPanelMostrarTodosPac = new javax.swing.JPanel();
-        verTodos = new javax.swing.JRadioButton();
-        verConObSoc = new javax.swing.JRadioButton();
-        cancelarbtn = new javax.swing.JButton();
-        verSinObSoc = new javax.swing.JRadioButton();
-        dnitxt = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTableMostrar = new javax.swing.JTable();
-        jLabel2 = new javax.swing.JLabel();
-        buscarPorDni = new javax.swing.JButton();
-        jPanelMostrarTodosPro = new javax.swing.JPanel();
-        verTodosPro = new javax.swing.JRadioButton();
-        volverBtn = new javax.swing.JButton();
-        mattxt = new javax.swing.JTextField();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTableMostrarPro = new javax.swing.JTable();
-        jLabel5 = new javax.swing.JLabel();
-        buscarProMat = new javax.swing.JButton();
-        jRadioButton1 = new javax.swing.JRadioButton();
+            jPanelModificarPac = new javax.swing.JPanel();
+            titulo = new javax.swing.JLabel();
+            subtitulo = new javax.swing.JLabel();
+            buscarModPac = new javax.swing.JButton();
+            campoDniPac = new javax.swing.JTextField();
+            noEncontro = new javax.swing.JLabel();
+            nombreSig = new javax.swing.JLabel();
+            nombreTXT = new javax.swing.JLabel();
+            apellidoSig = new javax.swing.JLabel();
+            apellidoTXT = new javax.swing.JLabel();
+            dniSig = new javax.swing.JLabel();
+            dniTXT = new javax.swing.JLabel();
+            telefonoSig = new javax.swing.JLabel();
+            emailSig = new javax.swing.JLabel();
+            obSocSig = new javax.swing.JLabel();
+            campoTelMod = new javax.swing.JTextField();
+            campoMailMod = new javax.swing.JTextField();
+            separador = new javax.swing.JSeparator();
+            btnConfirmarPacMod = new javax.swing.JButton();
+            btnCancelarPacMod = new javax.swing.JButton();
+            campoModObSocPac = new javax.swing.JCheckBox();
+            jPanelModificarPro = new javax.swing.JPanel();
+            nombreTXT1 = new javax.swing.JLabel();
+            apellidoSig1 = new javax.swing.JLabel();
+            apellidoTXT1 = new javax.swing.JLabel();
+            dniSig1 = new javax.swing.JLabel();
+            modTelInput1 = new javax.swing.JTextField();
+            dniTXT1 = new javax.swing.JLabel();
+            modMailInput1 = new javax.swing.JTextField();
+            titulo1 = new javax.swing.JLabel();
+            telefonoSig1 = new javax.swing.JLabel();
+            subtitulo1 = new javax.swing.JLabel();
+            separador1 = new javax.swing.JSeparator();
+            buscarModPro = new javax.swing.JButton();
+            emailSig1 = new javax.swing.JLabel();
+            campoMatiProMod = new javax.swing.JTextField();
+            noEncontro1 = new javax.swing.JLabel();
+            matMod = new javax.swing.JLabel();
+            nombreSig1 = new javax.swing.JLabel();
+            matriculaTXT1 = new javax.swing.JLabel();
+            confirmarProbtn = new javax.swing.JButton();
+            cancelarProbtn = new javax.swing.JButton();
+            jPanelMostrarTodosPac = new javax.swing.JPanel();
+            verTodos = new javax.swing.JRadioButton();
+            verConObSoc = new javax.swing.JRadioButton();
+            cancelarbtn = new javax.swing.JButton();
+            verSinObSoc = new javax.swing.JRadioButton();
+            dnitxt = new javax.swing.JTextField();
+            jScrollPane1 = new javax.swing.JScrollPane();
+            jTableMostrar = new javax.swing.JTable();
+            jLabel2 = new javax.swing.JLabel();
+            buscarPorDni = new javax.swing.JButton();
+            jPanelMostrarTodosPro = new javax.swing.JPanel();
+            verTodosPro = new javax.swing.JRadioButton();
+            volverBtn = new javax.swing.JButton();
+            mattxt = new javax.swing.JTextField();
+            jScrollPane2 = new javax.swing.JScrollPane();
+            jTableMostrarPro = new javax.swing.JTable();
+            jLabel5 = new javax.swing.JLabel();
+            buscarProMat = new javax.swing.JButton();
+            jRadioButton1 = new javax.swing.JRadioButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setResizable(false);
-        getContentPane().setLayout(new java.awt.CardLayout());
+            setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+            setResizable(false);
+            getContentPane().setLayout(new java.awt.CardLayout());
 
-        jPanelModificarPac.setBackground(new java.awt.Color(153, 204, 255));
-        jPanelModificarPac.setOpaque(false);
+            jPanelModificarPac.setBackground(new java.awt.Color(153, 204, 255));
+            jPanelModificarPac.setOpaque(false);
 
-        titulo.setFont(new java.awt.Font("Product Sans", 1, 18)); // NOI18N
-        titulo.setForeground(new java.awt.Color(255, 255, 255));
-        titulo.setText("Modificacion de paciente");
+            titulo.setFont(new java.awt.Font("Nirmala UI", 1, 18)); // NOI18N
+            titulo.setForeground(new java.awt.Color(255, 255, 255));
+            titulo.setText("Modificacion de paciente");
 
-        subtitulo.setFont(new java.awt.Font("Product Sans", 1, 18)); // NOI18N
-        subtitulo.setForeground(new java.awt.Color(255, 255, 255));
-        subtitulo.setText("DNI");
+            subtitulo.setFont(new java.awt.Font("Nirmala UI", 1, 14)); // NOI18N
+            subtitulo.setForeground(new java.awt.Color(255, 255, 255));
+            subtitulo.setText("DNI");
 
-        buscarModPac.setBackground(new java.awt.Color(0, 51, 102));
-        buscarModPac.setForeground(new java.awt.Color(255, 255, 255));
-        buscarModPac.setText("Buscar");
-        buscarModPac.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buscarModPacActionPerformed(evt);
-            }
-        });
+            buscarModPac.setBackground(new java.awt.Color(0, 51, 102));
+            buscarModPac.setForeground(new java.awt.Color(255, 255, 255));
+            buscarModPac.setText("Buscar");
+            buscarModPac.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        buscarModPacActionPerformed(evt);
+                  }
+            });
 
-        campoDniPac.setBackground(new java.awt.Color(51, 51, 51));
-        campoDniPac.setForeground(new java.awt.Color(255, 255, 255));
-        campoDniPac.setToolTipText("Ingrese el DNI");
-        campoDniPac.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoDniPacActionPerformed(evt);
-            }
-        });
-        campoDniPac.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                campoDniPacKeyTyped(evt);
-            }
-        });
+            campoDniPac.setBackground(new java.awt.Color(51, 51, 51));
+            campoDniPac.setForeground(new java.awt.Color(255, 255, 255));
+            campoDniPac.setToolTipText("Ingrese el DNI");
+            campoDniPac.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        campoDniPacActionPerformed(evt);
+                  }
+            });
+            campoDniPac.addKeyListener(new java.awt.event.KeyAdapter() {
+                  public void keyTyped(java.awt.event.KeyEvent evt) {
+                        campoDniPacKeyTyped(evt);
+                  }
+            });
 
-        noEncontro.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        noEncontro.setForeground(new java.awt.Color(255, 255, 255));
-        noEncontro.setText("Paciente no encontrado");
-        noEncontro.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+            noEncontro.setFont(new java.awt.Font("Nirmala UI", 3, 14)); // NOI18N
+            noEncontro.setForeground(new java.awt.Color(255, 255, 255));
+            noEncontro.setText("Paciente no encontrado");
+            noEncontro.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        nombreSig.setFont(new java.awt.Font("Nirmala Text", 1, 14)); // NOI18N
-        nombreSig.setForeground(new java.awt.Color(255, 255, 255));
-        nombreSig.setText("Nombre");
+            nombreSig.setFont(new java.awt.Font("Nirmala Text", 1, 14)); // NOI18N
+            nombreSig.setForeground(new java.awt.Color(153, 153, 153));
+            nombreSig.setText("Nombre");
 
-        nombreTXT.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        nombreTXT.setForeground(new java.awt.Color(255, 255, 255));
-        nombreTXT.setText("default");
+            nombreTXT.setFont(new java.awt.Font("Nirmala UI", 1, 14)); // NOI18N
+            nombreTXT.setForeground(new java.awt.Color(255, 255, 255));
+            nombreTXT.setText("default");
 
-        apellidoSig.setFont(new java.awt.Font("Nirmala Text", 1, 14)); // NOI18N
-        apellidoSig.setForeground(new java.awt.Color(255, 255, 255));
-        apellidoSig.setText("Apellido");
+            apellidoSig.setFont(new java.awt.Font("Nirmala Text", 1, 14)); // NOI18N
+            apellidoSig.setForeground(new java.awt.Color(153, 153, 153));
+            apellidoSig.setText("Apellido");
 
-        apellidoTXT.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        apellidoTXT.setForeground(new java.awt.Color(255, 255, 255));
-        apellidoTXT.setText("default");
+            apellidoTXT.setFont(new java.awt.Font("Nirmala UI", 1, 14)); // NOI18N
+            apellidoTXT.setForeground(new java.awt.Color(255, 255, 255));
+            apellidoTXT.setText("default");
 
-        dniSig.setFont(new java.awt.Font("Nirmala Text", 1, 14)); // NOI18N
-        dniSig.setForeground(new java.awt.Color(255, 255, 255));
-        dniSig.setText("DNI");
+            dniSig.setFont(new java.awt.Font("Nirmala Text", 1, 14)); // NOI18N
+            dniSig.setForeground(new java.awt.Color(153, 153, 153));
+            dniSig.setText("DNI");
 
-        dniTXT.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        dniTXT.setForeground(new java.awt.Color(255, 255, 255));
-        dniTXT.setText("default");
+            dniTXT.setFont(new java.awt.Font("Nirmala UI", 1, 14)); // NOI18N
+            dniTXT.setForeground(new java.awt.Color(255, 255, 255));
+            dniTXT.setText("default");
 
-        telefonoSig.setFont(new java.awt.Font("Nirmala Text", 1, 14)); // NOI18N
-        telefonoSig.setForeground(new java.awt.Color(255, 255, 255));
-        telefonoSig.setText("Telefono");
+            telefonoSig.setFont(new java.awt.Font("Nirmala Text", 1, 14)); // NOI18N
+            telefonoSig.setForeground(new java.awt.Color(153, 153, 153));
+            telefonoSig.setText("Telefono");
 
-        emailSig.setFont(new java.awt.Font("Nirmala Text", 1, 14)); // NOI18N
-        emailSig.setForeground(new java.awt.Color(255, 255, 255));
-        emailSig.setText("Email");
+            emailSig.setFont(new java.awt.Font("Nirmala Text", 1, 14)); // NOI18N
+            emailSig.setForeground(new java.awt.Color(153, 153, 153));
+            emailSig.setText("Email");
 
-        obSocSig.setFont(new java.awt.Font("Nirmala Text", 1, 14)); // NOI18N
-        obSocSig.setForeground(new java.awt.Color(255, 255, 255));
-        obSocSig.setText("Obra Social");
+            obSocSig.setFont(new java.awt.Font("Nirmala Text", 1, 14)); // NOI18N
+            obSocSig.setForeground(new java.awt.Color(153, 153, 153));
+            obSocSig.setText("Obra Social");
 
-        campoTelMod.setBackground(new java.awt.Color(51, 51, 51));
-        campoTelMod.setForeground(new java.awt.Color(255, 255, 255));
-        campoTelMod.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoTelModActionPerformed(evt);
-            }
-        });
-        campoTelMod.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                campoTelModKeyTyped(evt);
-            }
-        });
+            campoTelMod.setBackground(new java.awt.Color(51, 51, 51));
+            campoTelMod.setForeground(new java.awt.Color(255, 255, 255));
+            campoTelMod.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        campoTelModActionPerformed(evt);
+                  }
+            });
+            campoTelMod.addKeyListener(new java.awt.event.KeyAdapter() {
+                  public void keyTyped(java.awt.event.KeyEvent evt) {
+                        campoTelModKeyTyped(evt);
+                  }
+            });
 
-        campoMailMod.setBackground(new java.awt.Color(51, 51, 51));
-        campoMailMod.setForeground(new java.awt.Color(255, 255, 255));
-        campoMailMod.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                campoMailModKeyTyped(evt);
-            }
-        });
+            campoMailMod.setBackground(new java.awt.Color(51, 51, 51));
+            campoMailMod.setForeground(new java.awt.Color(255, 255, 255));
+            campoMailMod.addKeyListener(new java.awt.event.KeyAdapter() {
+                  public void keyTyped(java.awt.event.KeyEvent evt) {
+                        campoMailModKeyTyped(evt);
+                  }
+            });
 
-        separador.setBackground(new java.awt.Color(153, 204, 255));
-        separador.setForeground(new java.awt.Color(102, 102, 102));
-        separador.setOrientation(javax.swing.SwingConstants.VERTICAL);
+            separador.setBackground(new java.awt.Color(153, 204, 255));
+            separador.setForeground(new java.awt.Color(102, 102, 102));
+            separador.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
-        btnConfirmarPacMod.setBackground(new java.awt.Color(0, 51, 102));
-        btnConfirmarPacMod.setForeground(new java.awt.Color(255, 255, 255));
-        btnConfirmarPacMod.setText("Confirmar cambios");
-        btnConfirmarPacMod.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnConfirmarPacModActionPerformed(evt);
-            }
-        });
+            btnConfirmarPacMod.setBackground(new java.awt.Color(0, 51, 102));
+            btnConfirmarPacMod.setForeground(new java.awt.Color(255, 255, 255));
+            btnConfirmarPacMod.setText("Confirmar cambios");
+            btnConfirmarPacMod.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        btnConfirmarPacModActionPerformed(evt);
+                  }
+            });
 
-        btnCancelarPacMod.setBackground(new java.awt.Color(0, 51, 102));
-        btnCancelarPacMod.setForeground(new java.awt.Color(255, 255, 255));
-        btnCancelarPacMod.setText("Cancelar");
-        btnCancelarPacMod.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCancelarPacModActionPerformed(evt);
-            }
-        });
+            btnCancelarPacMod.setBackground(new java.awt.Color(0, 51, 102));
+            btnCancelarPacMod.setForeground(new java.awt.Color(255, 255, 255));
+            btnCancelarPacMod.setText("Cancelar");
+            btnCancelarPacMod.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        btnCancelarPacModActionPerformed(evt);
+                  }
+            });
 
-        campoModObSocPac.setBackground(new java.awt.Color(153, 204, 255));
-        campoModObSocPac.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        campoModObSocPac.setForeground(new java.awt.Color(255, 255, 255));
-        campoModObSocPac.setContentAreaFilled(false);
-        campoModObSocPac.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoModObSocPacActionPerformed(evt);
-            }
-        });
+            campoModObSocPac.setBackground(new java.awt.Color(153, 204, 255));
+            campoModObSocPac.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+            campoModObSocPac.setForeground(new java.awt.Color(255, 255, 255));
+            campoModObSocPac.setContentAreaFilled(false);
+            campoModObSocPac.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        campoModObSocPacActionPerformed(evt);
+                  }
+            });
 
-        javax.swing.GroupLayout jPanelModificarPacLayout = new javax.swing.GroupLayout(jPanelModificarPac);
-        jPanelModificarPac.setLayout(jPanelModificarPacLayout);
-        jPanelModificarPacLayout.setHorizontalGroup(
-            jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelModificarPacLayout.createSequentialGroup()
-                .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelModificarPacLayout.createSequentialGroup()
-                        .addGap(59, 59, 59)
-                        .addComponent(subtitulo)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(campoDniPac, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelModificarPacLayout.createSequentialGroup()
-                        .addGap(113, 113, 113)
-                        .addComponent(titulo)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanelModificarPacLayout.createSequentialGroup()
-                .addGap(0, 114, Short.MAX_VALUE)
-                .addComponent(separador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelModificarPacLayout.createSequentialGroup()
+            javax.swing.GroupLayout jPanelModificarPacLayout = new javax.swing.GroupLayout(jPanelModificarPac);
+            jPanelModificarPac.setLayout(jPanelModificarPacLayout);
+            jPanelModificarPacLayout.setHorizontalGroup(
+                  jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                  .addGroup(jPanelModificarPacLayout.createSequentialGroup()
                         .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(dniSig)
-                            .addComponent(emailSig)
-                            .addComponent(telefonoSig)
-                            .addComponent(obSocSig)
-                            .addComponent(apellidoSig)
-                            .addComponent(nombreSig))
-                        .addGap(25, 25, 25)
+                              .addGroup(jPanelModificarPacLayout.createSequentialGroup()
+                                    .addGap(59, 59, 59)
+                                    .addComponent(subtitulo)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(campoDniPac, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
+                              .addGroup(jPanelModificarPacLayout.createSequentialGroup()
+                                    .addGap(113, 113, 113)
+                                    .addComponent(titulo)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                  .addGroup(jPanelModificarPacLayout.createSequentialGroup()
+                        .addGap(0, 114, Short.MAX_VALUE)
+                        .addComponent(separador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nombreTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(apellidoTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(dniTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(campoMailMod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(campoTelMod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(campoModObSocPac)))
-                    .addGroup(jPanelModificarPacLayout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(noEncontro, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(97, Short.MAX_VALUE))
-            .addGroup(jPanelModificarPacLayout.createSequentialGroup()
-                .addGap(133, 133, 133)
-                .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnConfirmarPacMod, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCancelarPacMod, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanelModificarPacLayout.createSequentialGroup()
-                .addGap(157, 157, 157)
-                .addComponent(buscarModPac, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanelModificarPacLayout.setVerticalGroup(
-            jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelModificarPacLayout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addComponent(titulo)
-                .addGap(18, 18, 18)
-                .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(campoDniPac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(subtitulo))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(buscarModPac)
-                .addGap(12, 12, 12)
-                .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelModificarPacLayout.createSequentialGroup()
-                        .addComponent(noEncontro)
-                        .addGap(7, 7, 7)
-                        .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(nombreSig)
-                            .addComponent(nombreTXT))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(apellidoSig)
-                            .addComponent(apellidoTXT))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(dniSig)
-                            .addComponent(dniTXT))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(telefonoSig)
-                            .addComponent(campoTelMod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(campoMailMod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(emailSig))
+                              .addGroup(jPanelModificarPacLayout.createSequentialGroup()
+                                    .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                          .addComponent(dniSig)
+                                          .addComponent(emailSig)
+                                          .addComponent(telefonoSig)
+                                          .addComponent(obSocSig)
+                                          .addComponent(apellidoSig)
+                                          .addComponent(nombreSig))
+                                    .addGap(25, 25, 25)
+                                    .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                          .addComponent(nombreTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                          .addComponent(apellidoTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                          .addComponent(dniTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                          .addComponent(campoMailMod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                          .addComponent(campoTelMod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                          .addComponent(campoModObSocPac)))
+                              .addGroup(jPanelModificarPacLayout.createSequentialGroup()
+                                    .addGap(22, 22, 22)
+                                    .addComponent(noEncontro, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(97, Short.MAX_VALUE))
+                  .addGroup(jPanelModificarPacLayout.createSequentialGroup()
+                        .addGap(133, 133, 133)
                         .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanelModificarPacLayout.createSequentialGroup()
-                                .addGap(7, 7, 7)
-                                .addComponent(obSocSig))
-                            .addGroup(jPanelModificarPacLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(campoModObSocPac, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addComponent(separador))
-                .addGap(55, 55, 55)
-                .addComponent(btnConfirmarPacMod)
-                .addGap(32, 32, 32)
-                .addComponent(btnCancelarPacMod)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        getContentPane().add(jPanelModificarPac, "card5");
-
-        jPanelModificarPro.setBackground(new java.awt.Color(153, 204, 255));
-        jPanelModificarPro.setOpaque(false);
-        jPanelModificarPro.setPreferredSize(new java.awt.Dimension(513, 704));
-
-        nombreTXT1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        nombreTXT1.setForeground(new java.awt.Color(255, 255, 255));
-        nombreTXT1.setText("default");
-
-        apellidoSig1.setFont(new java.awt.Font("Nirmala Text", 1, 14)); // NOI18N
-        apellidoSig1.setForeground(new java.awt.Color(255, 255, 255));
-        apellidoSig1.setText("Apellido");
-
-        apellidoTXT1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        apellidoTXT1.setForeground(new java.awt.Color(255, 255, 255));
-        apellidoTXT1.setText("default");
-
-        dniSig1.setFont(new java.awt.Font("Nirmala Text", 1, 14)); // NOI18N
-        dniSig1.setForeground(new java.awt.Color(255, 255, 255));
-        dniSig1.setText("DNI");
-
-        modTelInput1.setBackground(new java.awt.Color(51, 51, 51));
-        modTelInput1.setForeground(new java.awt.Color(255, 255, 255));
-        modTelInput1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                modTelInput1ActionPerformed(evt);
-            }
-        });
-        modTelInput1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                modTelInput1KeyTyped(evt);
-            }
-        });
-
-        dniTXT1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        dniTXT1.setForeground(new java.awt.Color(255, 255, 255));
-        dniTXT1.setText("default");
-
-        modMailInput1.setBackground(new java.awt.Color(51, 51, 51));
-        modMailInput1.setForeground(new java.awt.Color(255, 255, 255));
-        modMailInput1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                modMailInput1KeyTyped(evt);
-            }
-        });
-
-        titulo1.setFont(new java.awt.Font("Product Sans", 1, 18)); // NOI18N
-        titulo1.setForeground(new java.awt.Color(255, 255, 255));
-        titulo1.setText("Modificacion de profesional");
-
-        telefonoSig1.setFont(new java.awt.Font("Nirmala Text", 1, 14)); // NOI18N
-        telefonoSig1.setForeground(new java.awt.Color(255, 255, 255));
-        telefonoSig1.setText("Telefono");
-
-        subtitulo1.setFont(new java.awt.Font("Product Sans", 1, 18)); // NOI18N
-        subtitulo1.setForeground(new java.awt.Color(255, 255, 255));
-        subtitulo1.setText("Matricula");
-
-        separador1.setBackground(new java.awt.Color(153, 204, 255));
-        separador1.setForeground(new java.awt.Color(102, 102, 102));
-        separador1.setOrientation(javax.swing.SwingConstants.VERTICAL);
-
-        buscarModPro.setBackground(new java.awt.Color(0, 51, 102));
-        buscarModPro.setForeground(new java.awt.Color(255, 255, 255));
-        buscarModPro.setText("Buscar");
-        buscarModPro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buscarModProActionPerformed(evt);
-            }
-        });
-
-        emailSig1.setFont(new java.awt.Font("Nirmala Text", 1, 14)); // NOI18N
-        emailSig1.setForeground(new java.awt.Color(255, 255, 255));
-        emailSig1.setText("Email");
-
-        campoMatiProMod.setBackground(new java.awt.Color(51, 51, 51));
-        campoMatiProMod.setForeground(new java.awt.Color(255, 255, 255));
-        campoMatiProMod.setToolTipText("Ingrese el DNI");
-        campoMatiProMod.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoMatiProModActionPerformed(evt);
-            }
-        });
-        campoMatiProMod.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                campoMatiProModKeyTyped(evt);
-            }
-        });
-
-        noEncontro1.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        noEncontro1.setForeground(new java.awt.Color(255, 255, 255));
-        noEncontro1.setText("Paciente no encontrado");
-        noEncontro1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        matMod.setFont(new java.awt.Font("Nirmala Text", 1, 14)); // NOI18N
-        matMod.setForeground(new java.awt.Color(255, 255, 255));
-        matMod.setText("Matricula");
-
-        nombreSig1.setFont(new java.awt.Font("Nirmala Text", 1, 14)); // NOI18N
-        nombreSig1.setForeground(new java.awt.Color(255, 255, 255));
-        nombreSig1.setText("Nombre");
-
-        matriculaTXT1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        matriculaTXT1.setForeground(new java.awt.Color(255, 255, 255));
-        matriculaTXT1.setText("default");
-
-        confirmarProbtn.setBackground(new java.awt.Color(0, 51, 102));
-        confirmarProbtn.setForeground(new java.awt.Color(255, 255, 255));
-        confirmarProbtn.setText("Confirmar cambios");
-        confirmarProbtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                confirmarProbtnActionPerformed(evt);
-            }
-        });
-
-        cancelarProbtn.setBackground(new java.awt.Color(0, 51, 102));
-        cancelarProbtn.setForeground(new java.awt.Color(255, 255, 255));
-        cancelarProbtn.setText("Volver");
-        cancelarProbtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cancelarProbtnActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanelModificarProLayout = new javax.swing.GroupLayout(jPanelModificarPro);
-        jPanelModificarPro.setLayout(jPanelModificarProLayout);
-        jPanelModificarProLayout.setHorizontalGroup(
-            jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelModificarProLayout.createSequentialGroup()
-                .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelModificarProLayout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addComponent(subtitulo1)
+                              .addComponent(btnConfirmarPacMod, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                              .addComponent(btnCancelarPacMod, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                  .addGroup(jPanelModificarPacLayout.createSequentialGroup()
+                        .addGap(157, 157, 157)
+                        .addComponent(buscarModPac, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            );
+            jPanelModificarPacLayout.setVerticalGroup(
+                  jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                  .addGroup(jPanelModificarPacLayout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addComponent(titulo)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                              .addComponent(campoDniPac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                              .addComponent(subtitulo))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(buscarModPac)
+                        .addGap(12, 12, 12)
+                        .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                              .addGroup(jPanelModificarPacLayout.createSequentialGroup()
+                                    .addComponent(noEncontro)
+                                    .addGap(7, 7, 7)
+                                    .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                          .addComponent(nombreSig)
+                                          .addComponent(nombreTXT))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                          .addComponent(apellidoSig)
+                                          .addComponent(apellidoTXT))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                          .addComponent(dniSig)
+                                          .addComponent(dniTXT))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                          .addComponent(telefonoSig)
+                                          .addComponent(campoTelMod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                          .addComponent(campoMailMod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                          .addComponent(emailSig))
+                                    .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                          .addGroup(jPanelModificarPacLayout.createSequentialGroup()
+                                                .addGap(7, 7, 7)
+                                                .addComponent(obSocSig))
+                                          .addGroup(jPanelModificarPacLayout.createSequentialGroup()
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(campoModObSocPac, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                              .addComponent(separador))
+                        .addGap(55, 55, 55)
+                        .addComponent(btnConfirmarPacMod)
+                        .addGap(32, 32, 32)
+                        .addComponent(btnCancelarPacMod)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            );
+
+            getContentPane().add(jPanelModificarPac, "card5");
+
+            jPanelModificarPro.setBackground(new java.awt.Color(153, 204, 255));
+            jPanelModificarPro.setOpaque(false);
+            jPanelModificarPro.setPreferredSize(new java.awt.Dimension(513, 704));
+
+            nombreTXT1.setFont(new java.awt.Font("Nirmala UI", 1, 14)); // NOI18N
+            nombreTXT1.setForeground(new java.awt.Color(255, 255, 255));
+            nombreTXT1.setText("default");
+
+            apellidoSig1.setFont(new java.awt.Font("Nirmala UI", 1, 14)); // NOI18N
+            apellidoSig1.setForeground(new java.awt.Color(255, 255, 255));
+            apellidoSig1.setText("Apellido");
+
+            apellidoTXT1.setFont(new java.awt.Font("Nirmala UI", 1, 14)); // NOI18N
+            apellidoTXT1.setForeground(new java.awt.Color(255, 255, 255));
+            apellidoTXT1.setText("default");
+
+            dniSig1.setFont(new java.awt.Font("Nirmala UI", 1, 14)); // NOI18N
+            dniSig1.setForeground(new java.awt.Color(255, 255, 255));
+            dniSig1.setText("DNI");
+
+            modTelInput1.setBackground(new java.awt.Color(51, 51, 51));
+            modTelInput1.setForeground(new java.awt.Color(255, 255, 255));
+            modTelInput1.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        modTelInput1ActionPerformed(evt);
+                  }
+            });
+            modTelInput1.addKeyListener(new java.awt.event.KeyAdapter() {
+                  public void keyTyped(java.awt.event.KeyEvent evt) {
+                        modTelInput1KeyTyped(evt);
+                  }
+            });
+
+            dniTXT1.setFont(new java.awt.Font("Nirmala UI", 1, 14)); // NOI18N
+            dniTXT1.setForeground(new java.awt.Color(255, 255, 255));
+            dniTXT1.setText("default");
+
+            modMailInput1.setBackground(new java.awt.Color(51, 51, 51));
+            modMailInput1.setForeground(new java.awt.Color(255, 255, 255));
+            modMailInput1.addKeyListener(new java.awt.event.KeyAdapter() {
+                  public void keyTyped(java.awt.event.KeyEvent evt) {
+                        modMailInput1KeyTyped(evt);
+                  }
+            });
+
+            titulo1.setFont(new java.awt.Font("Nirmala UI", 1, 18)); // NOI18N
+            titulo1.setForeground(new java.awt.Color(255, 255, 255));
+            titulo1.setText("Modificacion de profesional");
+
+            telefonoSig1.setFont(new java.awt.Font("Nirmala UI", 1, 14)); // NOI18N
+            telefonoSig1.setForeground(new java.awt.Color(255, 255, 255));
+            telefonoSig1.setText("Telefono");
+
+            subtitulo1.setFont(new java.awt.Font("Nirmala UI", 1, 14)); // NOI18N
+            subtitulo1.setForeground(new java.awt.Color(255, 255, 255));
+            subtitulo1.setText("Matricula");
+
+            separador1.setBackground(new java.awt.Color(153, 204, 255));
+            separador1.setForeground(new java.awt.Color(102, 102, 102));
+            separador1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+            buscarModPro.setBackground(new java.awt.Color(0, 51, 102));
+            buscarModPro.setForeground(new java.awt.Color(255, 255, 255));
+            buscarModPro.setText("Buscar");
+            buscarModPro.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        buscarModProActionPerformed(evt);
+                  }
+            });
+
+            emailSig1.setFont(new java.awt.Font("Nirmala UI", 1, 14)); // NOI18N
+            emailSig1.setForeground(new java.awt.Color(255, 255, 255));
+            emailSig1.setText("Email");
+
+            campoMatiProMod.setBackground(new java.awt.Color(51, 51, 51));
+            campoMatiProMod.setForeground(new java.awt.Color(255, 255, 255));
+            campoMatiProMod.setToolTipText("Ingrese el DNI");
+            campoMatiProMod.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        campoMatiProModActionPerformed(evt);
+                  }
+            });
+            campoMatiProMod.addKeyListener(new java.awt.event.KeyAdapter() {
+                  public void keyTyped(java.awt.event.KeyEvent evt) {
+                        campoMatiProModKeyTyped(evt);
+                  }
+            });
+
+            noEncontro1.setFont(new java.awt.Font("Nirmala UI", 3, 14)); // NOI18N
+            noEncontro1.setForeground(new java.awt.Color(255, 255, 255));
+            noEncontro1.setText("Paciente no encontrado");
+            noEncontro1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+            matMod.setFont(new java.awt.Font("Nirmala UI", 1, 14)); // NOI18N
+            matMod.setForeground(new java.awt.Color(255, 255, 255));
+            matMod.setText("Matricula");
+
+            nombreSig1.setFont(new java.awt.Font("Nirmala UI", 1, 14)); // NOI18N
+            nombreSig1.setForeground(new java.awt.Color(255, 255, 255));
+            nombreSig1.setText("Nombre");
+
+            matriculaTXT1.setFont(new java.awt.Font("Nirmala UI", 1, 14)); // NOI18N
+            matriculaTXT1.setForeground(new java.awt.Color(255, 255, 255));
+            matriculaTXT1.setText("default");
+
+            confirmarProbtn.setBackground(new java.awt.Color(0, 51, 102));
+            confirmarProbtn.setForeground(new java.awt.Color(255, 255, 255));
+            confirmarProbtn.setText("Confirmar cambios");
+            confirmarProbtn.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        confirmarProbtnActionPerformed(evt);
+                  }
+            });
+
+            cancelarProbtn.setBackground(new java.awt.Color(0, 51, 102));
+            cancelarProbtn.setForeground(new java.awt.Color(255, 255, 255));
+            cancelarProbtn.setText("Volver");
+            cancelarProbtn.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        cancelarProbtnActionPerformed(evt);
+                  }
+            });
+
+            javax.swing.GroupLayout jPanelModificarProLayout = new javax.swing.GroupLayout(jPanelModificarPro);
+            jPanelModificarPro.setLayout(jPanelModificarProLayout);
+            jPanelModificarProLayout.setHorizontalGroup(
+                  jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                  .addGroup(jPanelModificarProLayout.createSequentialGroup()
                         .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(titulo1)
-                            .addComponent(campoMatiProMod, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanelModificarProLayout.createSequentialGroup()
-                                .addComponent(separador1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanelModificarProLayout.createSequentialGroup()
-                                        .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(dniSig1)
-                                            .addComponent(emailSig1)
-                                            .addComponent(telefonoSig1)
-                                            .addComponent(matMod)
-                                            .addComponent(apellidoSig1)
-                                            .addComponent(nombreSig1))
-                                        .addGap(25, 25, 25)
-                                        .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(nombreTXT1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(apellidoTXT1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(dniTXT1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(modMailInput1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(modTelInput1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(matriculaTXT1)))
-                                    .addGroup(jPanelModificarProLayout.createSequentialGroup()
-                                        .addGap(22, 22, 22)
-                                        .addComponent(noEncontro1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                    .addGroup(jPanelModificarProLayout.createSequentialGroup()
-                        .addGap(193, 193, 193)
-                        .addComponent(buscarModPro, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelModificarProLayout.createSequentialGroup()
-                        .addGap(170, 170, 170)
-                        .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(confirmarProbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cancelarProbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(56, Short.MAX_VALUE))
-        );
-        jPanelModificarProLayout.setVerticalGroup(
-            jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelModificarProLayout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addComponent(titulo1)
-                .addGap(18, 18, 18)
-                .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(campoMatiProMod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(subtitulo1))
-                .addGap(18, 18, 18)
-                .addComponent(buscarModPro)
-                .addGap(18, 18, 18)
-                .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanelModificarProLayout.createSequentialGroup()
-                        .addComponent(noEncontro1)
-                        .addGap(7, 7, 7)
+                              .addGroup(jPanelModificarProLayout.createSequentialGroup()
+                                    .addGap(43, 43, 43)
+                                    .addComponent(subtitulo1)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                          .addComponent(titulo1)
+                                          .addComponent(campoMatiProMod, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                          .addGroup(jPanelModificarProLayout.createSequentialGroup()
+                                                .addComponent(separador1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                      .addGroup(jPanelModificarProLayout.createSequentialGroup()
+                                                            .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                  .addComponent(dniSig1)
+                                                                  .addComponent(emailSig1)
+                                                                  .addComponent(telefonoSig1)
+                                                                  .addComponent(matMod)
+                                                                  .addComponent(apellidoSig1)
+                                                                  .addComponent(nombreSig1))
+                                                            .addGap(25, 25, 25)
+                                                            .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                  .addComponent(nombreTXT1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                  .addComponent(apellidoTXT1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                  .addComponent(dniTXT1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                  .addComponent(modMailInput1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                  .addComponent(modTelInput1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                  .addComponent(matriculaTXT1)))
+                                                      .addGroup(jPanelModificarProLayout.createSequentialGroup()
+                                                            .addGap(22, 22, 22)
+                                                            .addComponent(noEncontro1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                              .addGroup(jPanelModificarProLayout.createSequentialGroup()
+                                    .addGap(193, 193, 193)
+                                    .addComponent(buscarModPro, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
+                              .addGroup(jPanelModificarProLayout.createSequentialGroup()
+                                    .addGap(170, 170, 170)
+                                    .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                          .addComponent(confirmarProbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                          .addComponent(cancelarProbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addContainerGap(71, Short.MAX_VALUE))
+            );
+            jPanelModificarProLayout.setVerticalGroup(
+                  jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                  .addGroup(jPanelModificarProLayout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addComponent(titulo1)
+                        .addGap(18, 18, 18)
                         .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(nombreSig1)
-                            .addComponent(nombreTXT1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(apellidoSig1)
-                            .addComponent(apellidoTXT1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(dniSig1)
-                            .addComponent(dniTXT1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(telefonoSig1)
-                            .addComponent(modTelInput1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(modMailInput1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(emailSig1))
-                        .addGap(2, 2, 2)
-                        .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(matMod)
-                            .addComponent(matriculaTXT1)))
-                    .addComponent(separador1, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
-                .addComponent(confirmarProbtn)
-                .addGap(18, 18, 18)
-                .addComponent(cancelarProbtn)
-                .addContainerGap(183, Short.MAX_VALUE))
-        );
+                              .addComponent(campoMatiProMod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                              .addComponent(subtitulo1))
+                        .addGap(18, 18, 18)
+                        .addComponent(buscarModPro)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                              .addGroup(jPanelModificarProLayout.createSequentialGroup()
+                                    .addComponent(noEncontro1)
+                                    .addGap(7, 7, 7)
+                                    .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                          .addComponent(nombreSig1)
+                                          .addComponent(nombreTXT1))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                          .addComponent(apellidoSig1)
+                                          .addComponent(apellidoTXT1))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                          .addComponent(dniSig1)
+                                          .addComponent(dniTXT1))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                          .addComponent(telefonoSig1)
+                                          .addComponent(modTelInput1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                          .addComponent(modMailInput1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                          .addComponent(emailSig1))
+                                    .addGap(2, 2, 2)
+                                    .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                          .addComponent(matMod)
+                                          .addComponent(matriculaTXT1)))
+                              .addComponent(separador1, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(28, 28, 28)
+                        .addComponent(confirmarProbtn)
+                        .addGap(18, 18, 18)
+                        .addComponent(cancelarProbtn)
+                        .addContainerGap(182, Short.MAX_VALUE))
+            );
 
-        getContentPane().add(jPanelModificarPro, "card6");
+            getContentPane().add(jPanelModificarPro, "card6");
 
-        jPanelMostrarTodosPac.setBackground(new java.awt.Color(153, 204, 255));
-        jPanelMostrarTodosPac.setOpaque(false);
+            jPanelMostrarTodosPac.setBackground(new java.awt.Color(153, 204, 255));
+            jPanelMostrarTodosPac.setOpaque(false);
 
-        verTodos.setBackground(new java.awt.Color(153, 204, 255));
-        verTodos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        verTodos.setForeground(new java.awt.Color(255, 255, 255));
-        verTodos.setText("Ver todos");
-        verTodos.setContentAreaFilled(false);
-        verTodos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                verTodosActionPerformed(evt);
-            }
-        });
+            verTodos.setBackground(new java.awt.Color(153, 204, 255));
+            verTodos.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
+            verTodos.setForeground(new java.awt.Color(255, 255, 255));
+            verTodos.setText("Ver todos");
+            verTodos.setContentAreaFilled(false);
+            verTodos.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        verTodosActionPerformed(evt);
+                  }
+            });
 
-        verConObSoc.setBackground(new java.awt.Color(255, 255, 255));
-        verConObSoc.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        verConObSoc.setForeground(new java.awt.Color(255, 255, 255));
-        verConObSoc.setText("Ver con obra social");
-        verConObSoc.setContentAreaFilled(false);
-        verConObSoc.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                verConObSocActionPerformed(evt);
-            }
-        });
+            verConObSoc.setBackground(new java.awt.Color(255, 255, 255));
+            verConObSoc.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
+            verConObSoc.setForeground(new java.awt.Color(255, 255, 255));
+            verConObSoc.setText("Ver con obra social");
+            verConObSoc.setContentAreaFilled(false);
+            verConObSoc.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        verConObSocActionPerformed(evt);
+                  }
+            });
 
-        cancelarbtn.setBackground(new java.awt.Color(0, 51, 102));
-        cancelarbtn.setForeground(new java.awt.Color(255, 255, 255));
-        cancelarbtn.setText("Volver");
-        cancelarbtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cancelarbtnActionPerformed(evt);
-            }
-        });
+            cancelarbtn.setBackground(new java.awt.Color(0, 51, 102));
+            cancelarbtn.setForeground(new java.awt.Color(255, 255, 255));
+            cancelarbtn.setText("Volver");
+            cancelarbtn.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        cancelarbtnActionPerformed(evt);
+                  }
+            });
 
-        verSinObSoc.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        verSinObSoc.setForeground(new java.awt.Color(255, 255, 255));
-        verSinObSoc.setText("Ver sin obra social");
-        verSinObSoc.setContentAreaFilled(false);
-        verSinObSoc.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                verSinObSocActionPerformed(evt);
-            }
-        });
+            verSinObSoc.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
+            verSinObSoc.setForeground(new java.awt.Color(255, 255, 255));
+            verSinObSoc.setText("Ver sin obra social");
+            verSinObSoc.setContentAreaFilled(false);
+            verSinObSoc.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        verSinObSocActionPerformed(evt);
+                  }
+            });
 
-        dnitxt.setBackground(new java.awt.Color(51, 51, 51));
-        dnitxt.setForeground(new java.awt.Color(255, 255, 255));
-        dnitxt.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                dnitxtKeyTyped(evt);
-            }
-        });
+            dnitxt.setBackground(new java.awt.Color(51, 51, 51));
+            dnitxt.setForeground(new java.awt.Color(255, 255, 255));
+            dnitxt.addKeyListener(new java.awt.event.KeyAdapter() {
+                  public void keyTyped(java.awt.event.KeyEvent evt) {
+                        dnitxtKeyTyped(evt);
+                  }
+            });
 
-        jScrollPane1.setBackground(new java.awt.Color(153, 204, 255));
-        jScrollPane1.setForeground(new java.awt.Color(153, 204, 255));
+            jScrollPane1.setBackground(new java.awt.Color(153, 204, 255));
+            jScrollPane1.setForeground(new java.awt.Color(153, 204, 255));
 
-        jTableMostrar.setBackground(new java.awt.Color(102, 153, 255));
-        jTableMostrar.setForeground(new java.awt.Color(0, 0, 0));
-        jTableMostrar.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "Nombre", "Apellido", "DNI", "Email", "Telefono", "Obra social", "Estudios"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false
-            };
+            jTableMostrar.setBackground(new java.awt.Color(102, 153, 255));
+            jTableMostrar.setForeground(new java.awt.Color(0, 0, 0));
+            jTableMostrar.setModel(new javax.swing.table.DefaultTableModel(
+                  new Object [][] {
+                        {null, null, null, null, null, null, null},
+                        {null, null, null, null, null, null, null},
+                        {null, null, null, null, null, null, null},
+                        {null, null, null, null, null, null, null}
+                  },
+                  new String [] {
+                        "Nombre", "Apellido", "DNI", "Email", "Telefono", "Obra social", "Estudios"
+                  }
+            ) {
+                  Class[] types = new Class [] {
+                        java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
+                  };
+                  boolean[] canEdit = new boolean [] {
+                        false, false, false, false, false, false, false
+                  };
 
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
+                  public Class getColumnClass(int columnIndex) {
+                        return types [columnIndex];
+                  }
 
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jTableMostrar.setOpaque(false);
-        jScrollPane1.setViewportView(jTableMostrar);
+                  public boolean isCellEditable(int rowIndex, int columnIndex) {
+                        return canEdit [columnIndex];
+                  }
+            });
+            jTableMostrar.setOpaque(false);
+            jScrollPane1.setViewportView(jTableMostrar);
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Buscar por DNI");
+            jLabel2.setFont(new java.awt.Font("Nirmala UI", 1, 18)); // NOI18N
+            jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+            jLabel2.setText("Buscar por DNI");
 
-        buscarPorDni.setBackground(new java.awt.Color(0, 51, 102));
-        buscarPorDni.setForeground(new java.awt.Color(255, 255, 255));
-        buscarPorDni.setText("Buscar");
-        buscarPorDni.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buscarPorDniActionPerformed(evt);
-            }
-        });
+            buscarPorDni.setBackground(new java.awt.Color(0, 51, 102));
+            buscarPorDni.setForeground(new java.awt.Color(255, 255, 255));
+            buscarPorDni.setText("Buscar");
+            buscarPorDni.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        buscarPorDniActionPerformed(evt);
+                  }
+            });
 
-        javax.swing.GroupLayout jPanelMostrarTodosPacLayout = new javax.swing.GroupLayout(jPanelMostrarTodosPac);
-        jPanelMostrarTodosPac.setLayout(jPanelMostrarTodosPacLayout);
-        jPanelMostrarTodosPacLayout.setHorizontalGroup(
-            jPanelMostrarTodosPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelMostrarTodosPacLayout.createSequentialGroup()
-                .addGroup(jPanelMostrarTodosPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelMostrarTodosPacLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 538, Short.MAX_VALUE))
-                    .addGroup(jPanelMostrarTodosPacLayout.createSequentialGroup()
+            javax.swing.GroupLayout jPanelMostrarTodosPacLayout = new javax.swing.GroupLayout(jPanelMostrarTodosPac);
+            jPanelMostrarTodosPac.setLayout(jPanelMostrarTodosPacLayout);
+            jPanelMostrarTodosPacLayout.setHorizontalGroup(
+                  jPanelMostrarTodosPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                  .addGroup(jPanelMostrarTodosPacLayout.createSequentialGroup()
                         .addGroup(jPanelMostrarTodosPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanelMostrarTodosPacLayout.createSequentialGroup()
-                                .addGap(254, 254, 254)
-                                .addComponent(cancelarbtn))
-                            .addGroup(jPanelMostrarTodosPacLayout.createSequentialGroup()
-                                .addGap(32, 32, 32)
-                                .addGroup(jPanelMostrarTodosPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanelMostrarTodosPacLayout.createSequentialGroup()
-                                        .addComponent(verSinObSoc)
-                                        .addGap(90, 90, 90)
-                                        .addComponent(buscarPorDni))
-                                    .addGroup(jPanelMostrarTodosPacLayout.createSequentialGroup()
-                                        .addComponent(verTodos)
-                                        .addGap(115, 115, 115)
-                                        .addComponent(jLabel2))
-                                    .addGroup(jPanelMostrarTodosPacLayout.createSequentialGroup()
-                                        .addComponent(verConObSoc)
-                                        .addGap(51, 51, 51)
-                                        .addComponent(dnitxt, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        jPanelMostrarTodosPacLayout.setVerticalGroup(
-            jPanelMostrarTodosPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelMostrarTodosPacLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addGroup(jPanelMostrarTodosPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(verTodos)
-                    .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelMostrarTodosPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(verConObSoc)
-                    .addComponent(dnitxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelMostrarTodosPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(verSinObSoc)
-                    .addComponent(buscarPorDni))
-                .addGap(87, 87, 87)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
-                .addComponent(cancelarbtn)
-                .addGap(15, 15, 15))
-        );
+                              .addGroup(jPanelMostrarTodosPacLayout.createSequentialGroup()
+                                    .addContainerGap()
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 538, Short.MAX_VALUE))
+                              .addGroup(jPanelMostrarTodosPacLayout.createSequentialGroup()
+                                    .addGroup(jPanelMostrarTodosPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                          .addGroup(jPanelMostrarTodosPacLayout.createSequentialGroup()
+                                                .addGap(254, 254, 254)
+                                                .addComponent(cancelarbtn))
+                                          .addGroup(jPanelMostrarTodosPacLayout.createSequentialGroup()
+                                                .addGap(32, 32, 32)
+                                                .addGroup(jPanelMostrarTodosPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                      .addGroup(jPanelMostrarTodosPacLayout.createSequentialGroup()
+                                                            .addComponent(verSinObSoc)
+                                                            .addGap(90, 90, 90)
+                                                            .addComponent(buscarPorDni))
+                                                      .addGroup(jPanelMostrarTodosPacLayout.createSequentialGroup()
+                                                            .addComponent(verTodos)
+                                                            .addGap(115, 115, 115)
+                                                            .addComponent(jLabel2))
+                                                      .addGroup(jPanelMostrarTodosPacLayout.createSequentialGroup()
+                                                            .addComponent(verConObSoc)
+                                                            .addGap(51, 51, 51)
+                                                            .addComponent(dnitxt, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addGap(0, 0, Short.MAX_VALUE)))
+                        .addContainerGap())
+            );
+            jPanelMostrarTodosPacLayout.setVerticalGroup(
+                  jPanelMostrarTodosPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                  .addGroup(jPanelMostrarTodosPacLayout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addGroup(jPanelMostrarTodosPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                              .addComponent(verTodos)
+                              .addComponent(jLabel2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanelMostrarTodosPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                              .addComponent(verConObSoc)
+                              .addComponent(dnitxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanelMostrarTodosPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                              .addComponent(verSinObSoc)
+                              .addComponent(buscarPorDni))
+                        .addGap(87, 87, 87)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                        .addComponent(cancelarbtn)
+                        .addGap(15, 15, 15))
+            );
 
-        getContentPane().add(jPanelMostrarTodosPac, "card7");
+            getContentPane().add(jPanelMostrarTodosPac, "card7");
 
-        jPanelMostrarTodosPro.setBackground(new java.awt.Color(153, 204, 255));
-        jPanelMostrarTodosPro.setOpaque(false);
+            jPanelMostrarTodosPro.setBackground(new java.awt.Color(153, 204, 255));
+            jPanelMostrarTodosPro.setOpaque(false);
 
-        verTodosPro.setBackground(new java.awt.Color(153, 204, 255));
-        verTodosPro.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        verTodosPro.setForeground(new java.awt.Color(255, 255, 255));
-        verTodosPro.setText("Ver todos");
-        verTodosPro.setContentAreaFilled(false);
-        verTodosPro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                verTodosProActionPerformed(evt);
-            }
-        });
+            verTodosPro.setBackground(new java.awt.Color(153, 204, 255));
+            verTodosPro.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
+            verTodosPro.setForeground(new java.awt.Color(255, 255, 255));
+            verTodosPro.setText("Ver todos");
+            verTodosPro.setContentAreaFilled(false);
+            verTodosPro.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        verTodosProActionPerformed(evt);
+                  }
+            });
 
-        volverBtn.setBackground(new java.awt.Color(0, 51, 102));
-        volverBtn.setForeground(new java.awt.Color(255, 255, 255));
-        volverBtn.setText("Volver");
-        volverBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                volverBtnActionPerformed(evt);
-            }
-        });
+            volverBtn.setBackground(new java.awt.Color(0, 51, 102));
+            volverBtn.setForeground(new java.awt.Color(255, 255, 255));
+            volverBtn.setText("Volver");
+            volverBtn.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        volverBtnActionPerformed(evt);
+                  }
+            });
 
-        mattxt.setBackground(new java.awt.Color(51, 51, 51));
-        mattxt.setForeground(new java.awt.Color(255, 255, 255));
-        mattxt.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                mattxtKeyTyped(evt);
-            }
-        });
+            mattxt.setBackground(new java.awt.Color(51, 51, 51));
+            mattxt.setForeground(new java.awt.Color(255, 255, 255));
+            mattxt.addKeyListener(new java.awt.event.KeyAdapter() {
+                  public void keyTyped(java.awt.event.KeyEvent evt) {
+                        mattxtKeyTyped(evt);
+                  }
+            });
 
-        jScrollPane2.setBackground(new java.awt.Color(153, 204, 255));
-        jScrollPane2.setForeground(new java.awt.Color(153, 204, 255));
+            jScrollPane2.setBackground(new java.awt.Color(153, 204, 255));
+            jScrollPane2.setForeground(new java.awt.Color(153, 204, 255));
 
-        jTableMostrarPro.setBackground(new java.awt.Color(102, 153, 255));
-        jTableMostrarPro.setForeground(new java.awt.Color(0, 0, 0));
-        jTableMostrarPro.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
-            },
-            new String [] {
-                "Nombre", "Apellido", "DNI", "Email", "Telefono", "Matricula"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
-            };
+            jTableMostrarPro.setBackground(new java.awt.Color(102, 153, 255));
+            jTableMostrarPro.setForeground(new java.awt.Color(0, 0, 0));
+            jTableMostrarPro.setModel(new javax.swing.table.DefaultTableModel(
+                  new Object [][] {
+                        {null, null, null, null, null, null},
+                        {null, null, null, null, null, null},
+                        {null, null, null, null, null, null},
+                        {null, null, null, null, null, null}
+                  },
+                  new String [] {
+                        "Nombre", "Apellido", "DNI", "Email", "Telefono", "Matricula"
+                  }
+            ) {
+                  Class[] types = new Class [] {
+                        java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                  };
+                  boolean[] canEdit = new boolean [] {
+                        false, false, false, false, false, false
+                  };
 
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
+                  public Class getColumnClass(int columnIndex) {
+                        return types [columnIndex];
+                  }
 
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jTableMostrarPro.setOpaque(false);
-        jScrollPane2.setViewportView(jTableMostrarPro);
+                  public boolean isCellEditable(int rowIndex, int columnIndex) {
+                        return canEdit [columnIndex];
+                  }
+            });
+            jTableMostrarPro.setOpaque(false);
+            jScrollPane2.setViewportView(jTableMostrarPro);
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Buscar por matricula");
+            jLabel5.setFont(new java.awt.Font("Nirmala UI", 1, 18)); // NOI18N
+            jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+            jLabel5.setText("Buscar por matricula");
 
-        buscarProMat.setBackground(new java.awt.Color(0, 51, 102));
-        buscarProMat.setForeground(new java.awt.Color(255, 255, 255));
-        buscarProMat.setText("Buscar");
-        buscarProMat.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buscarProMatActionPerformed(evt);
-            }
-        });
+            buscarProMat.setBackground(new java.awt.Color(0, 51, 102));
+            buscarProMat.setForeground(new java.awt.Color(255, 255, 255));
+            buscarProMat.setText("Buscar");
+            buscarProMat.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        buscarProMatActionPerformed(evt);
+                  }
+            });
 
-        jRadioButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton1.setText("Ver sin obra social");
-        jRadioButton1.setContentAreaFilled(false);
+            jRadioButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+            jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
+            jRadioButton1.setText("Ver sin obra social");
+            jRadioButton1.setContentAreaFilled(false);
 
-        javax.swing.GroupLayout jPanelMostrarTodosProLayout = new javax.swing.GroupLayout(jPanelMostrarTodosPro);
-        jPanelMostrarTodosPro.setLayout(jPanelMostrarTodosProLayout);
-        jPanelMostrarTodosProLayout.setHorizontalGroup(
-            jPanelMostrarTodosProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelMostrarTodosProLayout.createSequentialGroup()
-                .addGroup(jPanelMostrarTodosProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelMostrarTodosProLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 538, Short.MAX_VALUE))
-                    .addGroup(jPanelMostrarTodosProLayout.createSequentialGroup()
+            javax.swing.GroupLayout jPanelMostrarTodosProLayout = new javax.swing.GroupLayout(jPanelMostrarTodosPro);
+            jPanelMostrarTodosPro.setLayout(jPanelMostrarTodosProLayout);
+            jPanelMostrarTodosProLayout.setHorizontalGroup(
+                  jPanelMostrarTodosProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                  .addGroup(jPanelMostrarTodosProLayout.createSequentialGroup()
                         .addGroup(jPanelMostrarTodosProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanelMostrarTodosProLayout.createSequentialGroup()
-                                .addGap(254, 254, 254)
-                                .addComponent(volverBtn))
-                            .addGroup(jPanelMostrarTodosProLayout.createSequentialGroup()
-                                .addGap(258, 258, 258)
-                                .addComponent(buscarProMat))
-                            .addGroup(jPanelMostrarTodosProLayout.createSequentialGroup()
-                                .addGap(30, 30, 30)
-                                .addComponent(verTodosPro)
-                                .addGap(109, 109, 109)
-                                .addComponent(mattxt, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanelMostrarTodosProLayout.createSequentialGroup()
-                                .addGap(209, 209, 209)
-                                .addComponent(jLabel5)))
-                        .addGap(0, 159, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        jPanelMostrarTodosProLayout.setVerticalGroup(
-            jPanelMostrarTodosProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelMostrarTodosProLayout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelMostrarTodosProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(mattxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(verTodosPro))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(buscarProMat)
-                .addGap(87, 87, 87)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
-                .addComponent(volverBtn)
-                .addGap(15, 15, 15))
-        );
+                              .addGroup(jPanelMostrarTodosProLayout.createSequentialGroup()
+                                    .addContainerGap()
+                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 538, Short.MAX_VALUE))
+                              .addGroup(jPanelMostrarTodosProLayout.createSequentialGroup()
+                                    .addGroup(jPanelMostrarTodosProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                          .addGroup(jPanelMostrarTodosProLayout.createSequentialGroup()
+                                                .addGap(254, 254, 254)
+                                                .addComponent(volverBtn))
+                                          .addGroup(jPanelMostrarTodosProLayout.createSequentialGroup()
+                                                .addGap(258, 258, 258)
+                                                .addComponent(buscarProMat))
+                                          .addGroup(jPanelMostrarTodosProLayout.createSequentialGroup()
+                                                .addGap(30, 30, 30)
+                                                .addComponent(verTodosPro)
+                                                .addGap(109, 109, 109)
+                                                .addComponent(mattxt, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                          .addGroup(jPanelMostrarTodosProLayout.createSequentialGroup()
+                                                .addGap(209, 209, 209)
+                                                .addComponent(jLabel5)))
+                                    .addGap(0, 159, Short.MAX_VALUE)))
+                        .addContainerGap())
+            );
+            jPanelMostrarTodosProLayout.setVerticalGroup(
+                  jPanelMostrarTodosProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                  .addGroup(jPanelMostrarTodosProLayout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanelMostrarTodosProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                              .addComponent(mattxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                              .addComponent(verTodosPro))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(buscarProMat)
+                        .addGap(87, 87, 87)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                        .addComponent(volverBtn)
+                        .addGap(15, 15, 15))
+            );
 
-        getContentPane().add(jPanelMostrarTodosPro, "card7");
+            getContentPane().add(jPanelMostrarTodosPro, "card7");
 
-        pack();
-    }// </editor-fold>//GEN-END:initComponents
+            pack();
+      }// </editor-fold>//GEN-END:initComponents
 
     
     /////////////////////////////
@@ -1410,71 +1410,70 @@ public class FormularioBuscar extends javax.swing.JFrame {
         if (encontro == false){
             JOptionPane.showMessageDialog(this, "No se encontro profesional con matricula -" + matIngresada + "-");
         }
-        mattxt.setText("");
+        dnitxt.setText("");
       }//GEN-LAST:event_buscarProMatActionPerformed
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel apellidoSig;
-    private javax.swing.JLabel apellidoSig1;
-    private javax.swing.JLabel apellidoTXT;
-    private javax.swing.JLabel apellidoTXT1;
-    private javax.swing.JButton btnCancelarPacMod;
-    private javax.swing.JButton btnConfirmarPacMod;
-    private javax.swing.JButton buscarModPac;
-    private javax.swing.JButton buscarModPro;
-    private javax.swing.JButton buscarPorDni;
-    private javax.swing.JButton buscarProMat;
-    private javax.swing.JTextField campoDniPac;
-    private javax.swing.JTextField campoMailMod;
-    private javax.swing.JTextField campoMatiProMod;
-    private javax.swing.JCheckBox campoModObSocPac;
-    private javax.swing.JTextField campoTelMod;
-    private javax.swing.JButton cancelarProbtn;
-    private javax.swing.JButton cancelarbtn;
-    private javax.swing.JButton confirmarProbtn;
-    private javax.swing.JLabel dniSig;
-    private javax.swing.JLabel dniSig1;
-    private javax.swing.JLabel dniTXT;
-    private javax.swing.JLabel dniTXT1;
-    private javax.swing.JTextField dnitxt;
-    private javax.swing.JLabel emailSig;
-    private javax.swing.JLabel emailSig1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JPanel jPanelModificarPac;
-    private javax.swing.JPanel jPanelModificarPro;
-    private javax.swing.JPanel jPanelMostrarTodosPac;
-    private javax.swing.JPanel jPanelMostrarTodosPro;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTableMostrar;
-    private javax.swing.JTable jTableMostrarPro;
-    private javax.swing.JLabel matMod;
-    private javax.swing.JLabel matriculaTXT1;
-    private javax.swing.JTextField mattxt;
-    private javax.swing.JTextField modMailInput1;
-    private javax.swing.JTextField modTelInput1;
-    private javax.swing.JLabel noEncontro;
-    private javax.swing.JLabel noEncontro1;
-    private javax.swing.JLabel nombreSig;
-    private javax.swing.JLabel nombreSig1;
-    private javax.swing.JLabel nombreTXT;
-    private javax.swing.JLabel nombreTXT1;
-    private javax.swing.JLabel obSocSig;
-    private javax.swing.JSeparator separador;
-    private javax.swing.JSeparator separador1;
-    private javax.swing.JLabel subtitulo;
-    private javax.swing.JLabel subtitulo1;
-    private javax.swing.JLabel telefonoSig;
-    private javax.swing.JLabel telefonoSig1;
-    private javax.swing.JLabel titulo;
-    private javax.swing.JLabel titulo1;
-    private javax.swing.JRadioButton verConObSoc;
-    private javax.swing.JRadioButton verSinObSoc;
-    private javax.swing.JRadioButton verTodos;
-    private javax.swing.JRadioButton verTodosPro;
-    private javax.swing.JButton volverBtn;
-    // End of variables declaration//GEN-END:variables
-
+      // Variables declaration - do not modify//GEN-BEGIN:variables
+      private javax.swing.JLabel apellidoSig;
+      private javax.swing.JLabel apellidoSig1;
+      private javax.swing.JLabel apellidoTXT;
+      private javax.swing.JLabel apellidoTXT1;
+      private javax.swing.JButton btnCancelarPacMod;
+      private javax.swing.JButton btnConfirmarPacMod;
+      private javax.swing.JButton buscarModPac;
+      private javax.swing.JButton buscarModPro;
+      private javax.swing.JButton buscarPorDni;
+      private javax.swing.JButton buscarProMat;
+      private javax.swing.JTextField campoDniPac;
+      private javax.swing.JTextField campoMailMod;
+      private javax.swing.JTextField campoMatiProMod;
+      private javax.swing.JCheckBox campoModObSocPac;
+      private javax.swing.JTextField campoTelMod;
+      private javax.swing.JButton cancelarProbtn;
+      private javax.swing.JButton cancelarbtn;
+      private javax.swing.JButton confirmarProbtn;
+      private javax.swing.JLabel dniSig;
+      private javax.swing.JLabel dniSig1;
+      private javax.swing.JLabel dniTXT;
+      private javax.swing.JLabel dniTXT1;
+      private javax.swing.JTextField dnitxt;
+      private javax.swing.JLabel emailSig;
+      private javax.swing.JLabel emailSig1;
+      private javax.swing.JLabel jLabel2;
+      private javax.swing.JLabel jLabel5;
+      private javax.swing.JPanel jPanelModificarPac;
+      private javax.swing.JPanel jPanelModificarPro;
+      private javax.swing.JPanel jPanelMostrarTodosPac;
+      private javax.swing.JPanel jPanelMostrarTodosPro;
+      private javax.swing.JRadioButton jRadioButton1;
+      private javax.swing.JScrollPane jScrollPane1;
+      private javax.swing.JScrollPane jScrollPane2;
+      private javax.swing.JTable jTableMostrar;
+      private javax.swing.JTable jTableMostrarPro;
+      private javax.swing.JLabel matMod;
+      private javax.swing.JLabel matriculaTXT1;
+      private javax.swing.JTextField mattxt;
+      private javax.swing.JTextField modMailInput1;
+      private javax.swing.JTextField modTelInput1;
+      private javax.swing.JLabel noEncontro;
+      private javax.swing.JLabel noEncontro1;
+      private javax.swing.JLabel nombreSig;
+      private javax.swing.JLabel nombreSig1;
+      private javax.swing.JLabel nombreTXT;
+      private javax.swing.JLabel nombreTXT1;
+      private javax.swing.JLabel obSocSig;
+      private javax.swing.JSeparator separador;
+      private javax.swing.JSeparator separador1;
+      private javax.swing.JLabel subtitulo;
+      private javax.swing.JLabel subtitulo1;
+      private javax.swing.JLabel telefonoSig;
+      private javax.swing.JLabel telefonoSig1;
+      private javax.swing.JLabel titulo;
+      private javax.swing.JLabel titulo1;
+      private javax.swing.JRadioButton verConObSoc;
+      private javax.swing.JRadioButton verSinObSoc;
+      private javax.swing.JRadioButton verTodos;
+      private javax.swing.JRadioButton verTodosPro;
+      private javax.swing.JButton volverBtn;
+      // End of variables declaration//GEN-END:variables
 }
