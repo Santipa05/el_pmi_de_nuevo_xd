@@ -69,7 +69,7 @@ public class FormularioEstudio extends javax.swing.JFrame {
         nuevaFila[4] = miEst.muestraEstado();
         nuevaFila[5] = miEst.muestraAnalisisRealizados();
         modelo.addRow(nuevaFila);
-}
+        }
       
       private void metAux(String accionActual) {
         if (listaEstudios.isEmpty()) {

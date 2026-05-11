@@ -395,9 +395,9 @@
                               <Component id="nombreTXT" alignment="0" min="-2" pref="222" max="-2" attributes="0"/>
                               <Component id="apellidoTXT" alignment="0" min="-2" pref="227" max="-2" attributes="0"/>
                               <Component id="dniTXT" alignment="0" min="-2" pref="227" max="-2" attributes="0"/>
-                              <Component id="campoModObSocPac" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="campoMailMod" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="campoTelMod" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoModObSocPac" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -463,10 +463,15 @@
                               <Component id="campoMailMod" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="emailSig" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="obSocSig" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="campoModObSocPac" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                                  <Component id="obSocSig" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="campoModObSocPac" min="-2" pref="20" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                       <Component id="separador" max="32767" attributes="0"/>
@@ -718,10 +723,13 @@
               <Font name="Segoe UI" size="14" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Si tengo"/>
+            <Property name="contentAreaFilled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoModObSocPacActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -796,7 +804,7 @@
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="93" max="32767" attributes="0"/>
+                  <EmptySpace pref="56" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -853,7 +861,7 @@
                   <Component id="confirmarProbtn" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="cancelarProbtn" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="35" max="32767" attributes="0"/>
+                  <EmptySpace pref="183" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1124,9 +1132,11 @@
                           <Component id="verPacientes" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="verProfesionales" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="211" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="213" max="-2" attributes="0"/>
                           <Component id="cancelarbtn" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -1141,12 +1151,13 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="verPacientes" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="verProfesionales" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRadioButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace pref="114" max="32767" attributes="0"/>
                   <Component id="jScrollPane1" min="-2" pref="302" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                   <Component id="cancelarbtn" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="150" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1163,7 +1174,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Ver pacientes"/>
+            <Property name="text" type="java.lang.String" value="Ver todos"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
           </Properties>
           <Events>
@@ -1181,7 +1192,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Ver profesionales"/>
+            <Property name="text" type="java.lang.String" value="Ver con obra social"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
           </Properties>
           <Events>
@@ -1234,11 +1245,23 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Cancelar"/>
+            <Property name="text" type="java.lang.String" value="Volver"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cancelarbtnActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="jRadioButton1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="14" style="0"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Ver sin obra social"/>
+            <Property name="contentAreaFilled" type="boolean" value="false"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>
