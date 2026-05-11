@@ -99,6 +99,7 @@ public class FormularioEliminar extends javax.swing.JFrame {
         btnCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setResizable(false);
 
         jPanelEliminarPaciente.setBackground(new java.awt.Color(153, 204, 255));
         jPanelEliminarPaciente.setOpaque(false);
@@ -139,7 +140,7 @@ public class FormularioEliminar extends javax.swing.JFrame {
 
         btnCancelar1.setBackground(new java.awt.Color(0, 51, 102));
         btnCancelar1.setForeground(new java.awt.Color(255, 255, 255));
-        btnCancelar1.setText("Cancelar");
+        btnCancelar1.setText("Volver");
         btnCancelar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelar1ActionPerformed(evt);
@@ -229,7 +230,7 @@ public class FormularioEliminar extends javax.swing.JFrame {
 
         btnCancelar.setBackground(new java.awt.Color(0, 51, 102));
         btnCancelar.setForeground(new java.awt.Color(255, 255, 255));
-        btnCancelar.setText("Cancelar");
+        btnCancelar.setText("Volver");
         btnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelarActionPerformed(evt);

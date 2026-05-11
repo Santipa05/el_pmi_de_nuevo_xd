@@ -40,6 +40,16 @@ public class FormularioBuscar extends javax.swing.JFrame {
           jScrollPane1.setViewportBorder(null);
           jScrollPane1.setOpaque(false);
           jScrollPane1.getViewport().setOpaque(false);
+          jTableMostrar.getColumnModel().getColumn(3).setPreferredWidth(200);
+          jTableMostrar.getColumnModel().getColumn(4).setPreferredWidth(100);
+          jTableMostrar.getColumnModel().getColumn(0).setPreferredWidth(100);
+          jTableMostrarPro.setFillsViewportHeight(true);
+          jScrollPane2.setBackground(cel);
+          jScrollPane2.getViewport().setBackground(cel);
+          jScrollPane2.setBorder(null);
+          jScrollPane2.setViewportBorder(null);
+          jScrollPane2.setOpaque(false);
+          jScrollPane2.getViewport().setOpaque(false);
       }
 
     public FormularioBuscar(HashMap<String, Persona> mapaPersonas, int op, String operacion, ArrayList<Estudio> listaEstudios) {
@@ -55,67 +65,21 @@ public class FormularioBuscar extends javax.swing.JFrame {
     
     private void metAux(int op){
             if(op == 0){
-                  if ("Ver cantidad de estudios".equals(accionActual)){
-                    jPanelContarEstPac.setVisible(true);
-                    jPanelContarEstPac.setEnabled(true);
-                    jPanelBuscarPaciente.setVisible(false);
-                    jPanelBuscarPaciente.setEnabled(false);
-                    jPanelBuscarProfesional.setVisible(false);
-                    jPanelBuscarProfesional.setEnabled(false);
-                    jPanelBuscarProfesional.setVisible(false);
-                    jPanelBuscarProfesional.setEnabled(false);
-                    jPanelModificarPac.setVisible(false);
-                    jPanelModificarPac.setEnabled(false);
+                 if ("Modificar".equals(accionActual)){
+                    muestraOnoCamposModPac(false);
+                    jPanelModificarPac.setVisible(true);
+                    jPanelModificarPac.setEnabled(true);
                     jPanelModificarPro.setVisible(false);
                     jPanelModificarPro.setEnabled(false);
-                    jPanelMostrarTodos.setVisible(false);
-                    jPanelMostrarTodos.setEnabled(false);
-                    this.pack();
-                  }else if ("Modificar".equals(accionActual)){
-                      muestraOnoCamposModPac(false);
-                      jPanelModificarPac.setVisible(true);
-                      jPanelModificarPac.setEnabled(true);
-                      jPanelContarEstPac.setVisible(false);
-                      jPanelContarEstPac.setEnabled(false);
-                      jPanelBuscarPaciente.setVisible(false);
-                      jPanelBuscarPaciente.setEnabled(false);
-                      jPanelBuscarProfesional.setVisible(false);
-                      jPanelBuscarProfesional.setEnabled(false);
-                      jPanelBuscarProfesional.setVisible(false);
-                      jPanelBuscarProfesional.setEnabled(false);
-                      jPanelModificarPro.setVisible(false);
-                      jPanelModificarPro.setEnabled(false);
-                    jPanelMostrarTodos.setVisible(false);
-                    jPanelMostrarTodos.setEnabled(false);
+                    jPanelMostrarTodosPac.setVisible(false);
+                    jPanelMostrarTodosPac.setEnabled(false);
+                    jPanelMostrarTodosPro.setVisible(false);
+                    jPanelMostrarTodosPro.setEnabled(false);
                     this.pack();
                   }
-                  else if ("Mostrar todos".equals(accionActual)){
-                        jPanelMostrarTodos.setVisible(true);
-                        jPanelMostrarTodos.setEnabled(true);
-                    jPanelBuscarPaciente.setVisible(false);
-                    jPanelBuscarPaciente.setEnabled(false);
-                    jPanelContarEstPac.setVisible(false);
-                    jPanelContarEstPac.setEnabled(false);
-                    jPanelBuscarProfesional.setVisible(false);
-                    jPanelBuscarProfesional.setEnabled(false);
-                    jPanelBuscarProfesional.setVisible(false);
-                    jPanelBuscarProfesional.setEnabled(false);
-                    jPanelModificarPac.setVisible(false);
-                    jPanelModificarPac.setEnabled(false);
-                    jPanelModificarPro.setVisible(false);
-                    jPanelModificarPro.setEnabled(false);
-                    this.pack();
-                  } else{
-                    jPanelBuscarPaciente.setVisible(true);
-                    jPanelBuscarPaciente.setEnabled(true);
-                    jPanelMostrarTodos.setVisible(false);
-                    jPanelMostrarTodos.setEnabled(false);
-                    jPanelContarEstPac.setVisible(false);
-                    jPanelContarEstPac.setEnabled(false);
-                    jPanelBuscarProfesional.setVisible(false);
-                    jPanelBuscarProfesional.setEnabled(false);
-                    jPanelBuscarProfesional.setVisible(false);
-                    jPanelBuscarProfesional.setEnabled(false);
+                  else if ("Mostrar/Buscar".equals(accionActual)){
+                    jPanelMostrarTodosPac.setVisible(true);
+                    jPanelMostrarTodosPac.setEnabled(true);
                     jPanelModificarPac.setVisible(false);
                     jPanelModificarPac.setEnabled(false);
                     jPanelModificarPro.setVisible(false);
@@ -124,67 +88,27 @@ public class FormularioBuscar extends javax.swing.JFrame {
                   }
                   
             }else if(op == 1){
-                  if ("Buscar por matricula".equals(accionActual)){
-                    jPanelBuscarProfesional.setVisible(true);
-                    jPanelBuscarProfesional.setEnabled(true);
-                    jPanelContarEstPac.setVisible(false);
-                    jPanelContarEstPac.setEnabled(false);
-                    jPanelBuscarPaciente.setVisible(false);
-                    jPanelBuscarPaciente.setEnabled(false);
-                    jPanelModificarPac.setVisible(false);
-                    jPanelModificarPac.setEnabled(false);
-                    jPanelModificarPro.setVisible(false);
-                    jPanelModificarPro.setEnabled(false);
-                    jPanelMostrarTodos.setVisible(false);
-                    jPanelMostrarTodos.setEnabled(false);
-                    this.pack();
-                  }else if ("Modificar".equals(accionActual)){
+                 if ("Modificar".equals(accionActual)){
                     muestraOnoCamposModPro(false);  
-                    jPanelModificarPac.setVisible(false);
-                    jPanelModificarPac.setEnabled(false);
-                    jPanelContarEstPac.setVisible(false);
-                    jPanelContarEstPac.setEnabled(false);
-                    jPanelBuscarPaciente.setVisible(false);
-                    jPanelBuscarPaciente.setEnabled(false);
-                    jPanelBuscarProfesional.setVisible(false);
-                    jPanelBuscarProfesional.setEnabled(false);
-                    jPanelBuscarProfesional.setVisible(false);
-                    jPanelBuscarProfesional.setEnabled(false);
                     jPanelModificarPro.setVisible(true);
                     jPanelModificarPro.setEnabled(true);
-                    jPanelMostrarTodos.setVisible(false);
-                    jPanelMostrarTodos.setEnabled(false);
+                    jPanelMostrarTodosPac.setVisible(false);
+                    jPanelMostrarTodosPac.setEnabled(false);
+                    jPanelMostrarTodosPro.setVisible(false);
+                    jPanelMostrarTodosPro.setEnabled(false);
+                    jPanelModificarPac.setVisible(false);
+                    jPanelModificarPac.setEnabled(false);
                     this.pack();
                   }
-                  else if ("Mostrar todos".equals(accionActual)){
-                    jPanelMostrarTodos.setVisible(true);
-                    jPanelMostrarTodos.setEnabled(true); 
-                    jPanelBuscarProfesional.setVisible(false);
-                    jPanelBuscarProfesional.setEnabled(false);
-                    jPanelBuscarProfesional.setVisible(false);
-                    jPanelBuscarProfesional.setEnabled(false);
-                    jPanelContarEstPac.setVisible(false);
-                    jPanelContarEstPac.setEnabled(false);
-                    jPanelBuscarPaciente.setVisible(false);
-                    jPanelBuscarPaciente.setEnabled(false);
-                    jPanelModificarPac.setVisible(false);
-                    jPanelModificarPac.setEnabled(false);
+                  else if ("Mostrar/Buscar".equals(accionActual)){
+                    jPanelMostrarTodosPro.setVisible(true);
+                    jPanelMostrarTodosPro.setEnabled(true);
                     jPanelModificarPro.setVisible(false);
                     jPanelModificarPro.setEnabled(false);
-                    this.pack();
-                  } else{
-                    jPanelBuscarProfesional.setVisible(true);
-                    jPanelBuscarProfesional.setEnabled(true);
-                    jPanelBuscarProfesional.setVisible(false);
-                    jPanelBuscarProfesional.setEnabled(false);
-                    jPanelContarEstPac.setVisible(false);
-                    jPanelContarEstPac.setEnabled(false);
-                    jPanelBuscarPaciente.setVisible(false);
-                    jPanelBuscarPaciente.setEnabled(false);
+                    jPanelMostrarTodosPac.setVisible(false);
+                    jPanelMostrarTodosPac.setEnabled(false);
                     jPanelModificarPac.setVisible(false);
                     jPanelModificarPac.setEnabled(false);
-                    jPanelModificarPro.setVisible(false);
-                    jPanelModificarPro.setEnabled(false);
                     this.pack();
                   }
             }
@@ -194,21 +118,6 @@ public class FormularioBuscar extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanelBuscarPaciente = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        dniPacBuscarTxt = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        btnBuscarPac = new javax.swing.JButton();
-        jPanelContarEstPac = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        dniPacContarEstTxt = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        btnContarEstPac = new javax.swing.JButton();
-        jPanelBuscarProfesional = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        matProBuscartxt1 = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        btnBuscarMatPro = new javax.swing.JButton();
         jPanelModificarPac = new javax.swing.JPanel();
         titulo = new javax.swing.JLabel();
         subtitulo = new javax.swing.JLabel();
@@ -251,219 +160,29 @@ public class FormularioBuscar extends javax.swing.JFrame {
         matriculaTXT1 = new javax.swing.JLabel();
         confirmarProbtn = new javax.swing.JButton();
         cancelarProbtn = new javax.swing.JButton();
-        jPanelMostrarTodos = new javax.swing.JPanel();
-        verPacientes = new javax.swing.JRadioButton();
-        verProfesionales = new javax.swing.JRadioButton();
+        jPanelMostrarTodosPac = new javax.swing.JPanel();
+        verTodos = new javax.swing.JRadioButton();
+        verConObSoc = new javax.swing.JRadioButton();
+        cancelarbtn = new javax.swing.JButton();
+        verSinObSoc = new javax.swing.JRadioButton();
+        dnitxt = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableMostrar = new javax.swing.JTable();
-        cancelarbtn = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        buscarPorDni = new javax.swing.JButton();
+        jPanelMostrarTodosPro = new javax.swing.JPanel();
+        verTodosPro = new javax.swing.JRadioButton();
+        volverBtn = new javax.swing.JButton();
+        mattxt = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTableMostrarPro = new javax.swing.JTable();
+        jLabel5 = new javax.swing.JLabel();
+        buscarProMat = new javax.swing.JButton();
         jRadioButton1 = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new java.awt.CardLayout());
-
-        jPanelBuscarPaciente.setBackground(new java.awt.Color(153, 204, 255));
-        jPanelBuscarPaciente.setOpaque(false);
-
-        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel1.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Buscar paciente");
-
-        dniPacBuscarTxt.setBackground(new java.awt.Color(51, 51, 51));
-        dniPacBuscarTxt.setForeground(new java.awt.Color(255, 255, 255));
-        dniPacBuscarTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dniPacBuscarTxtActionPerformed(evt);
-            }
-        });
-        dniPacBuscarTxt.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                dniPacBuscarTxtKeyTyped(evt);
-            }
-        });
-
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("DNI");
-
-        btnBuscarPac.setBackground(new java.awt.Color(0, 51, 102));
-        btnBuscarPac.setForeground(new java.awt.Color(255, 255, 255));
-        btnBuscarPac.setText("Buscar");
-        btnBuscarPac.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBuscarPacActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanelBuscarPacienteLayout = new javax.swing.GroupLayout(jPanelBuscarPaciente);
-        jPanelBuscarPaciente.setLayout(jPanelBuscarPacienteLayout);
-        jPanelBuscarPacienteLayout.setHorizontalGroup(
-            jPanelBuscarPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelBuscarPacienteLayout.createSequentialGroup()
-                .addContainerGap(157, Short.MAX_VALUE)
-                .addGroup(jPanelBuscarPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBuscarPacienteLayout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(dniPacBuscarTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBuscarPacienteLayout.createSequentialGroup()
-                        .addComponent(btnBuscarPac)
-                        .addGap(59, 59, 59))
-                    .addGroup(jPanelBuscarPacienteLayout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addComponent(jLabel1)))
-                .addContainerGap(188, Short.MAX_VALUE))
-        );
-        jPanelBuscarPacienteLayout.setVerticalGroup(
-            jPanelBuscarPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelBuscarPacienteLayout.createSequentialGroup()
-                .addGap(63, 63, 63)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addGroup(jPanelBuscarPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(dniPacBuscarTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
-                .addGap(27, 27, 27)
-                .addComponent(btnBuscarPac)
-                .addContainerGap(371, Short.MAX_VALUE))
-        );
-
-        getContentPane().add(jPanelBuscarPaciente, "card2");
-
-        jPanelContarEstPac.setBackground(new java.awt.Color(153, 204, 255));
-        jPanelContarEstPac.setOpaque(false);
-
-        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel3.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Ingrese datos de paciente");
-
-        dniPacContarEstTxt.setBackground(new java.awt.Color(51, 51, 51));
-        dniPacContarEstTxt.setForeground(new java.awt.Color(255, 255, 255));
-        dniPacContarEstTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dniPacContarEstTxtActionPerformed(evt);
-            }
-        });
-        dniPacContarEstTxt.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                dniPacContarEstTxtKeyTyped(evt);
-            }
-        });
-
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("DNI");
-
-        btnContarEstPac.setBackground(new java.awt.Color(0, 51, 102));
-        btnContarEstPac.setForeground(new java.awt.Color(255, 255, 255));
-        btnContarEstPac.setText("Buscar");
-        btnContarEstPac.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnContarEstPacActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanelContarEstPacLayout = new javax.swing.GroupLayout(jPanelContarEstPac);
-        jPanelContarEstPac.setLayout(jPanelContarEstPacLayout);
-        jPanelContarEstPacLayout.setHorizontalGroup(
-            jPanelContarEstPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelContarEstPacLayout.createSequentialGroup()
-                .addGroup(jPanelContarEstPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelContarEstPacLayout.createSequentialGroup()
-                        .addGap(90, 90, 90)
-                        .addGroup(jPanelContarEstPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addGroup(jPanelContarEstPacLayout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addGap(18, 18, 18)
-                                .addComponent(dniPacContarEstTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanelContarEstPacLayout.createSequentialGroup()
-                        .addGap(165, 165, 165)
-                        .addComponent(btnContarEstPac)))
-                .addContainerGap(231, Short.MAX_VALUE))
-        );
-        jPanelContarEstPacLayout.setVerticalGroup(
-            jPanelContarEstPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelContarEstPacLayout.createSequentialGroup()
-                .addGap(63, 63, 63)
-                .addComponent(jLabel3)
-                .addGap(18, 18, 18)
-                .addGroup(jPanelContarEstPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(dniPacContarEstTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnContarEstPac)
-                .addContainerGap(392, Short.MAX_VALUE))
-        );
-
-        getContentPane().add(jPanelContarEstPac, "card3");
-
-        jPanelBuscarProfesional.setBackground(new java.awt.Color(153, 204, 255));
-        jPanelBuscarProfesional.setForeground(new java.awt.Color(255, 255, 255));
-        jPanelBuscarProfesional.setOpaque(false);
-
-        jLabel7.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel7.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Buscar profesional");
-
-        matProBuscartxt1.setBackground(new java.awt.Color(51, 51, 51));
-        matProBuscartxt1.setForeground(new java.awt.Color(255, 255, 255));
-        matProBuscartxt1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                matProBuscartxt1ActionPerformed(evt);
-            }
-        });
-        matProBuscartxt1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                matProBuscartxt1KeyTyped(evt);
-            }
-        });
-
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Matricula");
-
-        btnBuscarMatPro.setBackground(new java.awt.Color(0, 51, 102));
-        btnBuscarMatPro.setForeground(new java.awt.Color(255, 255, 255));
-        btnBuscarMatPro.setText("Buscar");
-        btnBuscarMatPro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBuscarMatProActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanelBuscarProfesionalLayout = new javax.swing.GroupLayout(jPanelBuscarProfesional);
-        jPanelBuscarProfesional.setLayout(jPanelBuscarProfesionalLayout);
-        jPanelBuscarProfesionalLayout.setHorizontalGroup(
-            jPanelBuscarProfesionalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelBuscarProfesionalLayout.createSequentialGroup()
-                .addContainerGap(113, Short.MAX_VALUE)
-                .addGroup(jPanelBuscarProfesionalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBuscarProfesionalLayout.createSequentialGroup()
-                        .addComponent(jLabel8)
-                        .addGap(18, 18, 18)
-                        .addComponent(matProBuscartxt1, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBuscarProfesionalLayout.createSequentialGroup()
-                        .addComponent(btnBuscarMatPro)
-                        .addGap(46, 46, 46)))
-                .addContainerGap(202, Short.MAX_VALUE))
-        );
-        jPanelBuscarProfesionalLayout.setVerticalGroup(
-            jPanelBuscarProfesionalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelBuscarProfesionalLayout.createSequentialGroup()
-                .addGap(63, 63, 63)
-                .addComponent(jLabel7)
-                .addGap(18, 18, 18)
-                .addGroup(jPanelBuscarProfesionalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(matProBuscartxt1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8))
-                .addGap(18, 18, 18)
-                .addComponent(btnBuscarMatPro)
-                .addContainerGap(380, Short.MAX_VALUE))
-        );
-
-        getContentPane().add(jPanelBuscarProfesional, "card4");
 
         jPanelModificarPac.setBackground(new java.awt.Color(153, 204, 255));
         jPanelModificarPac.setOpaque(false);
@@ -812,7 +531,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
 
         cancelarProbtn.setBackground(new java.awt.Color(0, 51, 102));
         cancelarProbtn.setForeground(new java.awt.Color(255, 255, 255));
-        cancelarProbtn.setText("Cancelar");
+        cancelarProbtn.setText("Volver");
         cancelarProbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelarProbtnActionPerformed(evt);
@@ -914,28 +633,55 @@ public class FormularioBuscar extends javax.swing.JFrame {
 
         getContentPane().add(jPanelModificarPro, "card6");
 
-        jPanelMostrarTodos.setBackground(new java.awt.Color(153, 204, 255));
-        jPanelMostrarTodos.setOpaque(false);
+        jPanelMostrarTodosPac.setBackground(new java.awt.Color(153, 204, 255));
+        jPanelMostrarTodosPac.setOpaque(false);
 
-        verPacientes.setBackground(new java.awt.Color(153, 204, 255));
-        verPacientes.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        verPacientes.setForeground(new java.awt.Color(255, 255, 255));
-        verPacientes.setText("Ver todos");
-        verPacientes.setContentAreaFilled(false);
-        verPacientes.addActionListener(new java.awt.event.ActionListener() {
+        verTodos.setBackground(new java.awt.Color(153, 204, 255));
+        verTodos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        verTodos.setForeground(new java.awt.Color(255, 255, 255));
+        verTodos.setText("Ver todos");
+        verTodos.setContentAreaFilled(false);
+        verTodos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                verPacientesActionPerformed(evt);
+                verTodosActionPerformed(evt);
             }
         });
 
-        verProfesionales.setBackground(new java.awt.Color(255, 255, 255));
-        verProfesionales.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        verProfesionales.setForeground(new java.awt.Color(255, 255, 255));
-        verProfesionales.setText("Ver con obra social");
-        verProfesionales.setContentAreaFilled(false);
-        verProfesionales.addActionListener(new java.awt.event.ActionListener() {
+        verConObSoc.setBackground(new java.awt.Color(255, 255, 255));
+        verConObSoc.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        verConObSoc.setForeground(new java.awt.Color(255, 255, 255));
+        verConObSoc.setText("Ver con obra social");
+        verConObSoc.setContentAreaFilled(false);
+        verConObSoc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                verProfesionalesActionPerformed(evt);
+                verConObSocActionPerformed(evt);
+            }
+        });
+
+        cancelarbtn.setBackground(new java.awt.Color(0, 51, 102));
+        cancelarbtn.setForeground(new java.awt.Color(255, 255, 255));
+        cancelarbtn.setText("Volver");
+        cancelarbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelarbtnActionPerformed(evt);
+            }
+        });
+
+        verSinObSoc.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        verSinObSoc.setForeground(new java.awt.Color(255, 255, 255));
+        verSinObSoc.setText("Ver sin obra social");
+        verSinObSoc.setContentAreaFilled(false);
+        verSinObSoc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                verSinObSocActionPerformed(evt);
+            }
+        });
+
+        dnitxt.setBackground(new java.awt.Color(51, 51, 51));
+        dnitxt.setForeground(new java.awt.Color(255, 255, 255));
+        dnitxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                dnitxtKeyTyped(evt);
             }
         });
 
@@ -946,13 +692,147 @@ public class FormularioBuscar extends javax.swing.JFrame {
         jTableMostrar.setForeground(new java.awt.Color(0, 0, 0));
         jTableMostrar.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Nombre", "Apellido", "DNI", "Email", "Telefono", "Obra social", "Estudios"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTableMostrar.setOpaque(false);
+        jScrollPane1.setViewportView(jTableMostrar);
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Buscar por DNI");
+
+        buscarPorDni.setBackground(new java.awt.Color(0, 51, 102));
+        buscarPorDni.setForeground(new java.awt.Color(255, 255, 255));
+        buscarPorDni.setText("Buscar");
+        buscarPorDni.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buscarPorDniActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanelMostrarTodosPacLayout = new javax.swing.GroupLayout(jPanelMostrarTodosPac);
+        jPanelMostrarTodosPac.setLayout(jPanelMostrarTodosPacLayout);
+        jPanelMostrarTodosPacLayout.setHorizontalGroup(
+            jPanelMostrarTodosPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelMostrarTodosPacLayout.createSequentialGroup()
+                .addGroup(jPanelMostrarTodosPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelMostrarTodosPacLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 538, Short.MAX_VALUE))
+                    .addGroup(jPanelMostrarTodosPacLayout.createSequentialGroup()
+                        .addGroup(jPanelMostrarTodosPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelMostrarTodosPacLayout.createSequentialGroup()
+                                .addGap(254, 254, 254)
+                                .addComponent(cancelarbtn))
+                            .addGroup(jPanelMostrarTodosPacLayout.createSequentialGroup()
+                                .addGap(32, 32, 32)
+                                .addGroup(jPanelMostrarTodosPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanelMostrarTodosPacLayout.createSequentialGroup()
+                                        .addComponent(verSinObSoc)
+                                        .addGap(90, 90, 90)
+                                        .addComponent(buscarPorDni))
+                                    .addGroup(jPanelMostrarTodosPacLayout.createSequentialGroup()
+                                        .addComponent(verTodos)
+                                        .addGap(115, 115, 115)
+                                        .addComponent(jLabel2))
+                                    .addGroup(jPanelMostrarTodosPacLayout.createSequentialGroup()
+                                        .addComponent(verConObSoc)
+                                        .addGap(51, 51, 51)
+                                        .addComponent(dnitxt, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPanelMostrarTodosPacLayout.setVerticalGroup(
+            jPanelMostrarTodosPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelMostrarTodosPacLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addGroup(jPanelMostrarTodosPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(verTodos)
+                    .addComponent(jLabel2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelMostrarTodosPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(verConObSoc)
+                    .addComponent(dnitxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelMostrarTodosPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(verSinObSoc)
+                    .addComponent(buscarPorDni))
+                .addGap(87, 87, 87)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addComponent(cancelarbtn)
+                .addGap(15, 15, 15))
+        );
+
+        getContentPane().add(jPanelMostrarTodosPac, "card7");
+
+        jPanelMostrarTodosPro.setBackground(new java.awt.Color(153, 204, 255));
+        jPanelMostrarTodosPro.setOpaque(false);
+
+        verTodosPro.setBackground(new java.awt.Color(153, 204, 255));
+        verTodosPro.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        verTodosPro.setForeground(new java.awt.Color(255, 255, 255));
+        verTodosPro.setText("Ver todos");
+        verTodosPro.setContentAreaFilled(false);
+        verTodosPro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                verTodosProActionPerformed(evt);
+            }
+        });
+
+        volverBtn.setBackground(new java.awt.Color(0, 51, 102));
+        volverBtn.setForeground(new java.awt.Color(255, 255, 255));
+        volverBtn.setText("Volver");
+        volverBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                volverBtnActionPerformed(evt);
+            }
+        });
+
+        mattxt.setBackground(new java.awt.Color(51, 51, 51));
+        mattxt.setForeground(new java.awt.Color(255, 255, 255));
+        mattxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                mattxtKeyTyped(evt);
+            }
+        });
+
+        jScrollPane2.setBackground(new java.awt.Color(153, 204, 255));
+        jScrollPane2.setForeground(new java.awt.Color(153, 204, 255));
+
+        jTableMostrarPro.setBackground(new java.awt.Color(102, 153, 255));
+        jTableMostrarPro.setForeground(new java.awt.Color(0, 0, 0));
+        jTableMostrarPro.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null}
             },
             new String [] {
-                "Nombre", "Apellido", "DNI", "Email", "Telefono", "Obra social"
+                "Nombre", "Apellido", "DNI", "Email", "Telefono", "Matricula"
             }
         ) {
             Class[] types = new Class [] {
@@ -970,15 +850,19 @@ public class FormularioBuscar extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jTableMostrar.setOpaque(false);
-        jScrollPane1.setViewportView(jTableMostrar);
+        jTableMostrarPro.setOpaque(false);
+        jScrollPane2.setViewportView(jTableMostrarPro);
 
-        cancelarbtn.setBackground(new java.awt.Color(0, 51, 102));
-        cancelarbtn.setForeground(new java.awt.Color(255, 255, 255));
-        cancelarbtn.setText("Volver");
-        cancelarbtn.addActionListener(new java.awt.event.ActionListener() {
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Buscar por matricula");
+
+        buscarProMat.setBackground(new java.awt.Color(0, 51, 102));
+        buscarProMat.setForeground(new java.awt.Color(255, 255, 255));
+        buscarProMat.setText("Buscar");
+        buscarProMat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cancelarbtnActionPerformed(evt);
+                buscarProMatActionPerformed(evt);
             }
         });
 
@@ -987,41 +871,53 @@ public class FormularioBuscar extends javax.swing.JFrame {
         jRadioButton1.setText("Ver sin obra social");
         jRadioButton1.setContentAreaFilled(false);
 
-        javax.swing.GroupLayout jPanelMostrarTodosLayout = new javax.swing.GroupLayout(jPanelMostrarTodos);
-        jPanelMostrarTodos.setLayout(jPanelMostrarTodosLayout);
-        jPanelMostrarTodosLayout.setHorizontalGroup(
-            jPanelMostrarTodosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 550, Short.MAX_VALUE)
-            .addGroup(jPanelMostrarTodosLayout.createSequentialGroup()
-                .addGroup(jPanelMostrarTodosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelMostrarTodosLayout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addComponent(verPacientes)
-                        .addGap(18, 18, 18)
-                        .addComponent(verProfesionales)
-                        .addGap(18, 18, 18)
-                        .addComponent(jRadioButton1))
-                    .addGroup(jPanelMostrarTodosLayout.createSequentialGroup()
-                        .addGap(213, 213, 213)
-                        .addComponent(cancelarbtn)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        javax.swing.GroupLayout jPanelMostrarTodosProLayout = new javax.swing.GroupLayout(jPanelMostrarTodosPro);
+        jPanelMostrarTodosPro.setLayout(jPanelMostrarTodosProLayout);
+        jPanelMostrarTodosProLayout.setHorizontalGroup(
+            jPanelMostrarTodosProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelMostrarTodosProLayout.createSequentialGroup()
+                .addGroup(jPanelMostrarTodosProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelMostrarTodosProLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 538, Short.MAX_VALUE))
+                    .addGroup(jPanelMostrarTodosProLayout.createSequentialGroup()
+                        .addGroup(jPanelMostrarTodosProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelMostrarTodosProLayout.createSequentialGroup()
+                                .addGap(254, 254, 254)
+                                .addComponent(volverBtn))
+                            .addGroup(jPanelMostrarTodosProLayout.createSequentialGroup()
+                                .addGap(258, 258, 258)
+                                .addComponent(buscarProMat))
+                            .addGroup(jPanelMostrarTodosProLayout.createSequentialGroup()
+                                .addGap(30, 30, 30)
+                                .addComponent(verTodosPro)
+                                .addGap(109, 109, 109)
+                                .addComponent(mattxt, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanelMostrarTodosProLayout.createSequentialGroup()
+                                .addGap(209, 209, 209)
+                                .addComponent(jLabel5)))
+                        .addGap(0, 159, Short.MAX_VALUE)))
+                .addContainerGap())
         );
-        jPanelMostrarTodosLayout.setVerticalGroup(
-            jPanelMostrarTodosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelMostrarTodosLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addGroup(jPanelMostrarTodosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(verPacientes)
-                    .addComponent(verProfesionales)
-                    .addComponent(jRadioButton1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addComponent(cancelarbtn)
-                .addGap(43, 43, 43))
+        jPanelMostrarTodosProLayout.setVerticalGroup(
+            jPanelMostrarTodosProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelMostrarTodosProLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelMostrarTodosProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(mattxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(verTodosPro))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(buscarProMat)
+                .addGap(87, 87, 87)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                .addComponent(volverBtn)
+                .addGap(15, 15, 15))
         );
 
-        getContentPane().add(jPanelMostrarTodos, "card7");
+        getContentPane().add(jPanelMostrarTodosPro, "card7");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -1031,6 +927,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
     ////METODOS REUTILIZABLES////
     /////////////////////////////
     
+      
     private boolean buscarPacDni(String dniBusqueda){
         return (mapaPersonas.containsKey(dniBusqueda) && (mapaPersonas.get(dniBusqueda) instanceof Paciente));
     }
@@ -1137,10 +1034,10 @@ public class FormularioBuscar extends javax.swing.JFrame {
         }     
     }
     
-    private void mostrarTodosPac(Paciente pac) {
+    private void cargarTablaPac(Paciente pac) {
         DefaultTableModel modelo = (DefaultTableModel) jTableMostrar.getModel();
         PacienteController miPac = new PacienteController(pac);
-        Object[] nuevaFila = new Object[6]; 
+        Object[] nuevaFila = new Object[7]; 
         nuevaFila[0] = miPac.muestraNombre();
         nuevaFila[1] = miPac.muestraApellido();
         nuevaFila[2] = miPac.muestraDni();
@@ -1150,23 +1047,18 @@ public class FormularioBuscar extends javax.swing.JFrame {
               nuevaFila[5] = "SI";
         else
               nuevaFila[5] = "NO";
+        nuevaFila[6] = miPac.obtenerCantidadEstudios(listaEstudios);
         modelo.addRow(nuevaFila);
 }
-    
-    private void mostrarSinObSoc(Paciente pac){
-          DefaultTableModel modelo = (DefaultTableModel) jTableMostrar.getModel();
-          
-    }
-    
-    private void mostrarTodosPro(Profesional pro) {
-        DefaultTableModel modelo = (DefaultTableModel) jTableMostrar.getModel();
+    private void cargarTablaPro(Profesional pro) {
+        DefaultTableModel modelo = (DefaultTableModel) jTableMostrarPro.getModel();
         ProfesionalController miPro = new ProfesionalController(pro);
-        Object[] nuevaFila = new Object[6];
+        Object[] nuevaFila = new Object[6]; 
         nuevaFila[0] = miPro.muestraNombre();
         nuevaFila[1] = miPro.muestraApellido();
         nuevaFila[2] = miPro.muestraDni();
-        nuevaFila[3] = miPro.muestraTelefono();
-        nuevaFila[4] = miPro.muestraMail();
+        nuevaFila[3] = miPro.muestraMail();
+        nuevaFila[4] = miPro.muestraTelefono();
         nuevaFila[5] = miPro.muestraMatricula();
         modelo.addRow(nuevaFila);
 }
@@ -1229,8 +1121,8 @@ public class FormularioBuscar extends javax.swing.JFrame {
                         escritorPac.append(miPac.muestraNombre() + "\n");
                         escritorPac.append(miPac.muestraApellido() + "\n");
                         escritorPac.append(miPac.muestraDni() + "\n");
-                        escritorPac.append(miPac.muestraTelefono() + "\n");
                         escritorPac.append(miPac.muestraMail() + "\n");
+                        escritorPac.append(miPac.muestraTelefono() + "\n");
                         escritorPac.append(miPac.muestraObraSocial() + "\n\n");
                   } else if (p instanceof Profesional pro) {
                         ProfesionalController miPro = new ProfesionalController(pro);
@@ -1247,70 +1139,9 @@ public class FormularioBuscar extends javax.swing.JFrame {
             }
       }
       
-    private void btnBuscarPacActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarPacActionPerformed
-        String dniBusqueda = dniPacBuscarTxt.getText();
-        if (buscarPacDni(dniBusqueda)){
-                Object[] opciones = {"Salir", "Reintentar"}; 
-                int seleccion = javax.swing.JOptionPane.showOptionDialog(this,"Paciente encontrado!\n\nNombre: " + obtenerPac(dniBusqueda).muestraNombre() + "\nDNI: " + obtenerPac(dniBusqueda).muestraDni()
-                        + "\n\nDesea intentarlo nuevamente?", "Busqueda", javax.swing.JOptionPane.DEFAULT_OPTION, javax.swing.JOptionPane.QUESTION_MESSAGE, null, opciones, opciones[0]);
-                if(seleccion == 0)
-                      this.dispose();
-        }else{
-            JOptionPane.showMessageDialog(this, "No se encontro ningun paciente con el dni " + dniBusqueda);
-        }
-    }//GEN-LAST:event_btnBuscarPacActionPerformed
-
-    private void dniPacBuscarTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dniPacBuscarTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_dniPacBuscarTxtActionPerformed
-
     private void matProBuscarTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matProBuscarTxtActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_matProBuscarTxtActionPerformed
-
-    private void dniPacContarEstTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dniPacContarEstTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_dniPacContarEstTxtActionPerformed
-
-    private void btnContarEstPacActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContarEstPacActionPerformed
-        String dniBusqueda = dniPacContarEstTxt.getText();
-        if (buscarPacDni(dniBusqueda)){
-                Paciente encontrada = (Paciente) mapaPersonas.get(dniBusqueda);
-                PacienteController miPac = new PacienteController(encontrada);
-                int cantEst = miPac.obtenerCantidadEstudios(listaEstudios);
-                Object[] opciones = {"Salir", "Reintentar"}; 
-                int seleccion = javax.swing.JOptionPane.showOptionDialog(this,"Nombre: " + miPac.muestraNombre() + "\nDNI: " +
-                        miPac.muestraDni() + "\nCantidad de estudios: " + cantEst + "\n\nDesea intentarlo con otro paciente?\n", "Muestra",
-                        javax.swing.JOptionPane.DEFAULT_OPTION, javax.swing.JOptionPane.QUESTION_MESSAGE, null, opciones, opciones[0]);
-                if(seleccion == 0)
-                      this.dispose();
-        }else{
-            JOptionPane.showMessageDialog(this, "No se encontro ningun paciente con el dni " + dniBusqueda);
-        }
-    }//GEN-LAST:event_btnContarEstPacActionPerformed
-
-    private void matProBuscartxt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matProBuscartxt1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_matProBuscartxt1ActionPerformed
-
-    private void btnBuscarMatProActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarMatProActionPerformed
-        String matIngresada = matProBuscartxt1.getText();
-        boolean encontro = false;
-        
-        for (Persona p : mapaPersonas.values()){
-            if (p instanceof Profesional pro){
-                ProfesionalController miPro = new ProfesionalController(pro);
-                if(miPro.muestraMatricula().equals(matIngresada)){
-                    JOptionPane.showMessageDialog(this, "---Profesional encontrado---\n\n" + miPro.mostrarDatos());
-                    encontro = true;
-                    break;
-                }
-            }
-        }
-        if (encontro == false){
-            JOptionPane.showMessageDialog(this, "No se encontro profesional con matricula -" + matIngresada + "-");
-        }
-    }//GEN-LAST:event_btnBuscarMatProActionPerformed
 
     private void buscarModPacActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarModPacActionPerformed
         String dniBusqueda = campoDniPac.getText();
@@ -1418,30 +1249,6 @@ public class FormularioBuscar extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_cancelarProbtnActionPerformed
 
-      private void dniPacBuscarTxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_dniPacBuscarTxtKeyTyped
-            char c = evt.getKeyChar();
-            if(!Character.isDigit(c) && c != java.awt.event.KeyEvent.VK_BACK_SPACE){
-                  evt.consume();
-                  java.awt.Toolkit.getDefaultToolkit().beep();
-            }
-      }//GEN-LAST:event_dniPacBuscarTxtKeyTyped
-
-      private void dniPacContarEstTxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_dniPacContarEstTxtKeyTyped
-            char c = evt.getKeyChar();
-            if(!Character.isDigit(c) && c != java.awt.event.KeyEvent.VK_BACK_SPACE){
-                  evt.consume();
-                  java.awt.Toolkit.getDefaultToolkit().beep();
-            }
-      }//GEN-LAST:event_dniPacContarEstTxtKeyTyped
-
-      private void matProBuscartxt1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_matProBuscartxt1KeyTyped
-            char c = evt.getKeyChar();
-            if(!Character.isDigit(c) && c != java.awt.event.KeyEvent.VK_BACK_SPACE){
-                  evt.consume();
-                  java.awt.Toolkit.getDefaultToolkit().beep();
-            }
-      }//GEN-LAST:event_matProBuscartxt1KeyTyped
-
       private void campoDniPacKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_campoDniPacKeyTyped
             char c = evt.getKeyChar();
             if(!Character.isDigit(c) && c != java.awt.event.KeyEvent.VK_BACK_SPACE){
@@ -1486,33 +1293,36 @@ public class FormularioBuscar extends javax.swing.JFrame {
                   evt.consume();
     }//GEN-LAST:event_modMailInput1KeyTyped
 
-      private void verPacientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verPacientesActionPerformed
+      private void verTodosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verTodosActionPerformed
        DefaultTableModel modelo = (DefaultTableModel) jTableMostrar.getModel();
        modelo.setRowCount(0);
        for(Persona p : mapaPersonas.values()){
              if(p instanceof Paciente pac){
                   PacienteController miPac = new PacienteController(pac);
-                   mostrarTodosPac(miPac.obtenerPaciente());
+                   cargarTablaPac(miPac.obtenerPaciente());
                    jTableMostrar.getColumnModel().getColumn(5).setHeaderValue("Obra social");
                    this.repaint();
-                   verProfesionales.setSelected(false);
+                   verConObSoc.setSelected(false);
+                   verSinObSoc.setSelected(false);
              }
        }
-      }//GEN-LAST:event_verPacientesActionPerformed
+      }//GEN-LAST:event_verTodosActionPerformed
 
-      private void verProfesionalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verProfesionalesActionPerformed
+      private void verConObSocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verConObSocActionPerformed
             DefaultTableModel modelo = (DefaultTableModel) jTableMostrar.getModel();
             modelo.setRowCount(0);
             for(Persona p : mapaPersonas.values()){
-                  if(p instanceof Profesional pro){
-                        ProfesionalController miPro = new ProfesionalController(pro);
-                        mostrarTodosPro(miPro.ObtenerProfesional());
-                        jTableMostrar.getColumnModel().getColumn(5).setHeaderValue("Matricula");
-                        this.repaint();
-                        verPacientes.setSelected(false);
+                  if(p instanceof Paciente pac){
+                        PacienteController miPac = new PacienteController(pac);
+                        if(miPac.muestraObraSocial()){
+                              cargarTablaPac(miPac.obtenerPaciente());
+                              this.repaint();
+                              verSinObSoc.setSelected(false);
+                              verTodos.setSelected(false);
+                        }
                   }
             }
-      }//GEN-LAST:event_verProfesionalesActionPerformed
+      }//GEN-LAST:event_verConObSocActionPerformed
 
       private void cancelarbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarbtnActionPerformed
             this.dispose();
@@ -1522,18 +1332,98 @@ public class FormularioBuscar extends javax.swing.JFrame {
             // TODO add your handling code here:
       }//GEN-LAST:event_campoModObSocPacActionPerformed
 
+      private void verSinObSocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verSinObSocActionPerformed
+            DefaultTableModel modelo = (DefaultTableModel) jTableMostrar.getModel();
+            modelo.setRowCount(0);
+            for (Persona p : mapaPersonas.values()){
+                  if (p instanceof Paciente pac){
+                        PacienteController miPac = new PacienteController(pac);
+                        if(miPac.muestraObraSocial() == false){
+                              cargarTablaPac(miPac.obtenerPaciente());
+                              this.repaint();
+                              verConObSoc.setSelected(false);
+                              verTodos.setSelected(false);
+                        }
+                  }
+            }
+      }//GEN-LAST:event_verSinObSocActionPerformed
+
+      private void buscarPorDniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarPorDniActionPerformed
+            String dniBusqueda = dnitxt.getText();
+            DefaultTableModel modelo = (DefaultTableModel) jTableMostrar.getModel();
+            modelo.setRowCount(0);
+             if (buscarPacDni(dniBusqueda)){
+                  Paciente pac = new Paciente();
+                  PacienteController miPac = new PacienteController(pac);
+                   cargarTablaPac(obtenerPac(dniBusqueda).obtenerPaciente());
+        }else{
+            java.awt.Toolkit.getDefaultToolkit().beep();
+            JOptionPane.showMessageDialog(this, "No se encontro ningun paciente con el dni " + dniBusqueda);
+        }
+             dnitxt.setText("");
+            
+      }//GEN-LAST:event_buscarPorDniActionPerformed
+
+      private void dnitxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_dnitxtKeyTyped
+            char c = evt.getKeyChar();
+            if(!Character.isDigit(c) && c != java.awt.event.KeyEvent.VK_BACK_SPACE){
+                  evt.consume();
+                  java.awt.Toolkit.getDefaultToolkit().beep();
+            }
+      }//GEN-LAST:event_dnitxtKeyTyped
+
+      private void verTodosProActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verTodosProActionPerformed
+            DefaultTableModel modelo = (DefaultTableModel) jTableMostrarPro.getModel();
+       modelo.setRowCount(0);
+       for(Persona p : mapaPersonas.values()){
+             if(p instanceof Profesional pro){
+                  ProfesionalController miPro = new ProfesionalController(pro);
+                   cargarTablaPro(miPro.ObtenerProfesional());
+                   this.repaint();
+             }
+       }
+      }//GEN-LAST:event_verTodosProActionPerformed
+
+      private void volverBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverBtnActionPerformed
+           this.dispose();
+      }//GEN-LAST:event_volverBtnActionPerformed
+
+      private void mattxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_mattxtKeyTyped
+            // TODO add your handling code here:
+      }//GEN-LAST:event_mattxtKeyTyped
+
+      private void buscarProMatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarProMatActionPerformed
+            String matIngresada = mattxt.getText();
+            DefaultTableModel modelo = (DefaultTableModel) jTableMostrarPro.getModel();
+            modelo.setRowCount(0);
+        boolean encontro = false;
+        for (Persona p : mapaPersonas.values()){
+            if (p instanceof Profesional pro){
+                ProfesionalController miPro = new ProfesionalController(pro);
+                if(miPro.muestraMatricula().equals(matIngresada)){
+                      cargarTablaPro(miPro.ObtenerProfesional());
+                    encontro = true;
+                    break;
+                }
+            }
+        }
+        if (encontro == false){
+            JOptionPane.showMessageDialog(this, "No se encontro profesional con matricula -" + matIngresada + "-");
+        }
+        mattxt.setText("");
+      }//GEN-LAST:event_buscarProMatActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel apellidoSig;
     private javax.swing.JLabel apellidoSig1;
     private javax.swing.JLabel apellidoTXT;
     private javax.swing.JLabel apellidoTXT1;
-    private javax.swing.JButton btnBuscarMatPro;
-    private javax.swing.JButton btnBuscarPac;
     private javax.swing.JButton btnCancelarPacMod;
     private javax.swing.JButton btnConfirmarPacMod;
-    private javax.swing.JButton btnContarEstPac;
     private javax.swing.JButton buscarModPac;
     private javax.swing.JButton buscarModPro;
+    private javax.swing.JButton buscarPorDni;
+    private javax.swing.JButton buscarProMat;
     private javax.swing.JTextField campoDniPac;
     private javax.swing.JTextField campoMailMod;
     private javax.swing.JTextField campoMatiProMod;
@@ -1542,32 +1432,27 @@ public class FormularioBuscar extends javax.swing.JFrame {
     private javax.swing.JButton cancelarProbtn;
     private javax.swing.JButton cancelarbtn;
     private javax.swing.JButton confirmarProbtn;
-    private javax.swing.JTextField dniPacBuscarTxt;
-    private javax.swing.JTextField dniPacContarEstTxt;
     private javax.swing.JLabel dniSig;
     private javax.swing.JLabel dniSig1;
     private javax.swing.JLabel dniTXT;
     private javax.swing.JLabel dniTXT1;
+    private javax.swing.JTextField dnitxt;
     private javax.swing.JLabel emailSig;
     private javax.swing.JLabel emailSig1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JPanel jPanelBuscarPaciente;
-    private javax.swing.JPanel jPanelBuscarProfesional;
-    private javax.swing.JPanel jPanelContarEstPac;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanelModificarPac;
     private javax.swing.JPanel jPanelModificarPro;
-    private javax.swing.JPanel jPanelMostrarTodos;
+    private javax.swing.JPanel jPanelMostrarTodosPac;
+    private javax.swing.JPanel jPanelMostrarTodosPro;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTableMostrar;
+    private javax.swing.JTable jTableMostrarPro;
     private javax.swing.JLabel matMod;
-    private javax.swing.JTextField matProBuscartxt1;
     private javax.swing.JLabel matriculaTXT1;
+    private javax.swing.JTextField mattxt;
     private javax.swing.JTextField modMailInput1;
     private javax.swing.JTextField modTelInput1;
     private javax.swing.JLabel noEncontro;
@@ -1585,8 +1470,11 @@ public class FormularioBuscar extends javax.swing.JFrame {
     private javax.swing.JLabel telefonoSig1;
     private javax.swing.JLabel titulo;
     private javax.swing.JLabel titulo1;
-    private javax.swing.JRadioButton verPacientes;
-    private javax.swing.JRadioButton verProfesionales;
+    private javax.swing.JRadioButton verConObSoc;
+    private javax.swing.JRadioButton verSinObSoc;
+    private javax.swing.JRadioButton verTodos;
+    private javax.swing.JRadioButton verTodosPro;
+    private javax.swing.JButton volverBtn;
     // End of variables declaration//GEN-END:variables
 
 }

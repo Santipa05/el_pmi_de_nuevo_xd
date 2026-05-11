@@ -96,15 +96,11 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="8">
+              <StringArray count="4">
                 <StringItem index="0" value="Cargar"/>
                 <StringItem index="1" value="Eliminar"/>
                 <StringItem index="2" value="Modificar"/>
-                <StringItem index="3" value="Mostrar todos"/>
-                <StringItem index="4" value="Buscar por DNI"/>
-                <StringItem index="5" value="Mostrar con obra social"/>
-                <StringItem index="6" value="Mostrar sin obra social"/>
-                <StringItem index="7" value="Ver cantidad de estudios"/>
+                <StringItem index="3" value="Mostrar/Buscar"/>
               </StringArray>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -138,12 +134,11 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="5">
+              <StringArray count="4">
                 <StringItem index="0" value="Cargar"/>
                 <StringItem index="1" value="Eliminar"/>
                 <StringItem index="2" value="Modificar"/>
-                <StringItem index="3" value="Mostrar todos"/>
-                <StringItem index="4" value="Buscar por matricula"/>
+                <StringItem index="3" value="Mostrar/Buscar"/>
               </StringArray>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">

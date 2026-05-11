@@ -59,6 +59,7 @@ public class FormularioCarga extends javax.swing.JFrame {
         obSoc = new javax.swing.JCheckBox();
         jSeparator1 = new javax.swing.JSeparator();
         btnGuardarPaciente = new javax.swing.JButton();
+        btnCancelar1 = new javax.swing.JButton();
         PanelCargaPro = new javax.swing.JPanel();
         titulo = new javax.swing.JLabel();
         nombretxt = new javax.swing.JTextField();
@@ -75,6 +76,7 @@ public class FormularioCarga extends javax.swing.JFrame {
         btnGuardarProfesional = new javax.swing.JButton();
         dniProtxt = new javax.swing.JTextField();
         dniSig = new javax.swing.JLabel();
+        btnCancelar2 = new javax.swing.JButton();
         PanelCargaEst = new javax.swing.JPanel();
         tituloEst = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
@@ -95,6 +97,7 @@ public class FormularioCarga extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         btnCargarEstudio = new javax.swing.JButton();
         fechaRetxt = new javax.swing.JLabel();
+        btnCancelar3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
@@ -215,6 +218,15 @@ public class FormularioCarga extends javax.swing.JFrame {
             }
         });
 
+        btnCancelar1.setBackground(new java.awt.Color(0, 51, 102));
+        btnCancelar1.setForeground(new java.awt.Color(255, 255, 255));
+        btnCancelar1.setText("Volver");
+        btnCancelar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelar1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PanelCargaPacLayout = new javax.swing.GroupLayout(PanelCargaPac);
         PanelCargaPac.setLayout(PanelCargaPacLayout);
         PanelCargaPacLayout.setHorizontalGroup(
@@ -243,8 +255,10 @@ public class FormularioCarga extends javax.swing.JFrame {
                 .addGap(108, 108, 108))
             .addGroup(PanelCargaPacLayout.createSequentialGroup()
                 .addGap(126, 126, 126)
-                .addComponent(btnGuardarPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(PanelCargaPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnCancelar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnGuardarPaciente, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE))
+                .addContainerGap(143, Short.MAX_VALUE))
         );
         PanelCargaPacLayout.setVerticalGroup(
             PanelCargaPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -278,7 +292,9 @@ public class FormularioCarga extends javax.swing.JFrame {
                 .addComponent(obSoc)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnGuardarPaciente)
-                .addContainerGap(228, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnCancelar1)
+                .addContainerGap(195, Short.MAX_VALUE))
         );
 
         PanelCargaPro.setBackground(new java.awt.Color(153, 204, 255));
@@ -398,6 +414,15 @@ public class FormularioCarga extends javax.swing.JFrame {
         dniSig.setForeground(new java.awt.Color(255, 255, 255));
         dniSig.setText("DNI");
 
+        btnCancelar2.setBackground(new java.awt.Color(0, 51, 102));
+        btnCancelar2.setForeground(new java.awt.Color(255, 255, 255));
+        btnCancelar2.setText("Volver");
+        btnCancelar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelar2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PanelCargaProLayout = new javax.swing.GroupLayout(PanelCargaPro);
         PanelCargaPro.setLayout(PanelCargaProLayout);
         PanelCargaProLayout.setHorizontalGroup(
@@ -429,7 +454,9 @@ public class FormularioCarga extends javax.swing.JFrame {
                             .addComponent(matriculatxt, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(PanelCargaProLayout.createSequentialGroup()
                         .addGap(118, 118, 118)
-                        .addComponent(btnGuardarProfesional, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(PanelCargaProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnGuardarProfesional, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+                            .addComponent(btnCancelar2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(90, Short.MAX_VALUE))
         );
         PanelCargaProLayout.setVerticalGroup(
@@ -466,7 +493,9 @@ public class FormularioCarga extends javax.swing.JFrame {
                     .addComponent(separador, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(48, 48, 48)
                 .addComponent(btnGuardarProfesional)
-                .addContainerGap(123, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnCancelar2)
+                .addContainerGap(90, Short.MAX_VALUE))
         );
 
         PanelCargaEst.setBackground(new java.awt.Color(153, 204, 255));
@@ -569,6 +598,15 @@ public class FormularioCarga extends javax.swing.JFrame {
         fechaRetxt.setForeground(new java.awt.Color(255, 255, 255));
         fechaRetxt.setText("default");
 
+        btnCancelar3.setBackground(new java.awt.Color(0, 51, 102));
+        btnCancelar3.setForeground(new java.awt.Color(255, 255, 255));
+        btnCancelar3.setText("Volver");
+        btnCancelar3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelar3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PanelCargaEstLayout = new javax.swing.GroupLayout(PanelCargaEst);
         PanelCargaEst.setLayout(PanelCargaEstLayout);
         PanelCargaEstLayout.setHorizontalGroup(
@@ -606,11 +644,13 @@ public class FormularioCarga extends javax.swing.JFrame {
                             .addComponent(estudiosScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
                             .addComponent(fechaRetxt)))
                     .addGroup(PanelCargaEstLayout.createSequentialGroup()
-                        .addGap(141, 141, 141)
-                        .addComponent(btnCargarEstudio))
-                    .addGroup(PanelCargaEstLayout.createSequentialGroup()
                         .addGap(109, 109, 109)
-                        .addComponent(tituloEst)))
+                        .addComponent(tituloEst))
+                    .addGroup(PanelCargaEstLayout.createSequentialGroup()
+                        .addGap(141, 141, 141)
+                        .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnCancelar3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnCargarEstudio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(11, Short.MAX_VALUE))
         );
         PanelCargaEstLayout.setVerticalGroup(
@@ -654,8 +694,10 @@ public class FormularioCarga extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(estudiosScroll, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addComponent(jSeparator2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnCargarEstudio)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnCancelar3)
                 .addContainerGap())
         );
 
@@ -1080,6 +1122,18 @@ public class FormularioCarga extends javax.swing.JFrame {
             }
     }//GEN-LAST:event_nombretxtPacKeyTyped
 
+    private void btnCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelar1ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnCancelar1ActionPerformed
+
+    private void btnCancelar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelar2ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnCancelar2ActionPerformed
+
+    private void btnCancelar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelar3ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnCancelar3ActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PanelCargaEst;
     private javax.swing.JPanel PanelCargaPac;
@@ -1087,6 +1141,11 @@ public class FormularioCarga extends javax.swing.JFrame {
     private javax.swing.JLabel apellidoSig;
     private javax.swing.JTextField apellidotxt;
     private javax.swing.JTextField apellidotxtPac;
+    private javax.swing.JButton btnCancelar1;
+    private javax.swing.JButton btnCancelar2;
+    private javax.swing.JButton btnCancelar3;
+    private javax.swing.JButton btnCancelarPacMod;
+    private javax.swing.JButton btnCancelarPacMod1;
     private javax.swing.JButton btnCargarEstudio;
     private javax.swing.JButton btnGuardarPaciente;
     private javax.swing.JButton btnGuardarProfesional;

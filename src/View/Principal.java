@@ -226,7 +226,7 @@ public class Principal extends javax.swing.JFrame{
 
         menuPaciente.setBackground(new java.awt.Color(0, 102, 153));
         menuPaciente.setForeground(new java.awt.Color(255, 255, 255));
-        menuPaciente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cargar", "Eliminar", "Modificar", "Mostrar todos", "Buscar por DNI", "Mostrar con obra social", "Mostrar sin obra social", "Ver cantidad de estudios" }));
+        menuPaciente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cargar", "Eliminar", "Modificar", "Mostrar/Buscar" }));
         menuPaciente.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         menuPaciente.setMaximumSize(new java.awt.Dimension(167, 26));
         menuPaciente.addMouseWheelListener(new java.awt.event.MouseWheelListener() {
@@ -243,7 +243,7 @@ public class Principal extends javax.swing.JFrame{
 
         menuProfesional.setBackground(new java.awt.Color(0, 102, 153));
         menuProfesional.setForeground(new java.awt.Color(255, 255, 255));
-        menuProfesional.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cargar", "Eliminar", "Modificar", "Mostrar todos", "Buscar por matricula" }));
+        menuProfesional.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cargar", "Eliminar", "Modificar", "Mostrar/Buscar" }));
         menuProfesional.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         menuProfesional.setMaximumSize(new java.awt.Dimension(167, 26));
         menuProfesional.setMinimumSize(new java.awt.Dimension(167, 26));
@@ -333,23 +333,7 @@ public class Principal extends javax.swing.JFrame{
                           new FormularioBuscar(this.mapaPersonas, opcion, caso, this.listaEstudios).setVisible(true);
                           break;
                           
-                      case "Mostrar todos":
-                          new FormularioBuscar(this.mapaPersonas, opcion, caso, this.listaEstudios).setVisible(true);
-                          break;
-                          
-                      case "Buscar por DNI":
-                          new FormularioBuscar(this.mapaPersonas, opcion, caso, this.listaEstudios).setVisible(true);
-                          break;
-                          
-                      case "Mostrar con obra social":
-                          mostrarPacientesConOsinObra(true);
-                          break;
-                          
-                      case "Mostrar sin obra social":
-                          mostrarPacientesConOsinObra(false);
-                          break;
-                          
-                      case "Ver cantidad de estudios":
+                      case "Mostrar/Buscar":
                           new FormularioBuscar(this.mapaPersonas, opcion, caso, this.listaEstudios).setVisible(true);
                           break;
                   }
@@ -368,11 +352,8 @@ public class Principal extends javax.swing.JFrame{
                       case "Modificar":
                           new FormularioBuscar(this.mapaPersonas, opcion, caso, this.listaEstudios).setVisible(true);
                           break;
-                      case "Mostrar todos":
+                      case "Mostrar/Buscar":
                             new FormularioBuscar(this.mapaPersonas, opcion, caso, this.listaEstudios).setVisible(true);
-                          break;
-                      case "Buscar por matricula":
-                          new FormularioBuscar(this.mapaPersonas, opcion, caso, this.listaEstudios).setVisible(true);
                           break;
                   }
                   break;

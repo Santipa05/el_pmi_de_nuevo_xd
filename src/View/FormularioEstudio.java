@@ -32,11 +32,8 @@ public class FormularioEstudio extends javax.swing.JFrame {
       public FormularioEstudio() {
             this.setContentPane(fondo);
             initComponents();
-            jSplitPane1.setOpaque(false);
             jPanelBusquedas.setOpaque(false);
-            jPanelMostrarEstudios.setOpaque(false);
             this.pack();
-            jSplitPane1.setDividerLocation(484);
             setLocationRelativeTo(null);
       }
       
@@ -46,7 +43,6 @@ public class FormularioEstudio extends javax.swing.JFrame {
         this.accionActual = operacion; 
         this.listaEstudios = listaEstudios;
         this.pack();
-        jSplitPane1.setDividerLocation(484);
         setLocationRelativeTo(null);
         ocultarTodosLosBusqueda();
         muestraOnoCamposModEst(false);
@@ -75,33 +71,8 @@ public class FormularioEstudio extends javax.swing.JFrame {
         if (listaEstudios.isEmpty()) {
             JOptionPane.showMessageDialog(this, "No se encontraron estudios cargados.");
         } else {
-            jPanelMostrarEstudios.setVisible(true);
+            jPanel2.setVisible(true);
             switch (accionActual) {
-                case "Mostrar todos":
-                    Fecha fechaR = new Fecha(0, 0, 0);
-                    mostrarEstudios(accionActual, "", fechaR);
-                    if (jTableMostrar.getRowCount() > 0) {
-                        jSplitPane1.setDividerLocation(0); 
-                    }
-                    break;
-                
-                case "Mostrar por profesional":
-                    ocultarTodosLosBusqueda();
-                    jPanelBusquedas.setVisible(true);
-                    jPanelBuscarEstudioPro.setVisible(true);
-                    break;
-                
-                case "Mostrar por estado":
-                    ocultarTodosLosBusqueda();
-                    jPanelBusquedas.setVisible(true);
-                    jPanelBuscarEstudioEstado.setVisible(true);
-                    break;
-
-                case "Mostrar por fecha de realizacion":
-                    ocultarTodosLosBusqueda();
-                    jPanelBusquedas.setVisible(true);
-                    jPanelBuscarEstudioFechaRec.setVisible(true);
-                    break;
                 case "Modificar":
                     ocultarTodosLosBusqueda();
                     jPanelBusquedas.setVisible(true);
@@ -115,11 +86,7 @@ public class FormularioEstudio extends javax.swing.JFrame {
         }
       
       private void ocultarTodosLosBusqueda() {
-        jPanelBuscarEstudioEstado.setVisible(false);
-        jPanelBuscarEstudioFechaRec.setVisible(false);
-        jPanelBuscarEstudioPro.setVisible(false);
         jPanelModificarEst.setVisible(false);
-        jPanelMostrarEstudios.setVisible(false);
         muestraOnoCamposModEst(false);
         estadoInput.setSelectedIndex(0);
         matProEstInput.setText("");
@@ -157,7 +124,6 @@ public class FormularioEstudio extends javax.swing.JFrame {
        private void mostrarEstudios(String accionActual, String opcion, Fecha fec) {
         DefaultTableModel modelo = (DefaultTableModel) jTableMostrar.getModel();
         modelo.setRowCount(0);
-        boolean encontro = false;
         
         switch(accionActual){
             case "Mostrar todos":
@@ -167,31 +133,7 @@ public class FormularioEstudio extends javax.swing.JFrame {
                 }break;
                 
             case "Mostrar por profesional":
-                for (Estudio est : listaEstudios) {
-                    EstudioController miEst = new EstudioController(est);
-                    if (miEst.muestraMatriculaProfesional().trim().equals(opcion.trim())){
-                        cargarEstudioATabla(miEst.obtenerEstudio());
-                        encontro = true;
-                    }
-                }break;
-                
-            case "Mostrar por estado":
-                for (Estudio est : listaEstudios) {
-                    EstudioController miEst = new EstudioController(est);
-                    if (miEst.muestraEstado().equals(opcion)){
-                        cargarEstudioATabla(miEst.obtenerEstudio());
-                        encontro = true;
-                    }
-                }break;
-                    
-            case "Mostrar por fecha de realizacion":
-                for (Estudio est : listaEstudios) {
-                    EstudioController miEst = new EstudioController(est);
-                    if (miEst.esMismaFecha(fec)){
-                        cargarEstudioATabla(miEst.obtenerEstudio());
-                        encontro = true;
-                    }
-                }break;
+                break;
         }
         
         if (modelo.getRowCount() == 0) {
@@ -210,29 +152,28 @@ public class FormularioEstudio extends javax.swing.JFrame {
             if (jPanelModificarEst != null) jPanelModificarEst.setVisible(false);
             return;
     }
-    jPanelMostrarEstudios.setVisible(true);
     }
       @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jSplitPane1 = new javax.swing.JSplitPane();
-        jPanelBusquedas = new javax.swing.JPanel();
-        jPanelBuscarEstudioEstado = new javax.swing.JPanel();
-        btnBuscarEstEsta = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTableMostrar = new javax.swing.JTable();
+        jPanel2 = new javax.swing.JPanel();
+        verConObSoc = new javax.swing.JRadioButton();
         estadoInput = new javax.swing.JComboBox<>();
-        jPanelBuscarEstudioFechaRec = new javax.swing.JPanel();
-        btnBuscarEstFec = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
         fechaRealInput = new javax.swing.JSpinner();
-        jPanelBuscarEstudioPro = new javax.swing.JPanel();
-        btnBuscarEstPro = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
         matProEstInput = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        verConObSoc1 = new javax.swing.JRadioButton();
+        btnBuscarEstEsta = new javax.swing.JButton();
+        btnBuscarEstFec = new javax.swing.JButton();
+        btnBuscarEstPro = new javax.swing.JButton();
+        jPanelBusquedas = new javax.swing.JPanel();
         jPanelModificarEst = new javax.swing.JPanel();
         titulo = new javax.swing.JLabel();
         subtitulo = new javax.swing.JLabel();
@@ -252,45 +193,64 @@ public class FormularioEstudio extends javax.swing.JFrame {
         btnCancelarPacMod = new javax.swing.JButton();
         estadoEst = new javax.swing.JComboBox<>();
         fechaEntEst = new javax.swing.JSpinner();
-        jPanelMostrarEstudios = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTableMostrar = new javax.swing.JTable();
+        btnCancelar4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(153, 204, 255));
         setResizable(false);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jSplitPane1.setDividerLocation(400);
-        jSplitPane1.setOneTouchExpandable(true);
-        jSplitPane1.setOpaque(false);
+        jPanel1.setLayout(new java.awt.BorderLayout());
 
-        jPanelBusquedas.setBackground(new java.awt.Color(153, 204, 255));
-        jPanelBusquedas.setPreferredSize(new java.awt.Dimension(790, 427));
-        jPanelBusquedas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jTableMostrar.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
 
-        jPanelBuscarEstudioEstado.setBackground(new java.awt.Color(153, 204, 255));
-        jPanelBuscarEstudioEstado.setMaximumSize(new java.awt.Dimension(562, 478));
-        jPanelBuscarEstudioEstado.setMinimumSize(new java.awt.Dimension(562, 478));
-        jPanelBuscarEstudioEstado.setOpaque(false);
-        jPanelBuscarEstudioEstado.setPreferredSize(new java.awt.Dimension(562, 478));
+            },
+            new String [] {
+                "DNI paciente", "Matricula profesional", "Fecha de realizacion", "Fecha de entrega", "Estado", "Analisis"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
 
-        btnBuscarEstEsta.setBackground(new java.awt.Color(0, 51, 102));
-        btnBuscarEstEsta.setForeground(new java.awt.Color(255, 255, 255));
-        btnBuscarEstEsta.setText("Buscar");
-        btnBuscarEstEsta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBuscarEstEstaActionPerformed(evt);
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
             }
         });
+        jTableMostrar.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
+        jTableMostrar.setOpaque(false);
+        jTableMostrar.setSelectionBackground(new java.awt.Color(153, 255, 153));
+        jTableMostrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTableMostrarMouseClicked(evt);
+            }
+        });
+        jScrollPane2.setViewportView(jTableMostrar);
 
-        jLabel5.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel5.setText("Estado");
+        jPanel1.add(jScrollPane2, java.awt.BorderLayout.CENTER);
 
-        jLabel2.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel2.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Buscar estudio");
+        jPanel2.setOpaque(false);
+        jPanel2.setPreferredSize(new java.awt.Dimension(800, 150));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        verConObSoc.setBackground(new java.awt.Color(255, 255, 255));
+        verConObSoc.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        verConObSoc.setForeground(new java.awt.Color(255, 255, 255));
+        verConObSoc.setText("Mostrar todos");
+        verConObSoc.setContentAreaFilled(false);
+        verConObSoc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                verConObSocActionPerformed(evt);
+            }
+        });
+        jPanel2.add(verConObSoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 110, -1, -1));
 
         estadoInput.setBackground(new java.awt.Color(51, 51, 51));
         estadoInput.setForeground(new java.awt.Color(255, 255, 255));
@@ -300,124 +260,16 @@ public class FormularioEstudio extends javax.swing.JFrame {
                 estadoInputActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout jPanelBuscarEstudioEstadoLayout = new javax.swing.GroupLayout(jPanelBuscarEstudioEstado);
-        jPanelBuscarEstudioEstado.setLayout(jPanelBuscarEstudioEstadoLayout);
-        jPanelBuscarEstudioEstadoLayout.setHorizontalGroup(
-            jPanelBuscarEstudioEstadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelBuscarEstudioEstadoLayout.createSequentialGroup()
-                .addGroup(jPanelBuscarEstudioEstadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelBuscarEstudioEstadoLayout.createSequentialGroup()
-                        .addGap(75, 75, 75)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanelBuscarEstudioEstadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(estadoInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2)))
-                    .addGroup(jPanelBuscarEstudioEstadoLayout.createSequentialGroup()
-                        .addGap(142, 142, 142)
-                        .addComponent(btnBuscarEstEsta)))
-                .addContainerGap(307, Short.MAX_VALUE))
-        );
-        jPanelBuscarEstudioEstadoLayout.setVerticalGroup(
-            jPanelBuscarEstudioEstadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelBuscarEstudioEstadoLayout.createSequentialGroup()
-                .addGap(63, 63, 63)
-                .addComponent(jLabel2)
-                .addGap(18, 18, 18)
-                .addGroup(jPanelBuscarEstudioEstadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(estadoInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnBuscarEstEsta)
-                .addContainerGap(307, Short.MAX_VALUE))
-        );
-
-        jPanelBusquedas.add(jPanelBuscarEstudioEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 6, -1, -1));
-
-        jPanelBuscarEstudioFechaRec.setBackground(new java.awt.Color(153, 204, 255));
-        jPanelBuscarEstudioFechaRec.setMaximumSize(new java.awt.Dimension(562, 478));
-        jPanelBuscarEstudioFechaRec.setMinimumSize(new java.awt.Dimension(562, 478));
-        jPanelBuscarEstudioFechaRec.setOpaque(false);
-        jPanelBuscarEstudioFechaRec.setPreferredSize(new java.awt.Dimension(562, 478));
-
-        btnBuscarEstFec.setBackground(new java.awt.Color(0, 51, 102));
-        btnBuscarEstFec.setForeground(new java.awt.Color(255, 255, 255));
-        btnBuscarEstFec.setText("Buscar");
-        btnBuscarEstFec.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBuscarEstFecActionPerformed(evt);
-            }
-        });
-
-        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel3.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Buscar estudio");
-
-        jLabel10.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel10.setText("Fecha de realizacion");
+        jPanel2.add(estadoInput, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, -1, -1));
 
         fechaRealInput.setModel(new javax.swing.SpinnerDateModel(new java.util.Date(), null, new java.util.Date(), java.util.Calendar.DAY_OF_MONTH));
         fechaRealInput.setEditor(new javax.swing.JSpinner.DateEditor(fechaRealInput, "dd/MM/yyyy"));
-
-        javax.swing.GroupLayout jPanelBuscarEstudioFechaRecLayout = new javax.swing.GroupLayout(jPanelBuscarEstudioFechaRec);
-        jPanelBuscarEstudioFechaRec.setLayout(jPanelBuscarEstudioFechaRecLayout);
-        jPanelBuscarEstudioFechaRecLayout.setHorizontalGroup(
-            jPanelBuscarEstudioFechaRecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelBuscarEstudioFechaRecLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanelBuscarEstudioFechaRecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelBuscarEstudioFechaRecLayout.createSequentialGroup()
-                        .addGap(127, 127, 127)
-                        .addComponent(jLabel3))
-                    .addGroup(jPanelBuscarEstudioFechaRecLayout.createSequentialGroup()
-                        .addComponent(jLabel10)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(fechaRealInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelBuscarEstudioFechaRecLayout.createSequentialGroup()
-                        .addGap(153, 153, 153)
-                        .addComponent(btnBuscarEstFec)))
-                .addContainerGap(290, Short.MAX_VALUE))
-        );
-        jPanelBuscarEstudioFechaRecLayout.setVerticalGroup(
-            jPanelBuscarEstudioFechaRecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelBuscarEstudioFechaRecLayout.createSequentialGroup()
-                .addGap(69, 69, 69)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanelBuscarEstudioFechaRecLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(fechaRealInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10))
-                .addGap(18, 18, 18)
-                .addComponent(btnBuscarEstFec)
-                .addContainerGap(301, Short.MAX_VALUE))
-        );
-
-        jPanelBusquedas.add(jPanelBuscarEstudioFechaRec, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 6, -1, -1));
-
-        jPanelBuscarEstudioPro.setBackground(new java.awt.Color(153, 204, 255));
-        jPanelBuscarEstudioPro.setMaximumSize(new java.awt.Dimension(562, 478));
-        jPanelBuscarEstudioPro.setMinimumSize(new java.awt.Dimension(562, 478));
-        jPanelBuscarEstudioPro.setOpaque(false);
-        jPanelBuscarEstudioPro.setPreferredSize(new java.awt.Dimension(562, 478));
-
-        btnBuscarEstPro.setBackground(new java.awt.Color(0, 51, 102));
-        btnBuscarEstPro.setForeground(new java.awt.Color(255, 255, 255));
-        btnBuscarEstPro.setText("Buscar");
-        btnBuscarEstPro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBuscarEstProActionPerformed(evt);
+        fechaRealInput.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                fechaRealInputStateChanged(evt);
             }
         });
-
-        jLabel4.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel4.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel4.setText("Buscar estudio");
-
-        jLabel12.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel12.setText("Matricula del profesional");
+        jPanel2.add(fechaRealInput, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 40, -1, -1));
 
         matProEstInput.setBackground(new java.awt.Color(51, 51, 51));
         matProEstInput.setForeground(new java.awt.Color(255, 255, 255));
@@ -431,41 +283,74 @@ public class FormularioEstudio extends javax.swing.JFrame {
                 matProEstInputKeyTyped(evt);
             }
         });
+        jPanel2.add(matProEstInput, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 40, 120, -1));
 
-        javax.swing.GroupLayout jPanelBuscarEstudioProLayout = new javax.swing.GroupLayout(jPanelBuscarEstudioPro);
-        jPanelBuscarEstudioPro.setLayout(jPanelBuscarEstudioProLayout);
-        jPanelBuscarEstudioProLayout.setHorizontalGroup(
-            jPanelBuscarEstudioProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelBuscarEstudioProLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel12)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(matProEstInput, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(271, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBuscarEstudioProLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel4)
-                .addGap(143, 143, 143))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelBuscarEstudioProLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnBuscarEstPro)
-                .addGap(170, 170, 170))
-        );
-        jPanelBuscarEstudioProLayout.setVerticalGroup(
-            jPanelBuscarEstudioProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelBuscarEstudioProLayout.createSequentialGroup()
-                .addGap(69, 69, 69)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanelBuscarEstudioProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(matProEstInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel12))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnBuscarEstPro)
-                .addContainerGap(307, Short.MAX_VALUE))
-        );
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Estado");
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, -1, -1));
 
-        jPanelBusquedas.add(jPanelBuscarEstudioPro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 6, -1, -1));
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Matricula");
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 20, -1, -1));
+
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("Fecha de realizacion");
+        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 20, -1, -1));
+        jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, -1, 70));
+
+        verConObSoc1.setBackground(new java.awt.Color(255, 255, 255));
+        verConObSoc1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        verConObSoc1.setForeground(new java.awt.Color(255, 255, 255));
+        verConObSoc1.setText("Ver con obra social");
+        verConObSoc1.setContentAreaFilled(false);
+        verConObSoc1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                verConObSoc1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(verConObSoc1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, -1, -1));
+
+        btnBuscarEstEsta.setBackground(new java.awt.Color(0, 51, 102));
+        btnBuscarEstEsta.setForeground(new java.awt.Color(255, 255, 255));
+        btnBuscarEstEsta.setText("Buscar");
+        btnBuscarEstEsta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarEstEstaActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnBuscarEstEsta, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, -1, -1));
+
+        btnBuscarEstFec.setBackground(new java.awt.Color(0, 51, 102));
+        btnBuscarEstFec.setForeground(new java.awt.Color(255, 255, 255));
+        btnBuscarEstFec.setText("Buscar");
+        btnBuscarEstFec.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarEstFecActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnBuscarEstFec, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 70, -1, -1));
+
+        btnBuscarEstPro.setBackground(new java.awt.Color(0, 51, 102));
+        btnBuscarEstPro.setForeground(new java.awt.Color(255, 255, 255));
+        btnBuscarEstPro.setText("Buscar");
+        btnBuscarEstPro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarEstProActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnBuscarEstPro, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 70, -1, -1));
+
+        jPanel1.add(jPanel2, java.awt.BorderLayout.NORTH);
+
+        getContentPane().add(jPanel1, java.awt.BorderLayout.PAGE_START);
+
+        jPanelBusquedas.setBackground(new java.awt.Color(153, 204, 255));
+        jPanelBusquedas.setOpaque(false);
+        jPanelBusquedas.setPreferredSize(new java.awt.Dimension(790, 427));
+        jPanelBusquedas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanelModificarEst.setBackground(new java.awt.Color(153, 204, 255));
         jPanelModificarEst.setMaximumSize(new java.awt.Dimension(562, 478));
@@ -575,6 +460,15 @@ public class FormularioEstudio extends javax.swing.JFrame {
         fechaEntEst.setModel(new javax.swing.SpinnerDateModel(new java.util.Date(1777426620000L), new java.util.Date(1777426620000L), new java.util.Date(1924997820000L), java.util.Calendar.DAY_OF_MONTH));
         fechaEntEst.setEditor(new javax.swing.JSpinner.DateEditor(fechaEntEst, "dd/MM/yyyy"));
 
+        btnCancelar4.setBackground(new java.awt.Color(0, 51, 102));
+        btnCancelar4.setForeground(new java.awt.Color(255, 255, 255));
+        btnCancelar4.setText("Volver");
+        btnCancelar4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelar4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanelModificarEstLayout = new javax.swing.GroupLayout(jPanelModificarEst);
         jPanelModificarEst.setLayout(jPanelModificarEstLayout);
         jPanelModificarEstLayout.setHorizontalGroup(
@@ -582,54 +476,46 @@ public class FormularioEstudio extends javax.swing.JFrame {
             .addGroup(jPanelModificarEstLayout.createSequentialGroup()
                 .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelModificarEstLayout.createSequentialGroup()
-                        .addGap(123, 123, 123)
-                        .addComponent(separador, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(dniSig)
-                            .addComponent(emailSig)
-                            .addComponent(telefonoSig)
-                            .addComponent(apellidoSig)
-                            .addComponent(nombreSig))
-                        .addGap(25, 25, 25)
-                        .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(dniPacTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(matriculaTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(fechaReTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(estadoEst, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(fechaEntEst, javax.swing.GroupLayout.Alignment.LEADING))))
-                    .addGroup(jPanelModificarEstLayout.createSequentialGroup()
                         .addGap(139, 139, 139)
                         .addComponent(btnCancelarPacMod, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanelModificarEstLayout.createSequentialGroup()
-                        .addContainerGap()
+                        .addGap(1065, 1065, 1065)
                         .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelModificarEstLayout.createSequentialGroup()
+                                .addComponent(separador, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(dniSig)
+                                    .addComponent(emailSig)
+                                    .addComponent(telefonoSig)
+                                    .addComponent(apellidoSig)
+                                    .addComponent(nombreSig))
+                                .addGap(25, 25, 25)
+                                .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(dniPacTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(matriculaTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(fechaReTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(estadoEst, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(fechaEntEst, javax.swing.GroupLayout.Alignment.LEADING))))
                             .addGroup(jPanelModificarEstLayout.createSequentialGroup()
                                 .addComponent(subtitulo)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(campoDniPac, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanelModificarEstLayout.createSequentialGroup()
-                                        .addGap(16, 16, 16)
-                                        .addComponent(titulo))))
-                            .addGroup(jPanelModificarEstLayout.createSequentialGroup()
-                                .addGap(135, 135, 135)
-                                .addComponent(buscarModEst, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanelModificarEstLayout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addComponent(ENCONTRO))
-                    .addGroup(jPanelModificarEstLayout.createSequentialGroup()
-                        .addGap(190, 190, 190)
-                        .addComponent(btnConfirmarEstMod, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                                .addComponent(campoDniPac, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(ENCONTRO)
+                            .addComponent(titulo)
+                            .addComponent(buscarModEst, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(btnCancelar4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnConfirmarEstMod, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelModificarEstLayout.setVerticalGroup(
             jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelModificarEstLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addComponent(titulo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(55, 55, 55)
                 .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(campoDniPac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(subtitulo))
@@ -664,64 +550,16 @@ public class FormularioEstudio extends javax.swing.JFrame {
                             .addComponent(fechaEntEst, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnConfirmarEstMod)
-                .addGap(639, 639, 639)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnCancelar4)
+                .addGap(606, 606, 606)
                 .addComponent(btnCancelarPacMod)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanelBusquedas.add(jPanelModificarEst, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        jSplitPane1.setLeftComponent(jPanelBusquedas);
-
-        jPanelMostrarEstudios.setBackground(new java.awt.Color(153, 204, 255));
-        jPanelMostrarEstudios.setOpaque(false);
-
-        jTableMostrar.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "DNI paciente", "Matricula profesional", "Fecha de realizacion", "Fecha de entrega", "Estado", "Analisis"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.String.class, java.lang.String.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jTableMostrar.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
-        jTableMostrar.setSelectionBackground(new java.awt.Color(153, 255, 153));
-        jTableMostrar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTableMostrarMouseClicked(evt);
-            }
-        });
-        jScrollPane2.setViewportView(jTableMostrar);
-
-        javax.swing.GroupLayout jPanelMostrarEstudiosLayout = new javax.swing.GroupLayout(jPanelMostrarEstudios);
-        jPanelMostrarEstudios.setLayout(jPanelMostrarEstudiosLayout);
-        jPanelMostrarEstudiosLayout.setHorizontalGroup(
-            jPanelMostrarEstudiosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 462, Short.MAX_VALUE)
-        );
-        jPanelMostrarEstudiosLayout.setVerticalGroup(
-            jPanelMostrarEstudiosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 484, Short.MAX_VALUE)
-        );
-
-        jSplitPane1.setRightComponent(jPanelMostrarEstudios);
-
-        getContentPane().add(jSplitPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1057, -1));
+        getContentPane().add(jPanelBusquedas, java.awt.BorderLayout.PAGE_END);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -731,38 +569,37 @@ public class FormularioEstudio extends javax.swing.JFrame {
         Fecha fechaR = new Fecha(0, 0, 0);
         mostrarEstudios(accionActual, estadoSelec, fechaR);
         if (jTableMostrar.getRowCount() > 0) {
-        jSplitPane1.setDividerLocation(463); 
     }
     }//GEN-LAST:event_btnBuscarEstEstaActionPerformed
 
     private void estadoInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_estadoInputActionPerformed
-        // TODO add your handling code here:
+        DefaultTableModel modelo = (DefaultTableModel) jTableMostrar.getModel();
+        modelo.setRowCount(0);
+        String estadoSelec = estadoInput.getSelectedItem().toString();
+        for (Estudio est : listaEstudios) {
+            EstudioController miEst = new EstudioController(est);
+            if (miEst.muestraEstado().equals(estadoSelec)){
+                cargarEstudioATabla(miEst.obtenerEstudio());
+            }
+        }
     }//GEN-LAST:event_estadoInputActionPerformed
 
     private void btnBuscarEstFecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarEstFecActionPerformed
-        
-        java.util.Date dateRealizacion = (java.util.Date) fechaRealInput.getValue();
-        java.util.Calendar cal = java.util.Calendar.getInstance();
-        cal.setTime(dateRealizacion);
-        int diaR = cal.get(java.util.Calendar.DAY_OF_MONTH);
-        int mesR = cal.get(java.util.Calendar.MONTH) + 1;
-        int anioR = cal.get(java.util.Calendar.YEAR);
-        Fecha fechaR = new Fecha(diaR, mesR, anioR);
-        mostrarEstudios(accionActual, "", fechaR);
-        if (jTableMostrar.getRowCount() > 0) {
-        jSplitPane1.setDividerLocation(463); 
-    }
+     
     }//GEN-LAST:event_btnBuscarEstFecActionPerformed
 
     private void btnBuscarEstProActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarEstProActionPerformed
+        DefaultTableModel modelo = (DefaultTableModel) jTableMostrar.getModel();
+        modelo.setRowCount(0);
         String matricula = matProEstInput.getText().trim();
         if (!matricula.isEmpty()){
-            Fecha fechaR = new Fecha(0, 0, 0);
-            mostrarEstudios(accionActual, matricula, fechaR);
-            if (jTableMostrar.getRowCount() > 0) {
-            jSplitPane1.setDividerLocation(463); 
-        }
-        }else {
+            for (Estudio est : listaEstudios) {
+                EstudioController miEst = new EstudioController(est);
+                if (miEst.muestraMatriculaProfesional().trim().equals(matricula.trim())){
+                    cargarEstudioATabla(miEst.obtenerEstudio());
+                }
+            }
+        }else{
             JOptionPane.showMessageDialog(this, "Por favor, ingrese una matrícula.");
         }
     }//GEN-LAST:event_btnBuscarEstProActionPerformed
@@ -793,9 +630,7 @@ public class FormularioEstudio extends javax.swing.JFrame {
         }
         if (encontro == true){
             ENCONTRO.setVisible(true);
-            jPanelMostrarEstudios.setVisible(true);
             if (jTableMostrar.getRowCount() > 0) {
-            jSplitPane1.setDividerLocation(463); 
         }
         }else{
             muestraOnoCamposModEst(false);
@@ -913,7 +748,6 @@ public class FormularioEstudio extends javax.swing.JFrame {
                 miEst.muestraAnalisisRealizados().equals(anaTab)) {
                 this.estudioSelec = miEst.obtenerEstudio();
                 muestraDatosModEst(miEst);
-                jPanelMostrarEstudios.setVisible(false);
                 jPanelModificarEst.setVisible(true);
             }
         }
@@ -921,12 +755,42 @@ public class FormularioEstudio extends javax.swing.JFrame {
     }
     }//GEN-LAST:event_jTableMostrarMouseClicked
 
+    private void btnCancelar4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelar4ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnCancelar4ActionPerformed
+
+    private void verConObSocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verConObSocActionPerformed
+        
+    }//GEN-LAST:event_verConObSocActionPerformed
+
+    private void verConObSoc1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verConObSoc1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_verConObSoc1ActionPerformed
+
+    private void fechaRealInputStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_fechaRealInputStateChanged
+        DefaultTableModel modelo = (DefaultTableModel) jTableMostrar.getModel();
+        modelo.setRowCount(0);
+        java.util.Date dateRealizacion = (java.util.Date) fechaRealInput.getValue();
+        java.util.Calendar cal = java.util.Calendar.getInstance();
+        cal.setTime(dateRealizacion);
+        int diaR = cal.get(java.util.Calendar.DAY_OF_MONTH);
+        int mesR = cal.get(java.util.Calendar.MONTH) + 1;
+        int anioR = cal.get(java.util.Calendar.YEAR);
+        Fecha fechaR = new Fecha(diaR, mesR, anioR);
+        for (Estudio est : listaEstudios) {
+            EstudioController miEst = new EstudioController(est);
+            if (miEst.esMismaFecha(fechaR)){
+                cargarEstudioATabla(miEst.obtenerEstudio());
+            }
+        }
+    }//GEN-LAST:event_fechaRealInputStateChanged
+
     
     public class RenderAnalisis extends JTextArea implements TableCellRenderer {
         
     public RenderAnalisis() {
-        setLineWrap(true);       // Hace que el texto salte de línea
-        setWrapStyleWord(true);  // Salta de línea en espacios/puntos
+        setLineWrap(true);
+        setWrapStyleWord(true);
     }
     
     @Override
@@ -949,6 +813,7 @@ public class FormularioEstudio extends javax.swing.JFrame {
     private javax.swing.JButton btnBuscarEstEsta;
     private javax.swing.JButton btnBuscarEstFec;
     private javax.swing.JButton btnBuscarEstPro;
+    private javax.swing.JButton btnCancelar4;
     private javax.swing.JButton btnCancelarPacMod;
     private javax.swing.JButton btnConfirmarEstMod;
     private javax.swing.JButton buscarModEst;
@@ -962,19 +827,14 @@ public class FormularioEstudio extends javax.swing.JFrame {
     private javax.swing.JLabel fechaReTXT;
     private javax.swing.JSpinner fechaRealInput;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JPanel jPanelBuscarEstudioEstado;
-    private javax.swing.JPanel jPanelBuscarEstudioFechaRec;
-    private javax.swing.JPanel jPanelBuscarEstudioPro;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanelBusquedas;
     private javax.swing.JPanel jPanelModificarEst;
-    private javax.swing.JPanel jPanelMostrarEstudios;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JSplitPane jSplitPane1;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTable jTableMostrar;
     private javax.swing.JTextField matProEstInput;
     private javax.swing.JLabel matriculaTXT;
@@ -983,5 +843,7 @@ public class FormularioEstudio extends javax.swing.JFrame {
     private javax.swing.JLabel subtitulo;
     private javax.swing.JLabel telefonoSig;
     private javax.swing.JLabel titulo;
+    private javax.swing.JRadioButton verConObSoc;
+    private javax.swing.JRadioButton verConObSoc1;
     // End of variables declaration//GEN-END:variables
 }
