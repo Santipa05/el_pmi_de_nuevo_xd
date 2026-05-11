@@ -28,6 +28,9 @@ public class FormularioBuscar extends javax.swing.JFrame {
       public FormularioBuscar() {
           this.setContentPane(fondo);
           initComponents();
+          jScrollPane1.setOpaque(false);
+          jScrollPane1.getViewport().setOpaque(false);
+          jTableMostrar.setOpaque(false);
           setLocationRelativeTo(null);
           jTableMostrar.setFillsViewportHeight(true);
           Color cel = new Color(153, 204, 255);
@@ -393,6 +396,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
         getContentPane().add(jPanelContarEstPac, "card3");
 
         jPanelBuscarProfesional.setBackground(new java.awt.Color(153, 204, 255));
+        jPanelBuscarProfesional.setForeground(new java.awt.Color(255, 255, 255));
         jPanelBuscarProfesional.setOpaque(false);
 
         jLabel7.setBackground(new java.awt.Color(0, 0, 0));
