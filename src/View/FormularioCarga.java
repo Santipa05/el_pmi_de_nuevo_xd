@@ -512,7 +512,7 @@ public class FormularioCarga extends javax.swing.JFrame {
 
             PanelCargaEst.setBackground(new java.awt.Color(153, 204, 255));
             PanelCargaEst.setOpaque(false);
-            PanelCargaEst.setPreferredSize(new java.awt.Dimension(380, 500));
+            PanelCargaEst.setPreferredSize(new java.awt.Dimension(380, 530));
 
             tituloEst.setFont(new java.awt.Font("Nirmala UI", 1, 18)); // NOI18N
             tituloEst.setForeground(new java.awt.Color(255, 255, 255));
@@ -635,9 +635,9 @@ public class FormularioCarga extends javax.swing.JFrame {
             PanelCargaEstLayout.setHorizontalGroup(
                   PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                   .addGroup(PanelCargaEstLayout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                               .addGroup(PanelCargaEstLayout.createSequentialGroup()
-                                    .addGap(18, 18, 18)
                                     .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(12, 12, 12)
                                     .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -664,22 +664,22 @@ public class FormularioCarga extends javax.swing.JFrame {
                                           .addComponent(matProEst)
                                           .addComponent(fechaEnt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                           .addComponent(estado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                          .addComponent(estudiosScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
+                                          .addComponent(estudiosScroll, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
                                           .addComponent(fechaRetxt)))
                               .addGroup(PanelCargaEstLayout.createSequentialGroup()
-                                    .addGap(109, 109, 109)
+                                    .addGap(91, 91, 91)
                                     .addComponent(tituloEst))
                               .addGroup(PanelCargaEstLayout.createSequentialGroup()
-                                    .addGap(141, 141, 141)
+                                    .addGap(123, 123, 123)
                                     .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                           .addComponent(btnCancelar3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                          .addComponent(btnCargarEstudio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                          .addComponent(btnCargarEstudio))))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             );
             PanelCargaEstLayout.setVerticalGroup(
                   PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                  .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCargaEstLayout.createSequentialGroup()
-                        .addGap(33, 33, 33)
+                  .addGroup(PanelCargaEstLayout.createSequentialGroup()
+                        .addContainerGap()
                         .addComponent(tituloEst)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(PanelCargaEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -716,12 +716,12 @@ public class FormularioCarga extends javax.swing.JFrame {
                                                 .addComponent(estado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(18, 18, 18)
                                                 .addComponent(estudiosScroll, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                              .addComponent(jSeparator2))
+                              .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 401, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnCargarEstudio)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnCancelar3)
-                        .addContainerGap())
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             );
 
             javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

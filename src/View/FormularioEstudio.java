@@ -89,6 +89,7 @@ public class FormularioEstudio extends javax.swing.JFrame {
                     comboboxOpcion.setVisible(false);
                     comboboxOpcion.setEnabled(false);
                     ocultarMostrarBuscar();
+                    titulo1.setVisible(true);
                     dniModTxt.setVisible(true);
                     campoDniEst.setVisible(true);
                     campoDniEst.setEnabled(true);
@@ -366,13 +367,11 @@ public class FormularioEstudio extends javax.swing.JFrame {
                         .addGroup(jPanelMostrarBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                               .addGroup(jPanelMostrarBuscarLayout.createSequentialGroup()
                                     .addContainerGap()
-                                    .addComponent(comboboxOpcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(169, 169, 169)
-                                    .addComponent(titulo1))
+                                    .addComponent(comboboxOpcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                               .addGroup(jPanelMostrarBuscarLayout.createSequentialGroup()
-                                    .addGap(89, 89, 89)
+                                    .addGap(255, 255, 255)
                                     .addComponent(dniModTxt)
-                                    .addGap(172, 172, 172)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addGroup(jPanelMostrarBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                           .addGroup(jPanelMostrarBuscarLayout.createSequentialGroup()
                                                 .addComponent(campoDniEst, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -383,6 +382,8 @@ public class FormularioEstudio extends javax.swing.JFrame {
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(estadoInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                           .addGroup(jPanelMostrarBuscarLayout.createSequentialGroup()
+                                                .addComponent(titulo1)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(estadotxt)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(matriculatxt)
@@ -406,14 +407,13 @@ public class FormularioEstudio extends javax.swing.JFrame {
                   jPanelMostrarBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                   .addGroup(jPanelMostrarBuscarLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(jPanelMostrarBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                              .addComponent(comboboxOpcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                              .addComponent(titulo1))
+                        .addComponent(comboboxOpcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanelMostrarBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                               .addComponent(fechaRealtxt)
                               .addComponent(estadotxt)
-                              .addComponent(matriculatxt))
+                              .addComponent(matriculatxt)
+                              .addComponent(titulo1))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanelMostrarBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                               .addComponent(campoDniEst, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)

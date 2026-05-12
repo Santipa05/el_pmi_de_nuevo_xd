@@ -4,7 +4,8 @@ import java.util.HashMap;
 
 public class PMI {
       //El hashMap de los analisis
-    public static HashMap<Integer, String> catalogoAnalisis = new HashMap<>();
+      public static HashMap<Integer, String> catalogoAnalisis = new HashMap<>();
+    
       public static void main(String[] args) {
         cargarCatalogoAnalisis();
         java.awt.EventQueue.invokeLater(new Runnable() {

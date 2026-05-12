@@ -14,6 +14,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 
@@ -21,12 +23,12 @@ import javax.swing.JOptionPane;
 public class Principal extends javax.swing.JFrame{
     private ArrayList<Estudio> listaEstudios;
     private HashMap <String, Persona> mapaPersonas;
-    FondoPanel fondo = new FondoPanel();
 
     public Principal() {
         initComponents();
         this.mapaPersonas = new HashMap<String, Persona>();
         this.listaEstudios = new ArrayList<Estudio>();
+        setIconImage(new ImageIcon(getClass().getResource("/imagenes/unnamed.png")).getImage());
         setLocationRelativeTo(null);
         menuEstudio.setVisible(false);
         menuEstudio.setEnabled(false);

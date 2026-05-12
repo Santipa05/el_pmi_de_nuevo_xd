@@ -316,67 +316,61 @@ public class FormularioBuscar extends javax.swing.JFrame {
             jPanelModificarPac.setLayout(jPanelModificarPacLayout);
             jPanelModificarPacLayout.setHorizontalGroup(
                   jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                  .addGroup(jPanelModificarPacLayout.createSequentialGroup()
+                        .addGap(179, 179, 179)
+                        .addComponent(buscarModPac, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                   .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelModificarPacLayout.createSequentialGroup()
-                        .addContainerGap(107, Short.MAX_VALUE)
+                        .addContainerGap(123, Short.MAX_VALUE)
                         .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                              .addGroup(jPanelModificarPacLayout.createSequentialGroup()
-                                    .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                          .addGroup(jPanelModificarPacLayout.createSequentialGroup()
-                                                .addComponent(subtitulo)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(campoDniPac, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                          .addGroup(jPanelModificarPacLayout.createSequentialGroup()
-                                                .addGap(54, 54, 54)
-                                                .addComponent(titulo)))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                              .addGroup(jPanelModificarPacLayout.createSequentialGroup()
-                                    .addGap(55, 55, 55)
-                                    .addComponent(separador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                          .addGroup(jPanelModificarPacLayout.createSequentialGroup()
-                                                .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                      .addComponent(dniSig)
-                                                      .addComponent(emailSig)
-                                                      .addComponent(telefonoSig)
-                                                      .addComponent(obSocSig)
-                                                      .addComponent(apellidoSig)
-                                                      .addComponent(nombreSig))
-                                                .addGap(25, 25, 25)
-                                                .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                      .addComponent(nombreTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                      .addComponent(apellidoTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                      .addComponent(dniTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                      .addComponent(campoMailMod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                      .addComponent(campoTelMod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                      .addComponent(campoModObSocPac)))
-                                          .addGroup(jPanelModificarPacLayout.createSequentialGroup()
-                                                .addGap(22, 22, 22)
-                                                .addComponent(noEncontro, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                              .addGroup(jPanelModificarPacLayout.createSequentialGroup()
-                                    .addGap(74, 74, 74)
-                                    .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                          .addComponent(btnConfirmarPacMod, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                          .addComponent(btnCancelarPacMod, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
-                              .addGroup(jPanelModificarPacLayout.createSequentialGroup()
-                                    .addGap(98, 98, 98)
-                                    .addComponent(buscarModPac, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 178, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                              .addComponent(titulo)
+                              .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jPanelModificarPacLayout.createSequentialGroup()
+                                          .addComponent(separador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                          .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                          .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(jPanelModificarPacLayout.createSequentialGroup()
+                                                      .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                            .addComponent(dniSig)
+                                                            .addComponent(emailSig)
+                                                            .addComponent(telefonoSig)
+                                                            .addComponent(obSocSig)
+                                                            .addComponent(apellidoSig)
+                                                            .addComponent(nombreSig))
+                                                      .addGap(25, 25, 25)
+                                                      .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                            .addComponent(nombreTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addComponent(apellidoTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addComponent(dniTXT, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addComponent(campoModObSocPac)
+                                                            .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                                  .addComponent(campoMailMod, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                                                                  .addComponent(campoTelMod, javax.swing.GroupLayout.Alignment.LEADING))))
+                                                .addGroup(jPanelModificarPacLayout.createSequentialGroup()
+                                                      .addGap(22, 22, 22)
+                                                      .addComponent(noEncontro, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addGroup(jPanelModificarPacLayout.createSequentialGroup()
+                                          .addComponent(subtitulo)
+                                          .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                          .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(btnCancelarPacMod, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(btnConfirmarPacMod, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(campoDniPac, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                          .addGap(162, 162, 162))))
                         .addGap(49, 49, 49))
             );
             jPanelModificarPacLayout.setVerticalGroup(
                   jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                   .addGroup(jPanelModificarPacLayout.createSequentialGroup()
-                        .addGap(41, 41, 41)
+                        .addGap(47, 47, 47)
                         .addComponent(titulo)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                               .addComponent(campoDniPac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                               .addComponent(subtitulo))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(buscarModPac)
-                        .addGap(12, 12, 12)
+                        .addGap(18, 18, 18)
                         .addGroup(jPanelModificarPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                               .addGroup(jPanelModificarPacLayout.createSequentialGroup()
                                     .addComponent(noEncontro)
@@ -408,11 +402,11 @@ public class FormularioBuscar extends javax.swing.JFrame {
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(campoModObSocPac, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))))
                               .addComponent(separador))
-                        .addGap(55, 55, 55)
+                        .addGap(57, 57, 57)
                         .addComponent(btnConfirmarPacMod)
-                        .addGap(32, 32, 32)
+                        .addGap(18, 18, 18)
                         .addComponent(btnCancelarPacMod)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap(18, Short.MAX_VALUE))
             );
 
             getContentPane().add(jPanelModificarPac, "card5");
@@ -533,7 +527,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
 
             cancelarProbtn.setBackground(new java.awt.Color(0, 51, 102));
             cancelarProbtn.setForeground(new java.awt.Color(255, 255, 255));
-            cancelarProbtn.setText("Volver");
+            cancelarProbtn.setText("Cancelar");
             cancelarProbtn.addActionListener(new java.awt.event.ActionListener() {
                   public void actionPerformed(java.awt.event.ActionEvent evt) {
                         cancelarProbtnActionPerformed(evt);
@@ -570,9 +564,10 @@ public class FormularioBuscar extends javax.swing.JFrame {
                                                                   .addComponent(nombreTXT1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                   .addComponent(apellidoTXT1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                   .addComponent(dniTXT1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                  .addComponent(modMailInput1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                  .addComponent(modTelInput1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                  .addComponent(matriculaTXT1)))
+                                                                  .addComponent(matriculaTXT1)
+                                                                  .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                                        .addComponent(modMailInput1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                                                                        .addComponent(modTelInput1, javax.swing.GroupLayout.Alignment.LEADING))))
                                                       .addGroup(jPanelModificarProLayout.createSequentialGroup()
                                                             .addGap(22, 22, 22)
                                                             .addComponent(noEncontro1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))))))
@@ -815,6 +810,11 @@ public class FormularioBuscar extends javax.swing.JFrame {
 
             mattxt.setBackground(new java.awt.Color(51, 51, 51));
             mattxt.setForeground(new java.awt.Color(255, 255, 255));
+            mattxt.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        mattxtActionPerformed(evt);
+                  }
+            });
             mattxt.addKeyListener(new java.awt.event.KeyAdapter() {
                   public void keyTyped(java.awt.event.KeyEvent evt) {
                         mattxtKeyTyped(evt);
@@ -1123,8 +1123,8 @@ public class FormularioBuscar extends javax.swing.JFrame {
                         escritorPac.append(miPac.muestraNombre() + "\n");
                         escritorPac.append(miPac.muestraApellido() + "\n");
                         escritorPac.append(miPac.muestraDni() + "\n");
-                        escritorPac.append(miPac.muestraMail() + "\n");
                         escritorPac.append(miPac.muestraTelefono() + "\n");
+                        escritorPac.append(miPac.muestraMail() + "\n");
                         escritorPac.append(miPac.muestraObraSocial() + "\n\n");
                   } else if (p instanceof Profesional pro) {
                         ProfesionalController miPro = new ProfesionalController(pro);
@@ -1391,7 +1391,11 @@ public class FormularioBuscar extends javax.swing.JFrame {
       }//GEN-LAST:event_volverBtnActionPerformed
 
       private void mattxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_mattxtKeyTyped
-            // TODO add your handling code here:
+            char c = evt.getKeyChar();
+            if(!Character.isDigit(c) && c != java.awt.event.KeyEvent.VK_BACK_SPACE){
+                  evt.consume();
+                  java.awt.Toolkit.getDefaultToolkit().beep();
+            }
       }//GEN-LAST:event_mattxtKeyTyped
 
       private void buscarProMatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarProMatActionPerformed
@@ -1414,6 +1418,10 @@ public class FormularioBuscar extends javax.swing.JFrame {
         }
         dnitxt.setText("");
       }//GEN-LAST:event_buscarProMatActionPerformed
+
+      private void mattxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mattxtActionPerformed
+            // TODO add your handling code here:
+      }//GEN-LAST:event_mattxtActionPerformed
 
       // Variables declaration - do not modify//GEN-BEGIN:variables
       private javax.swing.JLabel apellidoSig;
