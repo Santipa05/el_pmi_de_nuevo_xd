@@ -40,64 +40,68 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace pref="107" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
-                          <Component id="subtitulo" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="subtitulo" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="campoDniPac" min="-2" pref="237" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                                  <Component id="titulo" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace pref="125" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                          <Component id="separador" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="campoDniPac" min="-2" pref="237" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
-                          <Component id="titulo" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="0" pref="114" max="32767" attributes="0"/>
-                  <Component id="separador" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="dniSig" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="emailSig" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="telefonoSig" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="obSocSig" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="apellidoSig" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="nombreSig" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="nombreTXT" alignment="0" min="-2" pref="222" max="-2" attributes="0"/>
-                              <Component id="apellidoTXT" alignment="0" min="-2" pref="227" max="-2" attributes="0"/>
-                              <Component id="dniTXT" alignment="0" min="-2" pref="227" max="-2" attributes="0"/>
-                              <Component id="campoMailMod" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="campoTelMod" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="campoModObSocPac" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="dniSig" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="emailSig" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="telefonoSig" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="obSocSig" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="apellidoSig" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="nombreSig" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="nombreTXT" alignment="0" min="-2" pref="222" max="-2" attributes="0"/>
+                                      <Component id="apellidoTXT" alignment="0" min="-2" pref="227" max="-2" attributes="0"/>
+                                      <Component id="dniTXT" alignment="0" min="-2" pref="227" max="-2" attributes="0"/>
+                                      <Component id="campoMailMod" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="campoTelMod" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="campoModObSocPac" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                                  <Component id="noEncontro" min="-2" pref="198" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                          <Component id="noEncontro" min="-2" pref="198" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="btnConfirmarPacMod" min="-2" pref="171" max="-2" attributes="0"/>
+                              <Component id="btnCancelarPacMod" min="-2" pref="171" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="149" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
+                          <Component id="buscarModPac" min="-2" pref="118" max="-2" attributes="0"/>
+                          <EmptySpace pref="178" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="97" max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="133" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="btnConfirmarPacMod" min="-2" pref="171" max="-2" attributes="0"/>
-                      <Component id="btnCancelarPacMod" min="-2" pref="171" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="157" max="-2" attributes="0"/>
-                  <Component id="buscarModPac" min="-2" pref="118" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -967,7 +971,7 @@
             <Component class="javax.swing.JTable" name="jTableMostrar">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="99" red="66" type="rgb"/>
+                  <Color blue="99" green="99" red="99" type="rgb"/>
                 </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="0" type="rgb"/>
@@ -1150,7 +1154,7 @@
             <Component class="javax.swing.JTable" name="jTableMostrarPro">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="99" red="66" type="rgb"/>
+                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
                 </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="0" type="rgb"/>
