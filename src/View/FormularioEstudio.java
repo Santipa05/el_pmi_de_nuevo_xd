@@ -89,28 +89,16 @@ public class FormularioEstudio extends javax.swing.JFrame {
                     comboboxOpcion.setVisible(false);
                     comboboxOpcion.setEnabled(false);
                     ocultarMostrarBuscar();
+                    dniModTxt.setVisible(true);
+                    campoDniEst.setVisible(true);
+                    campoDniEst.setEnabled(true);
+                    buscarModEst1.setVisible(true);
+                    buscarModEst1.setEnabled(true);
                     jPanelModificarEst.setVisible(true);
                     break;
                 case "Mostrar/Buscar":
                     ocultarModEst();
-                        titulo1.setVisible(false);
-                        fechaRealtxt.setVisible(false);
-                        estadotxt.setVisible(false);
-                        estadoInput.setVisible(false);
-                        estadoInput.setEnabled(false);
-                        dniModTxt.setVisible(false);
-                        fechaRealInput.setVisible(false);
-                        fechaRealInput.setEnabled(false);
-                        matriculatxt.setVisible(false);
-                        campoDniEst.setVisible(false);
-                        campoDniEst.setEnabled(false);
-                        matProEstInput.setVisible(false);
-                        matProEstInput.setEnabled(false);
-                        buscarModEst1.setVisible(false);
-                        buscarModEst1.setEnabled(false);
-                        btnBuscarEstPro.setVisible(false);
-                        btnBuscarEstPro.setEnabled(false);
-                        ENCONTRO.setVisible(false);
+                    ocultarMostrarBuscar();
                     jPanelMostrarBuscar.setVisible(true);
                     jScrollPane2.setVisible(true);
                     jTableMostrar.setVisible(true);
@@ -123,13 +111,24 @@ public class FormularioEstudio extends javax.swing.JFrame {
         }
       
       private void ocultarMostrarBuscar() {
-        estadoInput.setVisible(false);
-        fechaRealInput.setVisible(false);
-        matProEstInput.setVisible(false);
-        estadotxt.setVisible(false);
-        matriculatxt.setVisible(false);
+        titulo1.setVisible(false);
         fechaRealtxt.setVisible(false);
+        estadotxt.setVisible(false);
+        estadoInput.setVisible(false);
+        estadoInput.setEnabled(false);
+        dniModTxt.setVisible(false);
+        fechaRealInput.setVisible(false);
+        fechaRealInput.setEnabled(false);
+        matriculatxt.setVisible(false);
+        campoDniEst.setVisible(false);
+        campoDniEst.setEnabled(false);
+        matProEstInput.setVisible(false);
+        matProEstInput.setEnabled(false);
+        buscarModEst1.setVisible(false);
+        buscarModEst1.setEnabled(false);
         btnBuscarEstPro.setVisible(false);
+        btnBuscarEstPro.setEnabled(false);
+        ENCONTRO.setVisible(false);
     }
       
     private void ocultarModEst(){
@@ -169,414 +168,429 @@ public class FormularioEstudio extends javax.swing.JFrame {
       }
     
       @SuppressWarnings("unchecked")
-      // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-      private void initComponents() {
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
 
-            jPanelMostrarBuscar = new javax.swing.JPanel();
-            estadoInput = new javax.swing.JComboBox<>();
-            fechaRealInput = new javax.swing.JSpinner();
-            matProEstInput = new javax.swing.JTextField();
-            estadotxt = new javax.swing.JLabel();
-            matriculatxt = new javax.swing.JLabel();
-            fechaRealtxt = new javax.swing.JLabel();
-            jSeparator1 = new javax.swing.JSeparator();
-            btnBuscarEstPro = new javax.swing.JButton();
-            campoDniEst = new javax.swing.JTextField();
-            dniModTxt = new javax.swing.JLabel();
-            titulo1 = new javax.swing.JLabel();
-            buscarModEst1 = new javax.swing.JButton();
-            ENCONTRO = new javax.swing.JLabel();
-            jScrollPane2 = new javax.swing.JScrollPane();
-            jTableMostrar = new javax.swing.JTable();
-            comboboxOpcion = new javax.swing.JComboBox<>();
-            jPanelModificarEst = new javax.swing.JPanel();
-            nombreSig = new javax.swing.JLabel();
-            dniPacTXT = new javax.swing.JLabel();
-            apellidoSig = new javax.swing.JLabel();
-            matriculaTXT = new javax.swing.JLabel();
-            dniSig = new javax.swing.JLabel();
-            fechaReTXT = new javax.swing.JLabel();
-            telefonoSig = new javax.swing.JLabel();
-            emailSig = new javax.swing.JLabel();
-            separador = new javax.swing.JSeparator();
-            btnConfirmarEstMod = new javax.swing.JButton();
-            estadoEst = new javax.swing.JComboBox<>();
-            fechaEntEst = new javax.swing.JSpinner();
-            btnCancelar4 = new javax.swing.JButton();
-            jLabel1 = new javax.swing.JLabel();
+        jPanelMostrarBuscar = new javax.swing.JPanel();
+        estadoInput = new javax.swing.JComboBox<>();
+        fechaRealInput = new javax.swing.JSpinner();
+        matProEstInput = new javax.swing.JTextField();
+        estadotxt = new javax.swing.JLabel();
+        matriculatxt = new javax.swing.JLabel();
+        fechaRealtxt = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        btnBuscarEstPro = new javax.swing.JButton();
+        campoDniEst = new javax.swing.JTextField();
+        dniModTxt = new javax.swing.JLabel();
+        titulo1 = new javax.swing.JLabel();
+        buscarModEst1 = new javax.swing.JButton();
+        ENCONTRO = new javax.swing.JLabel();
+        btnCancelar2 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTableMostrar = new javax.swing.JTable();
+        comboboxOpcion = new javax.swing.JComboBox<>();
+        jPanelModificarEst = new javax.swing.JPanel();
+        nombreSig = new javax.swing.JLabel();
+        dniPacTXT = new javax.swing.JLabel();
+        apellidoSig = new javax.swing.JLabel();
+        matriculaTXT = new javax.swing.JLabel();
+        dniSig = new javax.swing.JLabel();
+        fechaReTXT = new javax.swing.JLabel();
+        telefonoSig = new javax.swing.JLabel();
+        emailSig = new javax.swing.JLabel();
+        separador = new javax.swing.JSeparator();
+        btnConfirmarEstMod = new javax.swing.JButton();
+        estadoEst = new javax.swing.JComboBox<>();
+        fechaEntEst = new javax.swing.JSpinner();
+        btnCancelar4 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
-            setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-            setBackground(new java.awt.Color(153, 204, 255));
-            setPreferredSize(new java.awt.Dimension(800, 800));
-            setResizable(false);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setBackground(new java.awt.Color(153, 204, 255));
+        setPreferredSize(new java.awt.Dimension(800, 800));
+        setResizable(false);
 
-            jPanelMostrarBuscar.setOpaque(false);
+        jPanelMostrarBuscar.setOpaque(false);
 
-            estadoInput.setBackground(new java.awt.Color(51, 51, 51));
-            estadoInput.setForeground(new java.awt.Color(255, 255, 255));
-            estadoInput.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "En elaboracion", "Finalizado", "Retirado", "Enviado" }));
-            estadoInput.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        estadoInputActionPerformed(evt);
-                  }
-            });
+        estadoInput.setBackground(new java.awt.Color(51, 51, 51));
+        estadoInput.setForeground(new java.awt.Color(255, 255, 255));
+        estadoInput.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "En elaboracion", "Finalizado", "Retirado", "Enviado" }));
+        estadoInput.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                estadoInputActionPerformed(evt);
+            }
+        });
 
-            fechaRealInput.setModel(new javax.swing.SpinnerDateModel(new java.util.Date(), null, new java.util.Date(), java.util.Calendar.DAY_OF_MONTH));
-            fechaRealInput.setEditor(new javax.swing.JSpinner.DateEditor(fechaRealInput, "dd/MM/yyyy"));
-            fechaRealInput.addChangeListener(new javax.swing.event.ChangeListener() {
-                  public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                        fechaRealInputStateChanged(evt);
-                  }
-            });
+        fechaRealInput.setModel(new javax.swing.SpinnerDateModel(new java.util.Date(), null, new java.util.Date(), java.util.Calendar.DAY_OF_MONTH));
+        fechaRealInput.setEditor(new javax.swing.JSpinner.DateEditor(fechaRealInput, "dd/MM/yyyy"));
+        fechaRealInput.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                fechaRealInputStateChanged(evt);
+            }
+        });
 
-            matProEstInput.setBackground(new java.awt.Color(51, 51, 51));
-            matProEstInput.setForeground(new java.awt.Color(255, 255, 255));
-            matProEstInput.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        matProEstInputActionPerformed(evt);
-                  }
-            });
-            matProEstInput.addKeyListener(new java.awt.event.KeyAdapter() {
-                  public void keyTyped(java.awt.event.KeyEvent evt) {
-                        matProEstInputKeyTyped(evt);
-                  }
-            });
+        matProEstInput.setBackground(new java.awt.Color(51, 51, 51));
+        matProEstInput.setForeground(new java.awt.Color(255, 255, 255));
+        matProEstInput.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                matProEstInputActionPerformed(evt);
+            }
+        });
+        matProEstInput.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                matProEstInputKeyTyped(evt);
+            }
+        });
 
-            estadotxt.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-            estadotxt.setForeground(new java.awt.Color(255, 255, 255));
-            estadotxt.setText("Estado");
+        estadotxt.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        estadotxt.setForeground(new java.awt.Color(255, 255, 255));
+        estadotxt.setText("Estado");
 
-            matriculatxt.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-            matriculatxt.setForeground(new java.awt.Color(255, 255, 255));
-            matriculatxt.setText("Matricula");
+        matriculatxt.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        matriculatxt.setForeground(new java.awt.Color(255, 255, 255));
+        matriculatxt.setText("Matricula");
 
-            fechaRealtxt.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-            fechaRealtxt.setForeground(new java.awt.Color(255, 255, 255));
-            fechaRealtxt.setText("Fecha de realizacion");
+        fechaRealtxt.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        fechaRealtxt.setForeground(new java.awt.Color(255, 255, 255));
+        fechaRealtxt.setText("Fecha de realizacion");
 
-            btnBuscarEstPro.setBackground(new java.awt.Color(0, 51, 102));
-            btnBuscarEstPro.setForeground(new java.awt.Color(255, 255, 255));
-            btnBuscarEstPro.setText("Buscar");
-            btnBuscarEstPro.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        btnBuscarEstProActionPerformed(evt);
-                  }
-            });
+        btnBuscarEstPro.setBackground(new java.awt.Color(0, 51, 102));
+        btnBuscarEstPro.setForeground(new java.awt.Color(255, 255, 255));
+        btnBuscarEstPro.setText("Buscar");
+        btnBuscarEstPro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarEstProActionPerformed(evt);
+            }
+        });
 
-            campoDniEst.setBackground(new java.awt.Color(51, 51, 51));
-            campoDniEst.setForeground(new java.awt.Color(255, 255, 255));
-            campoDniEst.setToolTipText("Ingrese el DNI");
-            campoDniEst.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        campoDniEstActionPerformed(evt);
-                  }
-            });
-            campoDniEst.addKeyListener(new java.awt.event.KeyAdapter() {
-                  public void keyTyped(java.awt.event.KeyEvent evt) {
-                        campoDniEstKeyTyped(evt);
-                  }
-            });
+        campoDniEst.setBackground(new java.awt.Color(51, 51, 51));
+        campoDniEst.setForeground(new java.awt.Color(255, 255, 255));
+        campoDniEst.setToolTipText("Ingrese el DNI");
+        campoDniEst.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoDniEstActionPerformed(evt);
+            }
+        });
+        campoDniEst.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                campoDniEstKeyTyped(evt);
+            }
+        });
 
-            dniModTxt.setFont(new java.awt.Font("Nirmala UI", 1, 14)); // NOI18N
-            dniModTxt.setForeground(new java.awt.Color(153, 153, 153));
-            dniModTxt.setText("DNI del paciente");
+        dniModTxt.setFont(new java.awt.Font("Nirmala UI", 1, 14)); // NOI18N
+        dniModTxt.setForeground(new java.awt.Color(153, 153, 153));
+        dniModTxt.setText("DNI del paciente");
 
-            titulo1.setBackground(new java.awt.Color(255, 255, 255));
-            titulo1.setFont(new java.awt.Font("Nirmala UI", 1, 18)); // NOI18N
-            titulo1.setForeground(new java.awt.Color(255, 255, 255));
-            titulo1.setText("Modificacion de estudio");
+        titulo1.setBackground(new java.awt.Color(255, 255, 255));
+        titulo1.setFont(new java.awt.Font("Nirmala UI", 1, 18)); // NOI18N
+        titulo1.setForeground(new java.awt.Color(255, 255, 255));
+        titulo1.setText("Modificacion de estudio");
 
-            buscarModEst1.setBackground(new java.awt.Color(0, 51, 102));
-            buscarModEst1.setForeground(new java.awt.Color(255, 255, 255));
-            buscarModEst1.setText("Buscar");
-            buscarModEst1.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        buscarModEst1ActionPerformed(evt);
-                  }
-            });
+        buscarModEst1.setBackground(new java.awt.Color(0, 51, 102));
+        buscarModEst1.setForeground(new java.awt.Color(255, 255, 255));
+        buscarModEst1.setText("Buscar");
+        buscarModEst1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buscarModEst1ActionPerformed(evt);
+            }
+        });
 
-            ENCONTRO.setFont(new java.awt.Font("Nirmala UI", 3, 14)); // NOI18N
-            ENCONTRO.setForeground(new java.awt.Color(153, 153, 153));
-            ENCONTRO.setText("SELECCIONE EN LA TABLA EL ESTUDIO QUE DESEA MODIFICAR");
-            ENCONTRO.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        ENCONTRO.setFont(new java.awt.Font("Nirmala UI", 3, 14)); // NOI18N
+        ENCONTRO.setForeground(new java.awt.Color(153, 153, 153));
+        ENCONTRO.setText("SELECCIONE EN LA TABLA EL ESTUDIO QUE DESEA MODIFICAR");
+        ENCONTRO.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-            jScrollPane2.setMaximumSize(null);
+        btnCancelar2.setBackground(new java.awt.Color(0, 51, 102));
+        btnCancelar2.setForeground(new java.awt.Color(255, 255, 255));
+        btnCancelar2.setText("Volver");
+        btnCancelar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelar2ActionPerformed(evt);
+            }
+        });
 
-            jTableMostrar.setModel(new javax.swing.table.DefaultTableModel(
-                  new Object [][] {
+        jScrollPane2.setMaximumSize(null);
 
-                  },
-                  new String [] {
-                        "DNI paciente", "Matricula profesional", "Fecha de realizacion", "Fecha de entrega", "Estado", "Analisis"
-                  }
-            ) {
-                  Class[] types = new Class [] {
-                        java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.String.class, java.lang.String.class
-                  };
-                  boolean[] canEdit = new boolean [] {
-                        false, false, false, false, false, false
-                  };
+        jTableMostrar.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
 
-                  public Class getColumnClass(int columnIndex) {
-                        return types [columnIndex];
-                  }
+            },
+            new String [] {
+                "DNI paciente", "Matricula profesional", "Fecha de realizacion", "Fecha de entrega", "Estado", "Analisis"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
 
-                  public boolean isCellEditable(int rowIndex, int columnIndex) {
-                        return canEdit [columnIndex];
-                  }
-            });
-            jTableMostrar.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
-            jTableMostrar.setOpaque(false);
-            jTableMostrar.setPreferredSize(new java.awt.Dimension(759, 490));
-            jTableMostrar.setSelectionBackground(new java.awt.Color(153, 255, 153));
-            jTableMostrar.addMouseListener(new java.awt.event.MouseAdapter() {
-                  public void mouseClicked(java.awt.event.MouseEvent evt) {
-                        jTableMostrarMouseClicked(evt);
-                  }
-            });
-            jScrollPane2.setViewportView(jTableMostrar);
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
 
-            comboboxOpcion.setBackground(new java.awt.Color(0, 102, 153));
-            comboboxOpcion.setForeground(new java.awt.Color(255, 255, 255));
-            comboboxOpcion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ver todos", "Ver por estado", "Ver por fecha de realizacion", "Ver por matricula" }));
-            comboboxOpcion.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        comboboxOpcionActionPerformed(evt);
-                  }
-            });
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTableMostrar.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
+        jTableMostrar.setOpaque(false);
+        jTableMostrar.setPreferredSize(new java.awt.Dimension(759, 490));
+        jTableMostrar.setSelectionBackground(new java.awt.Color(153, 255, 153));
+        jTableMostrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTableMostrarMouseClicked(evt);
+            }
+        });
+        jScrollPane2.setViewportView(jTableMostrar);
 
-            javax.swing.GroupLayout jPanelMostrarBuscarLayout = new javax.swing.GroupLayout(jPanelMostrarBuscar);
-            jPanelMostrarBuscar.setLayout(jPanelMostrarBuscarLayout);
-            jPanelMostrarBuscarLayout.setHorizontalGroup(
-                  jPanelMostrarBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                  .addGroup(jPanelMostrarBuscarLayout.createSequentialGroup()
-                        .addGroup(jPanelMostrarBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                              .addGroup(jPanelMostrarBuscarLayout.createSequentialGroup()
-                                    .addContainerGap()
-                                    .addComponent(comboboxOpcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(169, 169, 169)
-                                    .addComponent(titulo1))
-                              .addGroup(jPanelMostrarBuscarLayout.createSequentialGroup()
-                                    .addGap(89, 89, 89)
-                                    .addComponent(dniModTxt)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(jPanelMostrarBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                          .addComponent(buscarModEst1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                          .addComponent(campoDniEst, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(jPanelMostrarBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                          .addGroup(jPanelMostrarBuscarLayout.createSequentialGroup()
-                                                .addComponent(fechaRealtxt)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(matriculatxt)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(estadotxt))
-                                          .addGroup(jPanelMostrarBuscarLayout.createSequentialGroup()
-                                                .addComponent(estadoInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(matProEstInput, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(fechaRealInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                              .addGroup(jPanelMostrarBuscarLayout.createSequentialGroup()
-                                    .addGap(140, 140, 140)
-                                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(57, 57, 57)
-                                    .addComponent(ENCONTRO)))
-                        .addContainerGap(139, Short.MAX_VALUE))
-                  .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelMostrarBuscarLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(jPanelMostrarBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                              .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 759, javax.swing.GroupLayout.PREFERRED_SIZE)
-                              .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelMostrarBuscarLayout.createSequentialGroup()
-                                    .addComponent(btnBuscarEstPro, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(371, 371, 371))))
-            );
-            jPanelMostrarBuscarLayout.setVerticalGroup(
-                  jPanelMostrarBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                  .addGroup(jPanelMostrarBuscarLayout.createSequentialGroup()
+        comboboxOpcion.setBackground(new java.awt.Color(0, 102, 153));
+        comboboxOpcion.setForeground(new java.awt.Color(255, 255, 255));
+        comboboxOpcion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ver todos", "Ver por estado", "Ver por fecha de realizacion", "Ver por matricula" }));
+        comboboxOpcion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboboxOpcionActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanelMostrarBuscarLayout = new javax.swing.GroupLayout(jPanelMostrarBuscar);
+        jPanelMostrarBuscar.setLayout(jPanelMostrarBuscarLayout);
+        jPanelMostrarBuscarLayout.setHorizontalGroup(
+            jPanelMostrarBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelMostrarBuscarLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 759, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanelMostrarBuscarLayout.createSequentialGroup()
+                .addGroup(jPanelMostrarBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelMostrarBuscarLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(jPanelMostrarBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                              .addComponent(comboboxOpcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                              .addComponent(titulo1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanelMostrarBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                              .addComponent(fechaRealtxt)
-                              .addComponent(estadotxt)
-                              .addComponent(matriculatxt))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanelMostrarBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                              .addComponent(campoDniEst, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                              .addComponent(estadoInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                              .addComponent(fechaRealInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                              .addComponent(matProEstInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                              .addComponent(dniModTxt))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanelMostrarBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                              .addComponent(btnBuscarEstPro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                              .addComponent(buscarModEst1))
+                        .addComponent(comboboxOpcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(169, 169, 169)
+                        .addComponent(titulo1))
+                    .addGroup(jPanelMostrarBuscarLayout.createSequentialGroup()
+                        .addGap(89, 89, 89)
+                        .addComponent(dniModTxt)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanelMostrarBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                              .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                              .addComponent(ENCONTRO, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(66, 66, 66))
-            );
+                            .addGroup(jPanelMostrarBuscarLayout.createSequentialGroup()
+                                .addComponent(campoDniEst, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanelMostrarBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanelMostrarBuscarLayout.createSequentialGroup()
+                                        .addComponent(fechaRealtxt)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(matriculatxt)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(estadotxt))
+                                    .addGroup(jPanelMostrarBuscarLayout.createSequentialGroup()
+                                        .addComponent(estadoInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(matProEstInput, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(fechaRealInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(jPanelMostrarBuscarLayout.createSequentialGroup()
+                                .addComponent(buscarModEst1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnBuscarEstPro, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanelMostrarBuscarLayout.createSequentialGroup()
+                        .addGap(140, 140, 140)
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(57, 57, 57)
+                        .addComponent(ENCONTRO))
+                    .addGroup(jPanelMostrarBuscarLayout.createSequentialGroup()
+                        .addGap(307, 307, 307)
+                        .addComponent(btnCancelar2, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanelMostrarBuscarLayout.setVerticalGroup(
+            jPanelMostrarBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelMostrarBuscarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelMostrarBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(comboboxOpcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(titulo1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelMostrarBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(fechaRealtxt)
+                    .addComponent(estadotxt)
+                    .addComponent(matriculatxt))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelMostrarBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(campoDniEst, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(estadoInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fechaRealInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(matProEstInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dniModTxt))
+                .addGap(18, 18, 18)
+                .addGroup(jPanelMostrarBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnBuscarEstPro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(buscarModEst1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelMostrarBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ENCONTRO, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnCancelar2)
+                .addGap(21, 21, 21))
+        );
 
-            getContentPane().add(jPanelMostrarBuscar, java.awt.BorderLayout.NORTH);
+        getContentPane().add(jPanelMostrarBuscar, java.awt.BorderLayout.NORTH);
 
-            jPanelModificarEst.setBackground(new java.awt.Color(153, 204, 255));
-            jPanelModificarEst.setMaximumSize(new java.awt.Dimension(570, 490));
-            jPanelModificarEst.setMinimumSize(new java.awt.Dimension(570, 490));
-            jPanelModificarEst.setOpaque(false);
-            jPanelModificarEst.setPreferredSize(new java.awt.Dimension(570, 490));
+        jPanelModificarEst.setBackground(new java.awt.Color(153, 204, 255));
+        jPanelModificarEst.setMaximumSize(new java.awt.Dimension(570, 490));
+        jPanelModificarEst.setMinimumSize(new java.awt.Dimension(570, 490));
+        jPanelModificarEst.setOpaque(false);
+        jPanelModificarEst.setPreferredSize(new java.awt.Dimension(570, 490));
 
-            nombreSig.setFont(new java.awt.Font("Nirmala Text", 1, 14)); // NOI18N
-            nombreSig.setForeground(new java.awt.Color(153, 153, 153));
-            nombreSig.setText("DNI paciente");
+        nombreSig.setFont(new java.awt.Font("Nirmala Text", 1, 14)); // NOI18N
+        nombreSig.setForeground(new java.awt.Color(153, 153, 153));
+        nombreSig.setText("DNI paciente");
 
-            dniPacTXT.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-            dniPacTXT.setForeground(new java.awt.Color(255, 255, 255));
-            dniPacTXT.setText("default");
+        dniPacTXT.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        dniPacTXT.setForeground(new java.awt.Color(255, 255, 255));
+        dniPacTXT.setText("default");
 
-            apellidoSig.setFont(new java.awt.Font("Nirmala Text", 1, 14)); // NOI18N
-            apellidoSig.setForeground(new java.awt.Color(153, 153, 153));
-            apellidoSig.setText("Matricula profesional");
+        apellidoSig.setFont(new java.awt.Font("Nirmala Text", 1, 14)); // NOI18N
+        apellidoSig.setForeground(new java.awt.Color(153, 153, 153));
+        apellidoSig.setText("Matricula profesional");
 
-            matriculaTXT.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-            matriculaTXT.setForeground(new java.awt.Color(255, 255, 255));
-            matriculaTXT.setText("default");
+        matriculaTXT.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        matriculaTXT.setForeground(new java.awt.Color(255, 255, 255));
+        matriculaTXT.setText("default");
 
-            dniSig.setFont(new java.awt.Font("Nirmala Text", 1, 14)); // NOI18N
-            dniSig.setForeground(new java.awt.Color(153, 153, 153));
-            dniSig.setText("Fecha realizacion");
+        dniSig.setFont(new java.awt.Font("Nirmala Text", 1, 14)); // NOI18N
+        dniSig.setForeground(new java.awt.Color(153, 153, 153));
+        dniSig.setText("Fecha realizacion");
 
-            fechaReTXT.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-            fechaReTXT.setForeground(new java.awt.Color(255, 255, 255));
-            fechaReTXT.setText("default");
+        fechaReTXT.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        fechaReTXT.setForeground(new java.awt.Color(255, 255, 255));
+        fechaReTXT.setText("default");
 
-            telefonoSig.setFont(new java.awt.Font("Nirmala Text", 1, 14)); // NOI18N
-            telefonoSig.setForeground(new java.awt.Color(153, 153, 153));
-            telefonoSig.setText("Estado");
+        telefonoSig.setFont(new java.awt.Font("Nirmala Text", 1, 14)); // NOI18N
+        telefonoSig.setForeground(new java.awt.Color(153, 153, 153));
+        telefonoSig.setText("Estado");
 
-            emailSig.setFont(new java.awt.Font("Nirmala Text", 1, 14)); // NOI18N
-            emailSig.setForeground(new java.awt.Color(153, 153, 153));
-            emailSig.setText("Fecha entrega");
+        emailSig.setFont(new java.awt.Font("Nirmala Text", 1, 14)); // NOI18N
+        emailSig.setForeground(new java.awt.Color(153, 153, 153));
+        emailSig.setText("Fecha entrega");
 
-            separador.setBackground(new java.awt.Color(153, 204, 255));
-            separador.setForeground(new java.awt.Color(102, 102, 102));
-            separador.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        separador.setBackground(new java.awt.Color(153, 204, 255));
+        separador.setForeground(new java.awt.Color(102, 102, 102));
+        separador.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
-            btnConfirmarEstMod.setBackground(new java.awt.Color(0, 51, 102));
-            btnConfirmarEstMod.setForeground(new java.awt.Color(255, 255, 255));
-            btnConfirmarEstMod.setText("Confirmar cambios");
-            btnConfirmarEstMod.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        btnConfirmarEstModActionPerformed(evt);
-                  }
-            });
+        btnConfirmarEstMod.setBackground(new java.awt.Color(0, 51, 102));
+        btnConfirmarEstMod.setForeground(new java.awt.Color(255, 255, 255));
+        btnConfirmarEstMod.setText("Confirmar cambios");
+        btnConfirmarEstMod.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConfirmarEstModActionPerformed(evt);
+            }
+        });
 
-            estadoEst.setBackground(new java.awt.Color(51, 51, 51));
-            estadoEst.setForeground(new java.awt.Color(255, 255, 255));
-            estadoEst.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "En elaboracion", "Finalizado", "Retirado", "Enviado" }));
-            estadoEst.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        estadoEstActionPerformed(evt);
-                  }
-            });
+        estadoEst.setBackground(new java.awt.Color(51, 51, 51));
+        estadoEst.setForeground(new java.awt.Color(255, 255, 255));
+        estadoEst.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "En elaboracion", "Finalizado", "Retirado", "Enviado" }));
+        estadoEst.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                estadoEstActionPerformed(evt);
+            }
+        });
 
-            fechaEntEst.setModel(new javax.swing.SpinnerDateModel(new java.util.Date(1777426620000L), new java.util.Date(1777426620000L), new java.util.Date(1924997820000L), java.util.Calendar.DAY_OF_MONTH));
-            fechaEntEst.setEditor(new javax.swing.JSpinner.DateEditor(fechaEntEst, "dd/MM/yyyy"));
+        fechaEntEst.setModel(new javax.swing.SpinnerDateModel(new java.util.Date(1777426620000L), new java.util.Date(1777426620000L), new java.util.Date(1924997820000L), java.util.Calendar.DAY_OF_MONTH));
+        fechaEntEst.setEditor(new javax.swing.JSpinner.DateEditor(fechaEntEst, "dd/MM/yyyy"));
 
-            btnCancelar4.setBackground(new java.awt.Color(0, 51, 102));
-            btnCancelar4.setForeground(new java.awt.Color(255, 255, 255));
-            btnCancelar4.setText("Volver");
-            btnCancelar4.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        btnCancelar4ActionPerformed(evt);
-                  }
-            });
+        btnCancelar4.setBackground(new java.awt.Color(0, 51, 102));
+        btnCancelar4.setForeground(new java.awt.Color(255, 255, 255));
+        btnCancelar4.setText("Cancelar");
+        btnCancelar4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelar4ActionPerformed(evt);
+            }
+        });
 
-            jLabel1.setFont(new java.awt.Font("Nirmala UI", 1, 18)); // NOI18N
-            jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-            jLabel1.setText("Modificacion del estudio");
+        jLabel1.setFont(new java.awt.Font("Nirmala UI", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Modificacion del estudio");
 
-            javax.swing.GroupLayout jPanelModificarEstLayout = new javax.swing.GroupLayout(jPanelModificarEst);
-            jPanelModificarEst.setLayout(jPanelModificarEstLayout);
-            jPanelModificarEstLayout.setHorizontalGroup(
-                  jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                  .addGroup(jPanelModificarEstLayout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelModificarEstLayout = new javax.swing.GroupLayout(jPanelModificarEst);
+        jPanelModificarEst.setLayout(jPanelModificarEstLayout);
+        jPanelModificarEstLayout.setHorizontalGroup(
+            jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelModificarEstLayout.createSequentialGroup()
+                .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelModificarEstLayout.createSequentialGroup()
+                        .addGap(115, 115, 115)
                         .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                              .addGroup(jPanelModificarEstLayout.createSequentialGroup()
-                                    .addGap(115, 115, 115)
-                                    .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                          .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelModificarEstLayout.createSequentialGroup()
-                                                .addComponent(separador, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                      .addComponent(dniSig)
-                                                      .addComponent(emailSig)
-                                                      .addComponent(telefonoSig)
-                                                      .addComponent(apellidoSig)
-                                                      .addComponent(nombreSig))
-                                                .addGap(25, 25, 25)
-                                                .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                      .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                            .addComponent(estadoEst, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                            .addComponent(fechaEntEst, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                            .addComponent(fechaReTXT, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                      .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                            .addComponent(dniPacTXT, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                            .addComponent(matriculaTXT, javax.swing.GroupLayout.Alignment.LEADING))))
-                                          .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelModificarEstLayout.createSequentialGroup()
-                                                .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                      .addComponent(btnCancelar4, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                      .addComponent(btnConfirmarEstMod, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGap(79, 79, 79))))
-                              .addGroup(jPanelModificarEstLayout.createSequentialGroup()
-                                    .addGap(157, 157, 157)
-                                    .addComponent(jLabel1)))
-                        .addContainerGap(130, Short.MAX_VALUE))
-            );
-            jPanelModificarEstLayout.setVerticalGroup(
-                  jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                  .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelModificarEstLayout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addComponent(jLabel1)
-                        .addGap(58, 58, 58)
-                        .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                              .addGroup(jPanelModificarEstLayout.createSequentialGroup()
-                                    .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                          .addComponent(nombreSig)
-                                          .addComponent(dniPacTXT))
-                                    .addGap(18, 18, 18)
-                                    .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                          .addComponent(apellidoSig)
-                                          .addComponent(matriculaTXT))
-                                    .addGap(18, 18, 18)
-                                    .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                          .addComponent(fechaReTXT)
-                                          .addComponent(dniSig))
-                                    .addGap(14, 14, 14)
-                                    .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                          .addComponent(estadoEst, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                          .addComponent(telefonoSig))
-                                    .addGap(20, 20, 20)
-                                    .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                          .addComponent(emailSig)
-                                          .addComponent(fechaEntEst, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                              .addComponent(separador, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
-                        .addComponent(btnConfirmarEstMod)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelModificarEstLayout.createSequentialGroup()
+                                .addComponent(separador, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(dniSig)
+                                    .addComponent(emailSig)
+                                    .addComponent(telefonoSig)
+                                    .addComponent(apellidoSig)
+                                    .addComponent(nombreSig))
+                                .addGap(25, 25, 25)
+                                .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(estadoEst, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(fechaEntEst, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(fechaReTXT, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(dniPacTXT, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(matriculaTXT, javax.swing.GroupLayout.Alignment.LEADING))))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelModificarEstLayout.createSequentialGroup()
+                                .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btnCancelar4, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnConfirmarEstMod, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(79, 79, 79))))
+                    .addGroup(jPanelModificarEstLayout.createSequentialGroup()
+                        .addGap(157, 157, 157)
+                        .addComponent(jLabel1)))
+                .addContainerGap(334, Short.MAX_VALUE))
+        );
+        jPanelModificarEstLayout.setVerticalGroup(
+            jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelModificarEstLayout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(jLabel1)
+                .addGap(58, 58, 58)
+                .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelModificarEstLayout.createSequentialGroup()
+                        .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(nombreSig)
+                            .addComponent(dniPacTXT))
                         .addGap(18, 18, 18)
-                        .addComponent(btnCancelar4)
-                        .addContainerGap())
-            );
+                        .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(apellidoSig)
+                            .addComponent(matriculaTXT))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(fechaReTXT)
+                            .addComponent(dniSig))
+                        .addGap(14, 14, 14)
+                        .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(estadoEst, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(telefonoSig))
+                        .addGap(20, 20, 20)
+                        .addGroup(jPanelModificarEstLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(emailSig)
+                            .addComponent(fechaEntEst, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(separador, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                .addComponent(btnConfirmarEstMod)
+                .addGap(18, 18, 18)
+                .addComponent(btnCancelar4)
+                .addContainerGap())
+        );
 
-            getContentPane().add(jPanelModificarEst, java.awt.BorderLayout.SOUTH);
+        getContentPane().add(jPanelModificarEst, java.awt.BorderLayout.SOUTH);
 
-            pack();
-      }// </editor-fold>//GEN-END:initComponents
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
 
     private void estadoInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_estadoInputActionPerformed
         DefaultTableModel modelo = (DefaultTableModel) jTableMostrar.getModel();
@@ -646,6 +660,8 @@ public class FormularioEstudio extends javax.swing.JFrame {
             btnConfirmarEstMod.setEnabled(false);
         }     
     }
+    
+    
     
     private void btnConfirmarEstModActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmarEstModActionPerformed
         
@@ -772,27 +788,12 @@ public class FormularioEstudio extends javax.swing.JFrame {
       private void comboboxOpcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboboxOpcionActionPerformed
             int op = comboboxOpcion.getSelectedIndex();
             DefaultTableModel modelo = (DefaultTableModel) jTableMostrar.getModel();
+            btnCancelar2.setVisible(true);
+            btnCancelar2.setEnabled(true);
             switch(op){
                   case 0:
                         modelo.setRowCount(0);
-                        titulo1.setVisible(false);
-                        fechaRealtxt.setVisible(false);
-                        estadotxt.setVisible(false);
-                        estadoInput.setVisible(false);
-                        estadoInput.setEnabled(false);
-                        dniModTxt.setVisible(false);
-                        fechaRealInput.setVisible(false);
-                        fechaRealInput.setEnabled(false);
-                        matriculatxt.setVisible(false);
-                        campoDniEst.setVisible(false);
-                        campoDniEst.setEnabled(false);
-                        matProEstInput.setVisible(false);
-                        matProEstInput.setEnabled(false);
-                        buscarModEst1.setVisible(false);
-                        buscarModEst1.setEnabled(false);
-                        btnBuscarEstPro.setVisible(false);
-                        btnBuscarEstPro.setEnabled(false);
-                        ENCONTRO.setVisible(false);
+                        ocultarMostrarBuscar();
                         for (Estudio est : listaEstudios) {
                               EstudioController miEst = new EstudioController(est);
                               cargarEstudioATabla(miEst.obtenerEstudio());
@@ -800,68 +801,33 @@ public class FormularioEstudio extends javax.swing.JFrame {
                         break;
                   case 1:
                         modelo.setRowCount(0);
+                        ocultarMostrarBuscar();
                         estadotxt.setVisible(true);
                         estadoInput.setVisible(true);
                         estadoInput.setEnabled(true);
-                        titulo1.setVisible(false);
-                        fechaRealtxt.setVisible(false);
-                        dniModTxt.setVisible(false);
-                        fechaRealInput.setVisible(false);
-                        fechaRealInput.setEnabled(false);
-                        matriculatxt.setVisible(false);
-                        campoDniEst.setVisible(false);
-                        campoDniEst.setEnabled(false);
-                        matProEstInput.setVisible(false);
-                        matProEstInput.setEnabled(false);
-                        buscarModEst1.setVisible(false);
-                        buscarModEst1.setEnabled(false);
-                        btnBuscarEstPro.setVisible(false);
-                        btnBuscarEstPro.setEnabled(false);
                         break;
                   case 2:
                         modelo.setRowCount(0);
+                        ocultarMostrarBuscar();
                         fechaRealtxt.setVisible(true);
                         fechaRealInput.setVisible(true);
                         fechaRealInput.setEnabled(true);
-                        titulo1.setVisible(false);
-                        estadotxt.setVisible(false);
-                        estadoInput.setVisible(false);
-                        estadoInput.setEnabled(false);
-                        dniModTxt.setVisible(false);
-                        matriculatxt.setVisible(false);
-                        campoDniEst.setVisible(false);
-                        campoDniEst.setEnabled(false);
-                        matProEstInput.setVisible(false);
-                        matProEstInput.setEnabled(false);
-                        buscarModEst1.setVisible(false);
-                        buscarModEst1.setEnabled(false);
-                        btnBuscarEstPro.setVisible(false);
-                        btnBuscarEstPro.setEnabled(false);
-                        ENCONTRO.setVisible(false);
                         break;
                   case 3:
                         modelo.setRowCount(0);
+                        ocultarMostrarBuscar();
                         matriculatxt.setVisible(true);
                         matProEstInput.setVisible(true);
                         matProEstInput.setEnabled(true);
                         btnBuscarEstPro.setVisible(true);
                         btnBuscarEstPro.setEnabled(true);
-                        titulo1.setVisible(false);
-                        fechaRealtxt.setVisible(false);
-                        estadotxt.setVisible(false);
-                        estadoInput.setVisible(false);
-                        estadoInput.setEnabled(false);
-                        dniModTxt.setVisible(false);
-                        fechaRealInput.setVisible(false);
-                        fechaRealInput.setEnabled(false);
-                        campoDniEst.setVisible(false);
-                        campoDniEst.setEnabled(false);
-                        buscarModEst1.setVisible(false);
-                        buscarModEst1.setEnabled(false);
-                        ENCONTRO.setVisible(false);
                         
             }
       }//GEN-LAST:event_comboboxOpcionActionPerformed
+
+    private void btnCancelar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelar2ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnCancelar2ActionPerformed
 
     
     public class RenderAnalisis extends JTextArea implements TableCellRenderer {
@@ -882,38 +848,39 @@ public class FormularioEstudio extends javax.swing.JFrame {
     }
 }
 
-      // Variables declaration - do not modify//GEN-BEGIN:variables
-      private javax.swing.JLabel ENCONTRO;
-      private javax.swing.JLabel apellidoSig;
-      private javax.swing.JButton btnBuscarEstPro;
-      private javax.swing.JButton btnCancelar4;
-      private javax.swing.JButton btnConfirmarEstMod;
-      private javax.swing.JButton buscarModEst1;
-      private javax.swing.JTextField campoDniEst;
-      private javax.swing.JComboBox<String> comboboxOpcion;
-      private javax.swing.JLabel dniModTxt;
-      private javax.swing.JLabel dniPacTXT;
-      private javax.swing.JLabel dniSig;
-      private javax.swing.JLabel emailSig;
-      private javax.swing.JComboBox<String> estadoEst;
-      private javax.swing.JComboBox<String> estadoInput;
-      private javax.swing.JLabel estadotxt;
-      private javax.swing.JSpinner fechaEntEst;
-      private javax.swing.JLabel fechaReTXT;
-      private javax.swing.JSpinner fechaRealInput;
-      private javax.swing.JLabel fechaRealtxt;
-      private javax.swing.JLabel jLabel1;
-      private javax.swing.JPanel jPanelModificarEst;
-      private javax.swing.JPanel jPanelMostrarBuscar;
-      private javax.swing.JScrollPane jScrollPane2;
-      private javax.swing.JSeparator jSeparator1;
-      private javax.swing.JTable jTableMostrar;
-      private javax.swing.JTextField matProEstInput;
-      private javax.swing.JLabel matriculaTXT;
-      private javax.swing.JLabel matriculatxt;
-      private javax.swing.JLabel nombreSig;
-      private javax.swing.JSeparator separador;
-      private javax.swing.JLabel telefonoSig;
-      private javax.swing.JLabel titulo1;
-      // End of variables declaration//GEN-END:variables
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel ENCONTRO;
+    private javax.swing.JLabel apellidoSig;
+    private javax.swing.JButton btnBuscarEstPro;
+    private javax.swing.JButton btnCancelar2;
+    private javax.swing.JButton btnCancelar4;
+    private javax.swing.JButton btnConfirmarEstMod;
+    private javax.swing.JButton buscarModEst1;
+    private javax.swing.JTextField campoDniEst;
+    private javax.swing.JComboBox<String> comboboxOpcion;
+    private javax.swing.JLabel dniModTxt;
+    private javax.swing.JLabel dniPacTXT;
+    private javax.swing.JLabel dniSig;
+    private javax.swing.JLabel emailSig;
+    private javax.swing.JComboBox<String> estadoEst;
+    private javax.swing.JComboBox<String> estadoInput;
+    private javax.swing.JLabel estadotxt;
+    private javax.swing.JSpinner fechaEntEst;
+    private javax.swing.JLabel fechaReTXT;
+    private javax.swing.JSpinner fechaRealInput;
+    private javax.swing.JLabel fechaRealtxt;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanelModificarEst;
+    private javax.swing.JPanel jPanelMostrarBuscar;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTable jTableMostrar;
+    private javax.swing.JTextField matProEstInput;
+    private javax.swing.JLabel matriculaTXT;
+    private javax.swing.JLabel matriculatxt;
+    private javax.swing.JLabel nombreSig;
+    private javax.swing.JSeparator separador;
+    private javax.swing.JLabel telefonoSig;
+    private javax.swing.JLabel titulo1;
+    // End of variables declaration//GEN-END:variables
 }
