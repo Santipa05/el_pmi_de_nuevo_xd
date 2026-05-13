@@ -767,28 +767,32 @@ public class FormularioCarga extends javax.swing.JFrame {
       //evitando que se superpongan
       
       public void metAux(int op){
-            if(op == 0){
-                  PanelCargaPac.setVisible(true);
-                  PanelCargaPac.setEnabled(true);
-                  PanelCargaPro.setVisible(false);
-                  PanelCargaPro.setEnabled(false);
-                  PanelCargaEst.setVisible(false);
-                  PanelCargaEst.setEnabled(false);
-            } else if(op == 1){
-                  PanelCargaPro.setVisible(true);
-                  PanelCargaPro.setEnabled(true);
-                  PanelCargaPac.setVisible(false);
-                  PanelCargaPac.setEnabled(false);
-                  PanelCargaEst.setVisible(false);
-                  PanelCargaEst.setEnabled(false);
-            } else{
-                  PanelCargaEst.setVisible(true);
-                  PanelCargaEst.setEnabled(true);
-                  PanelCargaPro.setVisible(false);
-                  PanelCargaPro.setEnabled(false);
-                  PanelCargaPac.setVisible(false);
-                  PanelCargaPac.setEnabled(false);
-            }
+          switch (op) {
+                case 0:
+                      PanelCargaPac.setVisible(true);
+                      PanelCargaPac.setEnabled(true);
+                      PanelCargaPro.setVisible(false);
+                      PanelCargaPro.setEnabled(false);
+                      PanelCargaEst.setVisible(false);
+                      PanelCargaEst.setEnabled(false);
+                      break;
+                case 1:
+                      PanelCargaPro.setVisible(true);
+                      PanelCargaPro.setEnabled(true);
+                      PanelCargaPac.setVisible(false);
+                      PanelCargaPac.setEnabled(false);
+                      PanelCargaEst.setVisible(false);
+                      PanelCargaEst.setEnabled(false);
+                      break;
+                default:
+                      PanelCargaEst.setVisible(true);
+                      PanelCargaEst.setEnabled(true);
+                      PanelCargaPro.setVisible(false);
+                      PanelCargaPro.setEnabled(false);
+                      PanelCargaPac.setVisible(false);
+                      PanelCargaPac.setEnabled(false);
+                      break;
+          }
             this.revalidate();
             this.repaint();
       }
@@ -952,8 +956,8 @@ public class FormularioCarga extends javax.swing.JFrame {
                   JOptionPane.showMessageDialog(this, "Error al abrir el archivo. " + e.getMessage());
             }
                 JOptionPane.showMessageDialog(this, "Profesional cargado correctamente");
+                this.dispose();
             }
-            this.dispose();
         }
     }//GEN-LAST:event_btnGuardarProfesionalActionPerformed
 
