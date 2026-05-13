@@ -327,7 +327,8 @@ public class FormularioEliminar extends javax.swing.JFrame {
         if (encontro == false){
             if (mapaPersonas.containsKey(dniBusqueda) && (mapaPersonas.get(dniBusqueda) instanceof Paciente)){
                 Object[] opciones = {"Eliminar", "Cancelar"};
-                int seleccion = javax.swing.JOptionPane.showOptionDialog(this,"Esta seguro que desea eliminar al paciente?\n", "Eliminar", javax.swing.JOptionPane.DEFAULT_OPTION, javax.swing.JOptionPane.QUESTION_MESSAGE, null, opciones, opciones[0]);
+                int seleccion = javax.swing.JOptionPane.showOptionDialog(this,"Esta seguro que desea eliminar al paciente?\n", "Eliminar", 
+                        javax.swing.JOptionPane.DEFAULT_OPTION, javax.swing.JOptionPane.QUESTION_MESSAGE, null, opciones, opciones[0]);
                 if(seleccion == 0){
                     mapaPersonas.remove(dniBusqueda);
                     actualizarArchivoGeneral();
@@ -354,7 +355,8 @@ public class FormularioEliminar extends javax.swing.JFrame {
         String dniBusqueda = matProEliminarTxt.getText();
         if (mapaPersonas.containsKey(dniBusqueda) && (mapaPersonas.get(dniBusqueda) instanceof Profesional)){
               Object[] opciones = {"Eliminar", "Cancelar"};
-            int seleccion = javax.swing.JOptionPane.showOptionDialog(this,"Esta seguro que desea eliminar el profesional?\n", "Eliminar", javax.swing.JOptionPane.DEFAULT_OPTION, javax.swing.JOptionPane.QUESTION_MESSAGE, null, opciones, opciones[0]);
+            int seleccion = javax.swing.JOptionPane.showOptionDialog(this,"Esta seguro que desea eliminar el profesional?\n", "Eliminar", 
+                    javax.swing.JOptionPane.DEFAULT_OPTION, javax.swing.JOptionPane.QUESTION_MESSAGE, null, opciones, opciones[0]);
             if(seleccion == 0){
                 mapaPersonas.remove(dniBusqueda);
                 actualizarArchivoGeneral();
@@ -367,7 +369,8 @@ public class FormularioEliminar extends javax.swing.JFrame {
                 EstudioController miEst = new EstudioController(e);
                 if (miEst.muestraMatriculaProfesional().equals(matBusqueda)){
                 JOptionPane.showMessageDialog(this, "No es posible eliminar un profesional que posea estudios.");
-                encontro = true;break;
+                encontro = true;
+                break;
                 }
             }
         if (encontro == false){
@@ -376,19 +379,20 @@ public class FormularioEliminar extends javax.swing.JFrame {
                     ProfesionalController miPro = new ProfesionalController(pro);
                     if(miPro.muestraMatricula().equals(matBusqueda)){
                         Object[] opcion = {"Eliminar", "Cancelar"};
-                        int selecciones = javax.swing.JOptionPane.showOptionDialog(this,"Esta seguro que desea eliminar al paciente?\n", "Eliminar", javax.swing.JOptionPane.DEFAULT_OPTION, javax.swing.JOptionPane.QUESTION_MESSAGE, null, opcion, opcion[0]);
+                        int selecciones = javax.swing.JOptionPane.showOptionDialog(this,"Esta seguro que desea eliminar al paciente?\n", "Eliminar", 
+                                javax.swing.JOptionPane.DEFAULT_OPTION, javax.swing.JOptionPane.QUESTION_MESSAGE, null, opcion, opcion[0]);
                         if(selecciones == 0){
                             mapaPersonas.remove(miPro.muestraDni());
                             actualizarArchivoGeneral();
                             JOptionPane.showMessageDialog(this, "Profesional eliminado correctamente.");
                         }
                         } else{
-                            JOptionPane.showMessageDialog(this, "Profesional no encontrado.");
-                            matProEliminarTxt.setText("");
                     }
                     }
                 }
             }   
+                 JOptionPane.showMessageDialog(this, "Profesional no encontrado.");
+                 matProEliminarTxt.setText("");
         }
     }//GEN-LAST:event_btnEliminarProActionPerformed
 
