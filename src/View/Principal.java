@@ -460,6 +460,7 @@ public class Principal extends javax.swing.JFrame{
       }//GEN-LAST:event_menuEstudioActionPerformed
 
       private void togglePacActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_togglePacActionPerformed
+                  togglePac.setSelected(true);
                   togglePro.setSelected(false);
                   toggleEst.setSelected(false);
                   menuPaciente.setVisible(true);
@@ -471,6 +472,7 @@ public class Principal extends javax.swing.JFrame{
       }//GEN-LAST:event_togglePacActionPerformed
 
       private void toggleProActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleProActionPerformed
+                  togglePro.setSelected(true);
                   togglePac.setSelected(false);
                   toggleEst.setSelected(false);
                   menuProfesional.setVisible(true);
@@ -482,6 +484,7 @@ public class Principal extends javax.swing.JFrame{
       }//GEN-LAST:event_toggleProActionPerformed
 
       private void toggleEstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleEstActionPerformed
+                  toggleEst.setSelected(true);
                   togglePac.setSelected(false);
                   togglePro.setSelected(false);
                   menuEstudio.setVisible(true);

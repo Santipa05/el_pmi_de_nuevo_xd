@@ -17,7 +17,6 @@ public class PMI {
           });
       }
       //Los estudios posibles
-      
       public static void cargarCatalogoAnalisis(){
           catalogoAnalisis.put(0, "Hemograma Completo");
           catalogoAnalisis.put(1, "Glucemia");

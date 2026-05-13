@@ -1053,6 +1053,11 @@ public class FormularioCarga extends javax.swing.JFrame {
                   evt.consume();
                   java.awt.Toolkit.getDefaultToolkit().beep();
             }
+            int limite = 8;
+            if(dniPacEst.getText().length() >= limite){
+                  evt.consume();
+                  java.awt.Toolkit.getDefaultToolkit().beep();
+            }
       }//GEN-LAST:event_dniPacEstKeyTyped
 
       private void matProEstKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_matProEstKeyTyped
@@ -1082,6 +1087,11 @@ public class FormularioCarga extends javax.swing.JFrame {
       private void dniProtxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_dniProtxtKeyTyped
              char c = evt.getKeyChar();
             if(!Character.isDigit(c) && c != java.awt.event.KeyEvent.VK_BACK_SPACE){
+                  evt.consume();
+                  java.awt.Toolkit.getDefaultToolkit().beep();
+            }
+            int limite = 8;
+            if(dnitxt.getText().length() >= limite){
                   evt.consume();
                   java.awt.Toolkit.getDefaultToolkit().beep();
             }
@@ -1115,6 +1125,11 @@ public class FormularioCarga extends javax.swing.JFrame {
       private void dnitxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_dnitxtKeyTyped
             char c = evt.getKeyChar();
             if(!Character.isDigit(c) && c != java.awt.event.KeyEvent.VK_BACK_SPACE){
+                  evt.consume();
+                  java.awt.Toolkit.getDefaultToolkit().beep();
+            }
+            int limite = 8;
+            if(dnitxt.getText().length() >= limite){
                   evt.consume();
                   java.awt.Toolkit.getDefaultToolkit().beep();
             }

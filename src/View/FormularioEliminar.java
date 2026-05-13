@@ -400,6 +400,11 @@ public class FormularioEliminar extends javax.swing.JFrame {
                   evt.consume();
                   java.awt.Toolkit.getDefaultToolkit().beep();
             }
+            int limite = 8;
+            if(dniPacEliminarTxt.getText().length() >= limite){
+                  evt.consume();
+                  java.awt.Toolkit.getDefaultToolkit().beep();
+            }
       }//GEN-LAST:event_dniPacEliminarTxtKeyTyped
 
       private void matProEliminarTxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_matProEliminarTxtKeyTyped
