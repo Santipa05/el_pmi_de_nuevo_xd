@@ -23,6 +23,7 @@ public class Principal extends javax.swing.JFrame{
     private ArrayList<Estudio> listaEstudios;
     private HashMap <String, Persona> mapaPersonas;
 
+    //constructor vacio
     public Principal() {
         initComponents();
         this.mapaPersonas = new HashMap<String, Persona>();
