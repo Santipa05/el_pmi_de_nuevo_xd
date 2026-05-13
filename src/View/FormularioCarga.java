@@ -952,8 +952,8 @@ public class FormularioCarga extends javax.swing.JFrame {
                   JOptionPane.showMessageDialog(this, "Error al abrir el archivo. " + e.getMessage());
             }
                 JOptionPane.showMessageDialog(this, "Profesional cargado correctamente");
+                this.dispose();
             }
-            this.dispose();
         }
     }//GEN-LAST:event_btnGuardarProfesionalActionPerformed
 
