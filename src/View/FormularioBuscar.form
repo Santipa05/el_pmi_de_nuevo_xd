@@ -506,27 +506,27 @@
                               <Component id="nombreSig1" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="nombreTXT1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace pref="20" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="apellidoSig1" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="apellidoTXT1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="dniSig1" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="dniTXT1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="telefonoSig1" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="modTelInput1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="modMailInput1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="emailSig1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="emailSig1" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="modMailInput1" alignment="1" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="matMod" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="matriculaTXT1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -538,7 +538,7 @@
                   <Component id="confirmarProbtn" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="cancelarProbtn" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="182" max="32767" attributes="0"/>
+                  <EmptySpace pref="180" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -975,8 +975,8 @@
                     <Column editable="false" title="Nombre" type="java.lang.String"/>
                     <Column editable="false" title="Apellido" type="java.lang.String"/>
                     <Column editable="false" title="DNI" type="java.lang.String"/>
-                    <Column editable="false" title="Email" type="java.lang.String"/>
                     <Column editable="false" title="Telefono" type="java.lang.String"/>
+                    <Column editable="false" title="Email" type="java.lang.String"/>
                     <Column editable="false" title="Obra social" type="java.lang.String"/>
                     <Column editable="false" title="Estudios" type="java.lang.Integer"/>
                   </Table>

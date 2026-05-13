@@ -14,7 +14,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
@@ -194,7 +193,6 @@ public class Principal extends javax.swing.JFrame{
       private void initComponents() {
 
             Principal = new javax.swing.JPanel();
-            menuOpciones = new javax.swing.JComboBox<>();
             menuPaciente = new javax.swing.JComboBox<>();
             menuProfesional = new javax.swing.JComboBox<>();
             menuEstudio = new javax.swing.JComboBox<>();
@@ -202,7 +200,10 @@ public class Principal extends javax.swing.JFrame{
             btnConfirmarMenu = new javax.swing.JButton();
             jLabel1 = new javax.swing.JLabel();
             btnSalir = new javax.swing.JButton();
-            jPanel1 = new FondoPanel();
+            jPanelFondo = new FondoPanel();
+            togglePac = new javax.swing.JToggleButton();
+            togglePro = new javax.swing.JToggleButton();
+            toggleEst = new javax.swing.JToggleButton();
 
             setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
             setBounds(new java.awt.Rectangle(0, 0, 600, 100));
@@ -211,20 +212,6 @@ public class Principal extends javax.swing.JFrame{
 
             Principal.setBackground(new java.awt.Color(153, 204, 255));
             Principal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-            menuOpciones.setBackground(new java.awt.Color(0, 102, 153));
-            menuOpciones.setForeground(new java.awt.Color(255, 255, 255));
-            menuOpciones.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Paciente", "Profesional", "Estudio" }));
-            menuOpciones.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-            menuOpciones.setMaximumSize(new java.awt.Dimension(167, 26));
-            menuOpciones.setMinimumSize(new java.awt.Dimension(167, 26));
-            menuOpciones.setPreferredSize(new java.awt.Dimension(167, 26));
-            menuOpciones.addActionListener(new java.awt.event.ActionListener() {
-                  public void actionPerformed(java.awt.event.ActionEvent evt) {
-                        menuOpcionesActionPerformed(evt);
-                  }
-            });
-            Principal.add(menuOpciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 110, 200, 30));
 
             menuPaciente.setBackground(new java.awt.Color(0, 102, 153));
             menuPaciente.setForeground(new java.awt.Color(255, 255, 255));
@@ -302,7 +289,62 @@ public class Principal extends javax.swing.JFrame{
                   }
             });
             Principal.add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 370, 190, -1));
-            Principal.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 500));
+
+            togglePac.setBackground(new java.awt.Color(0, 102, 204));
+            togglePac.setFont(new java.awt.Font("Nirmala UI", 1, 20)); // NOI18N
+            togglePac.setForeground(new java.awt.Color(0, 0, 0));
+            togglePac.setText("PACIENTE");
+            togglePac.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        togglePacActionPerformed(evt);
+                  }
+            });
+
+            togglePro.setBackground(new java.awt.Color(0, 102, 204));
+            togglePro.setFont(new java.awt.Font("Nirmala UI", 1, 20)); // NOI18N
+            togglePro.setForeground(new java.awt.Color(0, 0, 0));
+            togglePro.setText("PROFESIONAL");
+            togglePro.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        toggleProActionPerformed(evt);
+                  }
+            });
+
+            toggleEst.setBackground(new java.awt.Color(0, 102, 204));
+            toggleEst.setFont(new java.awt.Font("Nirmala UI", 1, 20)); // NOI18N
+            toggleEst.setForeground(new java.awt.Color(0, 0, 0));
+            toggleEst.setText("ESTUDIO");
+            toggleEst.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        toggleEstActionPerformed(evt);
+                  }
+            });
+
+            javax.swing.GroupLayout jPanelFondoLayout = new javax.swing.GroupLayout(jPanelFondo);
+            jPanelFondo.setLayout(jPanelFondoLayout);
+            jPanelFondoLayout.setHorizontalGroup(
+                  jPanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                  .addGroup(jPanelFondoLayout.createSequentialGroup()
+                        .addGap(75, 75, 75)
+                        .addComponent(togglePac)
+                        .addGap(18, 18, 18)
+                        .addComponent(togglePro)
+                        .addGap(18, 18, 18)
+                        .addComponent(toggleEst)
+                        .addContainerGap(96, Short.MAX_VALUE))
+            );
+            jPanelFondoLayout.setVerticalGroup(
+                  jPanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                  .addGroup(jPanelFondoLayout.createSequentialGroup()
+                        .addGap(137, 137, 137)
+                        .addGroup(jPanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                              .addComponent(togglePac, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                              .addComponent(togglePro, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                              .addComponent(toggleEst, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(294, Short.MAX_VALUE))
+            );
+
+            Principal.add(jPanelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 500));
 
             getContentPane().add(Principal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 500));
 
@@ -314,8 +356,21 @@ public class Principal extends javax.swing.JFrame{
       }//GEN-LAST:event_menuProfesionalActionPerformed
 
       private void btnConfirmarMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmarMenuActionPerformed
-        String caso, op = menuOpciones.getItemAt(menuOpciones.getSelectedIndex());
-        int opcion = menuOpciones.getSelectedIndex();
+        String caso, op;
+        int opcion;
+        if(togglePac.isSelected()){
+              op = "Paciente";
+              opcion = 0;
+        }
+        else if(togglePro.isSelected()){
+              op = "Profesional";
+              opcion = 1;
+        }
+        else{
+              op = "Estudio";
+              opcion = 2;
+        }
+        
         
         //Esto es para que la ventana de los formularios cambie segun
         //que se quiere cargar, sea paciente, profesional o estudio
@@ -391,38 +446,6 @@ public class Principal extends javax.swing.JFrame{
           
       }//GEN-LAST:event_btnConfirmarMenuActionPerformed
 
-      private void menuOpcionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuOpcionesActionPerformed
-            int op = menuOpciones.getSelectedIndex();
-            switch (op){
-                  case 0:
-                  menuPaciente.setVisible(true);
-                  menuPaciente.setEnabled(true);
-                  menuEstudio.setVisible(false);
-                  menuEstudio.setEnabled(false);
-                  menuProfesional.setVisible(false);
-                  menuProfesional.setEnabled(false);
-                  break;
-                  case 1:
-                  menuProfesional.setVisible(true);
-                  menuProfesional.setEnabled(true);
-                  menuEstudio.setVisible(false);
-                  menuEstudio.setEnabled(false);
-                  menuPaciente.setVisible(false);
-                  menuPaciente.setEnabled(false);
-                  break;
-                  case 2:
-                  menuEstudio.setVisible(true);
-                  menuEstudio.setEnabled(true);
-                  menuPaciente.setVisible(false);
-                  menuPaciente.setEnabled(false);
-                  menuProfesional.setVisible(false);
-                  menuProfesional.setEnabled(false);
-                  break;
-            }
-            this.revalidate();
-            this.repaint();
-      }//GEN-LAST:event_menuOpcionesActionPerformed
-
       private void menuPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPacienteActionPerformed
 
       }//GEN-LAST:event_menuPacienteActionPerformed
@@ -442,17 +465,52 @@ public class Principal extends javax.swing.JFrame{
             // TODO add your handling code here:
       }//GEN-LAST:event_menuEstudioActionPerformed
 
+      private void togglePacActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_togglePacActionPerformed
+                  togglePro.setSelected(false);
+                  toggleEst.setSelected(false);
+                  menuPaciente.setVisible(true);
+                  menuPaciente.setEnabled(true);
+                  menuEstudio.setVisible(false);
+                  menuEstudio.setEnabled(false);
+                  menuProfesional.setVisible(false);
+                  menuProfesional.setEnabled(false);
+      }//GEN-LAST:event_togglePacActionPerformed
+
+      private void toggleProActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleProActionPerformed
+                  togglePac.setSelected(false);
+                  toggleEst.setSelected(false);
+                  menuProfesional.setVisible(true);
+                  menuProfesional.setEnabled(true);
+                  menuEstudio.setVisible(false);
+                  menuEstudio.setEnabled(false);
+                  menuPaciente.setVisible(false);
+                  menuPaciente.setEnabled(false);
+      }//GEN-LAST:event_toggleProActionPerformed
+
+      private void toggleEstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleEstActionPerformed
+                  togglePac.setSelected(false);
+                  togglePro.setSelected(false);
+                  menuEstudio.setVisible(true);
+                  menuEstudio.setEnabled(true);
+                  menuPaciente.setVisible(false);
+                  menuPaciente.setEnabled(false);
+                  menuProfesional.setVisible(false);
+                  menuProfesional.setEnabled(false);
+      }//GEN-LAST:event_toggleEstActionPerformed
+
 
       // Variables declaration - do not modify//GEN-BEGIN:variables
       private javax.swing.JPanel Principal;
       private javax.swing.JButton btnConfirmarMenu;
       private javax.swing.JButton btnSalir;
       private javax.swing.JLabel jLabel1;
-      private javax.swing.JPanel jPanel1;
+      private javax.swing.JPanel jPanelFondo;
       private javax.swing.JComboBox<String> menuEstudio;
-      private javax.swing.JComboBox<String> menuOpciones;
       private javax.swing.JComboBox<String> menuPaciente;
       private javax.swing.JComboBox<String> menuProfesional;
+      private javax.swing.JToggleButton toggleEst;
+      private javax.swing.JToggleButton togglePac;
+      private javax.swing.JToggleButton togglePro;
       private javax.swing.JLabel txtPrincipal;
       // End of variables declaration//GEN-END:variables
 

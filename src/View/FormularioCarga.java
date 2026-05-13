@@ -18,6 +18,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.FileNotFoundException;
+import javax.swing.ImageIcon;
 
 public class FormularioCarga extends javax.swing.JFrame {
 
@@ -28,6 +29,7 @@ public class FormularioCarga extends javax.swing.JFrame {
       public FormularioCarga() {
             this.setContentPane(fondo);
             initComponents();
+            setIconImage(new ImageIcon(getClass().getResource("/imagenes/unnamed.png")).getImage());
             setLocationRelativeTo(null);
             LocalDate fechaRe = LocalDate.now();
             DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
@@ -238,33 +240,32 @@ public class FormularioCarga extends javax.swing.JFrame {
             PanelCargaPacLayout.setHorizontalGroup(
                   PanelCargaPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                   .addGroup(PanelCargaPacLayout.createSequentialGroup()
-                        .addContainerGap(20, Short.MAX_VALUE)
-                        .addGroup(PanelCargaPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                              .addComponent(jLabel1)
-                              .addGroup(PanelCargaPacLayout.createSequentialGroup()
-                                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(PanelCargaPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                          .addComponent(jLabel5)
-                                          .addComponent(jLabel6)
-                                          .addComponent(jLabel4)
-                                          .addComponent(jLabel2)
-                                          .addComponent(jLabel3))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addGroup(PanelCargaPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                          .addComponent(mailtxtPac)
-                                          .addComponent(telefonotxtPac)
-                                          .addComponent(dnitxt)
-                                          .addComponent(apellidotxtPac)
-                                          .addComponent(nombretxtPac, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                          .addComponent(obSoc))))
-                        .addGap(108, 108, 108))
-                  .addGroup(PanelCargaPacLayout.createSequentialGroup()
                         .addGap(126, 126, 126)
                         .addGroup(PanelCargaPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                               .addComponent(btnCancelar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                               .addComponent(btnGuardarPaciente, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE))
                         .addContainerGap(143, Short.MAX_VALUE))
+                  .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCargaPacLayout.createSequentialGroup()
+                        .addContainerGap(20, Short.MAX_VALUE)
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(PanelCargaPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                              .addComponent(jLabel5)
+                              .addComponent(jLabel6)
+                              .addComponent(jLabel4)
+                              .addComponent(jLabel2)
+                              .addComponent(jLabel3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(PanelCargaPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                              .addComponent(jLabel1)
+                              .addGroup(PanelCargaPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(mailtxtPac)
+                                    .addComponent(telefonotxtPac)
+                                    .addComponent(dnitxt)
+                                    .addComponent(apellidotxtPac)
+                                    .addComponent(nombretxtPac, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(obSoc)))
+                        .addGap(108, 108, 108))
             );
             PanelCargaPacLayout.setVerticalGroup(
                   PanelCargaPacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -721,7 +722,7 @@ public class FormularioCarga extends javax.swing.JFrame {
                         .addComponent(btnCargarEstudio)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnCancelar3)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap(20, Short.MAX_VALUE))
             );
 
             javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -952,6 +953,7 @@ public class FormularioCarga extends javax.swing.JFrame {
             }
                 JOptionPane.showMessageDialog(this, "Profesional cargado correctamente");
             }
+            this.dispose();
         }
     }//GEN-LAST:event_btnGuardarProfesionalActionPerformed
 
@@ -1006,6 +1008,7 @@ public class FormularioCarga extends javax.swing.JFrame {
             miEstudio.colocarAnalisisRealizados(idsAnalisis);
             //Finalmente guardamos el estudio en la lista global
             listaEstudios.add(miEstudio.obtenerEstudio());
+            JOptionPane.showMessageDialog(this, "Estudio cargado correctamente");
             
             try(BufferedWriter escritor = new BufferedWriter(new FileWriter("archivos/archivoEstudios.txt", true))){
                   escritor.append(dniPacEst.getText() + "\n");

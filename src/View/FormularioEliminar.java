@@ -12,6 +12,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 public class FormularioEliminar extends javax.swing.JFrame {
@@ -23,6 +24,7 @@ public class FormularioEliminar extends javax.swing.JFrame {
       public FormularioEliminar() {
             this.setContentPane(fondo);
             initComponents();
+            setIconImage(new ImageIcon(getClass().getResource("/imagenes/unnamed.png")).getImage());
             setLocationRelativeTo(null);
       }
 
@@ -215,7 +217,7 @@ public class FormularioEliminar extends javax.swing.JFrame {
 
             jLabel6.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
             jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-            jLabel6.setText("Matricula");
+            jLabel6.setText("DNI");
 
             jSeparator3.setBackground(new java.awt.Color(153, 204, 255));
             jSeparator3.setForeground(new java.awt.Color(102, 102, 102));
@@ -259,7 +261,7 @@ public class FormularioEliminar extends javax.swing.JFrame {
                                                 .addGroup(jPanelEliminarProfesionalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                                       .addComponent(btnEliminarPro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                       .addComponent(btnCancelar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                                    .addContainerGap(62, Short.MAX_VALUE))
+                                    .addContainerGap(78, Short.MAX_VALUE))
                               .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelEliminarProfesionalLayout.createSequentialGroup()
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jLabel3)
@@ -380,7 +382,10 @@ public class FormularioEliminar extends javax.swing.JFrame {
                             actualizarArchivoGeneral();
                             JOptionPane.showMessageDialog(this, "Profesional eliminado correctamente.");
                         }
-                        }
+                        } else{
+                            JOptionPane.showMessageDialog(this, "Profesional no encontrado.");
+                            matProEliminarTxt.setText("");
+                    }
                     }
                 }
             }   

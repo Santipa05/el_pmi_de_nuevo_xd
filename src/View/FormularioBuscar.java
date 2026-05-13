@@ -14,6 +14,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -28,6 +29,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
       public FormularioBuscar() {
           this.setContentPane(fondo);
           initComponents();
+          setIconImage(new ImageIcon(getClass().getResource("/imagenes/unnamed.png")).getImage());
           jScrollPane1.setOpaque(false);
           jScrollPane1.getViewport().setOpaque(false);
           jTableMostrar.setOpaque(false);
@@ -40,8 +42,8 @@ public class FormularioBuscar extends javax.swing.JFrame {
           jScrollPane1.setViewportBorder(null);
           jScrollPane1.setOpaque(false);
           jScrollPane1.getViewport().setOpaque(false);
-          jTableMostrar.getColumnModel().getColumn(3).setPreferredWidth(200);
-          jTableMostrar.getColumnModel().getColumn(4).setPreferredWidth(100);
+          jTableMostrar.getColumnModel().getColumn(3).setPreferredWidth(100);
+          jTableMostrar.getColumnModel().getColumn(4).setPreferredWidth(200);
           jTableMostrar.getColumnModel().getColumn(0).setPreferredWidth(100);
           jTableMostrarPro.setFillsViewportHeight(true);
           jScrollPane2.setBackground(cel);
@@ -600,23 +602,23 @@ public class FormularioBuscar extends javax.swing.JFrame {
                                     .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                           .addComponent(nombreSig1)
                                           .addComponent(nombreTXT1))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                                     .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                           .addComponent(apellidoSig1)
                                           .addComponent(apellidoTXT1))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGap(18, 18, 18)
                                     .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                           .addComponent(dniSig1)
                                           .addComponent(dniTXT1))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGap(18, 18, 18)
                                     .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                           .addComponent(telefonoSig1)
                                           .addComponent(modTelInput1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                          .addComponent(modMailInput1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                          .addComponent(emailSig1))
-                                    .addGap(2, 2, 2)
+                                    .addGap(18, 18, 18)
+                                    .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                          .addComponent(emailSig1, javax.swing.GroupLayout.Alignment.TRAILING)
+                                          .addComponent(modMailInput1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGap(18, 18, 18)
                                     .addGroup(jPanelModificarProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                           .addComponent(matMod)
                                           .addComponent(matriculaTXT1)))
@@ -625,7 +627,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
                         .addComponent(confirmarProbtn)
                         .addGap(18, 18, 18)
                         .addComponent(cancelarProbtn)
-                        .addContainerGap(182, Short.MAX_VALUE))
+                        .addContainerGap(180, Short.MAX_VALUE))
             );
 
             getContentPane().add(jPanelModificarPro, "card6");
@@ -695,7 +697,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
                         {null, null, null, null, null, null, null}
                   },
                   new String [] {
-                        "Nombre", "Apellido", "DNI", "Email", "Telefono", "Obra social", "Estudios"
+                        "Nombre", "Apellido", "DNI", "Telefono", "Email", "Obra social", "Estudios"
                   }
             ) {
                   Class[] types = new Class [] {
@@ -1352,6 +1354,9 @@ public class FormularioBuscar extends javax.swing.JFrame {
 
       private void buscarPorDniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarPorDniActionPerformed
             String dniBusqueda = dnitxt.getText();
+            verTodos.setSelected(false);
+            verConObSoc.setSelected(false);
+            verSinObSoc.setSelected(false);
             DefaultTableModel modelo = (DefaultTableModel) jTableMostrar.getModel();
             modelo.setRowCount(0);
              if (buscarPacDni(dniBusqueda)){
@@ -1400,6 +1405,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
 
       private void buscarProMatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarProMatActionPerformed
             String matIngresada = mattxt.getText();
+            verTodosPro.setSelected(false);
             DefaultTableModel modelo = (DefaultTableModel) jTableMostrarPro.getModel();
             modelo.setRowCount(0);
         boolean encontro = false;
@@ -1416,7 +1422,7 @@ public class FormularioBuscar extends javax.swing.JFrame {
         if (encontro == false){
             JOptionPane.showMessageDialog(this, "No se encontro profesional con matricula -" + matIngresada + "-");
         }
-        dnitxt.setText("");
+        mattxt.setText("");
       }//GEN-LAST:event_buscarProMatActionPerformed
 
       private void mattxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mattxtActionPerformed
