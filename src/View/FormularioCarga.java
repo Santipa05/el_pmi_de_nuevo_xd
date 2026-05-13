@@ -796,33 +796,33 @@ public class FormularioCarga extends javax.swing.JFrame {
       
       private boolean validarDatosBase(String nombre, String apellido, String dni, String email, String telefono) {
         //Control campos vacios
-        if (nombre.isEmpty() || apellido.isEmpty() || telefono.isEmpty() || email.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "No pueden haber campos vacios.");
+        if (nombre.isEmpty() || apellido.isEmpty() || telefono.isEmpty() || email.isEmpty() || dni.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "-No pueden haber campos vacios-");
             return false;
         }
         //Control de formato de email
         if (!email.contains("@")) {
-            JOptionPane.showMessageDialog(this, "El email debe contener '@' ");
+            JOptionPane.showMessageDialog(this, "-El email debe contener '@'-");
             return false;
         }
         if (email.contains(" ")) {
-            JOptionPane.showMessageDialog(this, "El email no puede contener espacios");
+            JOptionPane.showMessageDialog(this, "-El email no puede contener espacios-");
             return false;
         }
         //Control de DNI (Clave unica en el mapa)
         if (mapaPersonas.containsKey(dni)) {
-            JOptionPane.showMessageDialog(this, "Error: El DNI ya se encuentra registrado en el sistema.");
+            JOptionPane.showMessageDialog(this, "-El DNI ya se encuentra registrado en el sistema-");
             return false;
         }
         //Control de Teléfono y Email
         for (Persona p : mapaPersonas.values()) {
             PersonaController pc = new PersonaController(p);
             if (pc.muestraTelefono().equals(telefono)) {
-                JOptionPane.showMessageDialog(this, "Error: El teléfono ya pertenece a otro usuario.");
+                JOptionPane.showMessageDialog(this, "-El teléfono ya pertenece a otro usuario-");
                 return false;
             }
             if (pc.muestraMail().equalsIgnoreCase(email)) {
-                JOptionPane.showMessageDialog(this, "Error: El email ya pertenece a otro usuario.");
+                JOptionPane.showMessageDialog(this, "-El email ya pertenece a otro usuario-");
                 return false;
             }
         }
@@ -924,6 +924,9 @@ public class FormularioCarga extends javax.swing.JFrame {
         String email = emailProtxt.getText().trim();
         String telefono = telefonoProtxt.getText().trim();
         String matricula = matriculatxt.getText().trim();
+        if (matricula.isEmpty()){
+            JOptionPane.showMessageDialog(this, "No pueden haber campos vacios.");
+        }else{
         // Validamos primero los datos que comparten todas las personas
         if (validarDatosBase(nombre, apellido,dni, email, telefono)) {
             // Validamos el dato matricula
@@ -955,6 +958,7 @@ public class FormularioCarga extends javax.swing.JFrame {
                 this.dispose();
             }
         }
+      }
     }//GEN-LAST:event_btnGuardarProfesionalActionPerformed
 
     private void btnCargarEstudioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCargarEstudioActionPerformed
