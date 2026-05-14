@@ -1,3 +1,17 @@
+Mauro
+Lombardo
+41333983
+2665368542
+maulom2001@clinica.com
+206
+
+pedro
+enrrique escobar gabiglis
+9200100
+265888888
+pedroescovbar@hotmail
+400
+
 Ricardo
 Lopez
 25444555
@@ -12,13 +26,6 @@ Fernandez
 lfernandez@clinica.com
 312
 
-Mauro
-Lombardo
-41333983
-2665368542
-maulom2001@clinica.com
-206
-
 Catriel
 el amigo
 46333179
@@ -29,20 +36,7 @@ santigame9@gmail.com
 Sofia 
 Martinez
 32111222
-2664112233
+2665889910
 smartinez@clinica.com
 101
 
-pedro
-enrique
-45321456
-266578900
-pedroenrique@gmail
-9009
-
-Juan ignacio
-Martinez Cuarta
-46300300
-2664870870
-juanignacio@gmail
-400
