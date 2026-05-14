@@ -1002,6 +1002,24 @@ public class FormularioCarga extends javax.swing.JFrame {
            //Creo fecha
             Fecha fechaR = new Fecha(diaR, mesR, anioR);
             Fecha fechaE = new Fecha(diaE, mesE, anioE);
+            int[] seleccionados = estudiosList.getSelectedIndices(); //Extraigo ids y los guardo en una lista (idsanalisis)
+            ArrayList <Integer> idsAnalisis = new ArrayList<>(); //Creo la lista de ids para poder setear los analisis
+            for (int i : seleccionados){
+                idsAnalisis.add(i);
+            }
+            for (Estudio estExistente : listaEstudios) {
+                  EstudioController ctrlExistente = new EstudioController(estExistente);
+                  if (ctrlExistente.muestraDniPaciente().equals(dniPacEst.getText().trim()) && ctrlExistente.esMismaFecha(fechaR)) {
+                        ArrayList<Integer> analisisViejos = ctrlExistente.obetenerAnalisis();
+                        for (int idNuevo : idsAnalisis) {
+                              if (analisisViejos.contains(idNuevo)) {
+                                    JOptionPane.showMessageDialog(this, "El paciente no puede repetir el análisis (ID: " + idNuevo + ") el mismo día.");
+                                    return;
+                              }
+                        }
+                  }
+            }
+            
             Estudio est = new Estudio();
             EstudioController miEstudio = new EstudioController(est);
             miEstudio.ColocarDniPaciente(dniPacEst.getText().trim());
@@ -1009,28 +1027,7 @@ public class FormularioCarga extends javax.swing.JFrame {
             miEstudio.ColocarFechaRealizacion(fechaR);
             miEstudio.ColocarFechaEntrega(fechaE);
             miEstudio.ColocarEstado(estado.getSelectedItem().toString());
-            
-            int[] seleccionados = estudiosList.getSelectedIndices(); //Extraigo ids y los guardo en una lista (idsanalisis)
-            ArrayList <Integer> idsAnalisis = new ArrayList<>(); //Creo la lista de ids para poder setear los analisis
-            for (int i : seleccionados){
-                idsAnalisis.add(i);
-            }
-            
-            for(Estudio est2 : listaEstudios){
-                EstudioController miEst2 = new EstudioController(est2);
-                if (miEst2.muestraDniPaciente().equals(dniPacEst.getText().trim()) && miEst2.esMismaFecha(fechaR)){
-                    for (int idViejo : miEst2.obetenerAnalisis()){
-                        for (int idNuevo : idsAnalisis){
-                           if (idNuevo == idViejo){
-                               JOptionPane.showMessageDialog(this, "El paciente no puede repetir analisis el mismo dia");
-                               return;
-                           } 
-                        }
-                    }
-                }
-            }
             miEstudio.colocarAnalisisRealizados(idsAnalisis);
-            //Finalmente guardamos el estudio en la lista global
             listaEstudios.add(miEstudio.obtenerEstudio());
             JOptionPane.showMessageDialog(this, "Estudio cargado correctamente");
             
