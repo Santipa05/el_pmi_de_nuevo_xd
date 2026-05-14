@@ -1002,14 +1002,6 @@ public class FormularioCarga extends javax.swing.JFrame {
            //Creo fecha
             Fecha fechaR = new Fecha(diaR, mesR, anioR);
             Fecha fechaE = new Fecha(diaE, mesE, anioE);
-            Estudio est = new Estudio();
-            EstudioController miEstudio = new EstudioController(est);
-            miEstudio.ColocarDniPaciente(dniPacEst.getText().trim());
-            miEstudio.ColocarMatricula(matProEst.getText().trim());
-            miEstudio.ColocarFechaRealizacion(fechaR);
-            miEstudio.ColocarFechaEntrega(fechaE);
-            miEstudio.ColocarEstado(estado.getSelectedItem().toString());
-            
             int[] seleccionados = estudiosList.getSelectedIndices(); //Extraigo ids y los guardo en una lista (idsanalisis)
             ArrayList <Integer> idsAnalisis = new ArrayList<>(); //Creo la lista de ids para poder setear los analisis
             for (int i : seleccionados){
@@ -1019,9 +1011,11 @@ public class FormularioCarga extends javax.swing.JFrame {
             for(Estudio est2 : listaEstudios){
                 EstudioController miEst2 = new EstudioController(est2);
                 if (miEst2.muestraDniPaciente().equals(dniPacEst.getText().trim()) && miEst2.esMismaFecha(fechaR)){
+                    System.out.println("coincidio fecha y paciente: " + miEst2.muestraDniPaciente() + " || " + miEst2.muestraStringFechaRealizacion());
                     for (int idViejo : miEst2.obetenerAnalisis()){
                         for (int idNuevo : idsAnalisis){
                            if (idNuevo == idViejo){
+                               System.out.println(idNuevo + " " + idViejo);
                                JOptionPane.showMessageDialog(this, "El paciente no puede repetir analisis el mismo dia");
                                return;
                            } 
@@ -1029,6 +1023,13 @@ public class FormularioCarga extends javax.swing.JFrame {
                     }
                 }
             }
+            Estudio est = new Estudio();
+            EstudioController miEstudio = new EstudioController(est);
+            miEstudio.ColocarDniPaciente(dniPacEst.getText().trim());
+            miEstudio.ColocarMatricula(matProEst.getText().trim());
+            miEstudio.ColocarFechaRealizacion(fechaR);
+            miEstudio.ColocarFechaEntrega(fechaE);
+            miEstudio.ColocarEstado(estado.getSelectedItem().toString());
             miEstudio.colocarAnalisisRealizados(idsAnalisis);
             //Finalmente guardamos el estudio en la lista global
             listaEstudios.add(miEstudio.obtenerEstudio());
