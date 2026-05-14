@@ -27,6 +27,7 @@ public class FormularioEstudio extends javax.swing.JFrame {
     private String accionActual;
     private ArrayList<Estudio> listaEstudios;
     private Estudio estudioSelec;
+    private javax.swing.JFrame ventanaPrincipal;
     FondoPanel fondo = new FondoPanel();
     
       public FormularioEstudio() {
@@ -44,8 +45,9 @@ public class FormularioEstudio extends javax.swing.JFrame {
             setLocationRelativeTo(null);
       }
       
-      public FormularioEstudio(HashMap<String, Persona> mapaPersonas, String operacion, ArrayList<Estudio> listaEstudios) {
+      public FormularioEstudio(HashMap<String, Persona> mapaPersonas, String operacion, ArrayList<Estudio> listaEstudios, javax.swing.JFrame ventanaPrincipal) {
         this();
+        this.ventanaPrincipal = ventanaPrincipal;
         this.mapaPersonas = mapaPersonas;
         this.accionActual = operacion; 
         this.listaEstudios = listaEstudios;
@@ -211,6 +213,11 @@ public class FormularioEstudio extends javax.swing.JFrame {
         setBackground(new java.awt.Color(153, 204, 255));
         setMaximumSize(new java.awt.Dimension(940, 1324));
         setResizable(false);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
         getContentPane().setLayout(new java.awt.CardLayout());
 
         jPanelMostrarBuscar.setMaximumSize(new java.awt.Dimension(940, 834));
@@ -685,7 +692,7 @@ public class FormularioEstudio extends javax.swing.JFrame {
         
         jPanelModificarEst.setVisible(false);
         this.estudioSelec = null; 
-        this.dispose();
+        retornar();
        }
     }//GEN-LAST:event_btnConfirmarEstModActionPerformed
 
@@ -694,7 +701,7 @@ public class FormularioEstudio extends javax.swing.JFrame {
     }//GEN-LAST:event_estadoEstActionPerformed
 
     private void btnCancelarModActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarModActionPerformed
-        this.dispose();
+        retornar();
     }//GEN-LAST:event_btnCancelarModActionPerformed
 
     private void fechaRealInputStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_fechaRealInputStateChanged
@@ -839,7 +846,7 @@ public class FormularioEstudio extends javax.swing.JFrame {
       }//GEN-LAST:event_comboboxOpcionActionPerformed
 
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
-        this.dispose();
+        retornar();
     }//GEN-LAST:event_btnVolverActionPerformed
 
       private void jTableMostrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableMostrarMouseClicked
@@ -872,6 +879,10 @@ public class FormularioEstudio extends javax.swing.JFrame {
             }
       }
       }//GEN-LAST:event_jTableMostrarMouseClicked
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        retornar();
+    }//GEN-LAST:event_formWindowClosing
 
     
     public class RenderAnalisis extends JTextArea implements TableCellRenderer {
@@ -927,4 +938,12 @@ public class FormularioEstudio extends javax.swing.JFrame {
     private javax.swing.JLabel tituloModificar;
     private javax.swing.JLabel tituloMostrar;
     // End of variables declaration//GEN-END:variables
+
+private void retornar() {
+        if (ventanaPrincipal != null) {
+        ventanaPrincipal.setVisible(true);
+        this.dispose(); 
+        }
+    }
+    
 }

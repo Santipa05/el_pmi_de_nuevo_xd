@@ -19,6 +19,7 @@ public class FormularioEliminar extends javax.swing.JFrame {
     
     private HashMap <String, Persona> mapaPersonas;
     private ArrayList<Estudio> listaEstudios;
+    private javax.swing.JFrame ventanaPrincipal;
     FondoPanel fondo = new FondoPanel();
 
       public FormularioEliminar() {
@@ -28,8 +29,9 @@ public class FormularioEliminar extends javax.swing.JFrame {
             setLocationRelativeTo(null);
       }
 
-    public FormularioEliminar(HashMap<String, Persona> mapaPersonas, int op, ArrayList<Estudio> listaEstudios) {
+    public FormularioEliminar(HashMap<String, Persona> mapaPersonas, int op, ArrayList<Estudio> listaEstudios, javax.swing.JFrame ventanaPrincipal) {
         this();
+        this.ventanaPrincipal = ventanaPrincipal;
         this.mapaPersonas = mapaPersonas;
         this.listaEstudios = listaEstudios;
         setLocationRelativeTo(null);
@@ -102,6 +104,11 @@ public class FormularioEliminar extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         jPanelEliminarPaciente.setBackground(new java.awt.Color(153, 204, 255));
         jPanelEliminarPaciente.setOpaque(false);
@@ -333,12 +340,12 @@ public class FormularioEliminar extends javax.swing.JFrame {
                     mapaPersonas.remove(dniBusqueda);
                     actualizarArchivoGeneral();
                     JOptionPane.showMessageDialog(this, "Paciente eliminado correctamente.");
+                    dniPacEliminarTxt.setText("");
                   }
                 }else{
                     JOptionPane.showMessageDialog(this, "No se encontro ningun paciente con el dni " + dniBusqueda);
                     }
         }
-        this.dispose();
     }//GEN-LAST:event_btnEliminarPacActionPerformed
 
     
@@ -387,11 +394,11 @@ public class FormularioEliminar extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEliminarProActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
-        this.dispose();
+        retornar();
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void btnCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelar1ActionPerformed
-        this.dispose();
+        retornar();
     }//GEN-LAST:event_btnCancelar1ActionPerformed
 
       private void dniPacEliminarTxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_dniPacEliminarTxtKeyTyped
@@ -415,6 +422,10 @@ public class FormularioEliminar extends javax.swing.JFrame {
             }
       }//GEN-LAST:event_matProEliminarTxtKeyTyped
 
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        retornar();
+    }//GEN-LAST:event_formWindowClosing
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnCancelar1;
@@ -431,4 +442,12 @@ public class FormularioEliminar extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JTextField matProEliminarTxt;
     // End of variables declaration//GEN-END:variables
+
+    private void retornar() {
+        if (ventanaPrincipal != null) {
+        ventanaPrincipal.setVisible(true);
+        this.dispose(); 
+        }
+    }
+
 }

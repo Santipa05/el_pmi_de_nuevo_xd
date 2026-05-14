@@ -365,7 +365,7 @@ public class Principal extends javax.swing.JFrame{
         
         //Esto es para que la ventana de los formularios cambie segun
         //que se quiere cargar, sea paciente, profesional o estudio
-        FormularioCarga form = new FormularioCarga(this.mapaPersonas, this.listaEstudios);
+        FormularioCarga form = new FormularioCarga(this.mapaPersonas, this.listaEstudios, this);
         form.metAux(opcion);
         
           switch (op){
@@ -373,21 +373,25 @@ public class Principal extends javax.swing.JFrame{
                   caso = menuPaciente.getItemAt(menuPaciente.getSelectedIndex());
                   switch (caso){
                       case "Cargar":
+                          this.dispose();
                           form.setVisible(true);
                           form.setEnabled(true);
                           form.setLocationRelativeTo(null);
                           break;
                           
                       case "Eliminar":
-                          new FormularioEliminar(this.mapaPersonas, opcion, this.listaEstudios).setVisible(true);
+                          this.dispose();
+                          new FormularioEliminar(this.mapaPersonas, opcion, this.listaEstudios, this).setVisible(true);
                           break;
                           
                       case "Modificar":
-                          new FormularioBuscar(this.mapaPersonas, opcion, caso, this.listaEstudios).setVisible(true);
+                          this.dispose();
+                          new FormularioBuscar(this.mapaPersonas, opcion, caso, this.listaEstudios, this).setVisible(true);
                           break;
                           
                       case "Mostrar/Buscar":
-                          new FormularioBuscar(this.mapaPersonas, opcion, caso, this.listaEstudios).setVisible(true);
+                          this.dispose();
+                          new FormularioBuscar(this.mapaPersonas, opcion, caso, this.listaEstudios, this).setVisible(true);
                           break;
                   }
                   break;
@@ -395,18 +399,22 @@ public class Principal extends javax.swing.JFrame{
                   caso = menuProfesional.getItemAt(menuProfesional.getSelectedIndex());
                   switch(caso){
                       case "Cargar":
+                          this.dispose();
                           form.setVisible(true);
                           form.setEnabled(true);
                           form.setLocationRelativeTo(null);
                           break;
                       case "Eliminar":
-                          new FormularioEliminar(this.mapaPersonas, opcion, this.listaEstudios).setVisible(true);
+                          this.dispose();
+                          new FormularioEliminar(this.mapaPersonas, opcion, this.listaEstudios, this).setVisible(true);
                           break;
                       case "Modificar":
-                          new FormularioBuscar(this.mapaPersonas, opcion, caso, this.listaEstudios).setVisible(true);
+                          this.dispose();
+                          new FormularioBuscar(this.mapaPersonas, opcion, caso, this.listaEstudios, this).setVisible(true);
                           break;
                       case "Mostrar/Buscar":
-                            new FormularioBuscar(this.mapaPersonas, opcion, caso, this.listaEstudios).setVisible(true);
+                          this.dispose();
+                            new FormularioBuscar(this.mapaPersonas, opcion, caso, this.listaEstudios, this).setVisible(true);
                           break;
                   }
                   break;
@@ -414,6 +422,7 @@ public class Principal extends javax.swing.JFrame{
                   caso = menuEstudio.getItemAt(menuEstudio.getSelectedIndex());
                   switch(caso){
                       case "Cargar":
+                          this.dispose();
                           form.setVisible(true);
                           form.setEnabled(true);
                           form.setLocationRelativeTo(null);
@@ -423,14 +432,16 @@ public class Principal extends javax.swing.JFrame{
                             JOptionPane.showMessageDialog(this, "No hay estudios cargados en el sistema.");
                             return;
                           }
-                          new FormularioEstudio(this.mapaPersonas, caso, this.listaEstudios).setVisible(true);
+                          this.dispose();
+                          new FormularioEstudio(this.mapaPersonas, caso, this.listaEstudios, this).setVisible(true);
                           break;
                       case "Modificar":
                           if (listaEstudios.isEmpty()) {
                             JOptionPane.showMessageDialog(this, "No hay estudios cargados en el sistema.");
                             return;
                           }
-                          new FormularioEstudio(this.mapaPersonas, caso, this.listaEstudios).setVisible(true);
+                          this.dispose();
+                          new FormularioEstudio(this.mapaPersonas, caso, this.listaEstudios, this).setVisible(true);
                           break;
                   }
           }

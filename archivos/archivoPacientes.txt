@@ -1,51 +1,44 @@
 Juan Ignacio
 Perez Godoy
 40123456
-2665101010
 JULIANO@gmail.com
+2665101010
 true
 
-Carlos Alberto
-Rodriguez
-28456123
-2664998800
-carlosrodriguez@hotmail.com
-false
-
-Pepe
-romero
-46123457
-2665931655
-aa@gmail.com
-false
+pepe
+mujica
+46123321
+sdasadfs@dsad
+2665787878
+true
 
 Maria Elena
 Gomez
 35987654
-2664556677
 mariagomez@outlook.com
+2664556677
 true
 
 Paco
 Amoroso
 46408839
-2664755812
 santinomedero20009@gmail.com
+2664755812
 false
 
-juan
-kiko
-46444123
-2665090807
-juan@gmail.com.ar
+Carlos Alberto
+Rodriguez
+28456123
+carlosrodriguez@hotmail.com
+2664998800
 false
 
 pedro
-alfonso
-34909090
-pedroalfonso@gmail
-266476890
-false
+ALFONSO
+46909090
+pedroalfonso@yahoo.com
+2665909090
+true
 
 santi
 lucero
@@ -53,4 +46,11 @@ lucero
 santilucero100@gmail.com
 2664606060
 true
+
+juan
+kiko
+46444123
+juan@gmail.com.ar
+2665090807
+false
 
