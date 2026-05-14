@@ -767,28 +767,32 @@ public class FormularioCarga extends javax.swing.JFrame {
       //evitando que se superpongan
       
       public void metAux(int op){
-            if(op == 0){
-                  PanelCargaPac.setVisible(true);
-                  PanelCargaPac.setEnabled(true);
-                  PanelCargaPro.setVisible(false);
-                  PanelCargaPro.setEnabled(false);
-                  PanelCargaEst.setVisible(false);
-                  PanelCargaEst.setEnabled(false);
-            } else if(op == 1){
-                  PanelCargaPro.setVisible(true);
-                  PanelCargaPro.setEnabled(true);
-                  PanelCargaPac.setVisible(false);
-                  PanelCargaPac.setEnabled(false);
-                  PanelCargaEst.setVisible(false);
-                  PanelCargaEst.setEnabled(false);
-            } else{
-                  PanelCargaEst.setVisible(true);
-                  PanelCargaEst.setEnabled(true);
-                  PanelCargaPro.setVisible(false);
-                  PanelCargaPro.setEnabled(false);
-                  PanelCargaPac.setVisible(false);
-                  PanelCargaPac.setEnabled(false);
-            }
+          switch (op) {
+                case 0:
+                      PanelCargaPac.setVisible(true);
+                      PanelCargaPac.setEnabled(true);
+                      PanelCargaPro.setVisible(false);
+                      PanelCargaPro.setEnabled(false);
+                      PanelCargaEst.setVisible(false);
+                      PanelCargaEst.setEnabled(false);
+                      break;
+                case 1:
+                      PanelCargaPro.setVisible(true);
+                      PanelCargaPro.setEnabled(true);
+                      PanelCargaPac.setVisible(false);
+                      PanelCargaPac.setEnabled(false);
+                      PanelCargaEst.setVisible(false);
+                      PanelCargaEst.setEnabled(false);
+                      break;
+                default:
+                      PanelCargaEst.setVisible(true);
+                      PanelCargaEst.setEnabled(true);
+                      PanelCargaPro.setVisible(false);
+                      PanelCargaPro.setEnabled(false);
+                      PanelCargaPac.setVisible(false);
+                      PanelCargaPac.setEnabled(false);
+                      break;
+          }
             this.revalidate();
             this.repaint();
       }
@@ -948,7 +952,7 @@ public class FormularioCarga extends javax.swing.JFrame {
                   escritor.append(dni + "\n");
                   escritor.append(telefono + "\n");
                   escritor.append(email + "\n");
-                  escritor.append(matricula + "\n");
+                  escritor.append(matricula + "\n\n");
             } catch (FileNotFoundException e){
                   JOptionPane.showMessageDialog(this, "Error, no se encontro el archivo correspondiente. Codigo: " + e.getMessage());
             } catch(IOException e){
@@ -962,9 +966,12 @@ public class FormularioCarga extends javax.swing.JFrame {
     }//GEN-LAST:event_btnGuardarProfesionalActionPerformed
 
     private void btnCargarEstudioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCargarEstudioActionPerformed
-      
+        
       //Control de que no este repetido
-      
+          if (matProEst.getText().isEmpty() || dniPacEst.getText().isEmpty()){
+              JOptionPane.showMessageDialog(this, "-Error. No pueden haber campos vacios-\n\n");
+              return;
+          }
           if(!buscarProMat(matProEst.getText())){
                 JOptionPane.showMessageDialog(this, "-Error. El profesional no fue encontrado-\n\n");
                 return;
@@ -995,7 +1002,6 @@ public class FormularioCarga extends javax.swing.JFrame {
            //Creo fecha
             Fecha fechaR = new Fecha(diaR, mesR, anioR);
             Fecha fechaE = new Fecha(diaE, mesE, anioE);
-            
             Estudio est = new Estudio();
             EstudioController miEstudio = new EstudioController(est);
             miEstudio.ColocarDniPaciente(dniPacEst.getText().trim());
@@ -1008,6 +1014,20 @@ public class FormularioCarga extends javax.swing.JFrame {
             ArrayList <Integer> idsAnalisis = new ArrayList<>(); //Creo la lista de ids para poder setear los analisis
             for (int i : seleccionados){
                 idsAnalisis.add(i);
+            }
+            
+            for(Estudio est2 : listaEstudios){
+                EstudioController miEst2 = new EstudioController(est2);
+                if (miEst2.muestraDniPaciente().equals(dniPacEst.getText().trim()) && miEst2.esMismaFecha(fechaR)){
+                    for (int idViejo : miEst2.obetenerAnalisis()){
+                        for (int idNuevo : idsAnalisis){
+                           if (idNuevo == idViejo){
+                               JOptionPane.showMessageDialog(this, "El paciente no puede repetir analisis el mismo dia");
+                               return;
+                           } 
+                        }
+                    }
+                }
             }
             miEstudio.colocarAnalisisRealizados(idsAnalisis);
             //Finalmente guardamos el estudio en la lista global
@@ -1053,6 +1073,11 @@ public class FormularioCarga extends javax.swing.JFrame {
                   evt.consume();
                   java.awt.Toolkit.getDefaultToolkit().beep();
             }
+            int limite = 8;
+            if(dniPacEst.getText().length() >= limite){
+                  evt.consume();
+                  java.awt.Toolkit.getDefaultToolkit().beep();
+            }
       }//GEN-LAST:event_dniPacEstKeyTyped
 
       private void matProEstKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_matProEstKeyTyped
@@ -1082,6 +1107,11 @@ public class FormularioCarga extends javax.swing.JFrame {
       private void dniProtxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_dniProtxtKeyTyped
              char c = evt.getKeyChar();
             if(!Character.isDigit(c) && c != java.awt.event.KeyEvent.VK_BACK_SPACE){
+                  evt.consume();
+                  java.awt.Toolkit.getDefaultToolkit().beep();
+            }
+            int limite = 8;
+            if(dnitxt.getText().length() >= limite){
                   evt.consume();
                   java.awt.Toolkit.getDefaultToolkit().beep();
             }
@@ -1115,6 +1145,11 @@ public class FormularioCarga extends javax.swing.JFrame {
       private void dnitxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_dnitxtKeyTyped
             char c = evt.getKeyChar();
             if(!Character.isDigit(c) && c != java.awt.event.KeyEvent.VK_BACK_SPACE){
+                  evt.consume();
+                  java.awt.Toolkit.getDefaultToolkit().beep();
+            }
+            int limite = 8;
+            if(dnitxt.getText().length() >= limite){
                   evt.consume();
                   java.awt.Toolkit.getDefaultToolkit().beep();
             }

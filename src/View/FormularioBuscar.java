@@ -678,6 +678,11 @@ public class FormularioBuscar extends javax.swing.JFrame {
 
             dnitxt.setBackground(new java.awt.Color(51, 51, 51));
             dnitxt.setForeground(new java.awt.Color(255, 255, 255));
+            dnitxt.addActionListener(new java.awt.event.ActionListener() {
+                  public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        dnitxtActionPerformed(evt);
+                  }
+            });
             dnitxt.addKeyListener(new java.awt.event.KeyAdapter() {
                   public void keyTyped(java.awt.event.KeyEvent evt) {
                         dnitxtKeyTyped(evt);
@@ -1259,6 +1264,11 @@ public class FormularioBuscar extends javax.swing.JFrame {
                   evt.consume();
                   java.awt.Toolkit.getDefaultToolkit().beep();
             }
+            int limite = 8;
+            if(campoDniPac.getText().length() >= limite){
+                  evt.consume();
+                  java.awt.Toolkit.getDefaultToolkit().beep();
+            }
       }//GEN-LAST:event_campoDniPacKeyTyped
 
       private void campoMatiProModKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_campoMatiProModKeyTyped
@@ -1377,6 +1387,11 @@ public class FormularioBuscar extends javax.swing.JFrame {
                   evt.consume();
                   java.awt.Toolkit.getDefaultToolkit().beep();
             }
+            int limite = 8;
+            if(dnitxt.getText().length() >= limite){
+                  evt.consume();
+                  java.awt.Toolkit.getDefaultToolkit().beep();
+            }
       }//GEN-LAST:event_dnitxtKeyTyped
 
       private void verTodosProActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verTodosProActionPerformed
@@ -1404,22 +1419,28 @@ public class FormularioBuscar extends javax.swing.JFrame {
       }//GEN-LAST:event_mattxtKeyTyped
 
       private void buscarProMatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarProMatActionPerformed
-            String matIngresada = mattxt.getText();
+          boolean encontro = false;  
+          boolean noMat= false;
+          String matIngresada = mattxt.getText();
+          if (matIngresada.isEmpty()){
+            JOptionPane.showMessageDialog(this, "-Ingrese una matricula-");
+            noMat= true;
+            }else{
             verTodosPro.setSelected(false);
             DefaultTableModel modelo = (DefaultTableModel) jTableMostrarPro.getModel();
             modelo.setRowCount(0);
-        boolean encontro = false;
-        for (Persona p : mapaPersonas.values()){
-            if (p instanceof Profesional pro){
-                ProfesionalController miPro = new ProfesionalController(pro);
-                if(miPro.muestraMatricula().equals(matIngresada)){
+            for (Persona p : mapaPersonas.values()){
+                if (p instanceof Profesional pro){
+                    ProfesionalController miPro = new ProfesionalController(pro);
+                    if(miPro.muestraMatricula().equals(matIngresada)){
                       cargarTablaPro(miPro.ObtenerProfesional());
-                    encontro = true;
-                    break;
+                        encontro = true;
+                        break;
+                    }
                 }
             }
         }
-        if (encontro == false){
+        if (encontro == false && noMat == false){
             JOptionPane.showMessageDialog(this, "No se encontro profesional con matricula -" + matIngresada + "-");
         }
         mattxt.setText("");
@@ -1428,6 +1449,10 @@ public class FormularioBuscar extends javax.swing.JFrame {
       private void mattxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mattxtActionPerformed
             // TODO add your handling code here:
       }//GEN-LAST:event_mattxtActionPerformed
+
+      private void dnitxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dnitxtActionPerformed
+            // TODO add your handling code here:
+      }//GEN-LAST:event_dnitxtActionPerformed
 
       // Variables declaration - do not modify//GEN-BEGIN:variables
       private javax.swing.JLabel apellidoSig;

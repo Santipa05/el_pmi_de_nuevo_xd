@@ -197,7 +197,6 @@ public class Principal extends javax.swing.JFrame{
         menuPaciente = new javax.swing.JComboBox<>();
         menuProfesional = new javax.swing.JComboBox<>();
         menuEstudio = new javax.swing.JComboBox<>();
-        txtPrincipal = new javax.swing.JLabel();
         btnConfirmarMenu = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         btnSalir = new javax.swing.JButton();
@@ -259,12 +258,6 @@ public class Principal extends javax.swing.JFrame{
         });
         Principal.add(menuEstudio, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 200, 30));
 
-        txtPrincipal.setBackground(new java.awt.Color(85, 177, 177));
-        txtPrincipal.setFont(new java.awt.Font("Nirmala UI", 1, 18)); // NOI18N
-        txtPrincipal.setForeground(new java.awt.Color(102, 153, 255));
-        txtPrincipal.setText("OPCION");
-        Principal.add(txtPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, -1, -1));
-
         btnConfirmarMenu.setBackground(new java.awt.Color(0, 51, 102));
         btnConfirmarMenu.setForeground(new java.awt.Color(255, 255, 255));
         btnConfirmarMenu.setText("CONFIRMAR");
@@ -279,7 +272,7 @@ public class Principal extends javax.swing.JFrame{
         jLabel1.setForeground(new java.awt.Color(102, 153, 255));
         jLabel1.setText("OPERACION");
         jLabel1.setToolTipText("Operacion");
-        Principal.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 220, 135, -1));
+        Principal.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 220, 110, -1));
 
         btnSalir.setBackground(new java.awt.Color(0, 51, 102));
         btnSalir.setForeground(new java.awt.Color(255, 255, 255));
@@ -512,114 +505,6 @@ public class Principal extends javax.swing.JFrame{
     private javax.swing.JToggleButton toggleEst;
     private javax.swing.JToggleButton togglePac;
     private javax.swing.JToggleButton togglePro;
-    private javax.swing.JLabel txtPrincipal;
     // End of variables declaration//GEN-END:variables
-
-      
-      //METODOS PACIENTES
-    
-      private void mostrarTodosPacientes(){
-        boolean encontroPac = false;
-        
-        if (mapaPersonas.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "La lista está vacía.");
-            return;
-        }
-        String listado = "---LISTADO PACIENTES---\n\n";
-        for (Persona p : mapaPersonas.values()) {
-            if (p instanceof Paciente pac){
-                PacienteController miPac = new PacienteController(pac);
-                encontroPac = true;
-                listado += miPac.mostrarDatos() + "\n";
-            }
-        }
-        if (encontroPac == true){
-            JOptionPane.showMessageDialog(this, listado);}
-        else{
-            JOptionPane.showMessageDialog(this, "No se encontraron pacientes caragdos.");}
-      }
-      
-      
-      private void mostrarPacientesConOsinObra(boolean conOsin){
-        boolean encontroPac = false;
-        boolean encontroPacObra = false;
-        
-        if (mapaPersonas.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "La lista está vacía.");
-            return;
-        }
-        if (conOsin == true){
-            String listado = "---LISTADO PACIENTES CON OBRA SOCIAL---\n\n";
-        
-            for (Persona p : mapaPersonas.values()) {
-                if (p instanceof Paciente pac){
-                    PacienteController miPac = new PacienteController(pac);
-                    encontroPac = true;
-                    if (miPac.muestraObraSocial()==true){
-                        encontroPacObra = true;
-                        listado += miPac.mostrarDatos() + "\n";
-                }
-            }
-        }
-        if (encontroPacObra == true){
-            JOptionPane.showMessageDialog(this, listado);
-            return;
-        }
-        else if(encontroPac == true){
-            JOptionPane.showMessageDialog(this, "No se encontraron pacientes con obra social.");
-        }
-        else{
-            JOptionPane.showMessageDialog(this, "No se encontraron pacientes caragdos.");
-        }
-        }else{
-            String listado = "---LISTADO PACIENTES SIN OBRA SOCIAL---\n\n";
-        
-            for (Persona p : mapaPersonas.values()) {
-                if (p instanceof Paciente pac){
-                    PacienteController miPac = new PacienteController(pac);
-                    encontroPac = true;
-                    if (miPac.muestraObraSocial()==false){
-                        encontroPacObra = true;
-                        listado += miPac.mostrarDatos() + "\n";
-                }
-            }
-        }
-        if (encontroPacObra == true){
-            JOptionPane.showMessageDialog(this, listado);
-            return;
-        }
-        else if(encontroPac == true){
-            JOptionPane.showMessageDialog(this, "No se encontraron pacientes sin obra social.");
-        }
-        else{
-            JOptionPane.showMessageDialog(this, "No se encontraron pacientes caragdos.");
-        }
-        }
-      }
-      
-      //METODOS PROFESIONALES
-      
-      private void mostrarTodosProfesionales(){
-        boolean encontroPro = false;
-        
-        if (mapaPersonas.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "La lista está vacía.");
-            return;
-        }
-        String listado = "---LISTADO PROFESIONALES---\n\n";
-        for (Persona p : mapaPersonas.values()) {
-            if (p instanceof Profesional pro){
-                ProfesionalController miPro = new ProfesionalController(pro);
-                encontroPro = true;
-                listado += miPro.mostrarDatos() + "\n";
-            }
-        }
-        if (encontroPro == true){
-            JOptionPane.showMessageDialog(this, listado);
-        }
-        else{
-            JOptionPane.showMessageDialog(this, "No se encontraron profesionales cargados.");
-        }
-      }
       
 }

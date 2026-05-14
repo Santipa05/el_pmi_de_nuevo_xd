@@ -327,7 +327,8 @@ public class FormularioEliminar extends javax.swing.JFrame {
         if (encontro == false){
             if (mapaPersonas.containsKey(dniBusqueda) && (mapaPersonas.get(dniBusqueda) instanceof Paciente)){
                 Object[] opciones = {"Eliminar", "Cancelar"};
-                int seleccion = javax.swing.JOptionPane.showOptionDialog(this,"Esta seguro que desea eliminar al paciente?\n", "Eliminar", javax.swing.JOptionPane.DEFAULT_OPTION, javax.swing.JOptionPane.QUESTION_MESSAGE, null, opciones, opciones[0]);
+                int seleccion = javax.swing.JOptionPane.showOptionDialog(this,"Esta seguro que desea eliminar al paciente?\n", "Eliminar", 
+                        javax.swing.JOptionPane.DEFAULT_OPTION, javax.swing.JOptionPane.QUESTION_MESSAGE, null, opciones, opciones[0]);
                 if(seleccion == 0){
                     mapaPersonas.remove(dniBusqueda);
                     actualizarArchivoGeneral();
@@ -396,6 +397,11 @@ public class FormularioEliminar extends javax.swing.JFrame {
       private void dniPacEliminarTxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_dniPacEliminarTxtKeyTyped
             char c = evt.getKeyChar();
             if(!Character.isDigit(c) && c != java.awt.event.KeyEvent.VK_BACK_SPACE){
+                  evt.consume();
+                  java.awt.Toolkit.getDefaultToolkit().beep();
+            }
+            int limite = 8;
+            if(dniPacEliminarTxt.getText().length() >= limite){
                   evt.consume();
                   java.awt.Toolkit.getDefaultToolkit().beep();
             }
